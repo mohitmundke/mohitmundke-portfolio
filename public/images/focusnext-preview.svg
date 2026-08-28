@@ -1,0 +1,183 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080b12" />
+      <stop offset="50%" stop-color="#050508" />
+      <stop offset="100%" stop-color="#0c101a" />
+    </linearGradient>
+    <linearGradient id="blueViolet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.1" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle ambient glow -->
+  <circle cx="200" cy="150" r="300" fill="#3b82f6" opacity="0.07" filter="blur(80px)"/>
+  <circle cx="1000" cy="650" r="350" fill="#7c3aed" opacity="0.08" filter="blur(90px)"/>
+
+  <!-- App Window Container -->
+  <g transform="translate(60, 40)" filter="url(#shadow)">
+    <!-- App Window Frame -->
+    <rect width="1080" height="720" rx="18" fill="#0c101a" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+
+    <!-- Window Top Bar -->
+    <rect width="1080" height="52" rx="18" fill="#080b12"/>
+    <rect y="40" width="1080" height="12" fill="#080b12"/>
+    <line x1="0" y1="52" x2="1080" y2="52" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+    <!-- Window controls -->
+    <circle cx="28" cy="26" r="6" fill="#ef4444" opacity="0.8"/>
+    <circle cx="48" cy="26" r="6" fill="#f59e0b" opacity="0.8"/>
+    <circle cx="68" cy="26" r="6" fill="#10b981" opacity="0.8"/>
+
+    <!-- Window Title -->
+    <text x="540" y="32" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" text-anchor="middle">
+      FocusNext Wellness · Remote Work &amp; Productivity Companion
+    </text>
+
+    <!-- Sidebar -->
+    <g transform="translate(0, 52)">
+      <rect width="220" height="668" fill="#07090e" opacity="0.6"/>
+      <line x1="220" y1="0" x2="220" y2="668" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+      <!-- App Logo -->
+      <g transform="translate(24, 28)">
+        <rect width="32" height="32" rx="8" fill="url(#blueViolet)"/>
+        <path d="M8 24 L8 8 L16 18 L24 8 L24 24" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <text x="42" y="21" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="700">FocusNext</text>
+      </g>
+
+      <!-- Nav Items -->
+      <g transform="translate(16, 85)">
+        <!-- Active Item: Dashboard -->
+        <rect width="188" height="40" rx="10" fill="url(#blueViolet)" opacity="0.15"/>
+        <rect width="188" height="40" rx="10" stroke="rgba(59,130,246,0.4)" stroke-width="1" fill="none"/>
+        <circle cx="20" cy="20" r="4" fill="#38bdf8"/>
+        <text x="36" y="25" fill="#38bdf8" font-family="sans-serif" font-size="13" font-weight="600">Dashboard</text>
+
+        <!-- Other items -->
+        <text x="36" y="70" fill="#94a3b8" font-family="sans-serif" font-size="13" font-weight="500">Break Timer</text>
+        <text x="36" y="110" fill="#94a3b8" font-family="sans-serif" font-size="13" font-weight="500">Activity Log</text>
+        <text x="36" y="150" fill="#94a3b8" font-family="sans-serif" font-size="13" font-weight="500">Posture Alerts</text>
+        <text x="36" y="190" fill="#94a3b8" font-family="sans-serif" font-size="13" font-weight="500">Wellness Tips</text>
+        <text x="36" y="230" fill="#94a3b8" font-family="sans-serif" font-size="13" font-weight="500">Settings</text>
+      </g>
+    </g>
+
+    <!-- Main Content Area -->
+    <g transform="translate(244, 76)">
+      <!-- Top header in app -->
+      <text x="0" y="24" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="800">
+        Welcome back, Intern 👋
+      </text>
+      <text x="0" y="46" fill="#64748b" font-family="sans-serif" font-size="12">
+        Today's wellness streak: 5 days · Active focus session: 42 mins
+      </text>
+
+      <!-- Stat Cards Row -->
+      <g transform="translate(0, 68)">
+        <!-- Stat 1: Break Status -->
+        <rect width="180" height="96" rx="14" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+        <text x="16" y="28" fill="#94a3b8" font-family="sans-serif" font-size="11" font-weight="600" text-transform="uppercase">Next Break In</text>
+        <text x="16" y="62" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="24" font-weight="700">18:00</text>
+        <text x="16" y="82" fill="#4ade80" font-family="sans-serif" font-size="10">● Timer running</text>
+
+        <!-- Stat 2: Hydration -->
+        <rect x="200" width="180" height="96" rx="14" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+        <text x="216" y="28" fill="#94a3b8" font-family="sans-serif" font-size="11" font-weight="600" text-transform="uppercase">Hydration</text>
+        <text x="216" y="62" fill="#a78bfa" font-family="'JetBrains Mono', monospace" font-size="24" font-weight="700">6 / 8</text>
+        <text x="216" y="82" fill="#94a3b8" font-family="sans-serif" font-size="10">Glasses logged</text>
+
+        <!-- Stat 3: Posture Check -->
+        <rect x="400" width="180" height="96" rx="14" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+        <text x="416" y="28" fill="#94a3b8" font-family="sans-serif" font-size="11" font-weight="600" text-transform="uppercase">Posture Check</text>
+        <text x="416" y="62" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="24" font-weight="700">Good</text>
+        <text x="416" y="82" fill="#94a3b8" font-family="sans-serif" font-size="10">Last checked 12m ago</text>
+
+        <!-- Stat 4: Eye Rest -->
+        <rect x="600" width="196" height="96" rx="14" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+        <text x="616" y="28" fill="#94a3b8" font-family="sans-serif" font-size="11" font-weight="600" text-transform="uppercase">20-20-20 Rule</text>
+        <text x="616" y="62" fill="#fbbf24" font-family="'JetBrains Mono', monospace" font-size="24" font-weight="700">4 Done</text>
+        <text x="616" y="82" fill="#94a3b8" font-family="sans-serif" font-size="10">Target: 8 sessions</text>
+      </g>
+
+      <!-- Main Chart & Widget Section -->
+      <g transform="translate(0, 184)">
+        <!-- Activity Chart Box -->
+        <rect width="490" height="230" rx="16" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+        <text x="20" y="32" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700">Weekly Wellness &amp; Focus Trend</text>
+        
+        <!-- Faux Chart Lines -->
+        <g transform="translate(20, 50)">
+          <!-- Grid lines -->
+          <line x1="0" y1="30" x2="450" y2="30" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+          <line x1="0" y1="70" x2="450" y2="70" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+          <line x1="0" y1="110" x2="450" y2="110" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+          <line x1="0" y1="150" x2="450" y2="150" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+          <!-- Area Gradient Fill -->
+          <path d="M0 130 Q75 60 150 90 T300 40 T450 65 L450 150 L0 150 Z" fill="url(#glowGrad)"/>
+          <!-- Line 1: Blue -->
+          <path d="M0 130 Q75 60 150 90 T300 40 T450 65" stroke="#3b82f6" stroke-width="3" fill="none"/>
+          <circle cx="150" cy="90" r="4" fill="#3b82f6"/>
+          <circle cx="300" cy="40" r="5" fill="#60a5fa" stroke="#0c101a" stroke-width="2"/>
+          <circle cx="450" cy="65" r="4" fill="#3b82f6"/>
+
+          <!-- Days Labels -->
+          <text x="0" y="166" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="10">Mon</text>
+          <text x="75" y="166" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="10">Tue</text>
+          <text x="150" y="166" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="10">Wed</text>
+          <text x="225" y="166" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="10">Thu</text>
+          <text x="300" y="166" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="10">Fri</text>
+          <text x="375" y="166" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="10">Sat</text>
+          <text x="430" y="166" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="10">Sun</text>
+        </g>
+
+        <!-- Right Side: Quick Action & Tip Card -->
+        <g transform="translate(510, 0)">
+          <rect width="286" height="230" rx="16" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+          
+          <text x="20" y="32" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700">Quick Wellness Tip</text>
+          
+          <rect x="20" y="48" width="246" height="70" rx="10" fill="rgba(59,130,246,0.08)" stroke="rgba(59,130,246,0.2)" stroke-width="1"/>
+          <text x="32" y="72" fill="#93c5fd" font-family="sans-serif" font-size="11" font-weight="600">💡 Eye Strain Relief</text>
+          <text x="32" y="92" fill="#cbd5e1" font-family="sans-serif" font-size="10">
+            Look at an object 20 feet away for 20 seconds
+          </text>
+          <text x="32" y="106" fill="#cbd5e1" font-family="sans-serif" font-size="10">
+            every 20 minutes of screen work.
+          </text>
+
+          <!-- Start Break Button -->
+          <g transform="translate(20, 134)">
+            <rect width="246" height="38" rx="10" fill="url(#blueViolet)"/>
+            <text x="123" y="24" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">
+              Take a 5-Min Stretch Break
+            </text>
+          </g>
+
+          <g transform="translate(20, 180)">
+            <rect width="246" height="34" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+            <text x="123" y="22" fill="#94a3b8" font-family="sans-serif" font-size="11" font-weight="500" text-anchor="middle">
+              Log Water Intake (+250ml)
+            </text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,3 @@
+# Place your profile photo here as mohit-profile.jpg
+# Recommended: 600x750px or larger, JPEG format, portrait crop
+# The Hero section will automatically load this image.
