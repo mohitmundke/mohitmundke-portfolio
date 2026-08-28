@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mohitmundke.dev/sitemap.xml
+Sitemap: https://mohitmundkeco.vercel.app/sitemap.xml
