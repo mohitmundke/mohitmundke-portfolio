@@ -912,6 +912,80 @@ Grateful for this opportunity and excited for everything that lies ahead. Here�
         title: 'Monthly Highlights Poster — June 2026',
         caption: 'AI Demo Event, Lyria Showcase, Tech Connections, Video Creation & Welcome Kit'
       },
+      {
+        url: '/images/gsa-tshirt-back-view.jpg',
+        title: 'Ambassador Identity — Back View',
+        caption: 'Google Student Ambassador 2026 Official Identity'
+      },
+      {
+        url: '/images/gsa-ambassador-portrait.jpg',
+        title: 'Campus Ambassador Portrait',
+        caption: 'Mohit Mundke · Google Student Ambassador (GID: 5314)'
+      },
+      {
+        url: '/images/gsa-onboarding-letter.jpg',
+        title: 'Official Welcome & Onboarding Letter',
+        caption: 'Google Gemini Student Ambassador Program 2026 Onboarding Letter'
+      },
+      {
+        url: '/images/gsa-welcome-kit-merch.jpg',
+        title: 'Welcome Kit & Ambassador Merchandise',
+        caption: 'Official Google Student Ambassador T-Shirt, Cap, Stickers & Kit'
+      }
+    ],
+    badgeStyle: 'bg-gradient-to-r from-blue-600/25 via-violet-600/25 to-amber-500/25 border border-blue-500/40 text-blue-300',
+    pulseColor: 'bg-amber-400',
+    cardBg: 'from-blue-950/20 via-[#0a0718] to-[#030610]',
+    cardBorder: 'hover:border-amber-500/40',
+    topGlow: 'bg-blue-600/15',
+    bottomGlow: 'bg-amber-500/15',
+    captionBg: 'bg-blue-950/25 border-blue-500/25',
+    captionLabel: 'text-blue-400',
+    tagColor: 'text-amber-300 hover:border-blue-500/40',
+    isFeatured: true,
+    shortDescription: 'A documented journey and milestone of my first month as a Google Student Ambassador — pushing boundaries, exploring Gemini AI, creating content, and leading on campus.',
+    highlightsList: [
+      'Google Student Ambassador — June 2026',
+      'AI Demo Event — Gemini & Lyria Showcase',
+      'Tech Connections with Fellow Ambassadors',
+      'Video Content Creation',
+      'Creative Reel Creation',
+      'AI Exploration & Learning',
+      'Welcome Kit Received',
+      'Behind-the-Scenes Event Planning',
+      'Leadership Growth',
+      'Team Gemini — GID: 5314'
+    ],
+    caption: `My journey as a Google Student Ambassador this month was all about pushing boundaries, embracing innovation, and transforming curiosity into action. 🚀✨
+
+From exploring Google's latest technologies and experimenting with powerful AI tools like Gemini, to creating content, collaborating with fellow ambassadors, and sharing ideas with the community — every experience became an opportunity to learn, innovate, and grow.
+
+This month also pushed me beyond my comfort zone. Through new challenges, creative projects, AI exploration, content creation, and meaningful connections, I strengthened my communication, creativity, leadership, and problem-solving skills.
+
+One of the most exciting parts of the journey was connecting with fellow ambassadors and becoming part of a community filled with curious minds, creators, innovators, and future tech leaders. 💙
+
+Grateful for the experiences, opportunities, and memories from my first month as a Google Student Ambassador.
+
+This is just the beginning. More learning, more creating, more innovation ahead. 🚀`,
+    tags: [
+      '#GoogleStudentAmbassador',
+      '#GSA2026',
+      '#Google',
+      '#TeamGemini',
+      '#GoogleGemini',
+      '#GeminiAI',
+      '#ArtificialIntelligence',
+      '#GenerativeAI',
+      '#Leadership',
+      '#CampusLeadership',
+      '#TechCommunity',
+      '#Innovation',
+      '#StudentAmbassador',
+      '#ContentCreation',
+      '#AICommunity',
+      '#GoogleStudents'
+    ]
+  },
   {
     id: 'google-gemini-ambassador-2026',
     title: 'Google Gemini AI Student Ambassador Program 2026',
