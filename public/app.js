@@ -420,26 +420,24 @@ const achievementsData = [
     desc: 'Recognized for active participation in college developer initiatives, AI workshops, and peer academic mentoring.'
   },
   {
-    title: 'New Certificate / Recommendation Letter Slot',
-    issuer: 'Sample Template Slot',
-    type: 'Upcoming Credential',
-    icon: '📜',
-    year: 'Ready to Add',
-    color: 'emerald',
-    isPlaceholder: true,
-    badgeText: '✦ Reserved Slot',
-    desc: 'Pre-configured sample card reserved for your upcoming certificate letter, recommendation letter, or hackathon credential.'
+    title: 'Team Gemini Explorer — 600 Points Milestone',
+    issuer: 'Google Student Ambassadors · Team Gemini',
+    type: 'Leadership Milestone',
+    icon: '🚀',
+    year: '2026',
+    color: 'blue',
+    badgeText: '600 Points Achieved ✓',
+    desc: 'Completed 600 points milestone over 5 months of active ambassadorship (GID: 5314), unlocking official Team Gemini Bronze Explorer rewards.'
   },
   {
-    title: 'Ambassador Event Recognition Slot',
-    issuer: 'Sample Template Slot',
-    type: 'Upcoming Milestone',
-    icon: '✨',
-    year: 'Ready to Add',
-    color: 'violet',
-    isPlaceholder: true,
-    badgeText: '✦ Reserved Slot',
-    desc: 'Pre-configured sample card reserved for upcoming GSA event letters, workshop completion certificates, or new technical achievements.'
+    title: 'GSA Contributor Reward — First Earned Milestone',
+    issuer: 'Google Student Ambassadors (India)',
+    type: 'Contributor Recognition',
+    icon: '🎁',
+    year: '2026',
+    color: 'emerald',
+    badgeText: 'Official GSA Reward ✓',
+    desc: 'Awarded Amazon Pay contributor gift card in recognition of active leadership, event execution, and community participation as a Google Student Ambassador (GID: 5314).'
   }
 ];
 
@@ -1063,6 +1061,163 @@ GID: 5314`,
       '#FundMyCrazy',
       '#AI',
       '#GoogleGemini'
+    ]
+  },
+  {
+    id: 'team-gemini-explorer-rewards-600-points',
+    title: 'Team Gemini Explorer Milestone — 600 Points & Rewards',
+    category: 'ambassador',
+    categoryBadge: 'LEADERSHIP & AMBASSADORSHIP',
+    specialBadge: '✦ 600 POINTS MILESTONE',
+    secondaryBadge: '✦ EXPLORER REWARDS',
+    cornerBadge: 'BRONZE EXPLORER · 600 PTS',
+    gidBadge: 'GID: 5314',
+    date: 'September 2026',
+    dateFormatted: 'September 2026 · 5-Month Ambassador Milestone',
+    organization: 'Google Student Ambassadors India · Team Gemini',
+    role: 'Google Student Ambassador · Team Gemini Explorer',
+    program: 'Google Student Ambassador Program 2026',
+    institution: 'Dr. D. Y. Patil College of Engineering & Innovation (DYPCEI)',
+    association: 'Team Gemini & Google Student Community',
+    actionButtonText: 'View Milestone',
+    image: '/images/team-gemini-explorer-rewards-600-points.jpg',
+    imageAlt: 'Team Gemini Explorer 600 Points Milestone Rewards — Notebook, Pen & Bronze Box — Mohit Mundke (GID: 5314)',
+    downloadName: 'Mohit-Mundke-Team-Gemini-Explorer-Rewards-600-Points.jpg',
+    badgeStyle: 'bg-gradient-to-r from-blue-600/25 via-violet-600/25 to-cyan-500/25 border border-cyan-400/40 text-cyan-300',
+    pulseColor: 'bg-cyan-400',
+    cardBg: 'from-blue-950/20 via-[#070e1c] to-[#030610]',
+    cardBorder: 'hover:border-cyan-500/40',
+    topGlow: 'bg-blue-600/15',
+    bottomGlow: 'bg-cyan-500/15',
+    captionBg: 'bg-blue-950/25 border-cyan-500/25',
+    captionLabel: 'text-cyan-400',
+    tagColor: 'text-cyan-300 hover:border-blue-500/40',
+    isFeatured: true,
+    shortDescription: '600 points unlocked after 5 months of active ambassadorship — celebrating the official Team Gemini Bronze Explorer rewards, consistent AI experimentation, and community impact.',
+    highlightsList: [
+      '600 Points Milestone Achieved',
+      '5 Months as Google Student Ambassador',
+      'Team Gemini Explorer Rewards Unlocked',
+      'Official Ambassador Hardcover Notebook',
+      'Engraved 2026 Ambassador Pen',
+      'Brainstorming & Structuring Ideas with Gemini',
+      'Hands-on AI Experimentation & Learning',
+      'Team Gemini — GID: 5314'
+    ],
+    caption: `600 Points. 5 Months. Infinite Curiosity, Ideas & Memories. 🚀✨
+
+When I started my journey as a Google Student Ambassador (GID: 5314), I knew it would be an incredible opportunity to learn, explore, and connect with a passionate developer community. What I didn’t realize was just how deeply Google Gemini would become woven into my daily workflow.
+
+Over the past 5 months, Gemini has been my constant creative partner and technical catalyst:
+• 💡 Brainstorming innovative ideas & turning raw thoughts into structured roadmaps
+• 🔍 Deconstructing complex concepts & exploring cutting-edge AI technologies
+• 🛠️ Accelerating project development, refining code, and building smarter solutions
+• 🎨 Creating engaging content & empowering peers across campus
+
+One of the most rewarding aspects of the #TeamGemini journey is its milestone system. By actively participating, completing technical activities, and contributing to the student community, we earn points and unlock new achievements.
+
+Today, I’m thrilled to share that I have crossed 600 points and received these official Team Gemini Bronze Explorer rewards! 💙
+
+To me, this notebook, engraved 2026 Ambassador pen, and Explorer kit represent far more than just goodies — they stand for the consistency, curiosity, and effort invested over the past five months.
+
+The biggest lesson of this journey? The best way to understand technology isn’t just to use it, but to explore, experiment, build, and innovate with it.
+
+5 months down.
+600 points achieved.
+And honestly… this is just the beginning. 🚀
+
+Thank you, #TeamGemini, for making this journey so exciting! ✨`,
+    tags: [
+      '#GoogleStudentAmbassador',
+      '#TeamGemini',
+      '#GoogleGemini',
+      '#GeminiAI',
+      '#600Points',
+      '#ExplorerRewards',
+      '#BronzeExplorer',
+      '#GSA2026',
+      '#AI',
+      '#ArtificialIntelligence',
+      '#GenerativeAI',
+      '#CampusLeadership',
+      '#Innovation',
+      '#TechCommunity',
+      '#StudentAmbassador'
+    ]
+  },
+  {
+    id: 'gsa-amazon-gift-card-reward',
+    title: 'Google Student Ambassador Contributor Reward — First Earned Milestone',
+    category: 'ambassador',
+    categoryBadge: 'LEADERSHIP & REWARDS',
+    specialBadge: '✦ FIRST EARNED MILESTONE',
+    secondaryBadge: '✦ CONTRIBUTOR REWARD',
+    cornerBadge: 'AMAZON PAY REWARD · GID: 5314',
+    gidBadge: 'GID: 5314',
+    date: '2026 Milestone',
+    dateFormatted: '2026 · Official Contributor Recognition',
+    organization: 'Google Student Ambassadors India · Pine Labs',
+    role: 'Google Student Ambassador (GID: 5314)',
+    program: 'Google Student Ambassador Program 2026',
+    institution: 'Dr. D. Y. Patil College of Engineering & Innovation (DYPCEI)',
+    association: 'Team Gemini & Google Student Community',
+    issuedTo: 'Mohit Yogeshkumar Mundke',
+    actionButtonText: 'View Reward Details',
+    image: '/images/gsa-amazon-gift-card-reward.jpg',
+    imageAlt: 'Google Student Ambassador Contributor Reward Amazon Gift Card — Mohit Yogeshkumar Mundke (GID: 5314)',
+    downloadName: 'Mohit-Mundke-GSA-Amazon-Gift-Card-Reward.jpg',
+    badgeStyle: 'bg-gradient-to-r from-emerald-600/25 via-teal-600/25 to-blue-500/25 border border-emerald-400/40 text-emerald-300',
+    pulseColor: 'bg-emerald-400',
+    cardBg: 'from-emerald-950/20 via-[#040e16] to-[#030610]',
+    cardBorder: 'hover:border-emerald-500/40',
+    topGlow: 'bg-emerald-600/15',
+    bottomGlow: 'bg-teal-500/15',
+    captionBg: 'bg-emerald-950/25 border-emerald-500/25',
+    captionLabel: 'text-emerald-400',
+    tagColor: 'text-emerald-300 hover:border-emerald-500/40',
+    isFeatured: true,
+    shortDescription: 'A deeply meaningful milestone — receiving an Amazon Pay reward for active community leadership, technical sessions, and hands-on participation as a Google Student Ambassador.',
+    highlightsList: [
+      'Official GSA Contributor Reward',
+      'First Independent Earnings Milestone',
+      'Google Student Ambassador Program 2026',
+      'Community Contributions & Event Participation',
+      'Value of Showing Up & Consistent Effort',
+      'Issued to: Mohit Yogeshkumar Mundke',
+      'Order: ARRS0000011847 via Pine Labs',
+      'Team Gemini — GID: 5314'
+    ],
+    caption: `A Small Win That Means the World — Celebrating My First Earned Milestone ✨🎁
+
+Grateful and excited to share that I’ve received a ₹500 Amazon Gift Card as an official reward for my contributions as a Google Student Ambassador 2026 (GID: 5314).
+
+While ₹500 might seem like a modest number to some, to me it holds deep personal significance — because it represents my very first earned income. 🥹✨
+
+It isn’t about the monetary figure. It’s about the unforgettable feeling of earning something entirely through my own dedication, curiosity, participation, and the work I’ve poured into the student tech community over these past months.
+
+For me, this reward is a tangible reminder of a timeless truth:
+"Showing up consistently, experimenting boldly, creating value, and helping others always matters."
+
+Every small milestone is a stepping stone toward the bigger vision. I’m deeply grateful for the opportunities to build with Google Gemini, organize campus sessions, and collaborate with inspiring student developers across India.
+
+Here’s to continuous learning, embracing new challenges, and many more milestones ahead! 🌱🚀
+
+A heartfelt thank you to Google, Team Gemini, Google Student Ambassadors (India), and Ping Network for recognizing student efforts and making this journey so rewarding! ✨
+
+GID: 5314`,
+    tags: [
+      '#GoogleStudentAmbassador',
+      '#TeamGemini',
+      '#GoogleGemini',
+      '#FirstIncome',
+      '#SmallWins',
+      '#ContributorReward',
+      '#GSA2026',
+      '#CampusLeadership',
+      '#CommunityImpact',
+      '#ContinuousLearning',
+      '#StudentDeveloper',
+      '#GrowthMindset'
     ]
   },
   {
