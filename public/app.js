@@ -460,607 +460,78 @@ const galleryCategories = [
 
 const galleryData = [
   {
-    id: 'pixel-war-2k26',
-    title: 'Pixel War 2k26 — UI/UX Design Battle',
-    category: 'competition',
-    categoryBadge: 'COMPETITION',
-    date: '7th March 2026',
-    dateFormatted: 'March 7, 2026',
-    organization: 'Department of Artificial Intelligence & Data Science, Dr. D. Y. Patil College of Engineering & Innovation',
-    association: 'BRAIN Student Chapter',
-    image: '/images/pixel-war-2k26.jpg',
-    imageAlt: 'Pixel War 2k26 UI/UX Design Battle Certificate of Participation — Mohit Mundke',
-    downloadName: 'Mohit-Mundke-Pixel-War-2k26.jpg',
-    badgeStyle: 'bg-gradient-to-r from-violet-600/20 to-blue-600/20 border-violet-500/40 text-violet-300',
-    pulseColor: 'bg-violet-400',
-    cardBg: 'from-violet-950/20 via-[#070b19] to-[#030610]',
-    cardBorder: 'hover:border-violet-500/40',
-    topGlow: 'bg-violet-600/10',
-    bottomGlow: 'bg-blue-600/10',
-    captionBg: 'bg-violet-950/20 border-violet-500/20',
-    captionLabel: 'text-violet-400',
-    tagColor: 'text-cyan-300 hover:border-violet-500/40',
-    isFeatured: true,
-    caption: `Excited to share that I successfully participated in the UI/UX Pixel War 2k26 competition held on 7th March! ✨⭐
-
-Hence, gained a lot of experience by reviewing various tools used by participants like Framer, Stitch, Firebase AI Studio, Figma, Canva, and various other open-source AI tools were used!!
-
-It was a great opportunity to explore creativity, innovation, UI/UX design thinking, and problem-solving.
-
-Special thanks to BRAIN DYPCOEI for organizing the event successfully! 😁`,
-    tags: [
-      '#DYPCOEI',
-      '#UIUX',
-      '#PUNE',
-      '#AI',
-      '#DS',
-      '#ML',
-      '#Design',
-      '#PIXEL_WAR',
-      '#Student'
-    ]
-  },
-  {
-    id: 'aws-ml-ai-cert',
-    title: 'Fundamentals of Machine Learning and Artificial Intelligence',
-    category: 'certificate',
-    categoryBadge: 'CERTIFICATION',
-    date: 'April 13, 2026',
-    dateFormatted: 'April 13, 2026',
-    organization: 'AWS Training & Certification',
-    association: 'Amazon Web Services (AWS)',
-    issuedTo: 'Mohit Mundke',
-    image: '/images/aws-ml-ai-certificate.jpg',
-    imageAlt: 'Fundamentals of Machine Learning and Artificial Intelligence Completion Certificate — AWS Training & Certification — Mohit Mundke',
-    downloadName: 'Mohit-Mundke-AWS-ML-AI-Certificate.jpg',
-    badgeStyle: 'bg-gradient-to-r from-amber-500/20 to-orange-500/20 border-amber-500/40 text-amber-300',
-    pulseColor: 'bg-amber-400',
-    cardBg: 'from-amber-950/15 via-[#070a18] to-[#030610]',
-    cardBorder: 'hover:border-amber-500/40',
-    topGlow: 'bg-amber-500/10',
-    bottomGlow: 'bg-orange-500/10',
-    captionBg: 'bg-amber-950/20 border-amber-500/20',
-    captionLabel: 'text-amber-400',
-    tagColor: 'text-amber-300 hover:border-amber-500/40',
-    isFeatured: false,
-    caption: `Excited to share that I’ve successfully completed my certification in “Fundamentals of Machine Learning and Artificial Intelligence” from AWS Training & Certification 🎓✨
-
-This journey helped me strengthen my understanding of core ML & AI concepts 🤖📊 and gave me valuable insights into how intelligent systems work in real-world applications 🌍💡
-
-Looking forward to diving deeper into this field and building something impactful 🚀🔥`,
-    tags: [
-      '#AWS',
-      '#MachineLearning',
-      '#ArtificialIntelligence',
-      '#Learning',
-      '#Upskilling',
-      '#FutureReady',
-      '#AI',
-      '#ML'
-    ]
-  },
-  {
-    id: 'nptel-python-data-science',
-    title: 'Python for Data Science',
-    category: 'certificate',
-    categoryBadge: 'CERTIFICATION',
-    cornerBadge: 'NPTEL ONLINE CERTIFICATION',
-    date: 'Jan–Feb 2026',
-    dateFormatted: 'Jan–Feb 2026 · 4 Week Course',
-    organization: 'NPTEL Online Certification · IIT Madras · SWAYAM',
-    association: 'Ministry of Education (Govt. of India) & IIT Madras',
+    id: 'gsa-amazon-gift-card-reward',
+    title: 'Google Student Ambassador Contributor Reward — First Earned Milestone',
+    category: 'ambassador',
+    categoryBadge: 'LEADERSHIP & REWARDS',
+    specialBadge: '✦ FIRST EARNED MILESTONE',
+    secondaryBadge: '✦ CONTRIBUTOR REWARD',
+    cornerBadge: 'AMAZON PAY REWARD · GID: 5314',
+    gidBadge: 'GID: 5314',
+    date: '2026 Milestone',
+    dateFormatted: '2026 · Official Contributor Recognition',
+    organization: 'Google Student Ambassadors India · Pine Labs',
+    role: 'Google Student Ambassador (GID: 5314)',
+    program: 'Google Student Ambassador Program 2026',
+    institution: 'Dr. D. Y. Patil College of Engineering & Innovation (DYPCEI)',
+    association: 'Team Gemini & Google Student Community',
     issuedTo: 'Mohit Yogeshkumar Mundke',
-    image: '/images/nptel-python-data-science.jpg',
-    imageAlt: 'Python for Data Science NPTEL Online Certification — IIT Madras — Mohit Yogeshkumar Mundke',
-    downloadName: 'Mohit-Mundke-NPTEL-Python-Data-Science.jpg',
-    badgeStyle: 'bg-gradient-to-r from-rose-600/20 via-red-500/20 to-amber-500/20 border-rose-500/40 text-rose-300',
-    pulseColor: 'bg-rose-400',
-    cardBg: 'from-rose-950/15 via-[#090614] to-[#030610]',
-    cardBorder: 'hover:border-rose-500/40',
-    topGlow: 'bg-rose-600/10',
-    bottomGlow: 'bg-amber-600/10',
-    captionBg: 'bg-rose-950/20 border-rose-500/20',
-    captionLabel: 'text-rose-400',
-    tagColor: 'text-amber-300 hover:border-rose-500/40',
-    isFeatured: false,
-    scoreDetails: {
-      consolidated: '52%',
-      assignments: '21.67 / 25',
-      proctoredExam: '30 / 75',
-      duration: 'Jan–Feb 2026 (4 Week Course)'
-    },
-    caption: `I am pleased to share that I have successfully completed the NPTEL Online Certification in Python for Data Science 🎓 offered by IIT Madras.
-
-This course has strengthened my understanding of Python fundamentals, data handling, and key data science concepts 📊. It has been a valuable learning experience that contributed to building a strong foundation in this domain.
-
-I sincerely thank the instructors and NPTEL for this opportunity 🙏.
-
-I look forward to applying these skills in real-world projects and continuing my learning journey in data science 🚀.`,
-    tags: [
-      '#NPTEL',
-      '#Python',
-      '#DataScience',
-      '#IITMadras',
-      '#SkillDevelopment',
-      '#ContinuousLearning'
-    ]
-  },
-  {
-    id: 'imarticus-c-cpp-cert',
-    title: 'C & C++ Programming',
-    category: 'certificate',
-    categoryBadge: 'CERTIFICATION',
-    cornerBadge: 'CERTIFICATE OF PROFICIENCY',
-    date: '08 May 2026',
-    dateFormatted: '08 May 2026',
-    organization: 'Imarticus Learning',
-    association: 'NSDC & Skill India Certified',
-    issuedTo: 'Mohit Mundke',
-    image: '/images/imarticus-c-cpp-certificate.jpg',
-    imageAlt: 'C & C++ Programming Certificate of Proficiency — Imarticus Learning — Grade A — Mohit Mundke',
-    downloadName: 'Mohit-Mundke-Imarticus-C-CPP-Certificate.jpg',
-    badgeStyle: 'bg-gradient-to-r from-emerald-600/20 via-teal-500/20 to-cyan-500/20 border-emerald-500/40 text-emerald-300',
+    actionButtonText: 'View Reward Details',
+    image: '/images/gsa-amazon-gift-card-reward.jpg',
+    imageAlt: 'Google Student Ambassador Contributor Reward Amazon Gift Card — Mohit Yogeshkumar Mundke (GID: 5314)',
+    downloadName: 'Mohit-Mundke-GSA-Amazon-Gift-Card-Reward.jpg',
+    badgeStyle: 'bg-gradient-to-r from-emerald-600/25 via-teal-600/25 to-blue-500/25 border border-emerald-400/40 text-emerald-300',
     pulseColor: 'bg-emerald-400',
-    cardBg: 'from-emerald-950/15 via-[#060e10] to-[#030610]',
+    cardBg: 'from-emerald-950/20 via-[#040e16] to-[#030610]',
     cardBorder: 'hover:border-emerald-500/40',
-    topGlow: 'bg-emerald-600/10',
-    bottomGlow: 'bg-teal-600/10',
-    captionBg: 'bg-emerald-950/20 border-emerald-500/20',
+    topGlow: 'bg-emerald-600/15',
+    bottomGlow: 'bg-teal-500/15',
+    captionBg: 'bg-emerald-950/25 border-emerald-500/25',
     captionLabel: 'text-emerald-400',
     tagColor: 'text-emerald-300 hover:border-emerald-500/40',
-    isFeatured: false,
-    scoreDetails: {
-      consolidated: 'Grade: A',
-      assignments: 'Certificate ID: 5RSQBQIZVOH',
-      proctoredExam: 'NSDC & Skill India'
-    },
-    caption: `Grateful to share that I’ve successfully completed the C & C++ Programming certification from Imarticus Learning with an A Grade 🎉
-
-This journey helped me strengthen my fundamentals in:
-
-• C Programming
-• C++ Concepts
-• Functions & Pointers
-• Object-Oriented Programming
-• Problem Solving & Logic Building
-
-A big thanks to everyone who supported and guided me throughout the learning process. Looking forward to applying these skills in more projects and real-world development 🚀`,
-    tags: [
-      '#Programming',
-      '#CProgramming',
-      '#CPP',
-      '#Coding',
-      '#Learning',
-      '#StudentDeveloper',
-      '#SkillDevelopment',
-      '#Tech',
-      '#ImarticusLearning',
-      '#CPlusPlus',
-      '#DYPCEOI'
-    ]
-  },
-  {
-    id: 'google-gemini-ambassador-2026',
-    title: 'Google Gemini AI Student Ambassador Program 2026',
-    category: 'ambassador',
-    categoryBadge: 'LEADERSHIP & AMBASSADORSHIP',
-    specialBadge: '✦ FEATURED ACHIEVEMENT',
-    cornerBadge: 'OFFICIAL GSA APPOINTMENT',
-    gidBadge: 'GID: 5314',
-    date: 'May 2026 – Present',
-    dateFormatted: 'May 2026 · Official Appointment',
-    organization: 'Google Student Ambassadors India · Google Gemini',
-    role: 'Campus Ambassador — 2026',
-    institution: 'Dr. D. Y. Patil College of Engineering & Innovation (DYPCEI)',
-    association: 'Google Gemini & Student Developer Community',
-    image: '/images/google-gemini-ambassador-2026.jpg',
-    imageAlt: 'Google Gemini AI Student Ambassador Program 2026 Announcement Poster — Mohit Mundke (GID: 5314)',
-    downloadName: 'Mohit-Mundke-Google-Gemini-Ambassador-2026.jpg',
-    badgeStyle: 'bg-gradient-to-r from-blue-600/25 via-violet-600/25 to-cyan-500/25 border border-blue-500/40 text-blue-300',
-    pulseColor: 'bg-blue-400',
-    cardBg: 'from-blue-950/20 via-[#070d1e] to-[#030610]',
-    cardBorder: 'hover:border-blue-500/50',
-    topGlow: 'bg-blue-600/15',
-    bottomGlow: 'bg-cyan-500/15',
-    captionBg: 'bg-blue-950/25 border-blue-500/25',
-    captionLabel: 'text-blue-400',
-    tagColor: 'text-cyan-300 hover:border-blue-500/40',
     isFeatured: true,
-    highlights: [
-      { label: 'Role', value: 'Campus Ambassador' },
-      { label: 'Identity', value: 'GID: 5314' },
-      { label: 'Focus', value: 'Google Gemini & AI Projects' }
-    ],
-    caption: `Excited to announce that I’ve officially joined the Google Gemini AI Student Ambassador Program 2026 as a Campus Ambassador! 🚀✨
-
-Grateful for the opportunity to represent Gemini AI at my college and become part of a nationwide community of innovators, creators, and future tech leaders.
-
-Looking forward to building impactful AI projects, creating content around Gemini AI, organizing engaging activities on campus, and connecting with amazing creators and developers across India. 💙
-
-This is just the beginning of an incredible journey with AI and innovation! ✨`,
-    tags: [
-      '#GoogleStudentAmbassador',
-      '#GSA2026',
-      '#TeamGemini',
-      '#GoogleGemini',
-      '#GeminiAI',
-      '#GoogleGeminiAI',
-      '#AI',
-      '#ArtificialIntelligence',
-      '#Innovation',
-      '#TechCommunity',
-      '#CampusAmbassador',
-      '#GenerativeAI'
-    ]
-  },
-  {
-    id: 'gsa-june-2026-insights',
-    title: 'Google Student Ambassador Highlights — June 2026',
-    category: 'ambassador',
-    categoryBadge: 'LEADERSHIP & AMBASSADORSHIP',
-    specialBadge: '✦ FEATURED JOURNEY',
-    secondaryBadge: '✦ MONTHLY HIGHLIGHTS',
-    cornerBadge: '📸 5 HIGHLIGHTS & PHOTOS',
-    gidBadge: 'GID: 5314',
-    date: 'June 2026',
-    dateFormatted: 'June 2026 · Monthly Milestone',
-    organization: 'Google Student Ambassadors India · Team Gemini',
-    role: 'Student Ambassador',
-    program: 'Google Student Ambassador Program 2026',
-    institution: 'Dr. D. Y. Patil College of Engineering & Innovation (DYPCEI)',
-    association: 'Team Gemini & Google Student Community',
-    actionButtonText: 'View Journey',
-    image: '/images/gsa-june-2026-insights.jpg',
-    imageAlt: 'Google Student Ambassador Highlights — June 2026 — Mohit Mundke (GID: 5314)',
-    downloadName: 'Mohit-Mundke-GSA-June-2026-Highlights.jpg',
-    galleryImages: [
-      {
-        url: '/images/gsa-june-2026-insights.jpg',
-        title: 'Monthly Highlights Poster — June 2026',
-        caption: 'AI Demo Event, Lyria Showcase, Tech Connections, Video Creation & Welcome Kit'
-      },
-      {
-        url: '/images/gsa-tshirt-back-view.jpg',
-        title: 'Ambassador Identity — Back View',
-        caption: 'Google Student Ambassador 2026 Official Identity'
-      },
-      {
-        url: '/images/gsa-ambassador-portrait.jpg',
-        title: 'Campus Ambassador Portrait',
-        caption: 'Mohit Mundke · Google Student Ambassador (GID: 5314)'
-      },
-      {
-        url: '/images/gsa-onboarding-letter.jpg',
-        title: 'Official Welcome & Onboarding Letter',
-        caption: 'Google Gemini Student Ambassador Program 2026 Onboarding Letter'
-      },
-      {
-        url: '/images/gsa-welcome-kit-merch.jpg',
-        title: 'Welcome Kit & Ambassador Merchandise',
-        caption: 'Official Google Student Ambassador T-Shirt, Cap, Stickers & Kit'
-      }
-    ],
-    badgeStyle: 'bg-gradient-to-r from-blue-600/25 via-violet-600/25 to-amber-500/25 border border-blue-500/40 text-blue-300',
-    pulseColor: 'bg-amber-400',
-    cardBg: 'from-blue-950/20 via-[#0a0718] to-[#030610]',
-    cardBorder: 'hover:border-amber-500/40',
-    topGlow: 'bg-blue-600/15',
-    bottomGlow: 'bg-amber-500/15',
-    captionBg: 'bg-blue-950/25 border-blue-500/25',
-    captionLabel: 'text-blue-400',
-    tagColor: 'text-amber-300 hover:border-blue-500/40',
-    isFeatured: true,
-    shortDescription: 'A documented journey and milestone of my first month as a Google Student Ambassador — pushing boundaries, exploring Gemini AI, creating content, and leading on campus.',
+    shortDescription: 'A deeply meaningful milestone — receiving an Amazon Pay reward for active community leadership, technical sessions, and hands-on participation as a Google Student Ambassador.',
     highlightsList: [
-      'Google Student Ambassador — June 2026',
-      'AI Demo Event — Gemini & Lyria Showcase',
-      'Tech Connections with Fellow Ambassadors',
-      'Video Content Creation',
-      'Creative Reel Creation',
-      'AI Exploration & Learning',
-      'Welcome Kit Received',
-      'Behind-the-Scenes Event Planning',
-      'Leadership Growth',
+      'Official GSA Contributor Reward',
+      'First Independent Earnings Milestone',
+      'Google Student Ambassador Program 2026',
+      'Community Contributions & Event Participation',
+      'Value of Showing Up & Consistent Effort',
+      'Issued to: Mohit Yogeshkumar Mundke',
+      'Order: ARRS0000011847 via Pine Labs',
       'Team Gemini — GID: 5314'
     ],
-    caption: `My journey as a Google Student Ambassador this month was all about pushing boundaries, embracing innovation, and transforming curiosity into action. 🚀✨
+    caption: `A Small Win That Means the World — Celebrating My First Earned Milestone ✨🎁
 
-From exploring Google's latest technologies and experimenting with powerful AI tools like Gemini, to creating content, collaborating with fellow ambassadors, and sharing ideas with the community — every experience became an opportunity to learn, innovate, and grow.
+Grateful and excited to share that I’ve received a ₹500 Amazon Gift Card as an official reward for my contributions as a Google Student Ambassador 2026 (GID: 5314).
 
-This month also pushed me beyond my comfort zone. Through new challenges, creative projects, AI exploration, content creation, and meaningful connections, I strengthened my communication, creativity, leadership, and problem-solving skills.
+While ₹500 might seem like a modest number to some, to me it holds deep personal significance — because it represents my very first earned income. 🥹✨
 
-One of the most exciting parts of the journey was connecting with fellow ambassadors and becoming part of a community filled with curious minds, creators, innovators, and future tech leaders. 💙
+It isn’t about the monetary figure. It’s about the unforgettable feeling of earning something entirely through my own dedication, curiosity, participation, and the work I’ve poured into the student tech community over these past months.
 
-Grateful for the experiences, opportunities, and memories from my first month as a Google Student Ambassador.
+For me, this reward is a tangible reminder of a timeless truth:
+"Showing up consistently, experimenting boldly, creating value, and helping others always matters."
 
-This is just the beginning. More learning, more creating, more innovation ahead. 🚀`,
-    tags: [
-      '#GoogleStudentAmbassador',
-      '#GSA2026',
-      '#Google',
-      '#TeamGemini',
-      '#GoogleGemini',
-      '#GeminiAI',
-      '#ArtificialIntelligence',
-      '#GenerativeAI',
-      '#Leadership',
-      '#CampusLeadership',
-      '#TechCommunity',
-      '#Innovation',
-      '#StudentAmbassador',
-      '#ContentCreation',
-      '#AICommunity',
-      '#GoogleStudents'
-    ]
-  },
-  {
-    id: 'brain-foundation-member',
-    title: 'Bharat Research in AI and NextGen Foundation Membership 2026',
-    category: 'career',
-    categoryBadge: 'MEMBERSHIP & COMMUNITY',
-    specialBadge: '✦ COMMUNITY ACHIEVEMENT',
-    secondaryBadge: 'MEMBER 2026',
-    cornerBadge: 'OFFICIAL CERTIFICATE OF MEMBERSHIP',
-    gidBadge: 'BRAIN-DRY261-S024',
-    date: '02 July 2026',
-    dateFormatted: '02 July 2026 · Valid Until 31 Dec 2026',
-    organization: 'Bharat Research in AI and NextGen Foundation (BRAIN)',
-    role: 'Official Member',
-    membership: 'BRAIN Academic Institution Membership',
-    institution: 'Dr. D. Y. Patil College of Engineering & Innovation (DYPCEI)',
-    association: 'AI & NextGen Research Community',
-    actionButtonText: 'View Full Certificate',
-    image: '/images/brain-certificate-membership.jpg',
-    imageAlt: 'Bharat Research in AI and NextGen Foundation Certificate of Membership — Mohit Yogeshkumar Mundke',
-    downloadName: 'Mohit-Mundke-BRAIN-Membership-2026.jpg',
-    badgeStyle: 'bg-gradient-to-r from-blue-700/25 via-emerald-600/25 to-amber-500/25 border border-emerald-400/40 text-emerald-300',
-    pulseColor: 'bg-emerald-400',
-    cardBg: 'from-blue-950/20 via-[#05111b] to-[#030610]',
-    cardBorder: 'hover:border-emerald-500/40',
-    topGlow: 'bg-blue-600/15',
-    bottomGlow: 'bg-emerald-500/15',
-    captionBg: 'bg-blue-950/25 border-emerald-500/25',
-    captionLabel: 'text-emerald-400',
-    tagColor: 'text-emerald-300 hover:border-blue-500/40',
-    isFeatured: true,
-    shortDescription: 'Official Academic Institution Membership with Bharat Research in AI and NextGen Foundation (BRAIN) — dedicated to AI research, emerging technologies, innovation, and impactful community initiatives.',
-    highlightsList: [
-      'Official BRAIN Member',
-      'Bharat Research in AI and NextGen Foundation',
-      'AI, Innovation & Technology Community',
-      'Academic Institution Membership',
-      'Membership ID: BRAIN-DRY261-S024',
-      'Issued: 02 July 2026',
-      'Valid Until: 31 December 2026',
-      'Dr. D. Y. Patil College of Engineering & Innovation'
-    ],
-    caption: `Excited to share another meaningful milestone in my journey! 🎉
+Every small milestone is a stepping stone toward the bigger vision. I’m deeply grateful for the opportunities to build with Google Gemini, organize campus sessions, and collaborate with inspiring student developers across India.
 
-I’m honored to officially become a member of the Bharat Research in AI and NextGen Foundation (BRAIN).
+Here’s to continuous learning, embracing new challenges, and many more milestones ahead! 🌱🚀
 
-Being part of a community dedicated to AI, innovation, and technology-driven impact is an incredible opportunity to learn, collaborate, and contribute alongside passionate changemakers.
-
-As an AI & Data Science student, I look forward to expanding my knowledge, working on meaningful initiatives, exploring new opportunities, and growing with this inspiring network.
-
-Grateful for this opportunity and excited for everything that lies ahead. Here’s to continuous learning, innovation, and making a difference! 🚀`,
-    tags: [
-      '#ArtificialIntelligence',
-      '#AI',
-      '#MachineLearning',
-      '#Innovation',
-      '#TechCommunity',
-      '#Student',
-      '#AIResearch',
-      '#Leadership',
-      '#FutureReady',
-      '#Learning',
-      '#BRAIN',
-      '#ProfessionalGrowth'
-    ]
-  },
-  {
-    id: 'gsa-july-2026-highlights',
-    title: 'Google Student Ambassador Highlights — July 2026',
-    category: 'ambassador',
-    categoryBadge: 'LEADERSHIP & AMBASSADORSHIP',
-    specialBadge: '✦ BRONZE BADGE MILESTONE',
-    secondaryBadge: '✦ JULY HIGHLIGHTS',
-    cornerBadge: 'BRONZE BADGE · GID: 5314',
-    gidBadge: 'GID: 5314',
-    date: 'July 2026',
-    dateFormatted: 'July 2026 · Monthly Highlights',
-    organization: 'Google Student Ambassadors India · Team Gemini',
-    role: 'Google Student Ambassador · Bronze Badge',
-    program: 'Google Student Ambassador Program 2026',
-    institution: 'Dr. D. Y. Patil College of Engineering & Innovation (DYPCEI)',
-    association: 'Team Gemini & Google Student Community',
-    actionButtonText: 'View July Highlights',
-    image: '/images/gsa-july-2026-highlights.jpg',
-    imageAlt: 'Google Student Ambassador July Monthly Highlights — Bronze Badge — Mohit Yogeshkumar Mundke (GID: 5314)',
-    downloadName: 'Mohit-Mundke-GSA-July-2026-Highlights.jpg',
-    badgeStyle: 'bg-gradient-to-r from-amber-600/25 via-violet-600/25 to-blue-500/25 border border-amber-400/40 text-amber-300',
-    pulseColor: 'bg-amber-400',
-    cardBg: 'from-amber-950/20 via-[#0a0718] to-[#030610]',
-    cardBorder: 'hover:border-amber-500/40',
-    topGlow: 'bg-amber-600/15',
-    bottomGlow: 'bg-violet-500/15',
-    captionBg: 'bg-amber-950/25 border-amber-500/25',
-    captionLabel: 'text-amber-400',
-    tagColor: 'text-amber-300 hover:border-violet-500/40',
-    isFeatured: true,
-    shortDescription: 'Learning. Leading. Inspiring with Gemini ✨ — July progress dashboard showcasing product trials, content creation, analytics tracking, and earning the Bronze Badge.',
-    highlightsList: [
-      'Google Student Ambassador — July 2026',
-      'Bronze Badge Earned',
-      'Product Trials (Laboratory Flask)',
-      'Content Creation (Video / Clapper)',
-      'Monthly Highlights (Analytics / Dashboard)',
-      'Product Understanding (Search Exploration)',
-      'Boost Google Initiatives (Megaphone)',
-      'Team Gemini — GID: 5314'
-    ],
-    caption: `Learning. Leading. Inspiring with Gemini ✨
-
-July was all about progress, passion, and purpose. As a Google Student Ambassador representing Team Gemini (GID: 5314), I engaged in hands-on product trials, video content creation, analytics tracking, and community tech initiatives.
-
-Honored to earn the Bronze Badge milestone this month! Grateful for every opportunity to learn, lead, and inspire. Let's keep building the future together 🚀`,
-    tags: [
-      '#GoogleStudentAmbassador',
-      '#TeamGemini',
-      '#GoogleGemini',
-      '#GeminiAI',
-      '#BronzeBadge',
-      '#GSA2026',
-      '#JulyHighlights',
-      '#AI',
-      '#Leadership',
-      '#ContentCreation',
-      '#Innovation',
-      '#TechCommunity'
-    ]
-  },
-  {
-    id: 'thiranex-internship-offer',
-    title: 'Internship in Full Stack Development',
-    category: 'career',
-    categoryBadge: 'CAREER & PROFESSIONAL EXPERIENCE',
-    specialBadge: '✦ CAREER MILESTONE',
-    secondaryBadge: 'REMOTE INTERNSHIP',
-    cornerBadge: 'FULL STACK DEVELOPMENT',
-    gidBadge: 'THX-AUG1126-479',
-    date: '11 Aug 2026 — 10 Sept 2026',
-    dateFormatted: '11 August 2026 — 10 September 2026',
-    organization: 'Thiranex',
-    role: 'Intern — Full Stack Development',
-    program: 'Full Stack Development Internship',
-    association: 'Thiranex Engineering Team · Remote / Project-Based',
-    actionButtonText: 'View Offer Letter',
-    image: '/images/thiranex-internship-offer-letter.jpg',
-    imageAlt: 'Thiranex Offer Letter for Internship in Full Stack Development — Mohit Yogeshkumar Mundke (THX-AUG1126-479)',
-    downloadName: 'Mohit-Mundke-Thiranex-Internship-Offer-Letter.jpg',
-    badgeStyle: 'bg-gradient-to-r from-blue-600/25 via-cyan-600/25 to-indigo-600/25 border border-cyan-400/40 text-cyan-300',
-    pulseColor: 'bg-cyan-400',
-    cardBg: 'from-blue-950/20 via-[#070e1c] to-[#030610]',
-    cardBorder: 'hover:border-cyan-500/40',
-    topGlow: 'bg-blue-600/15',
-    bottomGlow: 'bg-cyan-500/15',
-    captionBg: 'bg-blue-950/25 border-cyan-500/25',
-    captionLabel: 'text-cyan-400',
-    tagColor: 'text-cyan-300 hover:border-blue-500/40',
-    isFeatured: true,
-    shortDescription: 'Selected for Internship in Full Stack Development at Thiranex — working on industry-oriented practical projects, component architecture, and real-world web applications under professional mentorship.',
-    highlightsList: [
-      'Selected for Internship in Full Stack Development',
-      'Organization: Thiranex',
-      'Role: Intern — Full Stack Development',
-      'Work Mode: Remote / Project-Based',
-      'Commencement: 11 August 2026',
-      'Completion: 10 September 2026',
-      'Industry-oriented practical projects',
-      'Professional mentorship',
-      'Hands-on Full Stack Development experience'
-    ],
-    caption: `🚀 Excited to Begin a New Chapter!
-
-I’m thrilled to share that I’ve been selected for an Internship in Full Stack Development at Thiranex. 💻✨
-
-This opportunity marks another step forward in my journey of turning knowledge into real-world skills and building practical solutions.
-
-Over the coming weeks, I’ll be working on industry-oriented projects, gaining hands-on experience in Full Stack Development, and learning under professional mentorship.
-
-📌 Role: Intern — Full Stack Development
-🏢 Organization: Thiranex
-📅 Duration: 11 August 2026 — 10 September 2026
-🌐 Mode: Remote / Project-Based
-
-I’m grateful for this opportunity and excited for the learning, challenges, and experiences ahead. Looking forward to building, learning, and growing! 🚀
-
-Here’s to the next chapter! 🌱💻`,
-    tags: [
-      '#Internship',
-      '#FullStackDevelopment',
-      '#Thiranex',
-      '#WebDevelopment',
-      '#SoftwareDevelopment',
-      '#Learning',
-      '#CareerGrowth',
-      '#TechJourney',
-      '#StudentDeveloper',
-      '#ProfessionalGrowth',
-      '#FullStackDeveloper',
-      '#RemoteInternship'
-    ]
-  },
-  {
-    id: 'gsa-august-2026-highlights',
-    title: 'August 2026 Monthly Highlights — Google Student Ambassador',
-    category: 'ambassador',
-    categoryBadge: 'LEADERSHIP & MONTHLY HIGHLIGHTS',
-    specialBadge: '✦ MONTHLY IMPACT',
-    secondaryBadge: '✦ FUND MY CRAZY',
-    cornerBadge: 'FUND MY CRAZY · GID: 5314',
-    gidBadge: 'GID: 5314',
-    date: 'August 2026',
-    dateFormatted: 'August 2026 · Monthly Highlights',
-    organization: 'Google Student Ambassadors · Team Gemini',
-    role: 'Google Student Ambassador',
-    program: 'Google Student Ambassador Program 2026',
-    monthBadge: 'AUGUST 2026',
-    association: 'Team Gemini & Google Student Community',
-    actionButtonText: 'View Full Highlights',
-    image: '/images/gsa-august-2026-highlights.jpg',
-    imageAlt: 'Google Student Ambassador August 2026 Monthly Highlights — Fund My Crazy — Mohit Mundke (GID: 5314)',
-    downloadName: 'Mohit-Mundke-GSA-August-2026-Highlights.jpg',
-    badgeStyle: 'bg-gradient-to-r from-blue-600/25 via-violet-600/25 to-yellow-500/25 border border-blue-400/40 text-blue-300',
-    pulseColor: 'bg-yellow-400',
-    cardBg: 'from-blue-950/20 via-[#0c0a1a] to-[#030610]',
-    cardBorder: 'hover:border-blue-500/40',
-    topGlow: 'bg-blue-600/15',
-    bottomGlow: 'bg-violet-500/15',
-    captionBg: 'bg-blue-950/25 border-blue-500/25',
-    captionLabel: 'text-yellow-400',
-    tagColor: 'text-yellow-300 hover:border-blue-500/40',
-    isFeatured: true,
-    shortDescription: 'Learning. Building. Inspiring. — August leadership highlights showcasing organizing Fund My Crazy, converting ideas into live demos, community collaboration, and personal growth as an Ambassador.',
-    highlightsList: [
-      'Organized and hosted Fund My Crazy',
-      'Collaborated with students, creators, and innovators',
-      'Turned creative ideas into real demos and experiences',
-      'Worked on planning, communication, and collaboration',
-      'Project and event execution',
-      'Built stronger leadership skills & adaptability',
-      'Key Takeaway: Empowering ideas and bringing people together',
-      'Team Gemini — GID: 5314'
-    ],
-    caption: `This month pushed me far beyond my comfort zone as a Google Gemini Student Ambassador. 🚀
-
-From organizing Fund My Crazy to connecting with incredible students, creators, and innovators, I got a glimpse of what campus leadership truly looks like.
-
-One of my biggest challenges was turning an idea into something people could actually see, experience, and connect with. At first, there were countless moving parts, uncertainties, and decisions to make. But the process taught me something valuable: great ideas need more than creativity. They need planning, communication, collaboration, and adaptability.
-
-The highlight of the month was seeing Fund My Crazy bring ideas to life, transforming concepts into demos, visuals, and experiences. It reminded me that student communities grow when people stay curious, collaborate openly, and have the courage to experiment.
-
-💡 My biggest takeaway:
-"Leadership isn’t about doing everything yourself. It’s about bringing the right people together, empowering their ideas, and creating an environment where everyone feels encouraged to build something meaningful."
-
-This month didn’t just help me create better.
-It taught me to lead better.
+A heartfelt thank you to Google, Team Gemini, Google Student Ambassadors (India), and Ping Network for recognizing student efforts and making this journey so rewarding! ✨
 
 GID: 5314`,
     tags: [
-      '#GoogleGeminiStudentAmbassador',
       '#GoogleStudentAmbassador',
-      '#GSA2026',
       '#TeamGemini',
-      '#MonthlyHighlights',
+      '#GoogleGemini',
+      '#FirstIncome',
+      '#SmallWins',
+      '#ContributorReward',
+      '#GSA2026',
       '#CampusLeadership',
-      '#Innovation',
-      '#StudentCommunity',
-      '#Collaboration',
-      '#Leadership',
-      '#FundMyCrazy',
-      '#AI',
-      '#GoogleGemini'
+      '#CommunityImpact',
+      '#ContinuousLearning',
+      '#StudentDeveloper',
+      '#GrowthMindset'
     ]
   },
   {
@@ -1146,78 +617,487 @@ Thank you, #TeamGemini, for making this journey so exciting! ✨`,
     ]
   },
   {
-    id: 'gsa-amazon-gift-card-reward',
-    title: 'Google Student Ambassador Contributor Reward — First Earned Milestone',
+    id: 'gsa-august-2026-highlights',
+    title: 'August 2026 Monthly Highlights — Google Student Ambassador',
     category: 'ambassador',
-    categoryBadge: 'LEADERSHIP & REWARDS',
-    specialBadge: '✦ FIRST EARNED MILESTONE',
-    secondaryBadge: '✦ CONTRIBUTOR REWARD',
-    cornerBadge: 'AMAZON PAY REWARD · GID: 5314',
+    categoryBadge: 'LEADERSHIP & MONTHLY HIGHLIGHTS',
+    specialBadge: '✦ MONTHLY IMPACT',
+    secondaryBadge: '✦ FUND MY CRAZY',
+    cornerBadge: 'FUND MY CRAZY · GID: 5314',
     gidBadge: 'GID: 5314',
-    date: '2026 Milestone',
-    dateFormatted: '2026 · Official Contributor Recognition',
-    organization: 'Google Student Ambassadors India · Pine Labs',
-    role: 'Google Student Ambassador (GID: 5314)',
+    date: 'August 2026',
+    dateFormatted: 'August 2026 · Monthly Highlights',
+    organization: 'Google Student Ambassadors · Team Gemini',
+    role: 'Google Student Ambassador',
+    program: 'Google Student Ambassador Program 2026',
+    monthBadge: 'AUGUST 2026',
+    association: 'Team Gemini & Google Student Community',
+    actionButtonText: 'View Full Highlights',
+    image: '/images/gsa-august-2026-highlights.jpg',
+    imageAlt: 'Google Student Ambassador August 2026 Monthly Highlights — Fund My Crazy — Mohit Mundke (GID: 5314)',
+    downloadName: 'Mohit-Mundke-GSA-August-2026-Highlights.jpg',
+    badgeStyle: 'bg-gradient-to-r from-blue-600/25 via-violet-600/25 to-yellow-500/25 border border-blue-400/40 text-blue-300',
+    pulseColor: 'bg-yellow-400',
+    cardBg: 'from-blue-950/20 via-[#0c0a1a] to-[#030610]',
+    cardBorder: 'hover:border-blue-500/40',
+    topGlow: 'bg-blue-600/15',
+    bottomGlow: 'bg-violet-500/15',
+    captionBg: 'bg-blue-950/25 border-blue-500/25',
+    captionLabel: 'text-yellow-400',
+    tagColor: 'text-yellow-300 hover:border-blue-500/40',
+    isFeatured: true,
+    shortDescription: 'Learning. Building. Inspiring. — August leadership highlights showcasing organizing Fund My Crazy, converting ideas into live demos, community collaboration, and personal growth as an Ambassador.',
+    highlightsList: [
+      'Organized and hosted Fund My Crazy',
+      'Collaborated with students, creators, and innovators',
+      'Turned creative ideas into real demos and experiences',
+      'Worked on planning, communication, and collaboration',
+      'Project and event execution',
+      'Built stronger leadership skills & adaptability',
+      'Key Takeaway: Empowering ideas and bringing people together',
+      'Team Gemini — GID: 5314'
+    ],
+    caption: `This month pushed me far beyond my comfort zone as a Google Gemini Student Ambassador. 🚀
+
+From organizing Fund My Crazy to connecting with incredible students, creators, and innovators, I got a glimpse of what campus leadership truly looks like.
+
+One of my biggest challenges was turning an idea into something people could actually see, experience, and connect with. At first, there were countless moving parts, uncertainties, and decisions to make. But the process taught me something valuable: great ideas need more than creativity. They need planning, communication, collaboration, and adaptability.
+
+The highlight of the month was seeing Fund My Crazy bring ideas to life, transforming concepts into demos, visuals, and experiences. It reminded me that student communities grow when people stay curious, collaborate openly, and have the courage to experiment.
+
+💡 My biggest takeaway:
+"Leadership isn’t about doing everything yourself. It’s about bringing the right people together, empowering their ideas, and creating an environment where everyone feels encouraged to build something meaningful."
+
+This month didn’t just help me create better.
+It taught me to lead better.
+
+GID: 5314`,
+    tags: [
+      '#GoogleGeminiStudentAmbassador',
+      '#GoogleStudentAmbassador',
+      '#GSA2026',
+      '#TeamGemini',
+      '#MonthlyHighlights',
+      '#CampusLeadership',
+      '#Innovation',
+      '#StudentCommunity',
+      '#Collaboration',
+      '#Leadership',
+      '#FundMyCrazy',
+      '#AI',
+      '#GoogleGemini'
+    ]
+  },
+  {
+    id: 'thiranex-internship-offer',
+    title: 'Internship in Full Stack Development',
+    category: 'career',
+    categoryBadge: 'CAREER & PROFESSIONAL EXPERIENCE',
+    specialBadge: '✦ CAREER MILESTONE',
+    secondaryBadge: 'REMOTE INTERNSHIP',
+    cornerBadge: 'FULL STACK DEVELOPMENT',
+    gidBadge: 'THX-AUG1126-479',
+    date: '11 Aug 2026 — 10 Sept 2026',
+    dateFormatted: '11 August 2026 — 10 September 2026',
+    organization: 'Thiranex',
+    role: 'Intern — Full Stack Development',
+    program: 'Full Stack Development Internship',
+    association: 'Thiranex Engineering Team · Remote / Project-Based',
+    actionButtonText: 'View Offer Letter',
+    image: '/images/thiranex-internship-offer-letter.jpg',
+    imageAlt: 'Thiranex Offer Letter for Internship in Full Stack Development — Mohit Yogeshkumar Mundke (THX-AUG1126-479)',
+    downloadName: 'Mohit-Mundke-Thiranex-Internship-Offer-Letter.jpg',
+    badgeStyle: 'bg-gradient-to-r from-blue-600/25 via-cyan-600/25 to-indigo-600/25 border border-cyan-400/40 text-cyan-300',
+    pulseColor: 'bg-cyan-400',
+    cardBg: 'from-blue-950/20 via-[#070e1c] to-[#030610]',
+    cardBorder: 'hover:border-cyan-500/40',
+    topGlow: 'bg-blue-600/15',
+    bottomGlow: 'bg-cyan-500/15',
+    captionBg: 'bg-blue-950/25 border-cyan-500/25',
+    captionLabel: 'text-cyan-400',
+    tagColor: 'text-cyan-300 hover:border-blue-500/40',
+    isFeatured: true,
+    shortDescription: 'Selected for Internship in Full Stack Development at Thiranex — working on industry-oriented practical projects, component architecture, and real-world web applications under professional mentorship.',
+    highlightsList: [
+      'Selected for Internship in Full Stack Development',
+      'Organization: Thiranex',
+      'Role: Intern — Full Stack Development',
+      'Work Mode: Remote / Project-Based',
+      'Commencement: 11 August 2026',
+      'Completion: 10 September 2026',
+      'Industry-oriented practical projects',
+      'Professional mentorship',
+      'Hands-on Full Stack Development experience'
+    ],
+    caption: `🚀 Excited to Begin a New Chapter!
+
+I’m thrilled to share that I’ve been selected for an Internship in Full Stack Development at Thiranex. 💻✨
+
+This opportunity marks another step forward in my journey of turning knowledge into real-world skills and building practical solutions.
+
+Over the coming weeks, I’ll be working on industry-oriented projects, gaining hands-on experience in Full Stack Development, and learning under professional mentorship.
+
+📌 Role: Intern — Full Stack Development
+🏢 Organization: Thiranex
+📅 Duration: 11 August 2026 — 10 September 2026
+🌐 Mode: Remote / Project-Based
+
+I’m grateful for this opportunity and excited for the learning, challenges, and experiences ahead. Looking forward to building, learning, and growing! 🚀
+
+Here’s to the next chapter! 🌱💻`,
+    tags: [
+      '#Internship',
+      '#FullStackDevelopment',
+      '#Thiranex',
+      '#WebDevelopment',
+      '#SoftwareDevelopment',
+      '#Learning',
+      '#CareerGrowth',
+      '#TechJourney',
+      '#StudentDeveloper',
+      '#ProfessionalGrowth',
+      '#FullStackDeveloper',
+      '#RemoteInternship'
+    ]
+  },
+  {
+    id: 'gsa-july-2026-highlights',
+    title: 'Google Student Ambassador Highlights — July 2026',
+    category: 'ambassador',
+    categoryBadge: 'LEADERSHIP & AMBASSADORSHIP',
+    specialBadge: '✦ BRONZE BADGE MILESTONE',
+    secondaryBadge: '✦ JULY HIGHLIGHTS',
+    cornerBadge: 'BRONZE BADGE · GID: 5314',
+    gidBadge: 'GID: 5314',
+    date: 'July 2026',
+    dateFormatted: 'July 2026 · Monthly Highlights',
+    organization: 'Google Student Ambassadors India · Team Gemini',
+    role: 'Google Student Ambassador · Bronze Badge',
     program: 'Google Student Ambassador Program 2026',
     institution: 'Dr. D. Y. Patil College of Engineering & Innovation (DYPCEI)',
     association: 'Team Gemini & Google Student Community',
-    issuedTo: 'Mohit Yogeshkumar Mundke',
-    actionButtonText: 'View Reward Details',
-    image: '/images/gsa-amazon-gift-card-reward.jpg',
-    imageAlt: 'Google Student Ambassador Contributor Reward Amazon Gift Card — Mohit Yogeshkumar Mundke (GID: 5314)',
-    downloadName: 'Mohit-Mundke-GSA-Amazon-Gift-Card-Reward.jpg',
-    badgeStyle: 'bg-gradient-to-r from-emerald-600/25 via-teal-600/25 to-blue-500/25 border border-emerald-400/40 text-emerald-300',
-    pulseColor: 'bg-emerald-400',
-    cardBg: 'from-emerald-950/20 via-[#040e16] to-[#030610]',
-    cardBorder: 'hover:border-emerald-500/40',
-    topGlow: 'bg-emerald-600/15',
-    bottomGlow: 'bg-teal-500/15',
-    captionBg: 'bg-emerald-950/25 border-emerald-500/25',
-    captionLabel: 'text-emerald-400',
-    tagColor: 'text-emerald-300 hover:border-emerald-500/40',
+    actionButtonText: 'View July Highlights',
+    image: '/images/gsa-july-2026-highlights.jpg',
+    imageAlt: 'Google Student Ambassador July Monthly Highlights — Bronze Badge — Mohit Yogeshkumar Mundke (GID: 5314)',
+    downloadName: 'Mohit-Mundke-GSA-July-2026-Highlights.jpg',
+    badgeStyle: 'bg-gradient-to-r from-amber-600/25 via-violet-600/25 to-blue-500/25 border border-amber-400/40 text-amber-300',
+    pulseColor: 'bg-amber-400',
+    cardBg: 'from-amber-950/20 via-[#0a0718] to-[#030610]',
+    cardBorder: 'hover:border-amber-500/40',
+    topGlow: 'bg-amber-600/15',
+    bottomGlow: 'bg-violet-500/15',
+    captionBg: 'bg-amber-950/25 border-amber-500/25',
+    captionLabel: 'text-amber-400',
+    tagColor: 'text-amber-300 hover:border-violet-500/40',
     isFeatured: true,
-    shortDescription: 'A deeply meaningful milestone — receiving an Amazon Pay reward for active community leadership, technical sessions, and hands-on participation as a Google Student Ambassador.',
+    shortDescription: 'Learning. Leading. Inspiring with Gemini ✨ — July progress dashboard showcasing product trials, content creation, analytics tracking, and earning the Bronze Badge.',
     highlightsList: [
-      'Official GSA Contributor Reward',
-      'First Independent Earnings Milestone',
-      'Google Student Ambassador Program 2026',
-      'Community Contributions & Event Participation',
-      'Value of Showing Up & Consistent Effort',
-      'Issued to: Mohit Yogeshkumar Mundke',
-      'Order: ARRS0000011847 via Pine Labs',
+      'Google Student Ambassador — July 2026',
+      'Bronze Badge Earned',
+      'Product Trials (Laboratory Flask)',
+      'Content Creation (Video / Clapper)',
+      'Monthly Highlights (Analytics / Dashboard)',
+      'Product Understanding (Search Exploration)',
+      'Boost Google Initiatives (Megaphone)',
       'Team Gemini — GID: 5314'
     ],
-    caption: `A Small Win That Means the World — Celebrating My First Earned Milestone ✨🎁
+    caption: `Learning. Leading. Inspiring with Gemini ✨
 
-Grateful and excited to share that I’ve received a ₹500 Amazon Gift Card as an official reward for my contributions as a Google Student Ambassador 2026 (GID: 5314).
+July was all about progress, passion, and purpose. As a Google Student Ambassador representing Team Gemini (GID: 5314), I engaged in hands-on product trials, video content creation, analytics tracking, and community tech initiatives.
 
-While ₹500 might seem like a modest number to some, to me it holds deep personal significance — because it represents my very first earned income. 🥹✨
-
-It isn’t about the monetary figure. It’s about the unforgettable feeling of earning something entirely through my own dedication, curiosity, participation, and the work I’ve poured into the student tech community over these past months.
-
-For me, this reward is a tangible reminder of a timeless truth:
-"Showing up consistently, experimenting boldly, creating value, and helping others always matters."
-
-Every small milestone is a stepping stone toward the bigger vision. I’m deeply grateful for the opportunities to build with Google Gemini, organize campus sessions, and collaborate with inspiring student developers across India.
-
-Here’s to continuous learning, embracing new challenges, and many more milestones ahead! 🌱🚀
-
-A heartfelt thank you to Google, Team Gemini, Google Student Ambassadors (India), and Ping Network for recognizing student efforts and making this journey so rewarding! ✨
-
-GID: 5314`,
+Honored to earn the Bronze Badge milestone this month! Grateful for every opportunity to learn, lead, and inspire. Let's keep building the future together 🚀`,
     tags: [
       '#GoogleStudentAmbassador',
       '#TeamGemini',
       '#GoogleGemini',
-      '#FirstIncome',
-      '#SmallWins',
-      '#ContributorReward',
+      '#GeminiAI',
+      '#BronzeBadge',
       '#GSA2026',
-      '#CampusLeadership',
-      '#CommunityImpact',
-      '#ContinuousLearning',
+      '#JulyHighlights',
+      '#AI',
+      '#Leadership',
+      '#ContentCreation',
+      '#Innovation',
+      '#TechCommunity'
+    ]
+  },
+  {
+    id: 'brain-foundation-member',
+    title: 'Bharat Research in AI and NextGen Foundation Membership 2026',
+    category: 'career',
+    categoryBadge: 'MEMBERSHIP & COMMUNITY',
+    specialBadge: '✦ COMMUNITY ACHIEVEMENT',
+    secondaryBadge: 'MEMBER 2026',
+    cornerBadge: 'OFFICIAL CERTIFICATE OF MEMBERSHIP',
+    gidBadge: 'BRAIN-DRY261-S024',
+    date: '02 July 2026',
+    dateFormatted: '02 July 2026 · Valid Until 31 Dec 2026',
+    organization: 'Bharat Research in AI and NextGen Foundation (BRAIN)',
+    role: 'Official Member',
+    membership: 'BRAIN Academic Institution Membership',
+    institution: 'Dr. D. Y. Patil College of Engineering & Innovation (DYPCEI)',
+    association: 'AI & NextGen Research Community',
+    actionButtonText: 'View Full Certificate',
+    image: '/images/brain-certificate-membership.jpg',
+    imageAlt: 'Bharat Research in AI and NextGen Foundation Certificate of Membership — Mohit Yogeshkumar Mundke',
+    downloadName: 'Mohit-Mundke-BRAIN-Membership-2026.jpg',
+    badgeStyle: 'bg-gradient-to-r from-blue-700/25 via-emerald-600/25 to-amber-500/25 border border-emerald-400/40 text-emerald-300',
+    pulseColor: 'bg-emerald-400',
+    cardBg: 'from-blue-950/20 via-[#05111b] to-[#030610]',
+    cardBorder: 'hover:border-emerald-500/40',
+    topGlow: 'bg-blue-600/15',
+    bottomGlow: 'bg-emerald-500/15',
+    captionBg: 'bg-blue-950/25 border-emerald-500/25',
+    captionLabel: 'text-emerald-400',
+    tagColor: 'text-emerald-300 hover:border-blue-500/40',
+    isFeatured: true,
+    shortDescription: 'Official Academic Institution Membership with Bharat Research in AI and NextGen Foundation (BRAIN) — dedicated to AI research, emerging technologies, innovation, and impactful community initiatives.',
+    highlightsList: [
+      'Official BRAIN Member',
+      'Bharat Research in AI and NextGen Foundation',
+      'AI, Innovation & Technology Community',
+      'Academic Institution Membership',
+      'Membership ID: BRAIN-DRY261-S024',
+      'Issued: 02 July 2026',
+      'Valid Until: 31 December 2026',
+      'Dr. D. Y. Patil College of Engineering & Innovation'
+    ],
+    caption: `Excited to share another meaningful milestone in my journey! 🎉
+
+I’m honored to officially become a member of the Bharat Research in AI and NextGen Foundation (BRAIN).
+
+Being part of a community dedicated to AI, innovation, and technology-driven impact is an incredible opportunity to learn, collaborate, and contribute alongside passionate changemakers.
+
+As an AI & Data Science student, I look forward to expanding my knowledge, working on meaningful initiatives, exploring new opportunities, and growing with this inspiring network.
+
+Grateful for this opportunity and excited for everything that lies ahead. Here’s to continuous learning, innovation, and making a difference! 🚀`,
+    tags: [
+      '#ArtificialIntelligence',
+      '#AI',
+      '#MachineLearning',
+      '#Innovation',
+      '#TechCommunity',
+      '#Student',
+      '#AIResearch',
+      '#Leadership',
+      '#FutureReady',
+      '#Learning',
+      '#BRAIN',
+      '#ProfessionalGrowth'
+    ]
+  },
+  {
+    id: 'gsa-june-2026-insights',
+    title: 'Google Student Ambassador Highlights — June 2026',
+    category: 'ambassador',
+    categoryBadge: 'LEADERSHIP & AMBASSADORSHIP',
+    specialBadge: '✦ FEATURED JOURNEY',
+    secondaryBadge: '✦ MONTHLY HIGHLIGHTS',
+    cornerBadge: '📸 5 HIGHLIGHTS & PHOTOS',
+    gidBadge: 'GID: 5314',
+    date: 'June 2026',
+    dateFormatted: 'June 2026 · Monthly Milestone',
+    organization: 'Google Student Ambassadors India · Team Gemini',
+    role: 'Student Ambassador',
+    program: 'Google Student Ambassador Program 2026',
+    institution: 'Dr. D. Y. Patil College of Engineering & Innovation (DYPCEI)',
+    association: 'Team Gemini & Google Student Community',
+    actionButtonText: 'View Journey',
+    image: '/images/gsa-june-2026-insights.jpg',
+    imageAlt: 'Google Student Ambassador Highlights — June 2026 — Mohit Mundke (GID: 5314)',
+    downloadName: 'Mohit-Mundke-GSA-June-2026-Highlights.jpg',
+    galleryImages: [
+      {
+        url: '/images/gsa-june-2026-insights.jpg',
+        title: 'Monthly Highlights Poster — June 2026',
+        caption: 'AI Demo Event, Lyria Showcase, Tech Connections, Video Creation & Welcome Kit'
+      },
+  {
+    id: 'google-gemini-ambassador-2026',
+    title: 'Google Gemini AI Student Ambassador Program 2026',
+    category: 'ambassador',
+    categoryBadge: 'LEADERSHIP & AMBASSADORSHIP',
+    specialBadge: '✦ FEATURED ACHIEVEMENT',
+    cornerBadge: 'OFFICIAL GSA APPOINTMENT',
+    gidBadge: 'GID: 5314',
+    date: 'May 2026 – Present',
+    dateFormatted: 'May 2026 · Official Appointment',
+    organization: 'Google Student Ambassadors India · Google Gemini',
+    role: 'Campus Ambassador — 2026',
+    institution: 'Dr. D. Y. Patil College of Engineering & Innovation (DYPCEI)',
+    association: 'Google Gemini & Student Developer Community',
+    image: '/images/google-gemini-ambassador-2026.jpg',
+    imageAlt: 'Google Gemini AI Student Ambassador Program 2026 Announcement Poster — Mohit Mundke (GID: 5314)',
+    downloadName: 'Mohit-Mundke-Google-Gemini-Ambassador-2026.jpg',
+    badgeStyle: 'bg-gradient-to-r from-blue-600/25 via-violet-600/25 to-cyan-500/25 border border-blue-500/40 text-blue-300',
+    pulseColor: 'bg-blue-400',
+    cardBg: 'from-blue-950/20 via-[#070d1e] to-[#030610]',
+    cardBorder: 'hover:border-blue-500/50',
+    topGlow: 'bg-blue-600/15',
+    bottomGlow: 'bg-cyan-500/15',
+    captionBg: 'bg-blue-950/25 border-blue-500/25',
+    captionLabel: 'text-blue-400',
+    tagColor: 'text-cyan-300 hover:border-blue-500/40',
+    isFeatured: true,
+    highlights: [
+      { label: 'Role', value: 'Campus Ambassador' },
+      { label: 'Identity', value: 'GID: 5314' },
+      { label: 'Focus', value: 'Google Gemini & AI Projects' }
+    ],
+    caption: `Excited to announce that I’ve officially joined the Google Gemini AI Student Ambassador Program 2026 as a Campus Ambassador! 🚀✨
+
+Grateful for the opportunity to represent Gemini AI at my college and become part of a nationwide community of innovators, creators, and future tech leaders.
+
+Looking forward to building impactful AI projects, creating content around Gemini AI, organizing engaging activities on campus, and connecting with amazing creators and developers across India. 💙
+
+This is just the beginning of an incredible journey with AI and innovation! ✨`,
+    tags: [
+      '#GoogleStudentAmbassador',
+      '#GSA2026',
+      '#TeamGemini',
+      '#GoogleGemini',
+      '#GeminiAI',
+      '#GoogleGeminiAI',
+      '#AI',
+      '#ArtificialIntelligence',
+      '#Innovation',
+      '#TechCommunity',
+      '#CampusAmbassador',
+      '#GenerativeAI'
+    ]
+  },
+  {
+    id: 'imarticus-c-cpp-cert',
+    title: 'C & C++ Programming',
+    category: 'certificate',
+    categoryBadge: 'CERTIFICATION',
+    cornerBadge: 'CERTIFICATE OF PROFICIENCY',
+    date: '08 May 2026',
+    dateFormatted: '08 May 2026',
+    organization: 'Imarticus Learning',
+    association: 'NSDC & Skill India Certified',
+    issuedTo: 'Mohit Mundke',
+    image: '/images/imarticus-c-cpp-certificate.jpg',
+    imageAlt: 'C & C++ Programming Certificate of Proficiency — Imarticus Learning — Grade A — Mohit Mundke',
+    downloadName: 'Mohit-Mundke-Imarticus-C-CPP-Certificate.jpg',
+    badgeStyle: 'bg-gradient-to-r from-emerald-600/20 via-teal-500/20 to-cyan-500/20 border-emerald-500/40 text-emerald-300',
+    pulseColor: 'bg-emerald-400',
+    cardBg: 'from-emerald-950/15 via-[#060e10] to-[#030610]',
+    cardBorder: 'hover:border-emerald-500/40',
+    topGlow: 'bg-emerald-600/10',
+    bottomGlow: 'bg-teal-600/10',
+    captionBg: 'bg-emerald-950/20 border-emerald-500/20',
+    captionLabel: 'text-emerald-400',
+    tagColor: 'text-emerald-300 hover:border-emerald-500/40',
+    isFeatured: false,
+    scoreDetails: {
+      consolidated: 'Grade: A',
+      assignments: 'Certificate ID: 5RSQBQIZVOH',
+      proctoredExam: 'NSDC & Skill India'
+    },
+    caption: `Grateful to share that I’ve successfully completed the C & C++ Programming certification from Imarticus Learning with an A Grade 🎉
+
+This journey helped me strengthen my fundamentals in:
+
+• C Programming
+• C++ Concepts
+• Functions & Pointers
+• Object-Oriented Programming
+• Problem Solving & Logic Building
+
+A big thanks to everyone who supported and guided me throughout the learning process. Looking forward to applying these skills in more projects and real-world development 🚀`,
+    tags: [
+      '#Programming',
+      '#CProgramming',
+      '#CPP',
+      '#Coding',
+      '#Learning',
       '#StudentDeveloper',
-      '#GrowthMindset'
+      '#SkillDevelopment',
+      '#Tech',
+      '#ImarticusLearning',
+      '#CPlusPlus',
+      '#DYPCEOI'
+    ]
+  },
+  {
+    id: 'aws-ml-ai-cert',
+    title: 'Fundamentals of Machine Learning and Artificial Intelligence',
+    category: 'certificate',
+    categoryBadge: 'CERTIFICATION',
+    date: 'April 13, 2026',
+    dateFormatted: 'April 13, 2026',
+    organization: 'AWS Training & Certification',
+    association: 'Amazon Web Services (AWS)',
+    issuedTo: 'Mohit Mundke',
+    image: '/images/aws-ml-ai-certificate.jpg',
+    imageAlt: 'Fundamentals of Machine Learning and Artificial Intelligence Completion Certificate — AWS Training & Certification — Mohit Mundke',
+    downloadName: 'Mohit-Mundke-AWS-ML-AI-Certificate.jpg',
+    badgeStyle: 'bg-gradient-to-r from-amber-500/20 to-orange-500/20 border-amber-500/40 text-amber-300',
+    pulseColor: 'bg-amber-400',
+    cardBg: 'from-amber-950/15 via-[#070a18] to-[#030610]',
+    cardBorder: 'hover:border-amber-500/40',
+    topGlow: 'bg-amber-500/10',
+    bottomGlow: 'bg-orange-500/10',
+    captionBg: 'bg-amber-950/20 border-amber-500/20',
+    captionLabel: 'text-amber-400',
+    tagColor: 'text-amber-300 hover:border-amber-500/40',
+    isFeatured: false,
+    caption: `Excited to share that I’ve successfully completed my certification in “Fundamentals of Machine Learning and Artificial Intelligence” from AWS Training & Certification 🎓✨
+
+This journey helped me strengthen my understanding of core ML & AI concepts 🤖📊 and gave me valuable insights into how intelligent systems work in real-world applications 🌍💡
+
+Looking forward to diving deeper into this field and building something impactful 🚀🔥`,
+    tags: [
+      '#AWS',
+      '#MachineLearning',
+      '#ArtificialIntelligence',
+      '#Learning',
+      '#Upskilling',
+      '#FutureReady',
+      '#AI',
+      '#ML'
+    ]
+  },
+  {
+    id: 'pixel-war-2k26',
+    title: 'Pixel War 2k26 — UI/UX Design Battle',
+    category: 'competition',
+    categoryBadge: 'COMPETITION',
+    date: '7th March 2026',
+    dateFormatted: 'March 7, 2026',
+    organization: 'Department of Artificial Intelligence & Data Science, Dr. D. Y. Patil College of Engineering & Innovation',
+    association: 'BRAIN Student Chapter',
+    image: '/images/pixel-war-2k26.jpg',
+    imageAlt: 'Pixel War 2k26 UI/UX Design Battle Certificate of Participation — Mohit Mundke',
+    downloadName: 'Mohit-Mundke-Pixel-War-2k26.jpg',
+    badgeStyle: 'bg-gradient-to-r from-violet-600/20 to-blue-600/20 border-violet-500/40 text-violet-300',
+    pulseColor: 'bg-violet-400',
+    cardBg: 'from-violet-950/20 via-[#070b19] to-[#030610]',
+    cardBorder: 'hover:border-violet-500/40',
+    topGlow: 'bg-violet-600/10',
+    bottomGlow: 'bg-blue-600/10',
+    captionBg: 'bg-violet-950/20 border-violet-500/20',
+    captionLabel: 'text-violet-400',
+    tagColor: 'text-cyan-300 hover:border-violet-500/40',
+    isFeatured: true,
+    caption: `Excited to share that I successfully participated in the UI/UX Pixel War 2k26 competition held on 7th March! ✨⭐
+
+Hence, gained a lot of experience by reviewing various tools used by participants like Framer, Stitch, Firebase AI Studio, Figma, Canva, and various other open-source AI tools were used!!
+
+It was a great opportunity to explore creativity, innovation, UI/UX design thinking, and problem-solving.
+
+Special thanks to BRAIN DYPCOEI for organizing the event successfully! 😁`,
+    tags: [
+      '#DYPCOEI',
+      '#UIUX',
+      '#PUNE',
+      '#AI',
+      '#DS',
+      '#ML',
+      '#Design',
+      '#PIXEL_WAR',
+      '#Student'
     ]
   },
   {
@@ -1350,6 +1230,52 @@ This Nano Banana tutorial session was focused on exploring new tools, demonstrat
       '#Learning',
       '#TechCommunity',
       '#KnowledgeSharing'
+    ]
+  },
+  {
+    id: 'nptel-python-data-science',
+    title: 'Python for Data Science',
+    category: 'certificate',
+    categoryBadge: 'CERTIFICATION',
+    cornerBadge: 'NPTEL ONLINE CERTIFICATION',
+    date: 'Jan–Feb 2026',
+    dateFormatted: 'Jan–Feb 2026 · 4 Week Course',
+    organization: 'NPTEL Online Certification · IIT Madras · SWAYAM',
+    association: 'Ministry of Education (Govt. of India) & IIT Madras',
+    issuedTo: 'Mohit Yogeshkumar Mundke',
+    image: '/images/nptel-python-data-science.jpg',
+    imageAlt: 'Python for Data Science NPTEL Online Certification — IIT Madras — Mohit Yogeshkumar Mundke',
+    downloadName: 'Mohit-Mundke-NPTEL-Python-Data-Science.jpg',
+    badgeStyle: 'bg-gradient-to-r from-rose-600/20 via-red-500/20 to-amber-500/20 border-rose-500/40 text-rose-300',
+    pulseColor: 'bg-rose-400',
+    cardBg: 'from-rose-950/15 via-[#090614] to-[#030610]',
+    cardBorder: 'hover:border-rose-500/40',
+    topGlow: 'bg-rose-600/10',
+    bottomGlow: 'bg-amber-600/10',
+    captionBg: 'bg-rose-950/20 border-rose-500/20',
+    captionLabel: 'text-rose-400',
+    tagColor: 'text-amber-300 hover:border-rose-500/40',
+    isFeatured: false,
+    scoreDetails: {
+      consolidated: '52%',
+      assignments: '21.67 / 25',
+      proctoredExam: '30 / 75',
+      duration: 'Jan–Feb 2026 (4 Week Course)'
+    },
+    caption: `I am pleased to share that I have successfully completed the NPTEL Online Certification in Python for Data Science 🎓 offered by IIT Madras.
+
+This course has strengthened my understanding of Python fundamentals, data handling, and key data science concepts 📊. It has been a valuable learning experience that contributed to building a strong foundation in this domain.
+
+I sincerely thank the instructors and NPTEL for this opportunity 🙏.
+
+I look forward to applying these skills in real-world projects and continuing my learning journey in data science 🚀.`,
+    tags: [
+      '#NPTEL',
+      '#Python',
+      '#DataScience',
+      '#IITMadras',
+      '#SkillDevelopment',
+      '#ContinuousLearning'
     ]
   }
 ];
