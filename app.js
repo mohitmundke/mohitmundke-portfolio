@@ -3769,9 +3769,47 @@ function ContactPage({ navigateTo }) {
 /* ═══════════════════════════════════════════════════════════════════
    PAGE 9: RECRUITER VIEW (DEDICATED RECRUITER PAGE)
    ═══════════════════════════════════════════════════════════════════ */
-function RecruiterPage({ navigateTo }) {
+function RecruiterPage({ navigateTo, authSession, onOpenLogin }) {
   return (
     <div className="page-container max-w-5xl mx-auto px-4 py-8 space-y-8">
+      {/* Auth Status & Callout Banner */}
+      {!authSession ? (
+        <div className="p-4 sm:p-5 rounded-2xl bg-violet-950/30 border border-violet-500/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 backdrop-blur-md">
+          <div className="flex items-center gap-3">
+            <span className="text-2xl">🔐</span>
+            <div>
+              <p className="text-xs font-bold text-white">Recruiter / Hiring Partner Access</p>
+              <p className="text-[11px] text-slate-400">Log in or activate guest recruiter access to view executive candidate insights and direct scheduling.</p>
+            </div>
+          </div>
+          <button
+            onClick={onOpenLogin}
+            className="px-4 py-2 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-mono text-xs font-bold transition-all whitespace-nowrap shadow-lg shadow-violet-600/30"
+          >
+            Authenticate Portal ↗
+          </button>
+        </div>
+      ) : (
+        <div className="p-4 sm:p-5 rounded-2xl bg-emerald-950/30 border border-emerald-500/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 backdrop-blur-md">
+          <div className="flex items-center gap-3">
+            <span className="text-2xl">🛡️</span>
+            <div>
+              <p className="text-xs font-bold text-white flex items-center gap-2">
+                <span>Verified {authSession.role === 'admin' ? 'Owner / Admin' : 'Recruiter'} Portal Active</span>
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-bold">VERIFIED</span>
+              </p>
+              <p className="text-[11px] text-slate-400">Logged in as: <span className="text-emerald-300 font-semibold">{authSession.name}</span>. Confidential candidate matrix unlocked.</p>
+            </div>
+          </div>
+          <button
+            onClick={onOpenLogin}
+            className="px-3.5 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 text-xs font-mono transition-all whitespace-nowrap"
+          >
+            Portal Session ⚙️
+          </button>
+        </div>
+      )}
+
       <div className="glass-card p-6 sm:p-8 rounded-3xl border-amber-500/30 bg-gradient-to-r from-amber-500/10 via-violet-900/15 to-transparent">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
@@ -3892,12 +3930,305 @@ function RecruiterPage({ navigateTo }) {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
+   AUTHENTICATION & LOGIN PORTAL MODAL
+   ═══════════════════════════════════════════════════════════════════ */
+function AuthModal({ isOpen, onClose, onLogin, authSession, onLogout }) {
+  const [role, setRole] = useState('recruiter'); // 'recruiter' | 'admin'
+  const [passkey, setPasskey] = useState('');
+  const [guestName, setGuestName] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState('');
+  const [successMsg, setSuccessMsg] = useState('');
+
+  if (!isOpen) return null;
+
+  const handleAuthSubmit = (e) => {
+    e && e.preventDefault();
+    setError('');
+
+    const cleanPass = passkey.trim().toLowerCase();
+
+    if (role === 'recruiter') {
+      if (cleanPass === 'recruiter2026' || cleanPass === 'recruiter' || cleanPass === 'hire2026') {
+        setSuccessMsg('Recruiter Access Granted! Redirecting...');
+        setTimeout(() => {
+          onLogin('recruiter', guestName.trim() || 'Verified Recruiter');
+          setSuccessMsg('');
+          setPasskey('');
+        }, 500);
+      } else {
+        setError('Invalid recruiter passkey. Tip: Use "recruiter2026" or click "Guest Instant Access" below.');
+      }
+    } else if (role === 'admin') {
+      if (cleanPass === 'mohit2026' || cleanPass === 'admin2026') {
+        setSuccessMsg('Owner / Admin Authenticated! Welcome Mohit.');
+        setTimeout(() => {
+          onLogin('admin', 'Mohit Mundke (Admin)');
+          setSuccessMsg('');
+          setPasskey('');
+        }, 500);
+      } else {
+        setError('Invalid admin passkey. (Hint: mohit2026)');
+      }
+    }
+  };
+
+  const handleInstantRecruiter = () => {
+    setSuccessMsg('Guest Recruiter Access Activated!');
+    setTimeout(() => {
+      onLogin('recruiter', guestName.trim() || 'Hiring Partner / Recruiter');
+      setSuccessMsg('');
+    }, 400);
+  };
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md"
+      onClick={onClose}
+    >
+      <div
+        className="w-full max-w-md rounded-3xl border border-white/15 bg-gradient-to-b from-[#0a0f24] via-[#070b1a] to-[#04060e] shadow-2xl p-6 sm:p-8 relative overflow-hidden"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Ambient background glow */}
+        <div className="absolute -top-16 -right-16 w-40 h-40 bg-violet-600/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-16 -left-16 w-40 h-40 bg-cyan-600/20 rounded-full blur-3xl pointer-events-none" />
+
+        {/* Close Button */}
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white transition-all text-sm cursor-pointer"
+          title="Close modal"
+        >
+          ✕
+        </button>
+
+        {authSession ? (
+          /* Active Session View */
+          <div className="text-center py-4 space-y-4">
+            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-violet-600/20 to-cyan-600/20 border border-violet-500/40 mx-auto flex items-center justify-center text-3xl shadow-lg shadow-violet-500/20">
+              {authSession.role === 'admin' ? '👑' : '💼'}
+            </div>
+            <div>
+              <span className="font-mono text-xs uppercase tracking-widest text-emerald-400 font-bold">
+                ● SESSION ACTIVE
+              </span>
+              <h2 className="font-heading font-extrabold text-xl text-white mt-1">
+                {authSession.name || (authSession.role === 'admin' ? 'Admin Portal' : 'Recruiter Portal')}
+              </h2>
+              <p className="text-xs text-slate-400 mt-1">
+                {authSession.role === 'admin' 
+                  ? 'Authenticated with Full Portfolio Owner Privileges.'
+                  : 'Authenticated with Verified Recruiter & Executive Access.'}
+              </p>
+            </div>
+
+            <div className="pt-2 flex flex-col gap-2">
+              <button
+                onClick={() => {
+                  onClose();
+                  window.location.hash = '#/recruiter';
+                }}
+                className="cta-primary w-full py-2.5 rounded-xl text-xs font-bold"
+              >
+                Open Recruiter Dashboard ↗
+              </button>
+              <button
+                onClick={() => {
+                  onLogout();
+                }}
+                className="w-full py-2.5 rounded-xl bg-red-500/10 hover:bg-red-500/20 border border-red-500/30 text-red-300 text-xs font-mono font-semibold transition-all cursor-pointer"
+              >
+                Log Out of Portal ⎋
+              </button>
+            </div>
+          </div>
+        ) : (
+          /* Login Form View */
+          <div className="space-y-5">
+            <div>
+              <div className="flex items-center gap-2 mb-1.5">
+                <span className="text-lg">🔐</span>
+                <span className="font-mono text-[11px] uppercase tracking-wider text-violet-400 font-bold">
+                  PORTAL AUTHENTICATION
+                </span>
+              </div>
+              <h2 className="font-heading font-extrabold text-2xl text-white">
+                Access Portal
+              </h2>
+              <p className="text-xs text-slate-400 mt-1">
+                Sign in to view executive candidate insights, confidential recruiter details, or owner controls.
+              </p>
+            </div>
+
+            {/* Role Tab Selector */}
+            <div className="grid grid-cols-2 gap-1 p-1 bg-white/5 rounded-2xl border border-white/10">
+              <button
+                type="button"
+                onClick={() => { setRole('recruiter'); setError(''); }}
+                className={`py-2 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-all cursor-pointer ${
+                  role === 'recruiter'
+                    ? 'bg-gradient-to-r from-violet-600 to-indigo-600 text-white shadow-md'
+                    : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                <span>💼</span> Recruiter Portal
+              </button>
+              <button
+                type="button"
+                onClick={() => { setRole('admin'); setError(''); }}
+                className={`py-2 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-all cursor-pointer ${
+                  role === 'admin'
+                    ? 'bg-gradient-to-r from-violet-600 to-indigo-600 text-white shadow-md'
+                    : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                <span>👑</span> Admin Mode
+              </button>
+            </div>
+
+            <form onSubmit={handleAuthSubmit} className="space-y-4">
+              {role === 'recruiter' && (
+                <div>
+                  <label className="block text-[11px] font-mono text-slate-400 mb-1">
+                    Your Name or Organization (Optional)
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="e.g. Google, Microsoft, Tech Recruiter"
+                    value={guestName}
+                    onChange={(e) => setGuestName(e.target.value)}
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-600 text-xs focus:outline-none focus:border-violet-500/60"
+                  />
+                </div>
+              )}
+
+              <div>
+                <div className="flex items-center justify-between mb-1">
+                  <label className="text-[11px] font-mono text-slate-400">
+                    {role === 'recruiter' ? 'Recruiter Passkey' : 'Admin Master Password'}
+                  </label>
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="text-[10px] font-mono text-slate-500 hover:text-violet-400 cursor-pointer"
+                  >
+                    {showPassword ? 'Hide' : 'Show'}
+                  </button>
+                </div>
+                <input
+                  type={showPassword ? 'text' : 'password'}
+                  required
+                  placeholder={role === 'recruiter' ? 'Enter passkey (e.g. recruiter2026)' : 'Enter admin password'}
+                  value={passkey}
+                  onChange={(e) => setPasskey(e.target.value)}
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-600 text-xs focus:outline-none focus:border-violet-500/60 font-mono"
+                />
+              </div>
+
+              {error && (
+                <div className="p-2.5 rounded-xl bg-red-500/10 border border-red-500/30 text-red-300 text-xs font-mono">
+                  ⚠️ {error}
+                </div>
+              )}
+
+              {successMsg && (
+                <div className="p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-mono">
+                  ✓ {successMsg}
+                </div>
+              )}
+
+              <button
+                type="submit"
+                className="cta-primary w-full py-3 rounded-xl text-xs font-bold text-white shadow-lg shadow-violet-600/30 cursor-pointer"
+              >
+                Authenticate &amp; Unlock ✦
+              </button>
+            </form>
+
+            {/* Quick Demo Credentials */}
+            <div className="p-3 rounded-2xl bg-white/[0.03] border border-white/10 space-y-2 text-[11px] font-mono">
+              <div className="flex items-center justify-between text-slate-400">
+                <span>🔑 Quick Passkeys:</span>
+                <span className="text-violet-400">Default Access</span>
+              </div>
+              <div className="flex items-center justify-between text-slate-300">
+                <span>Recruiter Passkey:</span>
+                <button
+                  type="button"
+                  onClick={() => setPasskey('recruiter2026')}
+                  className="px-2 py-0.5 rounded bg-violet-600/20 hover:bg-violet-600/40 text-violet-300 transition-colors cursor-pointer"
+                >
+                  recruiter2026
+                </button>
+              </div>
+              <div className="flex items-center justify-between text-slate-300">
+                <span>Admin Passkey:</span>
+                <button
+                  type="button"
+                  onClick={() => { setRole('admin'); setPasskey('mohit2026'); }}
+                  className="px-2 py-0.5 rounded bg-amber-500/20 hover:bg-amber-500/40 text-amber-300 transition-colors cursor-pointer"
+                >
+                  mohit2026
+                </button>
+              </div>
+            </div>
+
+            {/* 1-Click Instant Recruiter Button */}
+            {role === 'recruiter' && (
+              <div className="text-center pt-1">
+                <button
+                  type="button"
+                  onClick={handleInstantRecruiter}
+                  className="text-xs text-slate-400 hover:text-cyan-300 transition-colors underline underline-offset-4 cursor-pointer"
+                >
+                  Don&apos;t have a passkey? Continue as Guest Recruiter →
+                </button>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════════════════════════════
    MAIN APP ROUTER COMPONENT
    ═══════════════════════════════════════════════════════════════════ */
 function App() {
   const [loading, setLoading] = useState(true);
   const [route, setRoute] = useState('/');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [authSession, setAuthSession] = useState(() => {
+    try {
+      const saved = localStorage.getItem('portfolio_auth_session');
+      return saved ? JSON.parse(saved) : null;
+    } catch (e) {
+      return null;
+    }
+  });
+  const [loginModalOpen, setLoginModalOpen] = useState(false);
+
+  const handleLogin = (role, name) => {
+    const session = {
+      role,
+      name: name || (role === 'admin' ? 'Mohit Mundke (Admin)' : 'Verified Recruiter'),
+      timestamp: Date.now()
+    };
+    setAuthSession(session);
+    try {
+      localStorage.setItem('portfolio_auth_session', JSON.stringify(session));
+    } catch (e) {}
+    setLoginModalOpen(false);
+  };
+
+  const handleLogout = () => {
+    setAuthSession(null);
+    try {
+      localStorage.removeItem('portfolio_auth_session');
+    } catch (e) {}
+  };
 
   const [aiOpen, setAiOpen] = useState(false);
   const [aiMessages, setAiMessages] = useState([
@@ -3912,11 +4243,22 @@ function App() {
   };
 
   useEffect(() => {
-    setRoute(getCleanRoute());
+    const initial = getCleanRoute();
+    if (initial === '/login' || initial === '/portal') {
+      setLoginModalOpen(true);
+      setRoute('/');
+    } else {
+      setRoute(initial);
+    }
 
     const handleHashChange = () => {
       const current = getCleanRoute();
-      setRoute(current);
+      if (current === '/login' || current === '/portal') {
+        setLoginModalOpen(true);
+        setRoute('/');
+      } else {
+        setRoute(current);
+      }
       window.scrollTo({ top: 0, behavior: 'instant' });
     };
 
@@ -4035,21 +4377,46 @@ function App() {
             </nav>
           )}
 
-          {/* Right: Simple Mode Toggle Icon + Strong Single CTA */}
+          {/* Right: Simple Mode Toggle Icon + Portal Login + Strong Single CTA */}
           <div className="flex items-center gap-2 sm:gap-2.5 flex-shrink-0">
             {/* Simple Clean Icon Toggle */}
             <button
               onClick={() => navigateTo(isRecruiter ? '/' : '/recruiter')}
-              className="w-8 h-8 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-white/20 flex items-center justify-center text-xs sm:text-sm transition-all hover:scale-105 active:scale-95 text-slate-300 hover:text-white flex-shrink-0"
+              className="w-8 h-8 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-white/20 flex items-center justify-center text-xs sm:text-sm transition-all hover:scale-105 active:scale-95 text-slate-300 hover:text-white flex-shrink-0 cursor-pointer"
               title={isRecruiter ? "Switch to Developer / Normal View" : "Switch to Recruiter View"}
             >
               {isRecruiter ? '💼' : '💻'}
             </button>
 
+            {/* Portal / Login Button */}
+            {!authSession ? (
+              <button
+                onClick={() => setLoginModalOpen(true)}
+                className="h-8 px-2.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-violet-500/40 text-xs font-mono font-medium text-slate-300 hover:text-white transition-all flex items-center gap-1.5 flex-shrink-0 cursor-pointer"
+                title="Recruiter & Admin Portal Login"
+              >
+                <span>🔐</span>
+                <span className="hidden sm:inline">Portal</span>
+              </button>
+            ) : (
+              <button
+                onClick={() => setLoginModalOpen(true)}
+                className={`h-8 px-2.5 rounded-xl border flex items-center gap-1.5 text-xs font-mono font-bold transition-all flex-shrink-0 cursor-pointer ${
+                  authSession.role === 'admin'
+                    ? 'bg-amber-500/15 border-amber-500/40 text-amber-300 hover:bg-amber-500/25'
+                    : 'bg-violet-600/20 border-violet-500/40 text-violet-300 hover:bg-violet-600/30'
+                }`}
+                title="Click to view Portal Session or Log out"
+              >
+                <span>{authSession.role === 'admin' ? '👑' : '💼'}</span>
+                <span className="hidden sm:inline">{authSession.role === 'admin' ? 'Admin' : 'Recruiter'}</span>
+              </button>
+            )}
+
             {/* Lets Connect - Strong Single CTA */}
             <button
               onClick={() => navigateTo('/contact')}
-              className="cta-primary px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-xs font-bold text-white shadow-lg shadow-violet-600/30 hover:shadow-violet-500/50 hover:scale-[1.03] active:scale-95 transition-all flex items-center gap-1.5 flex-shrink-0"
+              className="cta-primary px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-xs font-bold text-white shadow-lg shadow-violet-600/30 hover:shadow-violet-500/50 hover:scale-[1.03] active:scale-95 transition-all flex items-center gap-1.5 flex-shrink-0 cursor-pointer"
             >
               <span>Let&apos;s Connect</span>
               <span className="text-[11px]">✨</span>
@@ -4058,7 +4425,7 @@ function App() {
             {/* Mobile Hamburger Toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-1.5 sm:p-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/15 text-slate-300 hover:text-white transition-colors flex-shrink-0"
+              className="lg:hidden p-1.5 sm:p-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/15 text-slate-300 hover:text-white transition-colors flex-shrink-0 cursor-pointer"
               aria-label="Toggle navigation menu"
             >
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -4093,10 +4460,20 @@ function App() {
             <div className="pt-2 mt-2 border-t border-white/10 flex flex-col gap-2">
               <button
                 onClick={() => {
+                  setLoginModalOpen(true);
+                  setMobileMenuOpen(false);
+                }}
+                className="px-4 py-2.5 rounded-xl bg-violet-600/15 border border-violet-500/30 text-violet-300 text-xs font-semibold text-left flex items-center gap-2 cursor-pointer"
+              >
+                <span>🔐</span>
+                <span>{authSession ? `Portal Session (${authSession.role === 'admin' ? 'Admin' : 'Recruiter'})` : 'Recruiter & Admin Portal Login'}</span>
+              </button>
+              <button
+                onClick={() => {
                   navigateTo(isRecruiter ? '/' : '/recruiter');
                   setMobileMenuOpen(false);
                 }}
-                className="px-4 py-2.5 rounded-xl bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs font-semibold text-left flex items-center gap-2"
+                className="px-4 py-2.5 rounded-xl bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs font-semibold text-left flex items-center gap-2 cursor-pointer"
               >
                 <span>💼</span>
                 <span>{isRecruiter ? 'Switch to Normal Mode' : 'Switch to Recruiter Mode'}</span>
@@ -4106,15 +4483,15 @@ function App() {
                   navigateTo('/contact');
                   setMobileMenuOpen(false);
                 }}
-                className="cta-primary w-full py-3 rounded-xl text-xs font-bold text-center mt-1"
+                className="cta-primary w-full py-3 rounded-xl text-xs font-bold text-center mt-1 cursor-pointer"
               >
                 Let&apos;s Connect ✨
               </button>
               <a
-                href="/resume.pdf"
+                href={getResumePdfSrc()}
                 target="_blank"
-                download
-                className="px-4 py-2.5 rounded-xl bg-violet-600/15 border border-violet-500/30 text-violet-300 text-xs font-semibold text-center"
+                download="Mohit-Mundke-Resume.pdf"
+                className="px-4 py-2.5 rounded-xl bg-violet-600/15 border border-violet-500/30 text-violet-300 text-xs font-semibold text-center cursor-pointer"
               >
                 📄 Download Official Resume
               </a>
@@ -4134,8 +4511,23 @@ function App() {
         {route === '/achievements' && <AchievementsPage navigateTo={navigateTo} />}
         {route === '/gallery' && <GalleryPage navigateTo={navigateTo} />}
         {route === '/contact' && <ContactPage navigateTo={navigateTo} />}
-        {route === '/recruiter' && <RecruiterPage navigateTo={navigateTo} />}
+        {route === '/recruiter' && (
+          <RecruiterPage
+            navigateTo={navigateTo}
+            authSession={authSession}
+            onOpenLogin={() => setLoginModalOpen(true)}
+          />
+        )}
       </main>
+
+      {/* ═══ AUTHENTICATION & LOGIN MODAL ═══ */}
+      <AuthModal
+        isOpen={loginModalOpen}
+        onClose={() => setLoginModalOpen(false)}
+        onLogin={handleLogin}
+        authSession={authSession}
+        onLogout={handleLogout}
+      />
 
       {/* ═══ 3. COMPREHENSIVE MULTI-PAGE FOOTER ═══ */}
       <footer className="relative z-10 border-t border-white/10 bg-[#020408] pt-16 pb-12 px-4 sm:px-6 lg:px-8">
@@ -4245,6 +4637,15 @@ function App() {
                     </button>
                   </li>
                 ))}
+                <li className="pt-2 border-t border-white/5">
+                  <button
+                    onClick={() => setLoginModalOpen(true)}
+                    className="hover:text-violet-300 inline-flex items-center gap-1.5 transition-all text-violet-400 font-mono text-[11px] cursor-pointer"
+                  >
+                    <span>🔐</span>
+                    <span>{authSession ? `${authSession.role === 'admin' ? 'Admin' : 'Recruiter'} Portal Active` : 'Recruiter & Admin Portal'}</span>
+                  </button>
+                </li>
               </ul>
             </div>
 
