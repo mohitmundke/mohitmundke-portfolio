@@ -1360,14 +1360,14 @@ function Monogram({ size = 38, className = "" }) {
 
   return (
     <div
-      className={`relative inline-flex items-center justify-center rounded-xl overflow-hidden border border-white/20 bg-gradient-to-br from-[#0c1022] via-[#050814] to-black shadow-lg shadow-violet-500/20 flex-shrink-0 group ${className}`}
+      className={`nav-logo-box relative inline-flex items-center justify-center rounded-xl overflow-hidden border border-white/20 bg-gradient-to-br from-[#0c1022] via-[#050814] to-black shadow-lg shadow-violet-500/20 flex-shrink-0 transition-all duration-300 ease-out ${className}`}
       style={{ width: size, height: size, minWidth: size, minHeight: size }}
     >
       {!failed ? (
         <img
           src={getImageSrc('/images/mohit-mundke-logo-cropped.png')}
           alt="Mohit Mundke Logo"
-          className="w-full h-full object-contain p-1 filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] transition-transform duration-300 group-hover:scale-105"
+          className="w-full h-full object-contain p-0.5 filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] transition-transform duration-300 ease-out"
           onError={(e) => {
             if (e.currentTarget.src.indexOf('mohit-mundke-logo.png') === -1) {
               e.currentTarget.src = getImageSrc('/images/mohit-mundke-logo.png');
@@ -3989,19 +3989,19 @@ function App() {
     <div className="relative min-h-screen text-slate-200 bg-[#030508] flex flex-col justify-between">
       <ParticleBackground />
 
-      {/* ═══ 1. STICKY NAVBAR (10/10 EXECUTIVE GLASS PANEL) ═══ */}
+      {/* ═══ 1. STICKY NAVBAR (10/10 EXECUTIVE GLASS PANEL - BUTTERY SMOOTH) ═══ */}
       <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center pt-2.5 sm:pt-4 px-3 sm:px-6 pointer-events-none">
-        <div className="pointer-events-auto w-full max-w-6xl rounded-2xl border border-white/[0.12] px-3 sm:px-4 py-2 sm:py-2.5 flex items-center justify-between shadow-[0_12px_40px_rgba(0,0,0,0.65),inset_0_1px_1px_rgba(255,255,255,0.12)] bg-[#050814]/90 backdrop-blur-2xl transition-all">
+        <div className="nav-glass pointer-events-auto w-full max-w-6xl rounded-2xl px-3 sm:px-4 py-2 sm:py-2.5 flex items-center justify-between transition-all">
           
           {/* Left: Logo & Professional Identity */}
           <button
             onClick={() => navigateTo('/')}
-            className="flex items-center gap-2.5 sm:gap-3 group text-left focus:outline-none flex-shrink-0 cursor-pointer select-none"
+            className="nav-brand-btn flex items-center gap-2.5 sm:gap-3 text-left focus:outline-none flex-shrink-0 cursor-pointer select-none"
             title="Mohit Mundke — Home"
           >
-            <Monogram size={38} className="transition-transform duration-300 group-hover:scale-105 flex-shrink-0" />
+            <Monogram size={38} className="flex-shrink-0" />
             <div className="flex flex-col">
-              <span className="font-heading font-extrabold text-sm sm:text-[15px] text-white tracking-tight group-hover:text-violet-300 transition-colors leading-tight">
+              <span className="font-heading font-extrabold text-sm sm:text-[15px] text-white tracking-tight hover:text-violet-300 transition-colors duration-300 leading-tight">
                 Mohit Mundke
               </span>
               <span className="font-mono text-[10.5px] text-slate-400 font-medium tracking-tight hidden sm:block whitespace-nowrap">
@@ -4012,23 +4012,19 @@ function App() {
 
           {/* Center: Clean Desktop Navigation with Inset Capsule Track */}
           {!isRecruiter && (
-            <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1 p-1 rounded-xl bg-white/[0.03] border border-white/[0.06]">
+            <nav className="nav-track hidden lg:flex items-center gap-0.5 xl:gap-1 p-1 rounded-xl">
               {navItems.map((item) => {
                 const isActive = route === item.id;
                 return (
                   <button
                     key={item.id}
                     onClick={() => navigateTo(item.id)}
-                    className={`relative px-2 xl:px-2.5 py-1.5 text-[11.5px] xl:text-xs font-medium tracking-tight rounded-lg transition-all duration-200 cursor-pointer select-none ${
-                      isActive
-                        ? 'text-white font-semibold bg-white/[0.1] shadow-[inset_0_1px_0_rgba(255,255,255,0.15),0_2px_8px_rgba(0,0,0,0.3)] border border-white/10'
-                        : 'text-slate-400 hover:text-slate-100 hover:bg-white/[0.05]'
+                    className={`nav-pill-btn px-2 xl:px-2.5 py-1.5 text-[11.5px] xl:text-xs font-medium tracking-tight rounded-lg cursor-pointer ${
+                      isActive ? 'active font-semibold' : 'text-slate-400'
                     }`}
                   >
                     <span>{item.label}</span>
-                    {isActive && (
-                      <span className="absolute bottom-0 left-2 right-2 h-[2px] bg-gradient-to-r from-violet-400 to-cyan-400 rounded-full shadow-[0_0_8px_rgba(168,85,247,0.9)]" />
-                    )}
+                    {isActive && <span className="nav-active-glow-bar" />}
                   </button>
                 );
               })}
@@ -4040,20 +4036,20 @@ function App() {
             {/* Simple Clean Mode Toggle */}
             <button
               onClick={() => navigateTo(isRecruiter ? '/' : '/recruiter')}
-              className={`w-9 h-9 rounded-xl border flex items-center justify-center text-sm transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer flex-shrink-0 select-none ${
+              className={`nav-mode-btn w-9 h-9 rounded-xl border flex items-center justify-center text-sm cursor-pointer flex-shrink-0 select-none ${
                 isRecruiter
                   ? 'bg-amber-500/15 border-amber-500/40 text-amber-300 shadow-[0_0_15px_rgba(245,158,11,0.25)]'
-                  : 'bg-white/[0.04] hover:bg-white/[0.08] border-white/10 hover:border-violet-400/40 text-slate-300 hover:text-white'
+                  : 'bg-white/[0.04] border-white/10 text-slate-300 hover:text-white'
               }`}
               title={isRecruiter ? "Switch to Normal Portfolio Mode" : "Switch to Recruiter Mode"}
             >
               <span>{isRecruiter ? '💼' : '💻'}</span>
             </button>
 
-            {/* Lets Connect - Elevated Gradient CTA with Inner Bevel & Glow */}
+            {/* Lets Connect - Elevated Gradient CTA with Buttery Smooth Transition */}
             <button
               onClick={() => navigateTo('/contact')}
-              className="h-9 px-3.5 sm:px-4 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-violet-600 via-indigo-600 to-cyan-500 hover:from-violet-500 hover:to-cyan-400 shadow-[0_0_20px_rgba(124,58,237,0.35),inset_0_1px_1px_rgba(255,255,255,0.3)] hover:shadow-[0_0_25px_rgba(6,182,212,0.45)] hover:scale-[1.03] active:scale-95 transition-all duration-200 flex items-center gap-1.5 flex-shrink-0 cursor-pointer select-none whitespace-nowrap"
+              className="nav-cta-smooth h-9 px-3.5 sm:px-4 rounded-xl text-xs font-bold text-white flex items-center gap-1.5 flex-shrink-0 cursor-pointer select-none whitespace-nowrap"
             >
               <span>Let&apos;s Connect</span>
               <span className="text-[11px] animate-pulse">✨</span>
