@@ -1360,17 +1360,17 @@ function Monogram({ size = 38, className = "" }) {
 
   return (
     <div
-      className={`relative inline-flex items-center justify-center rounded-xl overflow-hidden border border-white/20 bg-gradient-to-br from-violet-950/80 to-slate-950 shadow-lg shadow-violet-500/15 flex-shrink-0 ${className}`}
+      className={`relative inline-flex items-center justify-center rounded-xl overflow-hidden border border-white/20 bg-gradient-to-br from-[#0c1022] via-[#050814] to-black shadow-lg shadow-violet-500/20 flex-shrink-0 group ${className}`}
       style={{ width: size, height: size, minWidth: size, minHeight: size }}
     >
       {!failed ? (
         <img
-          src={getImageSrc('/images/mohit-mundke-logo.png')}
+          src={getImageSrc('/images/mohit-mundke-logo-cropped.png')}
           alt="Mohit Mundke Logo"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain p-1 filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] transition-transform duration-300 group-hover:scale-105"
           onError={(e) => {
-            if (e.currentTarget.src.indexOf('mm-logo.png') === -1) {
-              e.currentTarget.src = '/images/mm-logo.png';
+            if (e.currentTarget.src.indexOf('mohit-mundke-logo.png') === -1) {
+              e.currentTarget.src = getImageSrc('/images/mohit-mundke-logo.png');
             } else {
               setFailed(true);
             }
@@ -1381,7 +1381,7 @@ function Monogram({ size = 38, className = "" }) {
           MM
         </span>
       )}
-      <span className="absolute -bottom-0.5 -right-0.5 w-2 h-2 rounded-full bg-emerald-400 border border-[#030508]" />
+      <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-emerald-400 border-2 border-[#050814] shadow-[0_0_8px_rgba(52,211,153,0.8)]" />
     </div>
   );
 }
@@ -3989,76 +3989,80 @@ function App() {
     <div className="relative min-h-screen text-slate-200 bg-[#030508] flex flex-col justify-between">
       <ParticleBackground />
 
-      {/* ═══ 1. STICKY NAVBAR (PROFESSIONAL UNIFIED GLASS PANEL) ═══ */}
-      <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center pt-3 sm:pt-4 px-3 sm:px-6 pointer-events-none">
-        <div className="pointer-events-auto w-full max-w-6xl rounded-2xl border border-white/10 px-3.5 sm:px-5 py-2 flex items-center justify-between shadow-[0_8px_32px_rgba(0,0,0,0.5)] bg-[#050814]/85 backdrop-blur-xl transition-all">
+      {/* ═══ 1. STICKY NAVBAR (10/10 EXECUTIVE GLASS PANEL) ═══ */}
+      <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center pt-2.5 sm:pt-4 px-3 sm:px-6 pointer-events-none">
+        <div className="pointer-events-auto w-full max-w-6xl rounded-2xl border border-white/[0.12] px-3 sm:px-4 py-2 sm:py-2.5 flex items-center justify-between shadow-[0_12px_40px_rgba(0,0,0,0.65),inset_0_1px_1px_rgba(255,255,255,0.12)] bg-[#050814]/90 backdrop-blur-2xl transition-all">
           
           {/* Left: Logo & Professional Identity */}
           <button
             onClick={() => navigateTo('/')}
-            className="flex items-center gap-2.5 sm:gap-3 group text-left focus:outline-none flex-shrink-0"
+            className="flex items-center gap-2.5 sm:gap-3 group text-left focus:outline-none flex-shrink-0 cursor-pointer select-none"
             title="Mohit Mundke — Home"
           >
-            <Monogram size={32} className="transition-transform duration-300 group-hover:scale-105 flex-shrink-0" />
+            <Monogram size={38} className="transition-transform duration-300 group-hover:scale-105 flex-shrink-0" />
             <div className="flex flex-col">
               <span className="font-heading font-extrabold text-sm sm:text-[15px] text-white tracking-tight group-hover:text-violet-300 transition-colors leading-tight">
                 Mohit Mundke
               </span>
-              <span className="font-mono text-[10px] text-slate-400 font-medium tracking-tight hidden xl:block whitespace-nowrap">
-                AI &amp; Data Science <span className="text-slate-600">|</span> <span className="text-cyan-300/90 font-semibold">Google Student Ambassador</span>
-              </span>
-              <span className="font-mono text-[10px] text-slate-400 font-medium tracking-tight hidden sm:block xl:hidden whitespace-nowrap">
-                AI &amp; Data Science
+              <span className="font-mono text-[10.5px] text-slate-400 font-medium tracking-tight hidden sm:block whitespace-nowrap">
+                AI &amp; Data Science <span className="text-slate-600">·</span> <span className="text-cyan-300 font-semibold">Google Ambassador</span>
               </span>
             </div>
           </button>
 
-          {/* Center: Clean Desktop Navigation (No bulky boxes, subtle active underline glow) */}
+          {/* Center: Clean Desktop Navigation with Inset Capsule Track */}
           {!isRecruiter && (
-            <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1.5 mx-2">
+            <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1 p-1 rounded-xl bg-white/[0.03] border border-white/[0.06]">
               {navItems.map((item) => {
                 const isActive = route === item.id;
                 return (
                   <button
                     key={item.id}
                     onClick={() => navigateTo(item.id)}
-                    className={`relative px-2 xl:px-2.5 py-1.5 text-[11.5px] xl:text-xs font-medium tracking-wide transition-all ${
+                    className={`relative px-2 xl:px-2.5 py-1.5 text-[11.5px] xl:text-xs font-medium tracking-tight rounded-lg transition-all duration-200 cursor-pointer select-none ${
                       isActive
-                        ? 'text-white font-semibold after:absolute after:-bottom-1 after:left-2 after:right-2 after:h-[2px] after:bg-gradient-to-r after:from-violet-400 after:to-cyan-400 after:rounded-full after:shadow-[0_0_8px_#a855f7]'
-                        : 'text-slate-400 hover:text-white hover:bg-white/[0.04] rounded-lg'
+                        ? 'text-white font-semibold bg-white/[0.1] shadow-[inset_0_1px_0_rgba(255,255,255,0.15),0_2px_8px_rgba(0,0,0,0.3)] border border-white/10'
+                        : 'text-slate-400 hover:text-slate-100 hover:bg-white/[0.05]'
                     }`}
                   >
-                    {item.label}
+                    <span>{item.label}</span>
+                    {isActive && (
+                      <span className="absolute bottom-0 left-2 right-2 h-[2px] bg-gradient-to-r from-violet-400 to-cyan-400 rounded-full shadow-[0_0_8px_rgba(168,85,247,0.9)]" />
+                    )}
                   </button>
                 );
               })}
             </nav>
           )}
 
-          {/* Right: Simple Mode Toggle Icon + Strong Single CTA */}
+          {/* Right: Refined Mode Toggle + Glowing Connect CTA */}
           <div className="flex items-center gap-2 sm:gap-2.5 flex-shrink-0">
-            {/* Simple Clean Icon Toggle */}
+            {/* Simple Clean Mode Toggle */}
             <button
               onClick={() => navigateTo(isRecruiter ? '/' : '/recruiter')}
-              className="w-8 h-8 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-white/20 flex items-center justify-center text-xs sm:text-sm transition-all hover:scale-105 active:scale-95 text-slate-300 hover:text-white flex-shrink-0"
-              title={isRecruiter ? "Switch to Developer / Normal View" : "Switch to Recruiter View"}
+              className={`w-9 h-9 rounded-xl border flex items-center justify-center text-sm transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer flex-shrink-0 select-none ${
+                isRecruiter
+                  ? 'bg-amber-500/15 border-amber-500/40 text-amber-300 shadow-[0_0_15px_rgba(245,158,11,0.25)]'
+                  : 'bg-white/[0.04] hover:bg-white/[0.08] border-white/10 hover:border-violet-400/40 text-slate-300 hover:text-white'
+              }`}
+              title={isRecruiter ? "Switch to Normal Portfolio Mode" : "Switch to Recruiter Mode"}
             >
-              {isRecruiter ? '💼' : '💻'}
+              <span>{isRecruiter ? '💼' : '💻'}</span>
             </button>
 
-            {/* Lets Connect - Strong Single CTA */}
+            {/* Lets Connect - Elevated Gradient CTA with Inner Bevel & Glow */}
             <button
               onClick={() => navigateTo('/contact')}
-              className="cta-primary px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-xs font-bold text-white shadow-lg shadow-violet-600/30 hover:shadow-violet-500/50 hover:scale-[1.03] active:scale-95 transition-all flex items-center gap-1.5 flex-shrink-0"
+              className="h-9 px-3.5 sm:px-4 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-violet-600 via-indigo-600 to-cyan-500 hover:from-violet-500 hover:to-cyan-400 shadow-[0_0_20px_rgba(124,58,237,0.35),inset_0_1px_1px_rgba(255,255,255,0.3)] hover:shadow-[0_0_25px_rgba(6,182,212,0.45)] hover:scale-[1.03] active:scale-95 transition-all duration-200 flex items-center gap-1.5 flex-shrink-0 cursor-pointer select-none whitespace-nowrap"
             >
               <span>Let&apos;s Connect</span>
-              <span className="text-[11px]">✨</span>
+              <span className="text-[11px] animate-pulse">✨</span>
             </button>
 
             {/* Mobile Hamburger Toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-1.5 sm:p-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/15 text-slate-300 hover:text-white transition-colors flex-shrink-0"
+              className="lg:hidden p-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/15 text-slate-300 hover:text-white transition-colors flex-shrink-0 cursor-pointer"
               aria-label="Toggle navigation menu"
             >
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
