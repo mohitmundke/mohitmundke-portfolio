@@ -1,4 +1,5 @@
 import { useState, useEffect, lazy, Suspense } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import LoadingScreen from './components/layout/LoadingScreen';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
@@ -148,6 +149,9 @@ export default function App() {
 
         {/* Floating AI Assistant */}
         <AskMohitAssistant />
+
+        {/* Vercel Speed Insights */}
+        <SpeedInsights />
       </div>
     </>
   );
