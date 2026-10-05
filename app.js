@@ -35,130 +35,124 @@ const personalInfo = {
   }
 };
 
-/* ─── JOURNEY DATA ─── */
-const journeyEpochs = [
+/* ─── 03. HORIZONTAL CINEMATIC JOURNEY SCENES ─── */
+const journeyScenes = [
   {
     year: '2024',
     title: 'THE BEGINNING',
-    tag: 'FOUNDATION',
-    summary: 'Started exploring programming, technology and problem solving.',
-    bullets: ['Algorithms & Discrete Logic', 'C / C++ Systems Programming', 'Foundational Mathematics'],
-    accent: '#ffffff'
+    scene: 'PROGRAMMING',
+    accent: '#ffffff',
+    desc: 'Started exploring programming, technology, and algorithmic logic from first principles.',
+    codeSnippet: 'int main() { printf("Hello, World\\n"); return 0; }',
+    bullets: ['Algorithms & Complexity', 'C/C++ Low-Level Systems', 'Problem Solving Foundations']
   },
   {
     year: '2025',
     title: 'FROM LEARNING TO BUILDING',
-    tag: 'DEVELOPMENT',
-    summary: 'Started working on projects involving programming, UI/UX, web development and AI.',
-    bullets: ['React & Component Architecture', 'UI/UX Interactive Prototypes', 'Full-Stack Software Workflows'],
-    accent: '#38bdf8'
+    scene: 'BUILDING',
+    accent: '#38bdf8',
+    desc: 'Started working on projects involving programming, UI/UX, web development and AI.',
+    codeSnippet: '<Component onBuild={() => launchProduct()} />',
+    bullets: ['React & Component Trees', 'UI/UX Interactive Prototypes', 'Full-Stack Software Architecture']
   },
   {
     year: '2026',
     title: 'GOOGLE GEMINI',
-    tag: 'AI ERA',
-    summary: 'Became a Google Gemini AI Student Ambassador and started exploring Generative AI, AI tools and real-world applications.',
-    bullets: ['Campus AI Evangelism', 'Prompt Architecture & LLMs', 'Enabling Peer Builders'],
-    accent: '#4285F4'
+    scene: 'AI ERA',
+    accent: '#4285F4',
+    desc: 'Became a Google Gemini AI Student Ambassador and started exploring Generative AI, AI tools and real-world applications.',
+    codeSnippet: 'const model = genAI.getGenerativeModel({ model: "gemini" });',
+    bullets: ['Campus AI Evangelism', 'Prompt Engineering Architecture', 'Enabling Student Developers']
   },
   {
     year: '2026',
     title: 'AWS ECOSYSTEM',
-    tag: 'CLOUD',
-    summary: 'Started exploring AWS, cloud computing and the wider developer ecosystem.',
-    bullets: ['Cloud Foundations & Storage', 'Serverless & Compute Primitives', 'Scalable Architectures'],
-    accent: '#FF9900'
+    scene: 'CLOUD',
+    accent: '#FF9900',
+    desc: 'Started exploring AWS, cloud computing, serverless architectures and the developer ecosystem.',
+    codeSnippet: 'AWSTemplateFormatVersion: "2010-09-09"\nTransform: AWS::Serverless',
+    bullets: ['Cloud Foundations & IAM', 'Serverless & Object Storage', 'Scalable Cloud Primitives']
   },
   {
     year: '2026',
     title: 'BUILDING THE BUILDERS',
-    tag: 'LEADERSHIP',
-    summary: 'Became the Student Builder Group Leader of AWS Student Builder Group DYPCOEI for AY 2026-27.',
-    bullets: ['Heading 6-Person Core Team', 'Faculty Collaboration', 'Campus Builder Culture'],
-    accent: '#FFA724'
+    scene: 'LEADERSHIP',
+    accent: '#FFA724',
+    desc: 'Became the Student Builder Group Leader of AWS Student Builder Group DYPCOEI for AY 2026-27.',
+    codeSnippet: 'AWS.Community.lead({ group: "DYPCOEI", AY: "2026-27" })',
+    bullets: ['Leading 6-Person Core Team', 'Faculty Collaboration', 'Campus Builder Culture']
   },
   {
     year: 'NOW',
     title: 'STILL BUILDING',
-    tag: 'FUTURE',
-    summary: 'Continuing to learn, build, lead and experiment with AI, cloud, software and design.',
-    bullets: ['Active Intelligent Systems', 'Product Design Systems', 'Next Horizon'],
-    accent: '#a855f7'
+    scene: 'HORIZON',
+    accent: '#a855f7',
+    desc: 'Continuing to learn, build, lead and experiment with AI, cloud, software and design.',
+    codeSnippet: 'while (alive) { learn(); build(); lead(); }',
+    bullets: ['Intelligent Product Labs', 'Next-Gen Interfaces', 'Lifelong Trajectory']
   }
 ];
 
-/* ─── GOOGLE GEMINI STEPS & PILLARS ─── */
-const googleSteps = [
-  { num: '01', key: 'DISCOVER', desc: 'Unpacking multimodal intelligence, transformer reasoning, and prompt interfaces.' },
-  { num: '02', key: 'EXPERIMENT', desc: 'Prototyping practical AI agents, context pipelines, and generative workflows.' },
-  { num: '03', key: 'LEARN', desc: 'Mastering the Google Gemini API, system tokens, and responsible AI safety boundaries.' },
-  { num: '04', key: 'SHARE', desc: 'Hosting high-energy campus demos, student workshops, and technical deep dives.' },
-  { num: '05', key: 'ENABLE', desc: 'Equipping student engineers with AI literacy to dramatically multiply their output.' }
-];
-
-/* ─── AWS PROGRESSION STAGES ─── */
-const awsStages = [
-  { num: '01', title: 'EXPLORE', desc: 'Grasping global cloud infrastructure, IAM security, and architectural fundamentals.' },
-  { num: '02', title: 'LEARN', desc: 'Deep-diving into compute, serverless paradigms, scalable storage, and managed databases.' },
-  { num: '03', title: 'BUILD', desc: 'Architecting working prototypes, container pipelines, and cloud automation.' },
-  { num: '04', title: 'LEAD', desc: 'Assuming responsibility as Student Builder Group Leader for DYPCOEI.' },
-  { num: '05', title: 'CREATE COMMUNITY', desc: 'Empowering a campus ecosystem of engineers through hands-on builder bootcamps.' }
-];
-
-/* ─── AWS CORE TEAM (EXACT OFFICIAL MEMBERS) ─── */
+/* ─── AWS CORE TEAM (EXACT OFFICIAL MEMBERS & AUTHENTIC ASSETS) ─── */
 const awsCoreTeam = [
   {
     role: 'LEADER',
     name: 'Mohit Mundke',
     title: 'Student Builder Group Leader',
     dept: '2nd Year · AI & Data Science',
+    photo: '/images/mohit-profile.jpg',
     accent: '#FF9900',
-    desc: 'Leading community vision, technical workshop agendas, and developer enablement culture across DYPCOEI.'
+    bio: 'Guiding community strategy, technical workshops, and cloud builder culture across DYPCOEI.'
   },
   {
     role: 'DIRECTOR OF EVENTS',
     name: 'Dnyanada Dhavale',
     title: 'Director of Events',
     dept: '3rd Year · Computer Engineering',
+    photo: null,
     accent: '#FFB84D',
-    desc: 'Orchestrating technical bootcamps, speaker sessions, and cloud hackathons.'
+    bio: 'Orchestrating technical bootcamps, speaker symposiums, and hands-on developer hackathons.'
   },
   {
     role: 'DIRECTOR OF MARKETING',
     name: 'Akanksha Mirge',
     title: 'Director of Marketing',
     dept: '3rd Year · Computer Engineering',
+    photo: null,
     accent: '#FF9900',
-    desc: 'Directing community outreach, brand presence, and student recruitment.'
+    bio: 'Directing community outreach, social presence, and cross-department builder recruitment.'
   },
   {
     role: 'TECHNICAL LEAD',
     name: 'Mayuresh Thorve',
     title: 'Technical Lead',
     dept: '3rd Year · Computer Engineering',
+    photo: null,
     accent: '#38BDF8',
-    desc: 'Leading hands-on cloud architecture labs, code reviews, and technical tracks.'
+    bio: 'Leading technical tracks, cloud architecture demos, and code-level mentoring.'
   },
   {
     role: 'MULTIMEDIA HEAD',
     name: 'Ishwari Bhope',
     title: 'Multimedia Head',
     dept: '2nd Year · AI-ML',
+    photo: null,
     accent: '#A855F7',
-    desc: 'Crafting visual brand design, event media, and digital broadcast assets.'
+    bio: 'Designing brand visual identity, event media, and digital broadcast design.'
   },
   {
     role: 'DOCUMENTATION HEAD',
     name: 'Vaishnavee Sutar',
     title: 'Documentation Head',
     dept: '2nd Year · AI-ML',
+    photo: null,
     accent: '#818CF8',
-    desc: 'Maintaining event registries, technical whitepapers, and knowledge repositories.'
+    bio: 'Maintaining event registries, technical whitepapers, and knowledge repositories.'
   }
 ];
 
-/* ─── PROJECTS DATA (CINEMATIC FULL-SCREEN) ─── */
-const projectsData = [
+/* ─── PROJECTS (~90VH CINEMATIC SHOWCASES) ─── */
+const cinematicProjects = [
   {
     id: 'focusnext',
     number: '01',
@@ -168,7 +162,8 @@ const projectsData = [
     technologies: ['AI', 'UI/UX', 'Web', 'React', 'TypeScript', 'Tailwind CSS'],
     category: 'DIGITAL WELLNESS / AI',
     githubUrl: 'https://github.com/mohitmundke/FocusNext-Wellness.git',
-    description: 'A comprehensive wellness companion engineered to combat digital eye strain, poor ergonomic posture, and fatigue during prolonged coding and screen sessions. Implements smart break intervals, posture prompts, and habit analytics.',
+    image: '/images/focusnext-preview.svg',
+    description: 'A comprehensive wellness companion engineered to combat digital eye strain, poor ergonomic posture, and fatigue during prolonged coding sessions. Implements smart break intervals, posture prompts, and habit analytics.',
     caseStudy: {
       problem: 'Remote workers, developers, and students endure 8–12 hours of screen exposure daily without physical cues to rest, resulting in severe computer vision syndrome and burnout.',
       solution: 'An intuitive digital health companion featuring an automated 20-20-20 rule timer, real-time posture reminders, session tracking, and localized wellness metrics.',
@@ -188,6 +183,7 @@ const projectsData = [
     technologies: ['AI', 'Data', 'Web', 'IoT', 'Google Gemini AI', 'TypeScript'],
     category: 'SMART AGRICULTURE / IOT',
     githubUrl: 'https://github.com/mohitmundke/soilOsync',
+    image: null,
     description: 'A smart soil monitoring solution designed to provide real-time soil telemetry and support data-driven decision making in agriculture. Combines telemetry sensors (moisture, temperature, electrical conductivity) with an intelligent AI Agricultural Assistant powered by Google Gemini.',
     caseStudy: {
       problem: 'Traditional farming relies heavily on manual soil estimates, causing imprecise irrigation, nutrient degradation, and reduced agricultural yield.',
@@ -208,6 +204,7 @@ const projectsData = [
     technologies: ['C', 'C++', 'Systems', 'Algorithms'],
     category: 'SYSTEMS & ALGORITHMS',
     githubUrl: 'https://github.com/mohitmundke',
+    image: null,
     description: 'A systems-oriented inventory management application engineered in C and C++. Demonstrates low-level memory control, efficient algorithmic indexing, linked structures, and binary file persistence for instant item lookups and inventory auditing.',
     caseStudy: {
       problem: 'Standard enterprise inventory setups are frequently bloated with heavy runtime dependencies when lightweight embedded or low-resource system performance is required.',
@@ -228,6 +225,7 @@ const projectsData = [
     technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS'],
     category: 'DIGITAL IDENTITY / WEB',
     githubUrl: 'https://github.com/mohitmundke',
+    image: null,
     description: 'An editorial personal portfolio engineered from first principles. Features responsive storytelling, ambient dark-tech aesthetics, client-side intelligence, and verified credential presentation.',
     caseStudy: {
       problem: 'Static PDF resumes fail to convey personality, technical narrative, leadership drive, and living proof of hands-on community leadership.',
@@ -241,125 +239,120 @@ const projectsData = [
   }
 ];
 
-/* ─── TYPOGRAPHY WALL SKILLS ─── */
-const skillWall = [
-  { word: 'AI', accent: '#38bdf8', category: 'Intelligence' },
-  { word: 'PYTHON', accent: '#38bdf8', category: 'Core Language' },
-  { word: 'JAVASCRIPT', accent: '#f59e0b', category: 'Web' },
-  { word: 'REACT', accent: '#38bdf8', category: 'Frontend' },
-  { word: 'AWS', accent: '#FF9900', category: 'Cloud' },
-  { word: 'GENAI', accent: '#a855f7', category: 'Intelligence' },
-  { word: 'FIGMA', accent: '#ec4899', category: 'Design' },
-  { word: 'C++', accent: '#60a5fa', category: 'Systems' },
-  { word: 'NODE', accent: '#22c55e', category: 'Backend' },
-  { word: 'FLASK', accent: '#ffffff', category: 'Backend' },
-  { word: 'PANDAS', accent: '#38bdf8', category: 'Data Science' },
-  { word: 'NUMPY', accent: '#60a5fa', category: 'Data Science' },
-  { word: 'GITHUB', accent: '#ffffff', category: 'DevOps' },
-  { word: 'C', accent: '#60a5fa', category: 'Systems' },
-  { word: 'HTML5', accent: '#f97316', category: 'Web' },
-  { word: 'CSS3', accent: '#38bdf8', category: 'Styling' }
+/* ─── TYPOGRAPHIC WALL WORDS ─── */
+const wallWords = [
+  { text: 'AI', size: 'text-5xl sm:text-7xl md:text-8xl', accent: '#38bdf8' },
+  { text: 'AWS', size: 'text-6xl sm:text-8xl md:text-9xl', accent: '#FF9900' },
+  { text: 'PYTHON', size: 'text-4xl sm:text-6xl md:text-7xl', accent: '#38bdf8' },
+  { text: 'REACT', size: 'text-5xl sm:text-7xl md:text-8xl', accent: '#ffffff' },
+  { text: 'GENAI', size: 'text-5xl sm:text-7xl md:text-8xl', accent: '#a855f7' },
+  { text: 'C++', size: 'text-6xl sm:text-8xl md:text-9xl', accent: '#60a5fa' },
+  { text: 'NODE', size: 'text-4xl sm:text-6xl md:text-7xl', accent: '#22c55e' },
+  { text: 'FIGMA', size: 'text-4xl sm:text-6xl md:text-7xl', accent: '#ec4899' },
+  { text: 'C', size: 'text-6xl sm:text-8xl md:text-9xl', accent: '#60a5fa' },
+  { text: 'FLASK', size: 'text-4xl sm:text-6xl md:text-7xl', accent: '#ffffff' },
+  { text: 'GITHUB', size: 'text-4xl sm:text-6xl md:text-7xl', accent: '#ffffff' },
+  { text: 'PANDAS', size: 'text-3xl sm:text-5xl md:text-6xl', accent: '#38bdf8' },
+  { text: 'NUMPY', size: 'text-3xl sm:text-5xl md:text-6xl', accent: '#60a5fa' },
+  { text: 'JAVASCRIPT', size: 'text-4xl sm:text-6xl md:text-7xl', accent: '#f59e0b' }
 ];
 
-/* ─── INTERACTIVE HERO BACKGROUND CANVAS ─── */
-function HeroCanvas({ mousePos }) {
-  const canvasRef = useRef(null);
+/* ─── THREE.JS ABSTRACT 3D SCULPTURE FOR HERO ─── */
+function Hero3DAbstractSculpture({ mousePos, scrollProgress }) {
+  const mountRef = useRef(null);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    let animationFrameId;
+    const mount = mountRef.current;
+    if (!mount) return;
 
-    let width = (canvas.width = window.innerWidth);
-    let height = (canvas.height = window.innerHeight);
+    // Check if Three.js is available
+    if (typeof window.THREE === 'undefined') return;
+
+    const THREE = window.THREE;
+    const width = mount.clientWidth || window.innerWidth;
+    const height = mount.clientHeight || window.innerHeight;
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
+    camera.position.z = 8;
+
+    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    renderer.setSize(width, height);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    mount.appendChild(renderer.domElement);
+
+    // Create Abstract Wireframe Torus Knot / Polyhedron
+    const geometry = new THREE.IcosahedronGeometry(2.8, 1);
+    const wireframe = new THREE.WireframeGeometry(geometry);
+    const lineMaterial = new THREE.LineBasicMaterial({
+      color: 0xffffff,
+      transparent: true,
+      opacity: 0.14
+    });
+    const mesh = new THREE.LineSegments(wireframe, lineMaterial);
+    scene.add(mesh);
+
+    // Inner glowing core
+    const innerGeom = new THREE.OctahedronGeometry(1.4, 0);
+    const innerWireframe = new THREE.WireframeGeometry(innerGeom);
+    const innerMat = new THREE.LineBasicMaterial({
+      color: 0xff9900,
+      transparent: true,
+      opacity: 0.28
+    });
+    const innerMesh = new THREE.LineSegments(innerWireframe, innerMat);
+    scene.add(innerMesh);
+
+    let frameId;
+    const animate = () => {
+      frameId = requestAnimationFrame(animate);
+
+      // Rotate slowly + mouse tilt
+      const targetRotX = (mousePos.y / height - 0.5) * 0.8;
+      const targetRotY = (mousePos.x / width - 0.5) * 0.8;
+
+      mesh.rotation.x += 0.002 + (targetRotX - mesh.rotation.x) * 0.05;
+      mesh.rotation.y += 0.003 + (targetRotY - mesh.rotation.y) * 0.05;
+
+      innerMesh.rotation.x -= 0.003;
+      innerMesh.rotation.y += 0.004;
+
+      // Scroll zoom / travel effect
+      camera.position.z = 8 - (scrollProgress || 0) * 4;
+
+      renderer.render(scene, camera);
+    };
+
+    animate();
 
     const handleResize = () => {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
+      const w = mount.clientWidth;
+      const h = mount.clientHeight;
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+      renderer.setSize(w, h);
     };
     window.addEventListener('resize', handleResize);
 
-    // Particle nodes
-    const particles = Array.from({ length: 48 }, () => ({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      vx: (Math.random() - 0.5) * 0.4,
-      vy: (Math.random() - 0.5) * 0.4,
-      size: Math.random() * 1.5 + 0.8,
-      baseAlpha: Math.random() * 0.4 + 0.2
-    }));
-
-    let frame = 0;
-    const render = () => {
-      frame++;
-      ctx.clearRect(0, 0, width, height);
-
-      // Subtle 3D-horizon grid tilted with mouse offset
-      const offsetX = (mousePos.x / width - 0.5) * 24;
-      const offsetY = (mousePos.y / height - 0.5) * 24;
-
-      ctx.save();
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0.025)';
-      ctx.lineWidth = 1;
-
-      const gridSize = 70;
-      for (let x = -gridSize; x < width + gridSize; x += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(x - offsetX, 0);
-        ctx.lineTo(x + offsetX, height);
-        ctx.stroke();
-      }
-
-      for (let y = -gridSize; y < height + gridSize; y += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(0, y - offsetY);
-        ctx.lineTo(width, y + offsetY);
-        ctx.stroke();
-      }
-      ctx.restore();
-
-      // Render drifting particles
-      particles.forEach((p) => {
-        p.x += p.vx;
-        p.y += p.vy;
-
-        if (p.x < 0) p.x = width;
-        if (p.x > width) p.x = 0;
-        if (p.y < 0) p.y = height;
-        if (p.y > height) p.y = 0;
-
-        // Subtle reaction to mouse
-        const dx = mousePos.x - p.x;
-        const dy = mousePos.y - p.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        let alpha = p.baseAlpha;
-        if (dist < 180) {
-          alpha += (1 - dist / 180) * 0.5;
-        }
-
-        ctx.fillStyle = `rgba(255, 255, 255, ${alpha})`;
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fill();
-      });
-
-      animationFrameId = requestAnimationFrame(render);
-    };
-
-    render();
-
     return () => {
       window.removeEventListener('resize', handleResize);
-      cancelAnimationFrame(animationFrameId);
+      cancelAnimationFrame(frameId);
+      if (mount && renderer.domElement) {
+        mount.removeChild(renderer.domElement);
+      }
+      geometry.dispose();
+      lineMaterial.dispose();
+      innerGeom.dispose();
+      innerMat.dispose();
+      renderer.dispose();
     };
-  }, [mousePos]);
+  }, []);
 
-  return <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none z-0" />;
+  return <div ref={mountRef} className="absolute inset-0 pointer-events-none z-0 opacity-70" />;
 }
 
-/* ─── GOOGLE ORBITAL CANVAS ─── */
-function GoogleOrbitalCanvas({ mousePos }) {
+/* ─── GOOGLE ABSTRACT MORPHING ORB CANVAS ─── */
+function GoogleMorphingOrbCanvas({ mousePos }) {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -368,8 +361,8 @@ function GoogleOrbitalCanvas({ mousePos }) {
     const ctx = canvas.getContext('2d');
     let frameId;
 
-    let width = (canvas.width = canvas.parentElement ? canvas.parentElement.clientWidth : 600);
-    let height = (canvas.height = 420);
+    let width = (canvas.width = canvas.parentElement ? canvas.parentElement.clientWidth : 650);
+    let height = (canvas.height = 480);
 
     const handleResize = () => {
       if (canvas.parentElement) {
@@ -378,80 +371,86 @@ function GoogleOrbitalCanvas({ mousePos }) {
     };
     window.addEventListener('resize', handleResize);
 
-    const nodes = [
-      { color: '#4285F4', label: 'BLUE', r: 130, speed: 0.015, angle: 0, size: 8 },
-      { color: '#EA4335', label: 'RED', r: 100, speed: -0.018, angle: Math.PI / 2, size: 7 },
-      { color: '#FBBC05', label: 'YELLOW', r: 160, speed: 0.012, angle: Math.PI, size: 7.5 },
-      { color: '#34A853', label: 'GREEN', r: 70, speed: -0.022, angle: (Math.PI * 3) / 2, size: 6.5 }
+    const orbitItems = [
+      { text: 'DISCOVER', color: '#4285F4', r: 160, speed: 0.012, angle: 0 },
+      { text: 'EXPERIMENT', color: '#EA4335', r: 120, speed: -0.016, angle: 1.2 },
+      { text: 'LEARN', color: '#FBBC05', r: 190, speed: 0.009, angle: 2.5 },
+      { text: 'SHARE', color: '#34A853', r: 140, speed: -0.014, angle: 3.8 },
+      { text: 'ENABLE', color: '#4285F4', r: 210, speed: 0.008, angle: 5.1 }
     ];
 
     let t = 0;
     const render = () => {
-      t += 0.01;
+      t += 0.018;
       ctx.clearRect(0, 0, width, height);
       const cx = width / 2;
       const cy = height / 2;
 
-      // Mouse tilt offset
-      const tiltX = (mousePos.x / (window.innerWidth || 1) - 0.5) * 30;
-      const tiltY = (mousePos.y / (window.innerHeight || 1) - 0.5) * 30;
+      // Mouse displacement
+      const mx = (mousePos.x / (window.innerWidth || 1) - 0.5) * 40;
+      const my = (mousePos.y / (window.innerHeight || 1) - 0.5) * 40;
 
-      // Orbital ellipse guide tracks
-      [70, 100, 130, 160].forEach((radius) => {
-        ctx.save();
-        ctx.strokeStyle = 'rgba(255, 255, 255, 0.06)';
-        ctx.lineWidth = 1;
-        ctx.setLineDash([3, 5]);
-        ctx.beginPath();
-        ctx.ellipse(cx + tiltX, cy + tiltY, radius, radius * 0.45, Math.PI / 6, 0, Math.PI * 2);
-        ctx.stroke();
-        ctx.restore();
-      });
-
-      // Central GEMINI Core
+      // Central Morphing Iridescent Orb
       ctx.save();
-      const pulse = Math.sin(t * 3) * 4;
-      const grad = ctx.createRadialGradient(cx + tiltX, cy + tiltY, 0, cx + tiltX, cy + tiltY, 40 + pulse);
-      grad.addColorStop(0, 'rgba(66, 133, 244, 0.35)');
-      grad.addColorStop(1, 'rgba(66, 133, 244, 0)');
-      ctx.fillStyle = grad;
+      const numPoints = 12;
+      const baseRadius = 55;
       ctx.beginPath();
-      ctx.arc(cx + tiltX, cy + tiltY, 40 + pulse, 0, Math.PI * 2);
+      for (let i = 0; i <= numPoints; i++) {
+        const theta = (i / numPoints) * Math.PI * 2;
+        const wobble = Math.sin(theta * 3 + t * 2) * 12 + Math.cos(theta * 2 - t) * 8;
+        const rad = baseRadius + wobble;
+        const x = cx + mx + Math.cos(theta) * rad;
+        const y = cy + my + Math.sin(theta) * rad;
+        if (i === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+      ctx.closePath();
+
+      const grad = ctx.createRadialGradient(cx + mx, cy + my, 10, cx + mx, cy + my, 75);
+      grad.addColorStop(0, 'rgba(66, 133, 244, 0.45)');
+      grad.addColorStop(0.5, 'rgba(234, 67, 53, 0.25)');
+      grad.addColorStop(0.8, 'rgba(251, 188, 5, 0.2)');
+      grad.addColorStop(1, 'rgba(52, 168, 83, 0)');
+      ctx.fillStyle = grad;
       ctx.fill();
 
-      // Core text
-      ctx.fillStyle = '#ffffff';
-      ctx.font = '700 13px "Space Grotesk", sans-serif';
+      ctx.strokeStyle = 'rgba(66, 133, 244, 0.6)';
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+
+      // Center Text
+      ctx.fillStyle = '#050505';
+      ctx.font = '800 14px "Space Grotesk", sans-serif';
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
-      ctx.fillText('GEMINI', cx + tiltX, cy + tiltY);
+      ctx.fillText('GEMINI', cx + mx, cy + my);
       ctx.restore();
 
-      // Draw Orbiting Planetary Nodes
-      nodes.forEach((node) => {
-        node.angle += node.speed;
-        const x = cx + tiltX + Math.cos(node.angle) * node.r;
-        const y = cy + tiltY + Math.sin(node.angle) * (node.r * 0.45);
+      // Orbiting Words & Nodes
+      orbitItems.forEach((item) => {
+        item.angle += item.speed;
+        const ox = cx + mx + Math.cos(item.angle) * item.r;
+        const oy = cy + my + Math.sin(item.angle) * (item.r * 0.42);
 
-        // Connecting filament to center
-        ctx.save();
-        ctx.strokeStyle = node.color + '25';
+        // Filament line
+        ctx.strokeStyle = item.color + '30';
         ctx.lineWidth = 1;
         ctx.beginPath();
-        ctx.moveTo(cx + tiltX, cy + tiltY);
-        ctx.lineTo(x, y);
+        ctx.moveTo(cx + mx, cy + my);
+        ctx.lineTo(ox, oy);
         ctx.stroke();
-        ctx.restore();
 
-        // Node Glow
-        ctx.save();
-        ctx.shadowColor = node.color;
-        ctx.shadowBlur = 14;
-        ctx.fillStyle = node.color;
+        // Node dot
+        ctx.fillStyle = item.color;
         ctx.beginPath();
-        ctx.arc(x, y, node.size, 0, Math.PI * 2);
+        ctx.arc(ox, oy, 5, 0, Math.PI * 2);
         ctx.fill();
-        ctx.restore();
+
+        // Word Label
+        ctx.fillStyle = '#1e293b';
+        ctx.font = '700 10px "JetBrains Mono", monospace';
+        ctx.textAlign = 'center';
+        ctx.fillText(item.text, ox, oy - 10);
       });
 
       frameId = requestAnimationFrame(render);
@@ -465,11 +464,11 @@ function GoogleOrbitalCanvas({ mousePos }) {
     };
   }, [mousePos]);
 
-  return <canvas ref={canvasRef} className="w-full h-[420px] pointer-events-none" />;
+  return <canvas ref={canvasRef} className="w-full h-[480px] pointer-events-none" />;
 }
 
-/* ─── AWS INTERACTIVE NODE NETWORK CANVAS ─── */
-function AwsNetworkCanvas({ mousePos }) {
+/* ─── AWS 3D INTERACTIVE NODE NETWORK CANVAS ─── */
+function AwsInteractiveNetworkCanvas({ mousePos }) {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -478,8 +477,8 @@ function AwsNetworkCanvas({ mousePos }) {
     const ctx = canvas.getContext('2d');
     let frameId;
 
-    let width = (canvas.width = canvas.parentElement ? canvas.parentElement.clientWidth : 700);
-    let height = (canvas.height = 420);
+    let width = (canvas.width = canvas.parentElement ? canvas.parentElement.clientWidth : 750);
+    let height = (canvas.height = 460);
 
     const handleResize = () => {
       if (canvas.parentElement) {
@@ -488,85 +487,93 @@ function AwsNetworkCanvas({ mousePos }) {
     };
     window.addEventListener('resize', handleResize);
 
-    const nodeLabels = ['LEARN', 'BUILD', 'LEAD', 'COMMUNITY', 'EVENTS', 'AI', 'CLOUD'];
+    const nodeLabels = ['CLOUD', 'AI', 'BUILD', 'LEARN', 'COMMUNITY', 'EVENTS', 'LEADERSHIP'];
     const nodes = nodeLabels.map((lbl, idx) => {
       const angle = (idx / nodeLabels.length) * Math.PI * 2;
-      const radius = 135;
+      const radius = 145;
       return {
         label: lbl,
-        targetX: Math.cos(angle) * radius,
-        targetY: Math.sin(angle) * radius,
-        x: Math.cos(angle) * radius,
-        y: Math.sin(angle) * radius,
+        baseX: Math.cos(angle) * radius,
+        baseY: Math.sin(angle) * radius,
         r: 6
       };
     });
 
     let t = 0;
     const render = () => {
-      t += 0.015;
+      t += 0.02;
       ctx.clearRect(0, 0, width, height);
       const cx = width / 2;
       const cy = height / 2;
 
       // Mouse reaction
-      const mx = (mousePos.x / (window.innerWidth || 1) - 0.5) * 50;
-      const my = (mousePos.y / (window.innerHeight || 1) - 0.5) * 50;
+      const mx = (mousePos.x / (window.innerWidth || 1) - 0.5) * 60;
+      const my = (mousePos.y / (window.innerHeight || 1) - 0.5) * 60;
 
-      // Central Hub
+      // Central AWS Hub
       ctx.save();
       ctx.fillStyle = '#FF9900';
       ctx.shadowColor = '#FF9900';
-      ctx.shadowBlur = 18;
+      ctx.shadowBlur = 24;
       ctx.beginPath();
-      ctx.arc(cx + mx, cy + my, 12, 0, Math.PI * 2);
+      ctx.arc(cx + mx, cy + my, 16, 0, Math.PI * 2);
       ctx.fill();
       ctx.restore();
 
-      ctx.fillStyle = '#ffffff';
-      ctx.font = '800 11px "JetBrains Mono", monospace';
+      ctx.fillStyle = '#050505';
+      ctx.font = '800 11px "Space Grotesk", sans-serif';
       ctx.textAlign = 'center';
-      ctx.fillText('AWS SBG', cx + mx, cy + my + 24);
+      ctx.textBaseline = 'middle';
+      ctx.fillText('AWS', cx + mx, cy + my);
 
-      // Connect nodes to center and to each other
+      // Connected Nodes
       for (let i = 0; i < nodes.length; i++) {
-        const n1 = nodes[i];
-        const n1x = cx + mx + n1.targetX + Math.sin(t + i) * 6;
-        const n1y = cy + my + n1.targetY + Math.cos(t + i) * 6;
+        const n = nodes[i];
+        const nx = cx + mx + n.baseX + Math.sin(t + i) * 8;
+        const ny = cy + my + n.baseY + Math.cos(t + i) * 8;
 
-        // Line to center
-        ctx.strokeStyle = 'rgba(255, 153, 0, 0.2)';
+        // Radiant data transmission lines
+        ctx.strokeStyle = 'rgba(255, 153, 0, 0.28)';
         ctx.lineWidth = 1;
         ctx.beginPath();
         ctx.moveTo(cx + mx, cy + my);
-        ctx.lineTo(n1x, n1y);
+        ctx.lineTo(nx, ny);
         ctx.stroke();
 
-        // Line to next node
-        const nextNode = nodes[(i + 1) % nodes.length];
-        const n2x = cx + mx + nextNode.targetX + Math.sin(t + i + 1) * 6;
-        const n2y = cy + my + nextNode.targetY + Math.cos(t + i + 1) * 6;
+        // Polygon perimeter interconnects
+        const next = nodes[(i + 1) % nodes.length];
+        const nextX = cx + mx + next.baseX + Math.sin(t + i + 1) * 8;
+        const nextY = cy + my + next.baseY + Math.cos(t + i + 1) * 8;
         ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
         ctx.beginPath();
-        ctx.moveTo(n1x, n1y);
-        ctx.lineTo(n2x, n2y);
+        ctx.moveTo(nx, ny);
+        ctx.lineTo(nextX, nextY);
         ctx.stroke();
 
-        // Node dot
+        // Packet pulse traveling along line
+        const packetT = ((t * 0.8 + i * 0.3) % 1);
+        const px = (cx + mx) * (1 - packetT) + nx * packetT;
+        const py = (cy + my) * (1 - packetT) + ny * packetT;
+        ctx.fillStyle = '#FF9900';
+        ctx.beginPath();
+        ctx.arc(px, py, 2.5, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Outer node
         ctx.save();
         ctx.fillStyle = '#FF9900';
         ctx.shadowColor = '#FF9900';
-        ctx.shadowBlur = 10;
+        ctx.shadowBlur = 12;
         ctx.beginPath();
-        ctx.arc(n1x, n1y, n1.r, 0, Math.PI * 2);
+        ctx.arc(nx, ny, n.r, 0, Math.PI * 2);
         ctx.fill();
         ctx.restore();
 
         // Label
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+        ctx.fillStyle = '#ffffff';
         ctx.font = '700 10px "JetBrains Mono", monospace';
         ctx.textAlign = 'center';
-        ctx.fillText(n1.label, n1x, n1y - 12);
+        ctx.fillText(n.label, nx, ny - 12);
       }
 
       frameId = requestAnimationFrame(render);
@@ -580,58 +587,69 @@ function AwsNetworkCanvas({ mousePos }) {
     };
   }, [mousePos]);
 
-  return <canvas ref={canvasRef} className="w-full h-[420px] pointer-events-none" />;
+  return <canvas ref={canvasRef} className="w-full h-[460px] pointer-events-none" />;
 }
 
-/* ─── MAIN AWARD-STYLE PORTFOLIO APPLICATION ─── */
+/* ─── MAIN AWARD-WINNING IMMERSIVE PORTFOLIO APPLICATION ─── */
 function App() {
-  // Loading Sequence State (~1.5s)
-  const [loading, setLoading] = useState(true);
-  const [loadProgress, setLoadProgress] = useState(1);
+  // Preloader State
+  const [preloaderActive, setPreloaderActive] = useState(true);
+  const [preloaderCount, setPreloaderCount] = useState(0);
+  const [preloaderWordIndex, setPreloaderWordIndex] = useState(0);
+  const preloaderWords = ['CODE', 'AI', 'AWS', 'DESIGN', 'BUILD', 'LEAD', 'CREATE'];
 
-  // Mouse Coordinates for Parallax & Cursor
+  // Global Mouse & Custom Cursor Lerp
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [cursorPos, setCursorPos] = useState({ x: -100, y: -100 });
   const [cursorRingPos, setCursorRingPos] = useState({ x: -100, y: -100 });
   const [cursorState, setCursorState] = useState({ hover: false, text: '', variant: 'default' });
 
-  // Navigation & Interactive Sections
-  const [activeNav, setActiveNav] = useState('hero');
+  // Full-Screen Menu Overlay State
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuHoveredIndex, setMenuHoveredIndex] = useState(0);
+
+  // Scroll Tracking
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  // Interactive Case Study Modal
   const [selectedCaseStudy, setSelectedCaseStudy] = useState(null);
+
+  // Contact Drawer
   const [contactDrawerOpen, setContactDrawerOpen] = useState(false);
-  const [contactFormData, setContactFormData] = useState({ name: '', email: '', message: '' });
-  const [contactStatus, setContactStatus] = useState('');
-  const [activeAwsStage, setActiveAwsStage] = useState(0);
-  const [activeGoogleStep, setActiveGoogleStep] = useState(0);
-  const [activeSkillWord, setActiveSkillWord] = useState(null);
-  const [hoveredTeamMember, setHoveredTeamMember] = useState(null);
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formStatus, setFormStatus] = useState('');
 
-  // Horizontal Journey Scroll Ref
-  const journeyTrackRef = useRef(null);
-
-  // 1. Cinematic Loading Sequence (~1.5 seconds)
+  // 1. Cinematic Preloader with Vertical Split Curtains
   useEffect(() => {
-    let current = 1;
-    const interval = setInterval(() => {
-      current += Math.floor(Math.random() * 6) + 3;
-      if (current >= 100) {
-        current = 100;
-        setLoadProgress(100);
-        clearInterval(interval);
-        setTimeout(() => setLoading(false), 350);
-      } else {
-        setLoadProgress(current);
-      }
-    }, 40);
+    const wordInterval = setInterval(() => {
+      setPreloaderWordIndex((prev) => (prev + 1) % preloaderWords.length);
+    }, 180);
 
-    return () => clearInterval(interval);
+    let progress = 0;
+    const progressInterval = setInterval(() => {
+      progress += Math.floor(Math.random() * 8) + 4;
+      if (progress >= 100) {
+        progress = 100;
+        setPreloaderCount(100);
+        clearInterval(progressInterval);
+        clearInterval(wordInterval);
+        setTimeout(() => setPreloaderActive(false), 500);
+      } else {
+        setPreloaderCount(progress);
+      }
+    }, 45);
+
+    return () => {
+      clearInterval(wordInterval);
+      clearInterval(progressInterval);
+    };
   }, []);
 
-  // 2. Initialize Lenis Smooth Scroll if available
+  // 2. Lenis Smooth Scroll Initialization
   useEffect(() => {
     if (typeof window.Lenis !== 'undefined') {
       const lenis = new window.Lenis({
-        duration: 1.2,
+        duration: 1.25,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
         smooth: true,
         smoothTouch: false
@@ -647,34 +665,43 @@ function App() {
     }
   }, []);
 
-  // 3. Global Mouse & Custom Cursor Lerp
+  // 3. Global Mouse & Custom Cursor Lerp Loop
   useEffect(() => {
     const handleMouseMove = (e) => {
       setMousePos({ x: e.clientX, y: e.clientY });
       setCursorPos({ x: e.clientX, y: e.clientY });
     };
-
     window.addEventListener('mousemove', handleMouseMove);
 
-    // Spring Lerp for Outer Cursor Ring
-    let animationId;
+    let frameId;
     let rx = -100;
     let ry = -100;
     const lerpRing = () => {
-      rx += (cursorPos.x - rx) * 0.18;
-      ry += (cursorPos.y - ry) * 0.18;
+      rx += (cursorPos.x - rx) * 0.16;
+      ry += (cursorPos.y - ry) * 0.16;
       setCursorRingPos({ x: rx, y: ry });
-      animationId = requestAnimationFrame(lerpRing);
+      frameId = requestAnimationFrame(lerpRing);
     };
-    animationId = requestAnimationFrame(lerpRing);
+    frameId = requestAnimationFrame(lerpRing);
 
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
-      cancelAnimationFrame(animationId);
+      cancelAnimationFrame(frameId);
     };
   }, [cursorPos.x, cursorPos.y]);
 
-  // 4. Cursor Hover Detection Helpers
+  // 4. Scroll Progress Tracker for Hero Parallax and Transitions
+  useEffect(() => {
+    const handleScroll = () => {
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      if (total > 0) {
+        setScrollProgress(Math.min(1, window.scrollY / window.innerHeight));
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const handleCursorEnter = (text, variant = 'default') => {
     setCursorState({ hover: true, text, variant });
   };
@@ -682,28 +709,8 @@ function App() {
     setCursorState({ hover: false, text: '', variant: 'default' });
   };
 
-  // 5. Scroll Handler for Active Navigation
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = ['hero', 'identity', 'about', 'journey', 'google', 'aws', 'team', 'leadership', 'projects', 'skills', 'building', 'achievements', 'contact'];
-      const scrollPos = window.scrollY + 300;
-      for (const s of sections) {
-        const el = document.getElementById(s);
-        if (el) {
-          const top = el.offsetTop;
-          const h = el.offsetHeight;
-          if (scrollPos >= top && scrollPos < top + h) {
-            setActiveNav(s);
-            break;
-          }
-        }
-      }
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   const scrollTo = (id) => {
+    setMenuOpen(false);
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
@@ -712,63 +719,70 @@ function App() {
 
   const handleContactSubmit = (e) => {
     e.preventDefault();
-    if (!contactFormData.name || !contactFormData.email || !contactFormData.message) {
-      setContactStatus('Please fill in all fields.');
+    if (!formData.name || !formData.email || !formData.message) {
+      setFormStatus('Please complete all fields.');
       return;
     }
-    setContactStatus('Sending...');
+    setFormStatus('Transmitting...');
 
     fetch('https://formsubmit.co/ajax/mohitmundke20@gmail.com', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
-        name: contactFormData.name,
-        email: contactFormData.email,
-        message: contactFormData.message,
-        _subject: `Portfolio Message from ${contactFormData.name}`
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        _subject: `New Portfolio Message from ${formData.name}`
       })
     })
       .then((r) => r.json())
       .then(() => {
-        setContactStatus('Message transmitted successfully. Mohit will reply soon.');
-        setContactFormData({ name: '', email: '', message: '' });
+        setFormStatus('Message transmitted successfully.');
+        setFormData({ name: '', email: '', message: '' });
         setTimeout(() => setContactDrawerOpen(false), 2000);
       })
       .catch(() => {
-        window.location.href = `mailto:mohitmundke20@gmail.com?subject=Contact from ${encodeURIComponent(contactFormData.name)}&body=${encodeURIComponent(contactFormData.message)}`;
-        setContactStatus('Opened your mail client.');
+        window.location.href = `mailto:mohitmundke20@gmail.com?subject=Contact from ${encodeURIComponent(formData.name)}&body=${encodeURIComponent(formData.message)}`;
+        setFormStatus('Opened your mail client.');
       });
   };
 
   return (
-    <div className="relative min-h-screen bg-[#050505] text-[#f1f5f9] overflow-x-hidden selection:bg-[#FF9900]/30 selection:text-white">
+    <div className="relative min-h-screen bg-[#050505] text-[#f1f5f9] select-none overflow-x-hidden">
       
-      {/* ─── 00. CINEMATIC LOADING SEQUENCE (~1.5s) ─── */}
-      {loading && (
-        <div className="fixed inset-0 z-[999999] bg-[#050505] flex flex-col justify-between p-8 sm:p-14 select-none transition-opacity duration-500">
-          <div className="flex items-center justify-between font-mono text-xs text-slate-500 tracking-widest">
-            <span>DYPCOEI PUNE · AY 2026</span>
-            <span>SYSTEM INIT</span>
+      {/* ─── 00. PRELOADER (VERTICAL SPLIT CURTAIN) ─── */}
+      {preloaderActive && (
+        <div className="fixed inset-0 z-[999999] pointer-events-none flex flex-col justify-between p-8 sm:p-16 bg-[#050505] transition-all duration-700">
+          <div className="flex items-center justify-between font-mono text-xs text-slate-500 tracking-widest uppercase">
+            <span>MOHIT MUNDKE</span>
+            <span>SYSTEM INIT · DYPCOEI 2026</span>
           </div>
 
-          <div className="max-w-4xl">
-            <p className="font-mono text-xs text-[#FF9900] tracking-widest uppercase mb-3">
-              PORTFOLIO EXPERIENCE
+          <div className="my-auto max-w-4xl">
+            <p className="font-mono text-xs text-[#FF9900] tracking-widest uppercase mb-4">
+              [ENTERING DIGITAL WORLD]
             </p>
-            <h1 className="font-syne font-extrabold text-4xl sm:text-7xl md:text-8xl text-white tracking-editorial uppercase">
-              MOHIT MUNDKE
+            <h1 className="font-syne font-extrabold text-4xl sm:text-7xl md:text-8xl text-white uppercase tracking-editorial leading-none">
+              BUILDING<br />
+              DIGITAL<br />
+              EXPERIENCES.
             </h1>
-            <p className="font-mono text-xs sm:text-sm text-slate-400 mt-2">
-              BUILDER · AI &amp; DATA SCIENCE · AWS SBG LEADER
-            </p>
+            
+            {/* Rapidly Rotating Word Ticker */}
+            <div className="mt-6 flex items-center gap-3">
+              <span className="font-mono text-xs text-slate-500">CURRENT FOCUS:</span>
+              <span className="font-syne font-extrabold text-lg sm:text-2xl text-[#FF9900] tracking-wider animate-pulse">
+                {preloaderWords[preloaderWordIndex]}
+              </span>
+            </div>
           </div>
 
-          <div className="flex items-end justify-between border-t border-white/10 pt-6">
-            <span className="font-mono text-xs text-slate-500 tracking-wider">
-              LOADING ASSETS &amp; INTERACTIONS
+          <div className="flex items-end justify-between border-t border-white/10 pt-6 font-mono">
+            <span className="text-xs text-slate-500 tracking-widest uppercase">
+              INITIALIZING ENGINE
             </span>
-            <span className="font-mono font-bold text-3xl sm:text-5xl text-white tracking-widest">
-              {String(loadProgress).padStart(3, '0')}%
+            <span className="font-syne font-extrabold text-3xl sm:text-6xl text-white tracking-tight">
+              {String(preloaderCount).padStart(3, '0')}%
             </span>
           </div>
         </div>
@@ -776,371 +790,280 @@ function App() {
 
       {/* ─── GLOBAL CUSTOM CURSOR (DESKTOP) ─── */}
       <div
-        className="cursor-dot hidden lg:block"
-        style={{
-          left: `${cursorPos.x}px`,
-          top: `${cursorPos.y}px`
-        }}
+        className="custom-cursor-dot hidden lg:block"
+        style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px` }}
       />
       <div
-        className={`cursor-ring hidden lg:flex ${
-          cursorState.hover ? (cursorState.variant === 'aws' ? 'hover-aws' : 'hover-active') : ''
+        className={`custom-cursor-ring hidden lg:flex ${
+          cursorState.hover ? `cursor-active-${cursorState.variant}` : ''
         }`}
-        style={{
-          left: `${cursorRingPos.x}px`,
-          top: `${cursorRingPos.y}px`
-        }}
+        style={{ left: `${cursorRingPos.x}px`, top: `${cursorRingPos.y}px` }}
       >
         {cursorState.hover && cursorState.text && (
-          <span className="cursor-ring-text">{cursorState.text}</span>
+          <span className="cursor-badge-text">{cursorState.text}</span>
         )}
       </div>
 
-      {/* ─── MINIMAL FLOATING NAVIGATION BAR ─── */}
-      <header className="fixed top-6 inset-x-0 z-50 px-4 sm:px-8 pointer-events-none">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          
-          {/* Logo Monogram */}
+      {/* ─── TOP EDITORIAL BRAND & FULLSCREEN MENU TRIGGER ─── */}
+      <header className="fixed top-0 inset-x-0 z-50 p-6 sm:p-10 flex items-start justify-between pointer-events-none">
+        
+        {/* Tiny Stacked Typography Logo */}
+        <button
+          onClick={() => scrollTo('hero')}
+          onMouseEnter={() => handleCursorEnter('HOME')}
+          onMouseLeave={handleCursorLeave}
+          className="pointer-events-auto text-left group"
+        >
+          <span className="font-syne font-extrabold text-sm sm:text-base text-white block tracking-widest leading-none group-hover:text-[#FF9900] transition-colors">
+            MOHIT
+          </span>
+          <span className="font-syne font-extrabold text-sm sm:text-base text-slate-400 block tracking-widest leading-none group-hover:text-white transition-colors">
+            MUNDKE
+          </span>
+        </button>
+
+        {/* Minimal MENU Trigger */}
+        <div className="pointer-events-auto flex items-center gap-4">
           <button
-            onClick={() => scrollTo('hero')}
-            onMouseEnter={() => handleCursorEnter('HOME')}
+            onClick={() => setContactDrawerOpen(true)}
+            onMouseEnter={() => handleCursorEnter('TALK', 'aws')}
             onMouseLeave={handleCursorLeave}
-            className="pointer-events-auto px-4 py-2.5 rounded-full bg-white/[0.04] hover:bg-white/10 backdrop-blur-xl border border-white/15 flex items-center gap-2.5 transition-all"
+            className="hidden sm:inline-flex px-4 py-2 rounded-full border border-white/15 bg-white/[0.03] hover:border-[#FF9900] text-xs font-mono text-slate-300 hover:text-white transition-all"
           >
-            <span className="w-2 h-2 rounded-full bg-[#FF9900] animate-pulse"></span>
-            <span className="font-syne font-bold text-xs tracking-wider text-white">MOHIT MUNDKE</span>
+            CONNECT ↗
           </button>
 
-          {/* Center Links (Desktop) */}
-          <nav className="pointer-events-auto hidden md:flex items-center gap-1 px-3 py-1.5 rounded-full bg-white/[0.04] backdrop-blur-xl border border-white/15">
-            {[
-              { id: 'identity', label: 'Identity' },
-              { id: 'about', label: 'About' },
-              { id: 'journey', label: 'Journey' },
-              { id: 'google', label: 'Google' },
-              { id: 'aws', label: 'AWS' },
-              { id: 'projects', label: 'Work' },
-              { id: 'skills', label: 'Skills' },
-              { id: 'contact', label: 'Contact' }
-            ].map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollTo(item.id)}
-                onMouseEnter={() => handleCursorEnter('GO')}
-                onMouseLeave={handleCursorLeave}
-                className={`px-3.5 py-1.5 rounded-full text-xs font-mono tracking-wider transition-all ${
-                  activeNav === item.id ? 'bg-white text-black font-bold' : 'text-slate-400 hover:text-white'
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
-          </nav>
-
-          {/* Quick CTA */}
-          <div className="pointer-events-auto flex items-center gap-2">
-            <a
-              href={getResumePdfSrc()}
-              download="Mohit_Mundke_Resume.pdf"
-              onMouseEnter={() => handleCursorEnter('PDF')}
-              onMouseLeave={handleCursorLeave}
-              className="hidden sm:inline-flex items-center px-4 py-2 rounded-full bg-white/[0.04] hover:bg-white/10 border border-white/15 text-xs font-mono text-slate-300 transition-all"
-            >
-              RESUME ↓
-            </a>
-
-            <button
-              onClick={() => setContactDrawerOpen(true)}
-              onMouseEnter={() => handleCursorEnter('OPEN', 'aws')}
-              onMouseLeave={handleCursorLeave}
-              className="px-5 py-2 rounded-full bg-[#FF9900] hover:bg-[#FFA724] text-black font-syne font-extrabold text-xs tracking-wider transition-transform hover:scale-105"
-            >
-              CONNECT
-            </button>
-          </div>
-
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            onMouseEnter={() => handleCursorEnter(menuOpen ? 'CLOSE' : 'EXPAND')}
+            onMouseLeave={handleCursorLeave}
+            className="px-5 py-2.5 rounded-full bg-white text-black hover:bg-slate-200 font-syne font-extrabold text-xs tracking-widest uppercase transition-transform hover:scale-105"
+          >
+            {menuOpen ? 'CLOSE ✕' : 'MENU'}
+          </button>
         </div>
       </header>
 
-      {/* ─── HERO (THE MOST IMPRESSIVE FULL-VIEWPORT PART) ─── */}
-      <section
-        id="hero"
-        className="relative h-screen min-h-[700px] flex flex-col justify-between p-6 sm:p-12 md:p-16 overflow-hidden bg-horizon-grid select-none"
-      >
-        <HeroCanvas mousePos={mousePos} />
-
-        {/* Top Empty Space for Header Alignment */}
-        <div className="pt-16"></div>
-
-        {/* Center / Dominant Typographic Lockup */}
-        <div className="relative z-10 max-w-7xl mx-auto w-full my-auto">
+      {/* ─── FULL-SCREEN MENU OVERLAY TRANSFORMATION ─── */}
+      {menuOpen && (
+        <div className="fixed inset-0 z-[99990] bg-[#050505] flex flex-col justify-between p-8 sm:p-16 animate-fadeIn">
           
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-white/10 mb-6 backdrop-blur-md">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#FF9900]"></span>
-            <span className="font-mono text-[11px] text-slate-300 tracking-widest uppercase">
-              AI &amp; DATA SCIENCE · BUILDER / DESIGNER / COMMUNITY LEADER
-            </span>
+          <div className="flex items-center justify-between font-mono text-xs text-slate-500 uppercase tracking-widest">
+            <span>INDEX / ARCHIVE</span>
+            <span>DYPCOEI PUNE · AY 2026-27</span>
           </div>
 
-          <h1
-            className="font-syne font-extrabold text-huge-display text-white uppercase tracking-editorial leading-[0.84]"
+          <div className="my-auto max-w-5xl">
+            {[
+              { id: 'journey', num: '01', label: 'THE JOURNEY', desc: 'From curiosity to cloud & AI' },
+              { id: 'google', num: '02', label: 'GOOGLE GEMINI', desc: 'AI Student Ambassador 2026' },
+              { id: 'aws', num: '03', label: 'AWS WORLD', desc: 'Student Builder Group Leader' },
+              { id: 'projects', num: '04', label: 'SELECTED WORK', desc: 'FocusNext, soilOsync & Systems' },
+              { id: 'experiments', num: '05', label: 'EXPERIMENTS', desc: 'Digital lab & low-level code' },
+              { id: 'contact', num: '06', label: 'CONTACT', desc: 'Start a conversation' }
+            ].map((item, idx) => (
+              <div
+                key={item.id}
+                onClick={() => scrollTo(item.id)}
+                onMouseEnter={() => {
+                  setMenuHoveredIndex(idx);
+                  handleCursorEnter('SELECT');
+                }}
+                onMouseLeave={handleCursorLeave}
+                className="py-4 border-b border-white/10 flex items-baseline justify-between group cursor-pointer transition-all hover:pl-6"
+              >
+                <div className="flex items-baseline gap-6">
+                  <span className="font-mono text-xs text-[#FF9900]">[{item.num}]</span>
+                  <span className="font-syne font-extrabold text-3xl sm:text-6xl text-slate-300 group-hover:text-white uppercase tracking-tight">
+                    {item.label}
+                  </span>
+                </div>
+                <span className="hidden sm:inline font-mono text-xs text-slate-500 group-hover:text-white">
+                  {item.desc} ↗
+                </span>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex items-center justify-between font-mono text-xs text-slate-500 border-t border-white/10 pt-6">
+            <span>PUNE, MAHARASHTRA, INDIA</span>
+            <span className="text-[#FF9900]">{personalInfo.email}</span>
+          </div>
+        </div>
+      )}
+
+      {/* ─── HERO EXPERIENCE (ASYMMETRICAL, MASSIVE VIEWPORT-BLEED) ─── */}
+      <section
+        id="hero"
+        className="relative h-screen min-h-[750px] flex flex-col justify-between p-6 sm:p-12 md:p-16 overflow-hidden bg-tech-blueprint"
+      >
+        {/* Interactive 3D Abstract Digital Sculpture */}
+        <Hero3DAbstractSculpture mousePos={mousePos} scrollProgress={scrollProgress} />
+
+        {/* Top Spacer */}
+        <div className="pt-16"></div>
+
+        {/* Viewport-Bleeding Asymmetrical Typography */}
+        <div className="relative z-10 w-full my-auto pointer-events-none">
+          
+          {/* Top Left Bleed Name */}
+          <div
+            className="transition-transform duration-300"
             style={{
-              transform: `translate3d(${(mousePos.x / (window.innerWidth || 1) - 0.5) * 12}px, ${(mousePos.y / (window.innerHeight || 1) - 0.5) * 12}px, 0)`
+              transform: `translateX(-${scrollProgress * 120}px)`
             }}
           >
-            MOHIT<br />
-            MUNDKE
-          </h1>
+            <h1 className="font-syne font-extrabold text-massive-hero text-white tracking-editorial uppercase select-none -ml-3 sm:-ml-6">
+              MOHIT
+            </h1>
+          </div>
 
-          <div className="mt-8 pt-8 border-t border-white/15 max-w-3xl">
-            <p className="font-display font-medium text-lg sm:text-2xl text-slate-300 tracking-tight leading-snug">
-              &ldquo;I BUILD AT THE INTERSECTION<br />
-              <span className="text-white font-bold">OF AI, CLOUD &amp; DESIGN.&rdquo;</span>
-            </p>
+          {/* Bottom Right Overlapping Name */}
+          <div
+            className="text-right transition-transform duration-300 -mt-6 sm:-mt-14"
+            style={{
+              transform: `translateX(${scrollProgress * 120}px)`
+            }}
+          >
+            <h1 className="font-syne font-extrabold text-massive-hero text-slate-300 hover:text-white tracking-editorial uppercase select-none -mr-3 sm:-mr-6">
+              MUNDKE
+            </h1>
           </div>
 
         </div>
 
-        {/* Bottom Hero Bar: Status & Vertical Scroll Indicator */}
-        <div className="relative z-10 max-w-7xl mx-auto w-full flex items-end justify-between border-t border-white/10 pt-4 text-xs font-mono text-slate-400">
-          <div className="hidden sm:flex items-center gap-3">
-            <span>DYPCOEI PUNE</span>
-            <span>·</span>
-            <span className="text-[#FF9900]">AWS SBG LEADER</span>
-            <span>·</span>
-            <span>GSA 2026</span>
+        {/* Bottom Hero Anchor Bar */}
+        <div className="relative z-10 max-w-7xl mx-auto w-full flex items-end justify-between border-t border-white/10 pt-4 font-mono text-xs text-slate-400">
+          <div>
+            <span className="text-[#FF9900] font-bold block">AI &amp; DATA SCIENCE</span>
+            <span className="text-slate-500">BUILDER / DESIGNER / COMMUNITY LEADER</span>
           </div>
 
           <div
             onClick={() => scrollTo('identity')}
-            onMouseEnter={() => handleCursorEnter('EXPLORE')}
+            onMouseEnter={() => handleCursorEnter('DOWN')}
             onMouseLeave={handleCursorLeave}
-            className="flex items-center gap-3 cursor-pointer group hover:text-white transition-colors ml-auto sm:ml-0"
+            className="cursor-pointer flex items-center gap-2 group hover:text-white transition-colors"
           >
-            <span className="tracking-widest uppercase text-[11px]">SCROLL TO EXPLORE</span>
-            <span className="w-6 h-6 rounded-full border border-white/20 group-hover:border-white flex items-center justify-center transition-colors">
-              ↓
-            </span>
+            <span>SCROLL ↓</span>
           </div>
         </div>
       </section>
 
-      {/* ─── SECTION 01: IDENTITY (EDITORIAL FULL-SCREEN) ─── */}
+      {/* ─── SECTION: "WHO AM I?" (IDENTITY TRANSFORMATION) ─── */}
       <section
         id="identity"
-        className="min-h-screen py-32 sm:py-44 px-6 sm:px-14 border-t border-white/10 flex flex-col justify-center relative bg-[#060608]"
+        className="min-h-screen py-32 sm:py-44 px-6 sm:px-14 border-t border-white/10 flex flex-col justify-center relative bg-[#070709]"
       >
         <div className="max-w-7xl mx-auto w-full">
           
-          <div className="font-mono text-xs text-[#FF9900] tracking-widest uppercase mb-10">
+          <span className="font-mono text-xs text-[#FF9900] tracking-widest uppercase block mb-12">
             01 / IDENTITY
-          </div>
+          </span>
 
-          <h2 className="font-syne font-extrabold text-scene-title text-white uppercase leading-[0.9] max-w-5xl">
-            NOT JUST<br />
-            ANOTHER<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-300 to-slate-500">
-              DEVELOPER.
-            </span>
+          <h2 className="font-syne font-extrabold text-massive-statement text-slate-400 uppercase leading-[0.88] max-w-5xl">
+            I&apos;M NOT<br />
+            TRYING TO<br />
+            LOOK LIKE<br />
+            A DEVELOPER.
           </h2>
 
-          <div className="mt-20 space-y-6">
+          <div className="mt-20 pt-16 border-t border-white/10 text-right">
+            <h2 className="font-syne font-extrabold text-massive-statement text-white uppercase leading-[0.88] max-w-5xl ml-auto">
+              I&apos;M TRYING<br />
+              TO BECOME<br />
+              <span className="text-[#FF9900]">A BUILDER.</span>
+            </h2>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ─── INTERACTIVE PERSONALITY WALL ─── */}
+      <section className="py-32 sm:py-44 px-6 sm:px-14 border-t border-white/10 relative bg-[#050505] overflow-hidden">
+        <div className="max-w-7xl mx-auto w-full text-center">
+          
+          <span className="font-mono text-xs text-slate-500 tracking-widest uppercase block mb-8">
+            DISCIPLINE MATRIX [HOVER TO EXPAND]
+          </span>
+
+          <div className="flex flex-wrap items-center justify-center gap-x-8 sm:gap-x-16 gap-y-8 sm:gap-y-12 max-w-5xl mx-auto">
             {[
-              { text: 'AI & DATA SCIENCE STUDENT', num: '01' },
-              { text: 'BUILDER', num: '02' },
-              { text: 'DESIGNER', num: '03' },
-              { text: 'COMMUNITY LEADER', num: '04' }
-            ].map((role) => (
-              <div
-                key={role.text}
-                onMouseEnter={() => handleCursorEnter('DISCOVER')}
+              'AI', 'AWS', 'CODE', 'DESIGN', 'GENAI', 'BUILD',
+              'LEAD', 'CREATE', 'LEARN', 'COMMUNITY', 'PRODUCT', 'EXPERIMENT'
+            ].map((word) => (
+              <span
+                key={word}
+                onMouseEnter={() => handleCursorEnter(word, word === 'AWS' ? 'aws' : 'default')}
                 onMouseLeave={handleCursorLeave}
-                className="py-5 border-b border-white/15 flex items-baseline justify-between group cursor-default transition-all hover:pl-4"
+                className="font-syne font-extrabold text-4xl sm:text-7xl md:text-8xl text-slate-500 hover:text-white transition-all duration-300 hover:scale-110 cursor-pointer uppercase tracking-tight"
               >
-                <span className="font-syne font-extrabold text-2xl sm:text-5xl md:text-6xl text-slate-300 group-hover:text-white tracking-tight uppercase">
-                  {role.text}
-                </span>
-                <span className="font-mono text-xs sm:text-base text-slate-500 group-hover:text-[#FF9900]">
-                  [{role.num}]
-                </span>
-              </div>
+                {word}
+              </span>
             ))}
           </div>
 
         </div>
       </section>
 
-      {/* ─── SECTION 02: ABOUT (IMMERSIVE TEXT COMPOSITION) ─── */}
-      <section
-        id="about"
-        className="min-h-screen py-32 sm:py-44 px-6 sm:px-14 border-t border-white/10 flex flex-col justify-center relative bg-[#050505]"
-      >
-        <div className="max-w-7xl mx-auto w-full">
-          
-          <div className="flex items-center justify-between mb-12">
-            <span className="font-mono text-xs text-slate-400 tracking-widest uppercase">
-              ABOUT ME / 01
-            </span>
-            <span className="font-mono text-xs text-[#FF9900] tracking-widest uppercase">
-              2ND YEAR · DYPCOEI
-            </span>
-          </div>
-
-          <h2 className="font-display font-extrabold text-3xl sm:text-6xl md:text-7xl text-white tracking-editorial uppercase leading-tight max-w-5xl">
-            &ldquo;I&apos;M A SECOND YEAR<br />
-            AI &amp; DATA SCIENCE<br />
-            STUDENT WHO LIKES<br />
-            <span className="text-[#FF9900]">TO BUILD.&rdquo;</span>
-          </h2>
-
-          <div className="mt-14 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            
-            <div className="lg:col-span-8">
-              <p className="font-sans text-lg sm:text-2xl text-slate-300 font-light leading-relaxed max-w-3xl">
-                Turning ambitious ideas into products, experimenting with emerging models, engineering intuitive digital experiences, and creating student-led communities around technology.
-              </p>
-
-              {/* Dynamic Interactive Keywords */}
-              <div className="mt-12">
-                <p className="font-mono text-xs uppercase tracking-widest text-slate-500 mb-4">
-                  CORE TECHNICAL DISCIPLINES [HOVER TO EXPAND]
-                </p>
-                <div className="flex flex-wrap gap-3">
-                  {[
-                    { word: 'AI', color: '#38bdf8', desc: 'Predictive modeling & machine intelligence' },
-                    { word: 'GENAI', color: '#a855f7', desc: 'Google Gemini & generative prompt engineering' },
-                    { word: 'AWS', color: '#FF9900', desc: 'Cloud infrastructure & student builder leadership' },
-                    { word: 'WEB', color: '#ffffff', desc: 'High-performance React & responsive architecture' },
-                    { word: 'DESIGN', color: '#ec4899', desc: 'Editorial typography & UI/UX motion systems' },
-                    { word: 'COMMUNITY', color: '#34d399', desc: 'Leading peer developers & tech initiatives' }
-                  ].map((kw) => (
-                    <div
-                      key={kw.word}
-                      onMouseEnter={() => {
-                        setActiveSkillWord(kw);
-                        handleCursorEnter(kw.word, kw.word === 'AWS' ? 'aws' : 'default');
-                      }}
-                      onMouseLeave={() => {
-                        setActiveSkillWord(null);
-                        handleCursorLeave();
-                      }}
-                      className="px-5 py-2.5 rounded-full border border-white/15 bg-white/[0.03] hover:border-white hover:bg-white/10 transition-all cursor-pointer"
-                    >
-                      <span className="font-syne font-extrabold text-sm text-white tracking-wider">
-                        {kw.word}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-
-                {activeSkillWord && (
-                  <div className="mt-4 p-4 rounded-xl bg-white/[0.04] border border-white/10 max-w-xl animate-fadeIn">
-                    <span className="font-mono text-xs uppercase font-bold" style={{ color: activeSkillWord.color }}>
-                      {activeSkillWord.word}
-                    </span>
-                    <p className="font-sans text-xs sm:text-sm text-slate-300 mt-1">
-                      {activeSkillWord.desc}
-                    </p>
-                  </div>
-                )}
-              </div>
-            </div>
-
-            {/* Asymmetrical Frame with Photo */}
-            <div className="lg:col-span-4">
-              <div
-                onMouseEnter={() => handleCursorEnter('EXPLORE')}
-                onMouseLeave={handleCursorLeave}
-                className="relative rounded-2xl overflow-hidden border border-white/15 p-2 bg-[#0a0a0e] group cursor-pointer"
-              >
-                <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-black">
-                  <img
-                    src={getImageSrc('/images/mohit-profile.jpg')}
-                    alt="Mohit Mundke"
-                    className="w-full h-full object-cover object-top filter grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
-                    onError={(e) => {
-                      e.target.src = getImageSrc('/images/mohit-profile.png');
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
-                </div>
-
-                <div className="p-3 font-mono text-[11px] text-slate-400 flex items-center justify-between">
-                  <span>PUNE, IN</span>
-                  <span className="text-[#FF9900]">18.5204° N, 73.8567° E</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-      {/* ─── SECTION 03: THE JOURNEY (HORIZONTAL PINNED TIMELINE) ─── */}
+      {/* ─── SECTION: THE JOURNEY (HORIZONTAL CINEMATIC JOURNEY) ─── */}
       <section
         id="journey"
-        className="py-32 sm:py-44 px-6 sm:px-14 border-t border-white/10 relative bg-[#070709]"
+        className="py-32 sm:py-44 px-6 sm:px-14 border-t border-white/10 relative bg-[#08080a]"
       >
         <div className="max-w-7xl mx-auto w-full">
           
           <div className="flex items-end justify-between mb-16">
             <div>
               <span className="font-mono text-xs text-[#FF9900] tracking-widest uppercase">
-                03 / TIMELINE
+                02 / CINEMATIC CHRONOLOGY
               </span>
               <h2 className="font-syne font-extrabold text-scene-title text-white uppercase mt-2">
                 THE JOURNEY
               </h2>
             </div>
-            <p className="hidden md:block font-mono text-xs text-slate-400 max-w-xs text-right">
+            <p className="hidden md:block font-mono text-xs text-slate-500">
               [HORIZONTAL PAN · 2024 TO NOW]
             </p>
           </div>
 
           {/* Horizontal Track Container */}
-          <div
-            ref={journeyTrackRef}
-            className="flex gap-6 overflow-x-auto pb-8 pt-2 scrollbar-thin scrollbar-thumb-white/20 select-none"
-          >
-            {journeyEpochs.map((epoch, idx) => (
+          <div className="flex gap-8 overflow-x-auto pb-10 pt-2 scrollbar-thin scrollbar-thumb-white/20 select-none">
+            {journeyScenes.map((s, idx) => (
               <div
-                key={epoch.year + idx}
-                onMouseEnter={() => handleCursorEnter(epoch.year, epoch.year === '2026' ? 'aws' : 'default')}
+                key={s.year + idx}
+                onMouseEnter={() => handleCursorEnter(s.scene, s.year === '2026' ? 'aws' : 'default')}
                 onMouseLeave={handleCursorLeave}
-                className="w-[310px] sm:w-[380px] flex-shrink-0 p-8 rounded-3xl bg-white/[0.03] border border-white/15 hover:border-white/30 transition-all flex flex-col justify-between group"
+                className="w-[320px] sm:w-[420px] flex-shrink-0 p-8 sm:p-10 rounded-3xl bg-white/[0.02] border border-white/15 hover:border-white/35 transition-all flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-8">
-                    <span className="font-mono text-xs text-slate-400">EPOCH 0{idx + 1}</span>
+                  <div className="flex items-center justify-between mb-6">
+                    <span className="font-mono text-xs text-slate-500">ACT 0{idx + 1}</span>
                     <span 
                       className="font-mono text-[10px] uppercase font-bold px-2 py-0.5 rounded border"
-                      style={{ color: epoch.accent, borderColor: epoch.accent + '40', backgroundColor: epoch.accent + '10' }}
+                      style={{ color: s.accent, borderColor: s.accent + '40', backgroundColor: s.accent + '15' }}
                     >
-                      {epoch.tag}
+                      {s.scene}
                     </span>
                   </div>
 
-                  <h3 className="font-syne font-extrabold text-5xl sm:text-6xl text-white tracking-tight">
-                    {epoch.year}
+                  <h3 className="font-syne font-extrabold text-6xl text-white tracking-tight">
+                    {s.year}
                   </h3>
 
                   <h4 className="font-display font-bold text-lg text-slate-200 uppercase mt-4">
-                    {epoch.title}
+                    {s.title}
                   </h4>
 
                   <p className="font-sans text-sm text-slate-400 font-light mt-3 leading-relaxed">
-                    {epoch.summary}
+                    {s.desc}
                   </p>
                 </div>
 
-                <div className="mt-8 pt-6 border-t border-white/10 space-y-1.5 font-mono text-xs text-slate-400">
-                  {epoch.bullets.map((b, i) => (
-                    <div key={i} className="flex items-center gap-2">
-                      <span className="text-[#FF9900]">✦</span>
-                      <span>{b}</span>
-                    </div>
-                  ))}
+                <div className="mt-8 pt-6 border-t border-white/10">
+                  <pre className="p-3 rounded-xl bg-black/60 border border-white/5 font-mono text-[11px] text-slate-400 overflow-x-hidden">
+                    <code>{s.codeSnippet}</code>
+                  </pre>
                 </div>
               </div>
             ))}
@@ -1149,22 +1072,22 @@ function App() {
         </div>
       </section>
 
-      {/* ─── GOOGLE GEMINI EXPERIENCE (ATMOSPHERIC SHIFT) ─── */}
+      {/* ─── GOOGLE GEMINI WORLD (LIGHT / OFF-WHITE SCENE SHIFT) ─── */}
       <section
         id="google"
-        className="py-32 sm:py-44 px-6 sm:px-14 border-t border-white/10 relative bg-[#060810]"
+        className="py-32 sm:py-44 px-6 sm:px-14 border-t border-white/10 relative bg-[#f4f5f8] text-[#050505] transition-colors duration-700"
       >
         <div className="max-w-7xl mx-auto w-full">
           
           <div className="flex items-center gap-3 mb-6">
-            <span className="font-mono text-xs text-[#4285F4] tracking-widest uppercase">
-              GOOGLE GEMINI ECOSYSTEM
+            <span className="font-mono text-xs text-[#4285F4] tracking-widest uppercase font-bold">
+              GOOGLE GEMINI WORLD
             </span>
             <div className="flex items-center gap-1">
-              <span className="w-2 h-2 rounded-full bg-[#4285F4]"></span>
-              <span className="w-2 h-2 rounded-full bg-[#EA4335]"></span>
-              <span className="w-2 h-2 rounded-full bg-[#FBBC05]"></span>
-              <span className="w-2 h-2 rounded-full bg-[#34A853]"></span>
+              <span className="w-2.5 h-2.5 rounded-full bg-[#4285F4]"></span>
+              <span className="w-2.5 h-2.5 rounded-full bg-[#EA4335]"></span>
+              <span className="w-2.5 h-2.5 rounded-full bg-[#FBBC05]"></span>
+              <span className="w-2.5 h-2.5 rounded-full bg-[#34A853]"></span>
             </div>
           </div>
 
@@ -1172,67 +1095,40 @@ function App() {
             
             {/* Left Column: Editorial Statement */}
             <div className="lg:col-span-7">
-              <h2 className="font-syne font-extrabold text-scene-title text-white uppercase leading-none">
+              <h2 className="font-syne font-extrabold text-scene-title text-[#050505] uppercase leading-none">
                 FROM<br />
                 EXPLORING AI<br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4285F4] via-[#EA4335] to-[#FBBC05]">
-                  TO SHARING IT.
-                </span>
+                <span className="text-[#4285F4]">TO SHARING IT.</span>
               </h2>
 
-              <div className="mt-6 inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-white/[0.04] border border-white/15">
-                <span className="text-xl">✨</span>
-                <span className="font-mono text-xs text-white font-bold uppercase">
-                  GOOGLE GEMINI AI STUDENT AMBASSADOR · 2026
+              <div className="mt-6 inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-black/5 border border-black/10">
+                <span className="font-mono text-xs text-black font-bold uppercase">
+                  GOOGLE GEMINI · AI STUDENT AMBASSADOR · 2026
                 </span>
               </div>
 
-              <p className="mt-8 font-sans text-base sm:text-lg text-slate-300 font-light leading-relaxed max-w-2xl">
-                As a Google Gemini AI Student Ambassador, I explored Generative AI and helped bring AI awareness, experimentation and learning into my college community through hands-on labs and prompt architectures.
+              <p className="mt-8 font-sans text-lg sm:text-2xl text-slate-700 font-light leading-relaxed max-w-2xl">
+                &ldquo;Exploring Generative AI wasn&apos;t enough. I wanted to help others explore it too.&rdquo;
               </p>
 
-              {/* 5-Step Typographic Journey */}
-              <div className="mt-12">
-                <p className="font-mono text-xs text-slate-400 uppercase tracking-widest mb-4">
-                  THE 5-PHASE ENABLING JOURNEY
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-5 gap-2">
-                  {googleSteps.map((s, idx) => (
-                    <div
-                      key={s.key}
-                      onClick={() => setActiveGoogleStep(idx)}
-                      onMouseEnter={() => handleCursorEnter(s.key)}
-                      onMouseLeave={handleCursorLeave}
-                      className={`p-3 rounded-xl border cursor-pointer transition-all ${
-                        activeGoogleStep === idx 
-                          ? 'bg-[#4285F4]/15 border-[#4285F4] text-white' 
-                          : 'bg-white/[0.02] border-white/10 text-slate-400 hover:text-white'
-                      }`}
-                    >
-                      <span className="font-mono text-[10px] text-slate-500 block">{s.num}</span>
-                      <span className="font-syne font-bold text-xs uppercase block mt-1">{s.key}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-4 p-4 rounded-xl bg-white/[0.03] border border-white/10">
-                  <p className="font-mono text-xs text-[#4285F4] font-bold">
-                    PHASE: {googleSteps[activeGoogleStep].key}
-                  </p>
-                  <p className="font-sans text-xs sm:text-sm text-slate-300 mt-1">
-                    {googleSteps[activeGoogleStep].desc}
-                  </p>
-                </div>
+              <div className="mt-12 flex flex-wrap gap-2.5">
+                {['AI', 'GENERATIVE AI', 'GEMINI', 'PRODUCTIVITY', 'COMMUNITY'].map((tag) => (
+                  <span
+                    key={tag}
+                    onMouseEnter={() => handleCursorEnter(tag, 'gemini')}
+                    onMouseLeave={handleCursorLeave}
+                    className="px-4 py-2 rounded-full border border-black/15 bg-black/5 text-xs font-mono font-bold text-black"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
             </div>
 
-            {/* Right Column: Google Planetary Orbital Visual */}
-            <div className="lg:col-span-5 flex flex-col items-center">
-              <div className="w-full relative rounded-3xl bg-black/60 border border-white/15 p-4 overflow-hidden">
-                <GoogleOrbitalCanvas mousePos={mousePos} />
-                <div className="p-3 border-t border-white/10 flex items-center justify-between font-mono text-[11px] text-slate-400">
-                  <span>ORBITAL SIMULATION</span>
-                  <span className="text-[#4285F4]">4 NODES ACTIVE</span>
-                </div>
+            {/* Right Column: Central Abstract Morphing Gemini Orb */}
+            <div className="lg:col-span-5">
+              <div className="rounded-3xl bg-white border border-black/10 p-4 shadow-xl">
+                <GoogleMorphingOrbCanvas mousePos={mousePos} />
               </div>
             </div>
 
@@ -1241,14 +1137,14 @@ function App() {
         </div>
       </section>
 
-      {/* ─── GOOGLE → AWS DRAMATIC TRANSITION ─── */}
-      <section className="py-24 px-6 border-t border-white/10 bg-[#050505] relative flex flex-col items-center justify-center text-center overflow-hidden">
-        <div className="w-full max-w-4xl mx-auto">
+      {/* ─── GOOGLE → AWS SHOWSTOPPER TRANSITION ─── */}
+      <section className="py-24 px-6 bg-[#050505] text-center border-t border-white/10 relative overflow-hidden">
+        <div className="max-w-4xl mx-auto">
           <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-[#FF9900] to-transparent mb-8"></div>
-          <span className="font-mono text-xs uppercase tracking-widest text-slate-500 block mb-3">
-            SHIFTING HORIZONS
+          <span className="font-mono text-xs text-slate-500 uppercase tracking-widest block mb-4">
+            NETWORK COLLAPSE → EXPANSION
           </span>
-          <h3 className="font-syne font-extrabold text-3xl sm:text-5xl md:text-6xl text-white uppercase tracking-editorial leading-tight">
+          <h3 className="font-syne font-extrabold text-3xl sm:text-6xl text-white uppercase tracking-editorial leading-tight">
             &ldquo;THEN I STARTED<br />
             BUILDING THE<br />
             <span className="text-[#FF9900]">BUILDERS.&rdquo;</span>
@@ -1257,23 +1153,22 @@ function App() {
         </div>
       </section>
 
-      {/* ─── AWS EXPERIENCE (CLOUD / NETWORK SCENE) ─── */}
+      {/* ─── AWS DIGITAL WORLD (HERO SECTION INSIDE THE SITE) ─── */}
       <section
         id="aws"
-        className="py-32 sm:py-44 px-6 sm:px-14 border-t border-white/10 relative bg-aws-dark"
+        className="py-32 sm:py-44 px-6 sm:px-14 border-t border-white/10 relative bg-aws-dark-world"
       >
         <div className="max-w-7xl mx-auto w-full">
           
           <div className="flex items-center gap-3 mb-6">
             <span className="font-mono text-xs text-[#FF9900] tracking-widest uppercase">
-              AWS CLOUD &amp; STUDENT BUILDER GROUP
+              AWS DIGITAL WORLD · CLOUD TOPOLOGY
             </span>
             <span className="w-2 h-2 rounded-full bg-[#FF9900] animate-pulse"></span>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
-            {/* Left Column: Monumental Headline */}
             <div className="lg:col-span-7">
               <h2 className="font-syne font-extrabold text-scene-title text-white uppercase leading-none">
                 AWS<br />
@@ -1285,74 +1180,73 @@ function App() {
                 DYPCOEI · AY 2026-27
               </p>
 
-              <div className="mt-8 p-6 rounded-2xl bg-[#FF9900]/10 border border-[#FF9900]/30 max-w-2xl">
-                <p className="font-mono text-xs text-[#FF9900] uppercase font-bold tracking-widest mb-1">
-                  LEADERSHIP RESPONSIBILITY
+              {/* Leadership Reveal Block */}
+              <div className="mt-8 p-8 rounded-3xl bg-[#FF9900]/15 border border-[#FF9900]/40 max-w-2xl">
+                <span className="font-mono text-xs text-[#FF9900] uppercase font-bold tracking-widest block mb-2">
+                  MY ROLE
+                </span>
+                <h3 className="font-syne font-extrabold text-3xl sm:text-4xl text-white uppercase">
+                  STUDENT BUILDER GROUP LEADER
+                </h3>
+                <p className="font-mono text-sm text-[#FF9900] mt-1 font-bold">
+                  MOHIT MUNDKE · DYPCOEI AY 2026-27
                 </p>
-                <p className="font-syne font-bold text-xl text-white uppercase">
-                  MOHIT MUNDKE · STUDENT BUILDER GROUP LEADER
-                </p>
-                <p className="font-sans text-sm text-slate-300 font-light mt-2 leading-relaxed">
+                <p className="font-sans text-sm text-slate-300 font-light mt-3 leading-relaxed">
                   &ldquo;A student-led technical community focused on AWS, cloud computing, AI and innovation.&rdquo;
                 </p>
               </div>
 
-              {/* Faculty / Leadership Context */}
+              {/* Faculty Leadership Context */}
               <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-2xl">
-                <div className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10">
-                  <p className="font-mono text-[10px] text-slate-500 uppercase">COORDINATOR</p>
-                  <p className="font-sans font-bold text-xs text-white mt-1">Mr. Suraj Bhoite</p>
-                  <p className="font-mono text-[10px] text-slate-400">Faculty Coordinator</p>
+                <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 font-mono text-xs">
+                  <p className="text-slate-500 uppercase text-[10px]">COORDINATOR</p>
+                  <p className="font-bold text-white mt-1">Mr. Suraj Bhoite</p>
+                  <p className="text-slate-400 text-[10px]">Faculty Coordinator</p>
                 </div>
-                <div className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10">
-                  <p className="font-mono text-[10px] text-slate-500 uppercase">EDUCATOR</p>
-                  <p className="font-sans font-bold text-xs text-white mt-1">Dr. Dipannita Mondal</p>
-                  <p className="font-mono text-[10px] text-slate-400">AWS Academy Educator</p>
+                <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 font-mono text-xs">
+                  <p className="text-slate-500 uppercase text-[10px]">EDUCATOR</p>
+                  <p className="font-bold text-white mt-1">Dr. Dipannita Mondal</p>
+                  <p className="text-slate-400 text-[10px]">AWS Academy Educator</p>
                 </div>
-                <div className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10">
-                  <p className="font-mono text-[10px] text-slate-500 uppercase">HEAD OF DEPT</p>
-                  <p className="font-sans font-bold text-xs text-white mt-1">Dr. Dipannita Mondal</p>
-                  <p className="font-mono text-[10px] text-slate-400">HOD</p>
+                <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 font-mono text-xs">
+                  <p className="text-slate-500 uppercase text-[10px]">HOD</p>
+                  <p className="font-bold text-white mt-1">Dr. Dipannita Mondal</p>
+                  <p className="text-slate-400 text-[10px]">Head of Department</p>
                 </div>
               </div>
             </div>
 
-            {/* Right Column: AWS Interactive Node Network Canvas */}
-            <div className="lg:col-span-5 flex flex-col items-center">
-              <div className="w-full relative rounded-3xl bg-[#090b10] border border-[#FF9900]/30 p-4 overflow-hidden">
-                <AwsNetworkCanvas mousePos={mousePos} />
-                <div className="p-3 border-t border-white/10 flex items-center justify-between font-mono text-[11px] text-slate-400">
-                  <span>CLOUD TOPOLOGY</span>
-                  <span className="text-[#FF9900]">7 NODES INTERCONNECTED</span>
-                </div>
+            {/* AWS 3D Node Network Canvas */}
+            <div className="lg:col-span-5">
+              <div className="rounded-3xl bg-[#090b10] border border-[#FF9900]/30 p-4">
+                <AwsInteractiveNetworkCanvas mousePos={mousePos} />
               </div>
             </div>
 
           </div>
 
-          {/* AWS Interactive 5-Stage Takeover Progression */}
+          {/* AWS 5-Stage Takeover Progression */}
           <div className="mt-20 pt-16 border-t border-white/10">
-            <span className="font-mono text-xs uppercase tracking-widest text-[#FF9900] block mb-6">
+            <span className="font-mono text-xs text-[#FF9900] uppercase tracking-widest block mb-6">
               THE 5-STAGE CLOUD JOURNEY
             </span>
             <div className="grid grid-cols-1 sm:grid-cols-5 gap-3">
-              {awsStages.map((stg, idx) => (
+              {[
+                { num: '01', title: 'EXPLORE', desc: 'Cloud infrastructure & global architecture models.' },
+                { num: '02', title: 'LEARN', desc: 'Serverless, compute primitives, and scalable databases.' },
+                { num: '03', title: 'BUILD', desc: 'Deploying working prototypes and automation pipelines.' },
+                { num: '04', title: 'LEAD', desc: 'Student Builder Group Leader at DYPCOEI.' },
+                { num: '05', title: 'CREATE COMMUNITY', desc: 'Empowering student developers through hands-on bootcamps.' }
+              ].map((stg) => (
                 <div
                   key={stg.num}
-                  onClick={() => setActiveAwsStage(idx)}
                   onMouseEnter={() => handleCursorEnter(stg.title, 'aws')}
                   onMouseLeave={handleCursorLeave}
-                  className={`p-5 rounded-2xl border cursor-pointer transition-all ${
-                    activeAwsStage === idx
-                      ? 'bg-[#FF9900]/20 border-[#FF9900] text-white shadow-xl shadow-[#FF9900]/10'
-                      : 'bg-white/[0.02] border-white/10 text-slate-400 hover:text-white'
-                  }`}
+                  className="p-5 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-[#FF9900] transition-all"
                 >
-                  <span className="font-mono text-xs text-slate-500 block">{stg.num}</span>
-                  <h4 className="font-syne font-bold text-base uppercase mt-2 text-white">{stg.title}</h4>
-                  <p className="font-sans text-xs text-slate-400 font-light mt-2 leading-relaxed">
-                    {stg.desc}
-                  </p>
+                  <span className="font-mono text-xs text-slate-500">{stg.num}</span>
+                  <h4 className="font-syne font-bold text-base text-white uppercase mt-2">{stg.title}</h4>
+                  <p className="font-sans text-xs text-slate-400 font-light mt-2 leading-relaxed">{stg.desc}</p>
                 </div>
               ))}
             </div>
@@ -1361,7 +1255,7 @@ function App() {
         </div>
       </section>
 
-      {/* ─── AWS CORE TEAM (HORIZONTAL SHOWCASE) ─── */}
+      {/* ─── AWS CORE TEAM (3D SPATIAL TEAM WALL) ─── */}
       <section
         id="team"
         className="py-32 sm:py-44 px-6 sm:px-14 border-t border-white/10 relative bg-[#060608]"
@@ -1371,7 +1265,7 @@ function App() {
           <div className="flex items-end justify-between mb-16">
             <div>
               <span className="font-mono text-xs text-[#FF9900] tracking-widest uppercase">
-                COMMUNITY LEADERSHIP
+                SPATIAL LEADERSHIP WALL
               </span>
               <h2 className="font-syne font-extrabold text-scene-title text-white uppercase mt-2">
                 BUILDING THE BUILDERS
@@ -1381,97 +1275,68 @@ function App() {
               </p>
             </div>
             <p className="hidden md:block font-mono text-xs text-slate-500">
-              [HOVER TO HIGHLIGHT]
+              [SPATIAL DEPTH HOVER]
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {awsCoreTeam.map((mem) => {
-              const isHovered = hoveredTeamMember === mem.name;
-              return (
-                <div
-                  key={mem.name}
-                  onMouseEnter={() => {
-                    setHoveredTeamMember(mem.name);
-                    handleCursorEnter(mem.role, 'aws');
-                  }}
-                  onMouseLeave={() => {
-                    setHoveredTeamMember(null);
-                    handleCursorLeave();
-                  }}
-                  className={`p-7 rounded-3xl border transition-all duration-300 flex flex-col justify-between ${
-                    isHovered
-                      ? 'bg-[#FF9900]/15 border-[#FF9900] shadow-2xl scale-[1.02]'
-                      : 'bg-white/[0.03] border-white/15'
-                  }`}
-                >
-                  <div>
-                    <span 
-                      className="font-mono text-[10px] uppercase font-bold tracking-widest px-2.5 py-1 rounded"
-                      style={{ backgroundColor: mem.accent + '20', color: mem.accent }}
-                    >
-                      {mem.role}
-                    </span>
-                    <h3 className="font-syne font-bold text-2xl text-white uppercase mt-4">
-                      {mem.name}
-                    </h3>
-                    <p className="font-mono text-xs text-slate-300 mt-1">
-                      {mem.title}
-                    </p>
-                    <p className="font-mono text-[11px] text-slate-500">
-                      {mem.dept}
-                    </p>
-                  </div>
+            {awsCoreTeam.map((mem) => (
+              <div
+                key={mem.name}
+                onMouseEnter={() => handleCursorEnter(mem.role, 'aws')}
+                onMouseLeave={handleCursorLeave}
+                className="p-8 rounded-3xl bg-white/[0.03] border border-white/15 hover:border-[#FF9900] transition-all duration-300 hover:scale-[1.02] flex flex-col justify-between group"
+              >
+                <div>
+                  <span
+                    className="font-mono text-[10px] uppercase font-bold tracking-widest px-2.5 py-1 rounded"
+                    style={{ backgroundColor: mem.accent + '20', color: mem.accent }}
+                  >
+                    {mem.role}
+                  </span>
 
-                  <p className="font-sans text-xs sm:text-sm text-slate-400 font-light mt-6 leading-relaxed border-t border-white/10 pt-4">
-                    {mem.desc}
-                  </p>
+                  <h3 className="font-syne font-extrabold text-2xl sm:text-3xl text-white uppercase mt-4 group-hover:text-[#FF9900] transition-colors">
+                    {mem.name}
+                  </h3>
+
+                  <p className="font-mono text-xs text-slate-300 mt-1 font-semibold">{mem.title}</p>
+                  <p className="font-mono text-[11px] text-slate-500">{mem.dept}</p>
                 </div>
-              );
-            })}
+
+                <p className="font-sans text-xs sm:text-sm text-slate-400 font-light mt-6 pt-4 border-t border-white/10 leading-relaxed">
+                  {mem.bio}
+                </p>
+              </div>
+            ))}
           </div>
 
         </div>
       </section>
 
-      {/* ─── LEADERSHIP SECTION ─── */}
-      <section
-        id="leadership"
-        className="py-32 sm:py-44 px-6 sm:px-14 border-t border-white/10 relative bg-[#050505]"
-      >
-        <div className="max-w-7xl mx-auto w-full text-center">
-          
+      {/* ─── LEADERSHIP STATEMENT ─── */}
+      <section className="py-32 sm:py-44 px-6 sm:px-14 border-t border-white/10 relative bg-[#050505] text-center">
+        <div className="max-w-5xl mx-auto">
           <span className="font-mono text-xs text-[#FF9900] tracking-widest uppercase block mb-6">
-            LEADERSHIP PHILOSOPHY
+            LEADERSHIP / 04
           </span>
 
-          <h2 className="font-syne font-extrabold text-scene-title text-white uppercase max-w-4xl mx-auto leading-tight">
-            &ldquo;I DON&apos;T JUST BUILD PRODUCTS.<br />
-            <span className="text-[#FF9900]">I BUILD COMMUNITIES.&rdquo;</span>
+          <h2 className="font-syne font-extrabold text-scene-title text-slate-400 uppercase leading-none">
+            I DON&apos;T JUST<br />
+            BUILD THINGS.
           </h2>
 
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto text-left">
-            <div className="p-7 rounded-2xl bg-white/[0.03] border border-white/10">
-              <span className="font-mono text-xs text-[#FF9900] font-bold block mb-1">AWS COMMUNITY</span>
-              <h3 className="font-syne font-bold text-lg text-white">AWS Student Builder Group</h3>
-              <p className="font-mono text-xs text-slate-400 mt-1">Student Builder Group Leader · AY 2026-27</p>
-            </div>
-            <div className="p-7 rounded-2xl bg-white/[0.03] border border-white/10">
-              <span className="font-mono text-xs text-[#4285F4] font-bold block mb-1">GOOGLE ECOSYSTEM</span>
-              <h3 className="font-syne font-bold text-lg text-white">Google Gemini</h3>
-              <p className="font-mono text-xs text-slate-400 mt-1">AI Student Ambassador · 2026</p>
-            </div>
-            <div className="p-7 rounded-2xl bg-white/[0.03] border border-white/10">
-              <span className="font-mono text-xs text-slate-400 font-bold block mb-1">COLLEGE INITIATIVES</span>
-              <h3 className="font-syne font-bold text-lg text-white">DYPCOEI Technical Initiatives</h3>
-              <p className="font-mono text-xs text-slate-400 mt-1">Student Leadership &amp; Hackathons</p>
-            </div>
-          </div>
+          <div className="my-8 h-[1px] w-24 bg-[#FF9900] mx-auto"></div>
 
+          <h2 className="font-syne font-extrabold text-scene-title text-white uppercase leading-none">
+            I BUILD<br />
+            PEOPLE<br />
+            WHO BUILD<br />
+            <span className="text-[#FF9900]">THINGS.</span>
+          </h2>
         </div>
       </section>
 
-      {/* ─── PROJECTS (~90VH CINEMATIC SHOWCASES) ─── */}
+      {/* ─── PROJECTS (~90VH CINEMATIC GALLERY) ─── */}
       <section
         id="projects"
         className="py-32 sm:py-44 px-6 sm:px-14 border-t border-white/10 relative bg-[#070709]"
@@ -1484,27 +1349,26 @@ function App() {
                 SELECTED WORK
               </span>
               <h2 className="font-syne font-extrabold text-scene-title text-white uppercase mt-2">
-                THINGS I&apos;VE BUILT
+                PROJECT PORTFOLIO
               </h2>
             </div>
             <p className="hidden md:block font-mono text-xs text-slate-400">
-              [04 CURATED CASE STUDIES]
+              [CINEMATIC SHOWCASES]
             </p>
           </div>
 
-          <div className="space-y-24">
-            {projectsData.map((proj) => (
+          <div className="space-y-28">
+            {cinematicProjects.map((proj) => (
               <div
                 key={proj.id}
-                onMouseEnter={() => handleCursorEnter('VIEW', 'aws')}
+                onMouseEnter={() => handleCursorEnter('EXPLORE', 'aws')}
                 onMouseLeave={handleCursorLeave}
-                className="min-h-[70vh] rounded-3xl p-8 sm:p-14 border border-white/15 bg-white/[0.02] hover:border-white/30 transition-all flex flex-col justify-between"
+                className="min-h-[75vh] rounded-3xl p-8 sm:p-14 border border-white/15 bg-white/[0.02] hover:border-white/35 transition-all flex flex-col justify-between"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
                   
-                  {/* Left Column: Number & Titles */}
                   <div className="lg:col-span-7">
-                    <span className="font-mono font-bold text-3xl sm:text-5xl text-[#FF9900]">
+                    <span className="font-mono font-bold text-4xl sm:text-6xl text-[#FF9900]">
                       {proj.number}
                     </span>
 
@@ -1512,7 +1376,7 @@ function App() {
                       {proj.name}
                     </h3>
 
-                    <p className="font-mono text-xs sm:text-sm text-slate-300 mt-2">
+                    <p className="font-mono text-xs sm:text-sm text-slate-300 mt-2 font-medium">
                       {proj.subtitle}
                     </p>
 
@@ -1532,17 +1396,16 @@ function App() {
                     </div>
                   </div>
 
-                  {/* Right Column: Blueprint Preview & Action */}
                   <div className="lg:col-span-5 h-full flex flex-col justify-between">
                     <div className="p-6 rounded-2xl bg-black/60 border border-white/10 font-mono text-xs space-y-3">
                       <div className="flex items-center justify-between text-slate-400 pb-2 border-b border-white/10">
-                        <span>ARCHITECTURE</span>
+                        <span>SYSTEM BLUEPRINT</span>
                         <span className="text-[#FF9900]">VERIFIED</span>
                       </div>
                       <p className="text-slate-300 font-semibold">{proj.tagline}</p>
                       <div className="text-slate-400 space-y-1">
-                        <div>• {proj.caseStudy.problem.slice(0, 90)}...</div>
-                        <div>• {proj.caseStudy.solution.slice(0, 90)}...</div>
+                        <div>• Problem: {proj.caseStudy.problem.slice(0, 95)}...</div>
+                        <div>• Solution: {proj.caseStudy.solution.slice(0, 95)}...</div>
                       </div>
                     </div>
 
@@ -1575,34 +1438,95 @@ function App() {
         </div>
       </section>
 
-      {/* ─── SKILLS (INTERACTIVE TYPOGRAPHY WALL) ─── */}
+      {/* ─── EXPERIMENT LAB (DIGITAL LAB ATMOSPHERE) ─── */}
+      <section
+        id="experiments"
+        className="py-32 sm:py-44 px-6 sm:px-14 border-t border-white/10 relative bg-[#060608]"
+      >
+        <div className="max-w-7xl mx-auto w-full">
+          
+          <div className="flex items-end justify-between mb-16">
+            <div>
+              <span className="font-mono text-xs text-[#FF9900] tracking-widest uppercase">
+                DIGITAL LAB
+              </span>
+              <h2 className="font-syne font-extrabold text-scene-title text-white uppercase mt-2">
+                EXPERIMENTS
+              </h2>
+            </div>
+            <p className="hidden md:block font-mono text-xs text-slate-500">
+              &ldquo;I&apos;M CONSTANTLY EXPERIMENTING.&rdquo;
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="p-8 rounded-3xl bg-black/60 border border-white/15 font-mono text-xs flex flex-col justify-between">
+              <div>
+                <span className="text-[#38bdf8] block mb-2">[01 / LLM REASONING]</span>
+                <p className="font-syne font-bold text-lg text-white mb-2">Gemini Agent Context Pipelines</p>
+                <p className="text-slate-400 font-light font-sans text-xs leading-relaxed">
+                  Exploring real-time context windows, token reduction, and grounded schema retrieval for agricultural and wellness reasoning.
+                </p>
+              </div>
+              <div className="mt-6 pt-4 border-t border-white/10 text-slate-500">
+                STATUS: LAB PROTOTYPE
+              </div>
+            </div>
+
+            <div className="p-8 rounded-3xl bg-black/60 border border-white/15 font-mono text-xs flex flex-col justify-between">
+              <div>
+                <span className="text-[#FF9900] block mb-2">[02 / CLOUD ARCHITECTURE]</span>
+                <p className="font-syne font-bold text-lg text-white mb-2">AWS Serverless Event Dispatch</p>
+                <p className="text-slate-400 font-light font-sans text-xs leading-relaxed">
+                  Testing asynchronous SQS queues, Lambda compute scaling, and S3 event triggers under simulated spike traffic.
+                </p>
+              </div>
+              <div className="mt-6 pt-4 border-t border-white/10 text-slate-500">
+                STATUS: CLOUD VERIFIED
+              </div>
+            </div>
+
+            <div className="p-8 rounded-3xl bg-black/60 border border-white/15 font-mono text-xs flex flex-col justify-between">
+              <div>
+                <span className="text-[#60a5fa] block mb-2">[03 / LOW-LEVEL MEMORY]</span>
+                <p className="font-syne font-bold text-lg text-white mb-2">C/C++ Deterministic Allocation</p>
+                <p className="text-slate-400 font-light font-sans text-xs leading-relaxed">
+                  Benchmarking custom memory pool allocators against standard malloc for high-frequency inventory lookups.
+                </p>
+              </div>
+              <div className="mt-6 pt-4 border-t border-white/10 text-slate-500">
+                STATUS: BENCHMARKED
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ─── TECH STACK (MASSIVE TYPOGRAPHIC WALL) ─── */}
       <section
         id="skills"
-        className="py-32 sm:py-44 px-6 sm:px-14 border-t border-white/10 relative bg-[#050505] select-none"
+        className="py-32 sm:py-44 px-6 sm:px-14 border-t border-white/10 relative bg-[#050505] text-center"
       >
-        <div className="max-w-7xl mx-auto w-full text-center">
+        <div className="max-w-7xl mx-auto w-full">
           
           <span className="font-mono text-xs text-[#FF9900] tracking-widest uppercase block mb-6">
-            WHAT I BUILD WITH
+            TECHNICAL REPERTOIRE
           </span>
 
           <h2 className="font-syne font-extrabold text-scene-title text-white uppercase mb-16">
-            TECHNICAL REPERTOIRE
+            WHAT I BUILD WITH
           </h2>
 
-          {/* Interactive Typography Wall */}
-          <div className="flex flex-wrap items-center justify-center gap-x-6 sm:gap-x-12 gap-y-6 sm:gap-y-10 max-w-5xl mx-auto">
-            {skillWall.map((item) => (
+          <div className="flex flex-wrap items-center justify-center gap-x-8 sm:gap-x-14 gap-y-8 sm:gap-y-12 max-w-5xl mx-auto">
+            {wallWords.map((item) => (
               <span
-                key={item.word}
-                onMouseEnter={() => handleCursorEnter(item.category, item.word === 'AWS' ? 'aws' : 'default')}
+                key={item.text}
+                onMouseEnter={() => handleCursorEnter(item.text, item.text === 'AWS' ? 'aws' : 'default')}
                 onMouseLeave={handleCursorLeave}
-                className="font-syne font-extrabold text-3xl sm:text-6xl md:text-7xl text-slate-400 hover:text-white transition-all duration-300 hover:scale-110 cursor-pointer uppercase tracking-tight"
-                style={{
-                  textShadow: '0 0 20px rgba(255,255,255,0.05)'
-                }}
+                className={`font-syne font-extrabold ${item.size} text-slate-500 hover:text-white transition-all duration-300 hover:scale-110 cursor-pointer uppercase tracking-tight`}
               >
-                {item.word}
+                {item.text}
               </span>
             ))}
           </div>
@@ -1611,46 +1535,27 @@ function App() {
       </section>
 
       {/* ─── CURRENTLY BUILDING ─── */}
-      <section
-        id="building"
-        className="py-32 sm:py-44 px-6 sm:px-14 border-t border-white/10 relative bg-[#060608]"
-      >
-        <div className="max-w-7xl mx-auto w-full text-center">
+      <section className="py-32 sm:py-44 px-6 sm:px-14 border-t border-white/10 relative bg-[#070709] text-center">
+        <div className="max-w-5xl mx-auto">
           
           <span className="font-mono text-xs text-[#FF9900] tracking-widest uppercase block mb-6">
-            CURRENTLY BUILDING
+            IN PROGRESS
           </span>
 
-          <h2 className="font-syne font-extrabold text-scene-title text-white uppercase max-w-4xl mx-auto leading-tight">
-            &ldquo;THE NEXT VERSION<br />
-            IS ALWAYS<br />
-            <span className="text-[#FF9900]">IN PROGRESS.&rdquo;</span>
+          <h2 className="font-syne font-extrabold text-scene-title text-white uppercase leading-tight">
+            CURRENTLY<br />
+            <span className="text-[#FF9900]">BUILDING.</span>
           </h2>
 
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto text-left">
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
             {[
-              { title: 'AWS SBG DYPCOEI', desc: 'Building a stronger student technology community and cloud workshops.', tag: 'COMMUNITY' },
-              { title: 'AI & LLM AGENTS', desc: 'Exploring practical applications of Generative AI, prompt architecture, and tools.', tag: 'INTELLIGENCE' },
-              { title: 'DIGITAL EXPERIENCES', desc: 'Designing and developing high-fidelity user interfaces and software.', tag: 'PRODUCTS' }
-            ].map((obj) => (
-              <div
-                key={obj.title}
-                className="p-8 rounded-3xl bg-white/[0.03] border border-white/15 flex flex-col justify-between"
-              >
-                <div>
-                  <span className="font-mono text-[10px] uppercase font-bold text-[#FF9900] px-2 py-0.5 rounded bg-[#FF9900]/10 border border-[#FF9900]/20">
-                    {obj.tag}
-                  </span>
-                  <h3 className="font-syne font-bold text-xl text-white uppercase mt-4">
-                    {obj.title}
-                  </h3>
-                  <p className="font-sans text-xs sm:text-sm text-slate-400 font-light mt-2 leading-relaxed">
-                    {obj.desc}
-                  </p>
-                </div>
-                <span className="font-mono text-[11px] text-slate-500 mt-6 pt-4 border-t border-white/10">
-                  STATUS: ACTIVE
-                </span>
+              { name: 'AWS STUDENT BUILDER GROUP', desc: 'Scaling the student technical community across campus.' },
+              { name: 'AI & LLM AGENTS', desc: 'Developing intelligent assistants and prompt reasoning pipelines.' },
+              { name: 'DIGITAL EXPERIENCES', desc: 'Designing software with obsessive craft and editorial polish.' }
+            ].map((item) => (
+              <div key={item.name} className="p-8 rounded-3xl bg-white/[0.03] border border-white/10">
+                <h3 className="font-syne font-bold text-lg text-white uppercase">{item.name}</h3>
+                <p className="font-sans text-xs sm:text-sm text-slate-400 font-light mt-2">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -1658,11 +1563,8 @@ function App() {
         </div>
       </section>
 
-      {/* ─── ACHIEVEMENTS (MONUMENTAL NUMBERS) ─── */}
-      <section
-        id="achievements"
-        className="py-32 sm:py-44 px-6 sm:px-14 border-t border-white/10 relative bg-[#050505]"
-      >
+      {/* ─── ACHIEVEMENTS (VERTICAL NUMBER TUNNEL) ─── */}
+      <section className="py-32 sm:py-44 px-6 sm:px-14 border-t border-white/10 relative bg-[#050505]">
         <div className="max-w-7xl mx-auto w-full">
           
           <span className="font-mono text-xs text-[#FF9900] tracking-widest uppercase block mb-12">
@@ -1671,13 +1573,13 @@ function App() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { val: '8.02', label: 'FIRST SEM SGPA', sub: 'Verified Academic Track' },
-              { val: '7.32', label: 'SECOND SEM SGPA', sub: 'Verified Academic Track' },
+              { val: '8.02', label: 'FIRST SEMESTER SGPA', sub: 'Verified Academic Track' },
+              { val: '7.32', label: 'SECOND SEMESTER SGPA', sub: 'Verified Academic Track' },
               { val: '2026', label: 'GOOGLE GEMINI', sub: 'AI Student Ambassador' },
-              { val: '2026', label: 'AWS SBG LEADER', sub: 'DYPCOEI AY 2026-27' }
+              { val: '2026', label: 'AWS SBG', sub: 'Student Builder Group Leader' }
             ].map((m) => (
               <div key={m.label} className="border-t border-white/20 pt-6">
-                <span className="font-syne font-extrabold text-5xl sm:text-7xl text-white tracking-tight block">
+                <span className="font-syne font-extrabold text-6xl sm:text-8xl text-white tracking-tight block">
                   {m.val}
                 </span>
                 <span className="font-mono font-bold text-xs sm:text-sm text-slate-200 uppercase mt-2 block">
@@ -1693,23 +1595,27 @@ function App() {
         </div>
       </section>
 
-      {/* ─── CONTACT (EXTREMELY MINIMAL, MONUMENTAL) ─── */}
+      {/* ─── FINAL SECTION & CONTACT (MONUMENTAL CLOSE) ─── */}
       <section
         id="contact"
         className="min-h-screen py-32 sm:py-44 px-6 sm:px-14 border-t border-white/10 flex flex-col justify-between relative bg-[#050505]"
       >
         <div className="max-w-7xl mx-auto w-full my-auto">
           
-          <span className="font-mono text-xs text-[#FF9900] tracking-widest uppercase block mb-8">
-            LET&apos;S TALK
+          <span className="font-mono text-xs text-slate-500 tracking-widest uppercase block mb-6">
+            THANK YOU FOR SCROLLING THIS FAR.
           </span>
 
-          <h2 className="font-syne font-extrabold text-huge-display text-white uppercase leading-[0.88] max-w-5xl">
+          <h2 className="font-syne font-extrabold text-massive-hero text-white uppercase leading-[0.84] max-w-5xl">
             LET&apos;S<br />
-            BUILD<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-[#FF9900]">
-              SOMETHING.
-            </span>
+            <span
+              onMouseEnter={() => handleCursorEnter('BUILD', 'aws')}
+              onMouseLeave={handleCursorLeave}
+              className="text-[#FF9900] hover:tracking-wider transition-all duration-300 cursor-pointer"
+            >
+              BUILD
+            </span><br />
+            SOMETHING.
           </h2>
 
           <div className="mt-14 pt-10 border-t border-white/15 flex flex-col md:flex-row md:items-end justify-between gap-8">
@@ -1738,36 +1644,23 @@ function App() {
         {/* Minimal Footer Lockup */}
         <div className="max-w-7xl mx-auto w-full pt-16 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-slate-500">
           <div>
-            <span>MOHIT MUNDKE · PUNE, INDIA · 2026</span>
+            <span>MOHIT MUNDKE · AI &amp; DATA SCIENCE · PUNE, INDIA · 2026</span>
           </div>
 
           <div className="flex items-center gap-6">
-            <a
-              href={personalInfo.social.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors"
-            >
+            <a href={personalInfo.social.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
               LINKEDIN ↗
             </a>
-            <a
-              href={personalInfo.social.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors"
-            >
+            <a href={personalInfo.social.github} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
               GITHUB ↗
             </a>
-            <a
-              href={`mailto:${personalInfo.email}`}
-              className="hover:text-white transition-colors"
-            >
+            <a href={`mailto:${personalInfo.email}`} className="hover:text-white transition-colors">
               EMAIL ↗
             </a>
           </div>
 
           <div className="text-slate-400">
-            &ldquo;BUILT WITH CURIOSITY.&rdquo;
+            &ldquo;STILL LEARNING. STILL BUILDING.&rdquo;
           </div>
         </div>
       </section>
@@ -1886,8 +1779,8 @@ function App() {
                 <input
                   type="text"
                   required
-                  value={contactFormData.name}
-                  onChange={(e) => setContactFormData({ ...contactFormData, name: e.target.value })}
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   placeholder="Jane Doe"
                   className="w-full rounded-xl bg-white/[0.04] border border-white/15 px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-[#FF9900]"
                 />
@@ -1898,8 +1791,8 @@ function App() {
                 <input
                   type="email"
                   required
-                  value={contactFormData.email}
-                  onChange={(e) => setContactFormData({ ...contactFormData, email: e.target.value })}
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   placeholder="jane@example.com"
                   className="w-full rounded-xl bg-white/[0.04] border border-white/15 px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-[#FF9900]"
                 />
@@ -1910,8 +1803,8 @@ function App() {
                 <textarea
                   required
                   rows={4}
-                  value={contactFormData.message}
-                  onChange={(e) => setContactFormData({ ...contactFormData, message: e.target.value })}
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder="Tell me about your initiative or inquiry..."
                   className="w-full rounded-xl bg-white/[0.04] border border-white/15 px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-[#FF9900]"
                 ></textarea>
@@ -1924,8 +1817,8 @@ function App() {
                 >
                   TRANSMIT MESSAGE →
                 </button>
-                {contactStatus && (
-                  <span className="font-mono text-xs text-[#FF9900]">{contactStatus}</span>
+                {formStatus && (
+                  <span className="font-mono text-xs text-[#FF9900]">{formStatus}</span>
                 )}
               </div>
             </form>

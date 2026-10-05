@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MOHIT MUNDKE — Creative Developer, AI Builder &amp; AWS Community Leader</title>
-  <meta name="description" content="Immersive digital portfolio of Mohit Mundke — AI &amp; Data Science builder at DYPCOEI Pune, AWS Student Builder Group Leader, and Google Gemini AI Ambassador." />
+  <title>MOHIT MUNDKE — Digital Experience · AI Builder &amp; AWS Community Leader</title>
+  <meta name="description" content="An immersive digital experience by Mohit Mundke — AI &amp; Data Science builder at DYPCOEI Pune, AWS Student Builder Group Leader, and Google Gemini AI Ambassador." />
   <meta name="author" content="Mohit Mundke" />
   <link rel="canonical" href="https://mohitmundkeco.vercel.app/" />
-  <meta property="og:title" content="MOHIT MUNDKE — Creative Developer &amp; AI Builder" />
+  <meta property="og:title" content="MOHIT MUNDKE — Digital Experience" />
   <meta property="og:description" content="I build at the intersection of AI, Cloud &amp; Design." />
   <meta property="og:url" content="https://mohitmundkeco.vercel.app/" />
   <meta property="og:type" content="website" />
@@ -18,6 +18,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Three.js (Lightweight 3D WebGL Engine for Abstract Sculpture, Gemini Orb & AWS Network) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
   <!-- GSAP & ScrollTrigger -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -42,8 +45,8 @@
           },
           colors: {
             bgDark: '#050505',
-            panelDark: '#09090b',
-            surfaceDark: '#0d0d11',
+            panelDark: '#080808',
+            surfaceDark: '#0D0D0D',
             awsOrange: '#FF9900',
             awsAmber: '#FFA724',
             techCyan: '#38bdf8',
@@ -89,7 +92,7 @@
     }
 
     ::selection {
-      background: rgba(255, 153, 0, 0.35);
+      background: rgba(255, 153, 0, 0.4);
       color: #ffffff;
     }
 
@@ -98,20 +101,26 @@
     .font-heading { font-family: 'Plus Jakarta Sans', sans-serif; }
     .font-mono { font-family: 'JetBrains Mono', monospace; }
 
-    /* Monumental Editorial Type */
-    .text-huge-display {
-      font-size: clamp(3.8rem, 11.5vw, 12rem);
+    /* Monumental Hero Headline (clamp 90px to 240px) */
+    .text-massive-hero {
+      font-size: clamp(90px, 14vw, 240px);
+      line-height: 0.82;
+      letter-spacing: -0.06em;
+    }
+
+    .text-massive-statement {
+      font-size: clamp(52px, 8.5vw, 150px);
       line-height: 0.88;
-      letter-spacing: -0.055em;
+      letter-spacing: -0.05em;
     }
 
-    .text-scene-title {
-      font-size: clamp(2.4rem, 7.5vw, 7.5rem);
+    .text-editorial-section {
+      font-size: clamp(38px, 6vw, 96px);
       line-height: 0.92;
-      letter-spacing: -0.045em;
+      letter-spacing: -0.04em;
     }
 
-    /* Tactile Film Grain / Noise Overlay */
+    /* Filmic Noise / Grain Texture Layer */
     .noise-overlay {
       position: fixed;
       top: 0;
@@ -120,8 +129,25 @@
       height: 100vh;
       pointer-events: none;
       z-index: 9999;
-      opacity: 0.035;
+      opacity: 0.038;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+
+    /* Multi-plane Background Layers */
+    .bg-tech-blueprint {
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 80px 80px;
+    }
+
+    .bg-aws-dark-world {
+      background-color: #050505;
+      background-image: 
+        radial-gradient(circle at 50% 30%, rgba(255, 153, 0, 0.08), transparent 70%),
+        linear-gradient(to right, rgba(255, 153, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 153, 0, 0.03) 1px, transparent 1px);
+      background-size: 100% 100%, 72px 72px, 72px 72px;
     }
 
     /* Minimal Custom Scrollbar */
@@ -139,43 +165,86 @@
       background: #FF9900;
     }
 
-    /* Subtle Animated Horizon Grid */
-    .bg-horizon-grid {
-      background-image: 
-        linear-gradient(to right, rgba(255, 255, 255, 0.022) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
-      background-size: 72px 72px;
-    }
-
-    .bg-aws-dark {
-      background-image: 
-        radial-gradient(circle at 50% 0%, rgba(255, 153, 0, 0.08), transparent 60%),
-        linear-gradient(to right, rgba(255, 153, 0, 0.025) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 153, 0, 0.025) 1px, transparent 1px);
-      background-size: 100% 100%, 64px 64px, 64px 64px;
-    }
-
-    /* Smooth clip-path animations */
-    .clip-reveal-hidden {
-      clip-path: inset(100% 0 0 0);
-      transform: translateY(40px);
-      opacity: 0;
-      transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .clip-reveal-active {
-      clip-path: inset(0 0 0 0);
-      transform: translateY(0);
-      opacity: 1;
-    }
-
-    /* Cursor styling (desktop only) */
+    /* Custom Cursor Styles (Desktop Only) */
     @media (pointer: fine) {
       body {
-        cursor: none;
+        cursor: none !important;
       }
-      a, button, [role="button"], input, textarea {
-        cursor: none;
+      a, button, [role="button"], input, textarea, select {
+        cursor: none !important;
       }
+    }
+
+    .custom-cursor-dot {
+      pointer-events: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      background: #ffffff;
+      border-radius: 50%;
+      z-index: 999999;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.2s ease, transform 0.08s ease-out;
+    }
+
+    .custom-cursor-ring {
+      pointer-events: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 28px;
+      height: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 50%;
+      z-index: 999998;
+      transform: translate(-50%, -50%);
+      transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                  height 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                  background-color 0.25s ease,
+                  border-color 0.25s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .custom-cursor-ring.cursor-active-view {
+      width: 90px;
+      height: 90px;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-color: #ffffff;
+      backdrop-filter: invert(1);
+    }
+
+    .custom-cursor-ring.cursor-active-explore {
+      width: 96px;
+      height: 96px;
+      background-color: rgba(255, 153, 0, 0.95);
+      border-color: #FF9900;
+    }
+
+    .custom-cursor-ring.cursor-active-gemini {
+      width: 96px;
+      height: 96px;
+      background-color: rgba(66, 133, 244, 0.95);
+      border-color: #4285F4;
+    }
+
+    .custom-cursor-ring.cursor-active-aws {
+      width: 86px;
+      height: 86px;
+      background-color: #FF9900;
+      border-color: #FF9900;
+    }
+
+    .cursor-badge-text {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      color: #050505;
+      text-transform: uppercase;
     }
   </style>
 </head>

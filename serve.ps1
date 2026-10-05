@@ -71,14 +71,18 @@ try {
                 $response.AddHeader("Access-Control-Allow-Origin", "*")
                 $response.AddHeader("Cache-Control", "no-cache")
                 $response.StatusCode = 200
-                $response.OutputStream.Write($bytes, 0, $bytes.Length)
+                if ($request.HttpMethod -ne "HEAD") {
+                    $response.OutputStream.Write($bytes, 0, $bytes.Length)
+                }
             } catch {
                 $response.StatusCode = 500
             }
         } else {
             $response.StatusCode = 404
-            $errBytes = [System.Text.Encoding]::UTF8.GetBytes("404 Not Found")
-            $response.OutputStream.Write($errBytes, 0, $errBytes.Length)
+            if ($request.HttpMethod -ne "HEAD") {
+                $errBytes = [System.Text.Encoding]::UTF8.GetBytes("404 Not Found")
+                $response.OutputStream.Write($errBytes, 0, $errBytes.Length)
+            }
         }
 
         $response.OutputStream.Close()
