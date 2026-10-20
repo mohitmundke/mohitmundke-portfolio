@@ -205,7 +205,7 @@ const experienceData = [
       'Established the AWS Student Builder Group chapter at DYPCOEI under the Department of AI & Data Science.',
       'Leading the 5-division core team (Events, Marketing, Technical, Multimedia, Documentation) and drafting technical roadmaps.',
       'Organizing student workshops, cloud certification sprints, architectural labs, and collaborative hackathons.',
-      'Liaising with faculty advisors (Mr. Suraj Bhoite, Dr. Dipannita Mondal, Dr. Laxman Khandare) to build a sustainable engineering community.'
+      'Liaising with faculty advisors (Mr. Suraj Bhoite, Dr. Dipannita Mondal, Dr. Shweta Banait Ma’am) to build a sustainable engineering community.'
     ],
     skills: ['AWS Fundamentals', 'Community Leadership', 'Cloud Architecture', 'Core Team Governance', 'Technical Workshops', 'Peer Mentoring'],
     ctaRoute: '/aws-journey',
@@ -547,7 +547,7 @@ const awsLeadershipInfo = {
   facultyAdvisors: [
     { name: 'Mr. Suraj Bhoite', title: 'Faculty Coordinator', dept: 'Department of AI & Data Science' },
     { name: 'Dr. Dipannita Mondal', title: 'AWS Academy Educator', dept: 'Faculty Advisor & Mentor' },
-    { name: 'Dr. Laxman Khandare', title: 'Head of Department', dept: 'AI & Data Science, DYPCOEI' }
+    { name: 'Dr. Shweta Banait Ma’am', title: 'Faculty Coordinator', dept: 'Department of AI & Data Science' }
   ]
 };
 
@@ -805,57 +805,6 @@ const awsSkillsMatrix = {
     { name: 'Generative AI & Gemini', level: 'Advanced', tag: 'Intelligence', icon: '✨', desc: 'Google Gemini AI Ambassador expertise: prompt design, multimodal models, and integrating AI into practical software.' }
   ]
 };
-
-const awsProjectsData = [
-  {
-    id: 'cloudscale-telemetry',
-    title: 'CloudScale Telemetry & Analytics Sandbox',
-    subtitle: 'Serverless cloud telemetry pipeline prototype',
-    status: 'Prototype / Educational Lab',
-    statusBadge: 'Prototype',
-    statusColor: 'amber',
-    problem: 'IoT devices, remote applications, and developer tools generate continuous streams of structured telemetry that quickly overload traditional single-server database architectures.',
-    solution: 'Designed and prototyped a lightweight serverless architecture pattern using Amazon S3 for durable raw data ingestion, simulated AWS Lambda functions for payload validation, and CloudWatch for metrics visibility.',
-    servicesUsed: ['Amazon S3', 'AWS Lambda (Simulated)', 'Amazon CloudWatch', 'Python Boto3 SDK'],
-    techStack: ['Python 3.11', 'AWS SDK (Boto3)', 'JSON Schema', 'REST APIs'],
-    myContribution: 'Architected the cloud flow diagram, authored Python ingestion scripts using Boto3, configured secure IAM bucket policies, and created simulated load tests.',
-    githubUrl: 'https://github.com/mohitmundke',
-    liveUrl: null,
-    hasArchitecture: true
-  },
-  {
-    id: 'focusnext-cloud',
-    title: 'FocusNext Cloud Companion (Architecture Concept)',
-    subtitle: 'Serverless cloud extension for digital wellness companion',
-    status: 'Architecture Blueprint',
-    statusBadge: 'Architecture Concept',
-    statusColor: 'blue',
-    problem: 'FocusNext Wellness runs entirely client-side, meaning user break habits, ergonomic posture reminders, and deep-work session analytics do not persist across multiple devices.',
-    solution: 'Engineered an architectural blueprint transitioning FocusNext into a cloud-connected platform with AWS Lambda microservices, Amazon DynamoDB for millisecond-latency session state, and Amazon API Gateway.',
-    servicesUsed: ['AWS Lambda', 'Amazon DynamoDB', 'Amazon API Gateway', 'AWS IAM'],
-    techStack: ['React 18', 'TypeScript', 'Python FastAPI', 'AWS Serverless'],
-    myContribution: 'Drafted the cloud component architecture, defined DynamoDB partition/sort key data models, specified REST endpoint contracts, and analyzed serverless latency tradeoffs.',
-    githubUrl: 'https://github.com/mohitmundke/FocusNext-Wellness.git',
-    liveUrl: null,
-    hasArchitecture: true
-  },
-  {
-    id: 'future-cloud-sandbox',
-    title: 'Cloud Projects & Deployments in Progress',
-    subtitle: 'Active research and continuous building at DYPCOEI',
-    status: 'In Development',
-    statusBadge: 'Active Pipeline',
-    statusColor: 'emerald',
-    problem: 'Cloud computing and artificial intelligence are constantly evolving fields that require hands-on experimentation, benchmark testing, and continuous learning.',
-    solution: 'I am actively developing new cloud-native projects exploring containerized microservices (Docker), automated CI/CD deployment pipelines (GitHub Actions to AWS), and cloud-hosted machine learning inference.',
-    servicesUsed: ['AWS Cloud', 'Docker', 'GitHub Actions', 'AI Inference'],
-    techStack: ['Modern Cloud & AI Stack'],
-    myContribution: 'Continuous experimentation and implementation. Verified repositories and live demonstrations will be published here as they reach production milestones.',
-    githubUrl: 'https://github.com/mohitmundke',
-    liveUrl: null,
-    isUpcoming: true
-  }
-];
 
 const awsCredentialsData = [
   {
@@ -2764,7 +2713,6 @@ function AwsJourneyPage({ navigateTo }) {
             { id: 'team', label: 'Core Team', icon: '👥' },
             { id: 'events', label: 'Events', icon: '📅' },
             { id: 'skills', label: 'Cloud Skills', icon: '🛠️' },
-            { id: 'projects', label: 'Projects', icon: '💻' },
             { id: 'credentials', label: 'Credentials', icon: '📜' },
             { id: 'impact', label: 'Impact', icon: '🌱' },
           ].map((tab) => (
@@ -3242,90 +3190,7 @@ function AwsJourneyPage({ navigateTo }) {
         </section>
       )}
 
-      {/* ─── 7. AWS PROJECTS & EXPERIMENTS ─── */}
-      {(activeTab === 'all' || activeTab === 'projects') && (
-        <section className="space-y-8">
-          <div className="text-center">
-            <span className="font-mono text-xs uppercase tracking-widest text-[#FFA724] font-semibold block mb-1">
-              PRACTICAL IMPLEMENTATIONS
-            </span>
-            <h2 className="font-heading font-extrabold text-2xl sm:text-4xl text-white">
-              AWS Projects &amp; <span className="gradient-text-aws">Experiments</span>
-            </h2>
-            <p className="text-slate-400 text-xs sm:text-sm max-w-2xl mx-auto mt-2">
-              Serverless architectures, telemetry pipelines, and practical cloud learning experiences.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {awsProjectsData.map((proj) => (
-              <div
-                key={proj.id}
-                className="glass-card-aws p-7 rounded-3xl border border-white/10 hover:border-[#FF9900]/40 transition-all flex flex-col justify-between space-y-5"
-              >
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="font-mono text-[10px] px-2.5 py-0.5 rounded-full bg-[#FF9900]/15 text-[#FFA724] font-bold">
-                      {proj.statusBadge}
-                    </span>
-                    <span className="text-xl">☁️</span>
-                  </div>
-
-                  <div>
-                    <h3 className="font-heading font-extrabold text-lg sm:text-xl text-white">
-                      {proj.title}
-                    </h3>
-                    <p className="font-mono text-xs text-[#FFA724] mt-0.5">
-                      {proj.subtitle}
-                    </p>
-                  </div>
-
-                  <div className="space-y-2 text-xs">
-                    <div>
-                      <strong className="text-slate-300 block">Problem:</strong>
-                      <p className="text-slate-400 leading-relaxed">{proj.problem}</p>
-                    </div>
-                    <div>
-                      <strong className="text-slate-300 block">Architectural Solution:</strong>
-                      <p className="text-slate-400 leading-relaxed">{proj.solution}</p>
-                    </div>
-                  </div>
-
-                  <div className="space-y-1.5 pt-1">
-                    <span className="font-mono text-[10px] uppercase text-slate-500 font-bold block">
-                      SERVICES USED:
-                    </span>
-                    <div className="flex flex-wrap gap-1.5">
-                      {proj.servicesUsed.map((s) => (
-                        <span key={s} className="tech-tag-aws">{s}</span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono">
-                  {proj.githubUrl && (
-                    <a
-                      href={proj.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[#FFA724] hover:text-white flex items-center gap-1 font-semibold"
-                    >
-                      <span>View GitHub</span>
-                      <span>🐙 ↗</span>
-                    </a>
-                  )}
-                  {proj.isUpcoming && (
-                    <span className="text-emerald-400 italic">Continuous Building</span>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* ─── 8. CERTIFICATIONS, BADGES & ACHIEVEMENTS ─── */}
+      {/* ─── 7. CERTIFICATIONS, BADGES & ACHIEVEMENTS ─── */}
       {(activeTab === 'all' || activeTab === 'credentials') && (
         <section className="space-y-8">
           <div className="text-center">
@@ -3406,7 +3271,7 @@ function AwsJourneyPage({ navigateTo }) {
         </section>
       )}
 
-      {/* ─── 9. AWS COMMUNITY IMPACT ("BUILDING BEYOND MYSELF") ─── */}
+      {/* ─── 8. AWS COMMUNITY IMPACT ("BUILDING BEYOND MYSELF") ─── */}
       {(activeTab === 'all' || activeTab === 'impact') && (
         <section className="space-y-8">
           <div className="text-center">
@@ -3440,7 +3305,7 @@ function AwsJourneyPage({ navigateTo }) {
         </section>
       )}
 
-      {/* ─── 10. BOTTOM CONNECT & INVOLVEMENT BANNER ─── */}
+      {/* ─── 9. BOTTOM CONNECT & INVOLVEMENT BANNER ─── */}
       <section className="pt-6">
         <div className="glass-card-aws p-8 sm:p-12 rounded-3xl border border-[#FF9900]/30 bg-gradient-to-r from-[#FF9900]/15 via-[#070b16] to-[#04060d] text-center space-y-4 shadow-2xl relative overflow-hidden">
           <div className="max-w-2xl mx-auto space-y-3">
@@ -5379,7 +5244,7 @@ function App() {
     setTimeout(() => {
       let reply = "Mohit is an AI & Data Science engineering student at DYPCOEI Pune, Google Student Ambassador (GID: 5314), and AWS Student Builder Group Leader (AY 2026-27). Reach out at mohitmundke20@gmail.com!";
 
-      if (q.includes('aws') || q.includes('cloud') || q.includes('builder') || q.includes('sbg') || q.includes('suraj') || q.includes('dhavale') || q.includes('thorve')) {
+      if (q.includes('aws') || q.includes('cloud') || q.includes('builder') || q.includes('sbg') || q.includes('suraj') || q.includes('banait') || q.includes('dhavale') || q.includes('thorve')) {
         reply = 
           "Mohit is the **Student Builder Group Leader** of the **AWS Student Builder Group at DYPCOEI Pune** for Academic Year 2026–27! ☁️\n\n" +
           "🏛️ **Campus Community**: Leading a student-driven technical community focused on AWS cloud computing education, hands-on architectural learning, and AI innovation.\n\n" +
@@ -5390,8 +5255,12 @@ function App() {
           "• **Mayuresh Thorve** — Technical Lead (3rd Year Computer Eng)\n" +
           "• **Ishwari Bhope** — Multimedia Head (2nd Year AI-ML)\n" +
           "• **Vaishnavee Sutar** — Documentation Head (2nd Year AI-ML)\n\n" +
+          "🎓 **Faculty Advisors**:\n" +
+          "• **Mr. Suraj Bhoite** — Faculty Coordinator (Department of AI & Data Science)\n" +
+          "• **Dr. Dipannita Mondal** — AWS Academy Educator (Faculty Advisor & Mentor)\n" +
+          "• **Dr. Shweta Banait Ma’am** — Faculty Coordinator (Department of AI & Data Science)\n\n" +
           "📜 **AWS Credential**: Certified in *Fundamentals of Machine Learning and Artificial Intelligence* (AWS Training & Certification).\n\n" +
-          "👉 Visit **#/aws-journey** to explore the complete AWS progression timeline, events, projects, and architecture!";
+          "👉 Visit **#/aws-journey** to explore the complete AWS progression timeline, events, skills, credentials, and impact!";
       } else if (q.includes('google') || q.includes('ambassador') || q.includes('gsa')) {
         reply = "Mohit serves as a **Google Student Ambassador (GID: 5314 · Bronze Badge)**. He has spearheaded campus initiatives like *Fund My Crazy* and *Career Glow-up Night*, leading workshops on Google Gemini AI and developer tools.";
       } else if (q.includes('project') || q.includes('focusnext') || q.includes('soilosync') || q.includes('soil') || q.includes('wellness')) {
