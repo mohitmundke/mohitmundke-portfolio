@@ -63,10 +63,10 @@ const navItems = [
   { id: '/about', label: 'About' },
   { id: '/skills', label: 'Skills' },
   { id: '/experience', label: 'Experience' },
-  { id: '/aws-journey', label: 'AWS Journey', isAws: true },
+  { id: '/aws-journey', label: 'AWS Journey', shortLabel: 'AWS', isAws: true },
   { id: '/projects', label: 'Projects' },
   { id: '/education', label: 'Education' },
-  { id: '/achievements', label: 'Achievements' },
+  { id: '/achievements', label: 'Achievements', shortLabel: 'Awards' },
   { id: '/gallery', label: 'Gallery' },
   { id: '/contact', label: 'Contact' },
 ];
@@ -5308,7 +5308,7 @@ function App() {
 
       {/* ═══ 1. STICKY NAVBAR (10/10 EXECUTIVE GLASS PANEL - BUTTERY SMOOTH) ═══ */}
       <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center pt-2.5 sm:pt-4 px-3 sm:px-6 pointer-events-none">
-        <div className="nav-glass pointer-events-auto w-full max-w-6xl rounded-2xl px-3 sm:px-4 py-2 sm:py-2.5 flex items-center justify-between transition-all">
+        <div className="nav-glass pointer-events-auto w-full max-w-7xl rounded-2xl px-3 sm:px-4 py-2 sm:py-2.5 flex items-center justify-between gap-3 transition-all">
           
           {/* Left: Logo & Professional Identity */}
           <button
@@ -5317,19 +5317,21 @@ function App() {
             title="Mohit Mundke — Home"
           >
             <Monogram size={38} className="flex-shrink-0" />
-            <div className="flex flex-col">
-              <span className="font-heading font-extrabold text-sm sm:text-[15px] text-white tracking-tight hover:text-violet-300 transition-colors duration-300 leading-tight">
+            <div className="flex flex-col min-w-0">
+              <span className="font-heading font-extrabold text-sm sm:text-[15px] text-white tracking-tight hover:text-violet-300 transition-colors duration-300 leading-tight whitespace-nowrap">
                 Mohit Mundke
               </span>
-              <span className="font-mono text-[10.5px] text-slate-400 font-medium tracking-tight hidden sm:block whitespace-nowrap">
-                AI &amp; Data Science <span className="text-slate-600">·</span> <span className="text-cyan-300 font-semibold">Google Ambassador</span> <span className="text-slate-600">·</span> <span className="text-amber-400 font-semibold">AWS SBG Leader</span>
+              <span className="font-mono text-[10px] xl:text-[10.5px] text-slate-400 font-medium tracking-tight hidden md:block whitespace-nowrap">
+                <span className="text-cyan-300 font-semibold">Google Ambassador</span>
+                <span className="text-slate-600"> · </span>
+                <span className="text-amber-400 font-semibold">AWS Leader</span>
               </span>
             </div>
           </button>
 
           {/* Center: Clean Desktop Navigation with Inset Capsule Track */}
           {!isRecruiter && (
-            <nav className="nav-track hidden lg:flex items-center gap-0.5 xl:gap-1 p-1 rounded-xl">
+            <nav className="nav-track hidden lg:flex items-center gap-0.5 xl:gap-1 p-1 rounded-xl flex-shrink-0">
               {navItems.map((item) => {
                 const isActive = route === item.id;
                 const isAws = item.isAws;
@@ -5337,15 +5339,16 @@ function App() {
                   <button
                     key={item.id}
                     onClick={() => navigateTo(item.id)}
-                    className={`nav-pill-btn px-2 xl:px-2.5 py-1.5 text-[11.5px] xl:text-xs font-medium tracking-tight rounded-lg cursor-pointer ${
+                    className={`nav-pill-btn px-2 xl:px-2.5 py-1.5 text-[11px] xl:text-xs font-medium tracking-tight rounded-lg cursor-pointer whitespace-nowrap flex-shrink-0 select-none ${
                       isActive
                         ? (isAws ? 'active-aws font-semibold text-amber-300 bg-amber-500/20 border border-amber-500/40 shadow-[0_0_12px_rgba(245,158,11,0.25)]' : 'active font-semibold')
-                        : (isAws ? 'text-amber-400/90 hover:text-amber-300 hover:bg-amber-500/10' : 'text-slate-400')
+                        : (isAws ? 'text-amber-400/90 hover:text-amber-300 hover:bg-amber-500/10' : 'text-slate-400 hover:text-white')
                     }`}
                   >
-                    <span className="flex items-center gap-1">
-                      {isAws && <span className="text-[10px]">☁️</span>}
-                      <span>{item.label}</span>
+                    <span className="flex items-center gap-1 whitespace-nowrap">
+                      {isAws && <span className="text-[10.5px] leading-none shrink-0">☁️</span>}
+                      <span className="hidden xl:inline">{item.label}</span>
+                      <span className="xl:hidden inline">{item.shortLabel || item.label}</span>
                     </span>
                     {isActive && <span className={isAws ? "nav-active-glow-bar-aws" : "nav-active-glow-bar"} />}
                   </button>
