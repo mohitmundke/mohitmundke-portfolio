@@ -262,6 +262,32 @@ const experienceData = [
 
 const projectsData = [
   {
+    id: 'cinematic-portal',
+    name: 'MONOLITH. // Cinematic Portal Landing Page',
+    category: 'Kinetic Editorial Audio & Physical Archive',
+    badge1: 'INTERACTIVE SCROLL & PHYSICAL DECK',
+    badge2: '⭐ EDITORIAL SHOWCASE',
+    featured: true,
+    tagline: 'High-end scroll-driven portal with splitting wordmark, tactile throwable release-card deck, and minimal artist roster.',
+    description: 'A dark editorial landing page built with custom scroll-linked portal physics, 60fps rAF orchestration, throwable card deck with pointer capture, and responsive typography.',
+    purpose: 'To deliver a high-fashion, award-style digital editorial experience for a boutique record label and physical edition archive.',
+    targetUsers: 'Creative directors, audiophiles, collectors, and digital design enthusiasts.',
+    problem: 'Conventional marketing websites rely on generic grid templates and lack tactile, physical delight.',
+    solution: 'Engineered an original portal interaction where two monolithic panels slide apart to uncover a full-bleed photograph while the wordmark splits and tightens tracking, complemented by a throwable vinyl release-card deck.',
+    technologies: ['Syne Display Font', 'Sora Body Font', 'Vanilla JS (ES6+)', 'Pointer Capture API', 'IntersectionObserver', 'requestAnimationFrame', 'Tailwind CSS'],
+    liveUrl: '/portal/',
+    githubUrl: 'https://github.com/mohitmundke',
+    hasLiveDemo: true,
+    visualIcon: '◈',
+    visualHighlight: 'Reversible Scroll Portal · Throwable Deck · Minimalist Roster',
+    highlights: [
+      'Signature portal stage parting on scroll to reveal full-bleed architectural photograph',
+      'Wordmark expansion, letter-spacing tightening, and bidirectional half translation',
+      'Tactile throwable release sleeve card deck with pointer capture and keyboard navigation',
+      'Minimalist hairline artist roster and responsive physical release calendar'
+    ]
+  },
+  {
     id: 'focusnext',
     name: 'Wellness Healthcare (FocusNext)',
     category: 'Remote Worker Wellness Platform · AI & Full-Stack',

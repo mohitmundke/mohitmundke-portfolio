@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MONOLITH. // Archival Sound & Physical Editions</title>
+  <meta name="description" content="A dark editorial sonic portal and physical record archive. Uncover tactile master editions, heavyweight pressings, and spatial acoustic compositions." />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%22><text y=%2222%22 font-size=%2220%22>◈</text></svg>">
+
+  <!-- Google Fonts: Syne (Display 600, 700, 800) & Sora (Body 400, 500, 600) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            portalBg: '#0A0C0E',
+            portalSecondary: '#101317',
+            portalText: '#EDE7DC',
+            portalMuted: '#9EA5A8',
+            portalDim: '#6C7378',
+            portalAmber: '#E8913C',
+            portalTeal: '#2E6B72',
+          },
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            body: ['Sora', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-[#0A0C0E] text-[#EDE7DC] font-body selection:bg-[#E8913C] selection:text-[#0A0C0E]">
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       1. FIXED NAVIGATION BAR (58px, blur(14px), fine hairline bottom border)
+       ═══════════════════════════════════════════════════════════════════ -->
+  <header class="portal-nav px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto w-full flex items-center justify-between">
+      
+      <!-- Left: Compact Wordmark with Amber Period -->
+      <a href="#hero" class="flex items-center gap-1 font-display font-bold text-lg tracking-tight text-[#EDE7DC] hover:text-[#FFFFFF] transition-colors focus:outline-none select-none">
+        <span>MONOLITH</span><span class="text-[#E8913C]">.</span>
+      </a>
+
+      <!-- Center: Small Uppercase Navigation Links with Amber Hover -->
+      <nav class="hidden md:flex items-center gap-7">
+        <a href="#hero" class="nav-link">INDEX</a>
+        <a href="#statement" class="nav-link">MANIFESTO</a>
+        <a href="#catalogue" class="nav-link">CATALOGUE</a>
+        <a href="#roster" class="nav-link">ROSTER</a>
+        <a href="#dates" class="nav-link">DATES</a>
+        <a href="#contact" class="nav-link">CONTACT</a>
+      </nav>
+
+      <!-- Right: Compact Pill-Shaped CTA & Mobile Hamburger -->
+      <div class="flex items-center gap-3">
+        <button data-action="open-dispatch" class="nav-cta-btn">
+          <span>EDITION 04</span>
+          <span class="text-[#E8913C]">◈</span>
+        </button>
+
+        <button id="mobile-menu-toggle" class="md:hidden p-2 text-[#9EA5A8] hover:text-[#EDE7DC] focus:outline-none" aria-label="Toggle Navigation">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-[58px] left-0 right-0 bg-[#0A0C0E]/95 backdrop-blur-2xl border-b border-hairline py-6 px-6 flex flex-col gap-4">
+      <a href="#hero" class="nav-link text-sm py-1">INDEX</a>
+      <a href="#statement" class="nav-link text-sm py-1">MANIFESTO</a>
+      <a href="#catalogue" class="nav-link text-sm py-1">CATALOGUE</a>
+      <a href="#roster" class="nav-link text-sm py-1">ROSTER</a>
+      <a href="#dates" class="nav-link text-sm py-1">DATES</a>
+      <a href="#contact" class="nav-link text-sm py-1">CONTACT</a>
+      <div class="pt-2 border-t border-hairline">
+        <button data-action="open-dispatch" class="nav-cta-btn w-full justify-center">
+          <span>SUBSCRIBE TO DISPATCH ◈</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       2. SECTION ONE: THE PORTAL HERO (250svh Scroll Track)
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section id="hero" class="hero-scroll-track" aria-label="Cinematic Portal Hero">
+    <div id="hero-sticky-stage" class="hero-sticky-stage">
+      
+      <!-- Layer 1: Full-Bleed Hero Photograph -->
+      <img
+        id="hero-bg-photo"
+        src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=2070&auto=format&fit=crop"
+        alt="Monolithic architectural chamber with acoustic light study"
+        class="hero-bg-photo"
+        loading="eager"
+      />
+
+      <!-- Layer 2: Duotone Color Treatment Overlay -->
+      <div id="hero-duotone-layer" class="hero-duotone-layer"></div>
+
+      <!-- Layer 3: Radial Edge-Darkening Veil (Vignette) -->
+      <div id="hero-vignette-layer" class="hero-vignette-layer"></div>
+
+      <!-- Layer 4: Left Solid Opaque Panel -->
+      <div id="hero-panel-left" class="hero-panel-left"></div>
+
+      <!-- Layer 5: Right Solid Opaque Panel -->
+      <div id="hero-panel-right" class="hero-panel-right"></div>
+
+      <!-- Layer 6: Accent Dots traveling to opposite corners -->
+      <div id="hero-dot-amber" class="hero-dot hero-dot-amber"></div>
+      <div id="hero-dot-teal" class="hero-dot hero-dot-teal"></div>
+
+      <!-- Layer 7: Split Wordmark (Syne Display) -->
+      <div id="hero-wordmark-container" class="hero-wordmark-container">
+        <h1 id="hero-wordmark-text" class="hero-wordmark-text">
+          <span id="wordmark-half-left" class="wordmark-half-left">MONO</span>
+          <span id="wordmark-half-right" class="wordmark-half-right">LITH<span class="wordmark-period">.</span></span>
+        </h1>
+      </div>
+
+      <!-- Layer 8: Corner Metadata (Readable at all times) -->
+      <div id="corner-tl" class="hero-corner-meta corner-top-left"></div>
+      <div id="corner-tr" class="hero-corner-meta corner-top-right"></div>
+      <div id="corner-bl" class="hero-corner-meta corner-bottom-left"></div>
+      <div id="corner-br" class="hero-corner-meta corner-bottom-right"></div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       3. SECTION TWO: STATEMENT FOLD
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section id="statement" class="statement-section px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto w-full relative z-10">
+      
+      <!-- Outlined Index Numeral & Header -->
+      <div class="flex items-baseline justify-between mb-8 reveal-item">
+        <span class="label-mono label-amber">// EDITORIAL MANIFESTO</span>
+        <span class="statement-numeral">01</span>
+      </div>
+
+      <!-- Typographic Composition (~22 chars per line, highlighted amber phrase) -->
+      <div class="max-w-3xl space-y-8">
+        <h2 id="statement-lead" class="statement-lead-text reveal-item delay-100"></h2>
+
+        <div id="statement-details" class="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-4 reveal-item delay-200"></div>
+      </div>
+
+    </div>
+
+    <!-- Floating Circular Photograph (drifts & rotates gently on scroll) -->
+    <div id="statement-float-img-wrap" class="statement-float-img-wrap">
+      <img
+        src="https://images.unsplash.com/photo-1545454675-3531b543be5d?q=80&w=1000&auto=format&fit=crop"
+        alt="Acoustic transducer membrane"
+        class="statement-float-img"
+        loading="lazy"
+      />
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       4. SECTION THREE: RELEASES & THROWABLE CARD DECK
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section id="catalogue" class="catalogue-section px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto w-full">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left Column: Editorial Information & Controls -->
+        <div class="lg:col-span-5 space-y-6 reveal-item">
+          <span class="label-mono label-amber block">CATALOGUE // 2026 ARCHIVE</span>
+          
+          <h2 class="heading-display text-3xl sm:text-4xl text-[#EDE7DC] leading-tight">
+            Physical Editions &amp; Tactile Pressings
+          </h2>
+          
+          <p class="text-sm text-[#9EA5A8] leading-relaxed max-w-lg">
+            Hand-numbered limited runs, bespoke 350gsm uncoated cardstock, and virgin vinyl formulations. Each catalogue entry represents an uncompromising physical acoustic study.
+          </p>
+
+          <!-- Understated Action Buttons -->
+          <div class="flex items-center gap-3 pt-2">
+            <button id="deck-btn-prev" class="deck-btn-prev" aria-label="Previous Sleeve">
+              ← PREV SLEEVE
+            </button>
+            <button id="deck-btn-next" class="deck-btn-next" aria-label="Next Sleeve">
+              NEXT SLEEVE →
+            </button>
+          </div>
+
+          <!-- Interaction Hint -->
+          <p class="label-mono text-[#6C7378] text-[10.5px] pt-4 border-t border-hairline">
+            DRAG &amp; THROW CARDS HORIZONTALLY, OR USE ARROW KEYS (← / →)
+          </p>
+        </div>
+
+        <!-- Right Column: Tactile Throwable Card Deck -->
+        <div class="lg:col-span-7 flex flex-col items-center">
+          
+          <!-- Square Deck Container -->
+          <div
+            id="deck-container"
+            class="deck-container"
+            tabindex="0"
+            role="region"
+            aria-roledescription="Throwable card deck"
+            aria-label="Physical release sleeve collection"
+          >
+            <!-- Sleeves dynamically rendered here -->
+          </div>
+
+          <!-- Bottom Deck Indicators & Counter -->
+          <div class="w-full max-w-[440px] flex items-center justify-between mt-6 px-2">
+            <span id="deck-counter" class="label-mono text-[#9EA5A8]">01 / 05</span>
+            
+            <div id="deck-indicators" class="flex items-center gap-2"></div>
+            
+            <span class="label-mono label-amber text-[10px]">THROW SLEEVE ↗</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       5. SECTION FOUR: ARTIST ROSTER (Hairline-Separated Minimalist Rows)
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section id="roster" class="roster-section px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto w-full">
+      
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 pb-4 border-b border-hairline reveal-item">
+        <div>
+          <span class="label-mono label-teal block mb-1">ARTIST ROSTER // RESIDENT COLLECTIVE</span>
+          <h2 class="heading-display text-2xl sm:text-3xl text-[#EDE7DC]">
+            Composers &amp; Acoustic Researchers
+          </h2>
+        </div>
+        <span class="label-mono text-[#6C7378]">06 ACTIVE ARCHIVE ENTRIES</span>
+      </div>
+
+      <!-- Hairline-Separated Horizontal Rows -->
+      <div id="roster-list" class="divide-y divide-hairline"></div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       6. SECTION FIVE: RELEASE DATES TABLE
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section id="dates" class="dates-section px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto w-full">
+      
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 pb-4 border-b border-hairline reveal-item">
+        <div>
+          <span class="label-mono label-amber block mb-1">CALENDAR // DISPATCH SCHEDULE</span>
+          <h2 class="heading-display text-2xl sm:text-3xl text-[#EDE7DC]">
+            Upcoming &amp; Archival Pressings
+          </h2>
+        </div>
+        <span class="label-mono text-[#6C7378]">AY 2026 SCHEDULE</span>
+      </div>
+
+      <!-- Table Structure -->
+      <div class="overflow-x-auto">
+        <table class="dates-table">
+          <thead>
+            <tr>
+              <th>DATE</th>
+              <th>CATALOGUE #</th>
+              <th>RELEASE TITLE</th>
+              <th>ARTIST</th>
+              <th>FORMAT</th>
+              <th>DISPATCH STATUS</th>
+            </tr>
+          </thead>
+          <tbody id="dates-tbody"></tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       7. SECTION SIX: CLOSING EXPERIENCE & ARCHITECTURAL CROPPED TYPE
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section id="contact" class="closing-section px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto w-full">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
+        
+        <!-- Left: Compact Headline & Supporting Line -->
+        <div class="lg:col-span-8 space-y-4 reveal-item">
+          <span class="label-mono label-amber block">// ARCHIVAL DISPATCH</span>
+          <h2 id="closing-headline" class="closing-headline"></h2>
+          <p id="closing-subtext" class="text-sm text-[#9EA5A8] max-w-xl leading-relaxed"></p>
+        </div>
+
+        <!-- Right: Two Understated Action Buttons -->
+        <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 pt-2 lg:items-end reveal-item delay-100">
+          <button data-action="open-dispatch" class="closing-btn-primary">
+            <span>REQUEST DISPATCH ACCESS</span>
+            <span>◈</span>
+          </button>
+          <a href="#catalogue" class="closing-btn-secondary">
+            <span>INDEX ARCHIVE ↓</span>
+          </a>
+          <p id="closing-note" class="text-[11px] text-[#6C7378] font-body max-w-xs mt-2 lg:text-right"></p>
+        </div>
+
+      </div>
+
+      <!-- Colophon & Thin Footer Strip -->
+      <div id="closing-colophon"></div>
+
+    </div>
+
+    <!-- Architectural Cropped Oversized Wordmark extending edge to edge -->
+    <div class="closing-wordmark-wrap" aria-hidden="true">
+      <span class="closing-wordmark-text">
+        MONOLITH<span class="text-[#E8913C]">.</span>
+      </span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       8. DISPATCH SUBSCRIPTION MODAL DIALOG
+       ═══════════════════════════════════════════════════════════════════ -->
+  <div id="dispatch-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fadeIn" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="relative max-w-lg w-full bg-[#101317] border border-hairline p-8 space-y-6 shadow-2xl">
+      
+      <div class="flex items-start justify-between border-b border-hairline pb-4">
+        <div>
+          <span class="label-mono label-amber block mb-1">ARCHIVAL ACCESS</span>
+          <h3 id="modal-title" class="font-display font-bold text-xl text-[#EDE7DC]">Physical Release Dispatch</h3>
+        </div>
+        <button id="dispatch-modal-close" class="text-[#9EA5A8] hover:text-[#EDE7DC] text-lg font-mono p-1 focus:outline-none" aria-label="Close modal">✕</button>
+      </div>
+
+      <p class="text-xs text-[#9EA5A8] leading-relaxed">
+        Subscribers receive private notification windows 48 hours prior to public catalogue availability. Physical pressings are strictly limited to verified editions.
+      </p>
+
+      <form id="dispatch-form" class="space-y-4">
+        <div>
+          <label for="dispatch-email-input" class="label-mono block mb-1.5 text-[#EDE7DC]">Electronic Mail / Dispatch Endpoint</label>
+          <input 
+            type="email" 
+            id="dispatch-email-input" 
+            required
+            placeholder="collector@archive.org"
+            class="w-full bg-[#0A0C0E] border border-hairline px-4 py-3 text-sm text-[#EDE7DC] placeholder-[#6C7378] font-body focus:outline-none focus:border-[#E8913C] transition-colors"
+          />
+        </div>
+
+        <button type="submit" class="closing-btn-primary w-full justify-center">
+          <span>CONFIRM DISPATCH REGISTRATION ◈</span>
+        </button>
+      </form>
+
+      <div id="dispatch-confirmation" class="hidden text-center py-6 space-y-2">
+        <span class="text-2xl text-[#E8913C] block">◈</span>
+        <h4 class="font-display font-bold text-base text-[#EDE7DC]">Dispatch Confirmed</h4>
+        <p class="text-xs text-[#9EA5A8]">Your address has been committed to the 2026 priority allocation list.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Application Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -48,6 +48,16 @@ function copyStaticAssetsPlugin() {
           break;
         }
       }
+
+      // Copy portal directory to dist/portal
+      const portalSrc = path.resolve(__dirname, 'portal');
+      if (fs.existsSync(portalSrc)) {
+        const dest = path.join(distDir, 'portal');
+        if (fs.cpSync) {
+          fs.cpSync(portalSrc, dest, { recursive: true });
+        }
+        console.log(`[build] Copied portal to dist/portal`);
+      }
     },
   };
 }

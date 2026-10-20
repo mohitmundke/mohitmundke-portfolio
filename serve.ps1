@@ -52,6 +52,10 @@ try {
 
         $filePath = Join-Path $Root $relPath
 
+        if (Test-Path $filePath -PathType Container) {
+            $filePath = Join-Path $filePath "index.html"
+        }
+
         if (-not (Test-Path $filePath -PathType Leaf)) {
             # SPA Fallback
             $filePath = Join-Path $Root "index.html"

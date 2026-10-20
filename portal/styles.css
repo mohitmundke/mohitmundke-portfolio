@@ -1,0 +1,888 @@
+/* ═══════════════════════════════════════════════════════════════════
+   MONOLITH. // ARCHIVAL SOUND & PHYSICAL EDITIONS
+   High-Precision Editorial CSS & Design System
+   ═══════════════════════════════════════════════════════════════════ */
+
+:root {
+  --bg-primary: #0A0C0E;
+  --bg-secondary: #101317;
+  --text-primary: #EDE7DC;
+  --text-secondary: #9EA5A8;
+  --text-muted: #6C7378;
+  --accent-amber: #E8913C;
+  --accent-teal: #2E6B72;
+  --border-hairline: rgba(237, 231, 220, 0.13);
+  --border-hairline-light: rgba(237, 231, 220, 0.08);
+
+  --font-display: 'Syne', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --nav-height: 58px;
+}
+
+/* Base resets & typography */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+::selection {
+  background: var(--accent-amber);
+  color: #0A0C0E;
+}
+
+/* Typography Helpers */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.heading-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.025em;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.label-mono {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.label-amber {
+  color: var(--accent-amber);
+}
+
+.label-teal {
+  color: var(--accent-teal);
+}
+
+/* Hairline utility borders */
+.border-hairline {
+  border-color: var(--border-hairline);
+}
+
+.border-hairline-t {
+  border-top: 1px solid var(--border-hairline);
+}
+
+.border-hairline-b {
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   1. NAVIGATION BAR (58px fixed, blur(14px), fine bottom border)
+   ═══════════════════════════════════════════════════════════════════ */
+.portal-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+  z-index: 90;
+  background-color: rgba(10, 12, 14, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-hairline);
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-link {
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  transition: color 0.25s ease;
+  position: relative;
+  text-decoration: none;
+}
+
+.nav-link:hover, .nav-link:focus-visible {
+  color: var(--accent-amber);
+  outline: none;
+}
+
+.nav-cta-btn {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  background: transparent;
+  border: 1px solid var(--border-hairline);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-cta-btn:hover {
+  border-color: var(--accent-amber);
+  color: var(--accent-amber);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   2. SECTION ONE: THE PORTAL HERO (250svh Scroll Track)
+   ═══════════════════════════════════════════════════════════════════ */
+.hero-scroll-track {
+  position: relative;
+  height: 250svh;
+  height: 250vh;
+  width: 100%;
+}
+
+.hero-sticky-stage {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  background-color: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Layer 1: Full-bleed Hero Photograph */
+.hero-bg-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+  transform: scale(1.15);
+  transform-origin: center center;
+  will-change: transform;
+}
+
+/* Layer 2: Duotone Color Treatment */
+.hero-duotone-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(135deg, rgba(46, 107, 114, 0.85) 0%, rgba(232, 145, 60, 0.65) 100%);
+  mix-blend-mode: color;
+  opacity: 0;
+  pointer-events: none;
+  will-change: opacity;
+}
+
+/* Layer 3: Radial Edge-Darkening Veil (Vignette) */
+.hero-vignette-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: radial-gradient(circle at center, transparent 35%, rgba(10, 12, 14, 0.65) 75%, #0A0C0E 100%);
+  pointer-events: none;
+}
+
+/* Layer 4 & 5: Left and Right Solid Opaque Panels */
+.hero-panel-left {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 50.5vw;
+  background-color: var(--bg-primary);
+  z-index: 10;
+  border-right: 1px solid var(--border-hairline);
+  transform: translateX(0%);
+  will-change: transform;
+}
+
+.hero-panel-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 50.5vw;
+  background-color: var(--bg-primary);
+  z-index: 10;
+  border-left: 1px solid var(--border-hairline);
+  transform: translateX(0%);
+  will-change: transform;
+}
+
+/* Layer 6: Accent Dots traveling to opposite corners */
+.hero-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  z-index: 15;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.hero-dot-amber {
+  background-color: var(--accent-amber);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-dot-teal {
+  background-color: var(--accent-teal);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Layer 7: Split Wordmark (Syne Display) */
+.hero-wordmark-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  pointer-events: none;
+  width: 100%;
+  will-change: transform, letter-spacing;
+}
+
+.hero-wordmark-text {
+  font-family: var(--font-display);
+  font-size: clamp(64px, 12.5vw, 190px);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 0.9;
+  letter-spacing: 0.08em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.wordmark-half-left {
+  display: inline-block;
+  will-change: transform;
+  transform: translateX(0px);
+}
+
+.wordmark-half-right {
+  display: inline-block;
+  will-change: transform;
+  transform: translateX(0px);
+}
+
+.wordmark-period {
+  color: var(--accent-amber);
+}
+
+/* Layer 8: Corner Metadata */
+.hero-corner-meta {
+  position: absolute;
+  z-index: 25;
+  pointer-events: auto;
+  max-width: 260px;
+}
+
+.corner-top-left {
+  top: calc(var(--nav-height) + 24px);
+  left: 32px;
+}
+
+.corner-top-right {
+  top: calc(var(--nav-height) + 24px);
+  right: 32px;
+  text-align: right;
+}
+
+.corner-bottom-left {
+  bottom: 28px;
+  left: 32px;
+}
+
+.corner-bottom-right {
+  bottom: 28px;
+  right: 32px;
+  text-align: right;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   3. SECTION TWO: STATEMENT FOLD
+   ═══════════════════════════════════════════════════════════════════ */
+.statement-section {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-primary);
+  border-top: 1px solid var(--border-hairline);
+  border-bottom: 1px solid var(--border-hairline);
+  overflow: hidden;
+  padding: 100px 0;
+}
+
+.statement-numeral {
+  font-family: var(--font-display);
+  font-size: clamp(90px, 16vw, 240px);
+  font-weight: 800;
+  line-height: 0.85;
+  -webkit-text-stroke: 1.5px rgba(237, 231, 220, 0.16);
+  color: transparent;
+  user-select: none;
+  pointer-events: none;
+}
+
+.statement-lead-text {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3.5vw, 50px);
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  max-width: 23ch;
+}
+
+.statement-highlight {
+  color: var(--accent-amber);
+  position: relative;
+  display: inline;
+}
+
+.statement-float-img-wrap {
+  position: absolute;
+  right: -80px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: clamp(240px, 30vw, 420px);
+  height: clamp(240px, 30vw, 420px);
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--border-hairline);
+  pointer-events: none;
+  z-index: 5;
+  will-change: transform;
+}
+
+.statement-float-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(110%) grayscale(20%);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   4. SECTION THREE: RELEASES & THROWABLE CARD DECK
+   ═══════════════════════════════════════════════════════════════════ */
+.catalogue-section {
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-hairline);
+  padding: 120px 0;
+  position: relative;
+}
+
+.deck-container {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  perspective: 1200px;
+  touch-action: pan-y;
+  outline: none;
+}
+
+.deck-container:focus-visible {
+  outline: 2px solid var(--accent-amber);
+  outline-offset: 8px;
+  border-radius: 4px;
+}
+
+/* Physical Release Sleeve Card */
+.sleeve-card {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0E1114;
+  border: 1px solid var(--border-hairline);
+  border-radius: 3px;
+  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.75), 0 4px 12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  user-select: none;
+  cursor: grab;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.45s ease;
+  will-change: transform, opacity;
+  overflow: hidden;
+}
+
+.sleeve-card.dragging {
+  cursor: grabbing;
+  transition: none !important;
+}
+
+.sleeve-card:active {
+  cursor: grabbing;
+}
+
+/* Vinyl disc silhouette peeking behind sleeve */
+.vinyl-disc-edge {
+  position: absolute;
+  right: -36px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #25282c 0%, #0d0f11 50%, #060708 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.9);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.85;
+}
+
+.vinyl-disc-groove {
+  position: absolute;
+  inset: 18px;
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 255, 255, 0.06);
+}
+
+.vinyl-disc-label {
+  position: absolute;
+  inset: 44px;
+  border-radius: 50%;
+  background: var(--accent-amber);
+  border: 2px solid #000;
+}
+
+.card-content-wrap {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-cover-artwork {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+/* Deck Controls */
+.deck-btn-prev, .deck-btn-next {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  background: transparent;
+  border: 1px solid var(--border-hairline);
+  padding: 8px 18px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.deck-btn-prev:hover, .deck-btn-next:hover {
+  border-color: var(--accent-amber);
+  color: var(--accent-amber);
+  background-color: rgba(232, 145, 60, 0.05);
+}
+
+.deck-btn-prev:focus-visible, .deck-btn-next:focus-visible {
+  outline: 2px solid var(--accent-amber);
+  outline-offset: 3px;
+}
+
+/* Deck indicator dots */
+.deck-indicator-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: rgba(237, 231, 220, 0.2);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.deck-indicator-dot.active {
+  background-color: var(--accent-amber);
+  transform: scale(1.3);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   5. SECTION FOUR: ROSTER (Hairline-Separated Minimalist Rows)
+   ═══════════════════════════════════════════════════════════════════ */
+.roster-section {
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-hairline);
+  padding: 120px 0;
+}
+
+.roster-row {
+  border-bottom: 1px solid var(--border-hairline);
+  padding: 26px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  transition: border-color 0.25s ease, padding 0.25s ease;
+  position: relative;
+}
+
+.roster-row:hover {
+  border-color: rgba(232, 145, 60, 0.45);
+  padding-left: 8px;
+}
+
+.roster-artist-name {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 3vw, 36px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  transition: color 0.25s ease;
+}
+
+.roster-row:hover .roster-artist-name {
+  color: #FFFFFF;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   6. SECTION FIVE: RELEASE DATES TABLE
+   ═══════════════════════════════════════════════════════════════════ */
+.dates-section {
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-hairline);
+  padding: 120px 0;
+}
+
+.dates-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dates-table th {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.dates-table td {
+  padding: 22px 16px;
+  border-bottom: 1px solid var(--border-hairline);
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  vertical-align: middle;
+}
+
+.dates-table tr:hover td {
+  background-color: rgba(237, 231, 220, 0.02);
+  color: var(--text-primary);
+}
+
+.dates-table .date-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--text-primary);
+}
+
+.dates-table .date-status-pill {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border: 1px solid var(--border-hairline);
+  border-radius: 9999px;
+  display: inline-block;
+  color: var(--text-primary);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   7. SECTION SIX: CLOSING EXPERIENCE & ARCHITECTURAL CROPPED TYPE
+   ═══════════════════════════════════════════════════════════════════ */
+.closing-section {
+  background-color: var(--bg-primary);
+  padding: 120px 0 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.closing-headline {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4.5vw, 62px);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: var(--text-primary);
+  max-width: 22ch;
+}
+
+.closing-btn-primary {
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background-color: var(--accent-amber);
+  color: #0A0C0E;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  border: 1px solid var(--accent-amber);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.closing-btn-primary:hover {
+  background-color: #f39e4a;
+  transform: translateY(-1px);
+}
+
+.closing-btn-secondary {
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: var(--text-primary);
+  padding: 12px 24px;
+  border-radius: 9999px;
+  border: 1px solid var(--border-hairline);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.closing-btn-secondary:hover {
+  border-color: var(--text-primary);
+}
+
+/* Architectural cropped wordmark */
+.closing-wordmark-wrap {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  margin-top: 60px;
+  line-height: 0.78;
+  user-select: none;
+  pointer-events: none;
+}
+
+.closing-wordmark-text {
+  font-family: var(--font-display);
+  font-size: clamp(90px, 19vw, 290px);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  color: rgba(237, 231, 220, 0.95);
+  display: inline-block;
+  transform: translateY(24%);
+  will-change: transform;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   8. SYSTEM B: ONE-TIME REVEAL ANIMATIONS
+   ═══════════════════════════════════════════════════════════════════ */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-item.revealed {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Stagger delay classes */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+
+/* ═══════════════════════════════════════════════════════════════════
+   9. ACCESSIBILITY & PREFERS-REDUCED-MOTION
+   ═══════════════════════════════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-panel-left,
+  .hero-panel-right {
+    display: none !important;
+  }
+
+  .hero-bg-photo {
+    transform: scale(1) !important;
+  }
+
+  .hero-duotone-layer {
+    opacity: 0.35 !important;
+  }
+
+  .hero-wordmark-container {
+    transform: translate(-50%, -50%) !important;
+  }
+
+  .hero-wordmark-text {
+    letter-spacing: -0.02em !important;
+  }
+
+  .wordmark-half-left,
+  .wordmark-half-right {
+    transform: none !important;
+  }
+
+  .statement-float-img-wrap {
+    transform: translateY(-50%) !important;
+  }
+
+  .reveal-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .sleeve-card {
+    transition: none !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   10. RESPONSIVE BREAKPOINTS
+   ═══════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 54px;
+  }
+
+  .hero-scroll-track {
+    height: 200svh;
+    height: 200vh;
+  }
+
+  .corner-top-left,
+  .corner-top-right,
+  .corner-bottom-left,
+  .corner-bottom-right {
+    font-size: 10px;
+  }
+
+  .corner-top-left {
+    top: calc(var(--nav-height) + 12px);
+    left: 16px;
+  }
+
+  .corner-top-right {
+    top: calc(var(--nav-height) + 12px);
+    right: 16px;
+  }
+
+  .corner-bottom-left {
+    bottom: 16px;
+    left: 16px;
+  }
+
+  .corner-bottom-right {
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .statement-float-img-wrap {
+    right: -120px;
+    opacity: 0.45;
+  }
+
+  .roster-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  /* Dates Table Responsive Mobile Conversion */
+  .dates-table, .dates-table thead, .dates-table tbody, .dates-table th, .dates-table td, .dates-table tr {
+    display: block;
+  }
+
+  .dates-table thead {
+    display: none;
+  }
+
+  .dates-table tr {
+    border-bottom: 1px solid var(--border-hairline);
+    padding: 20px 0;
+  }
+
+  .dates-table td {
+    border: none;
+    padding: 4px 0;
+  }
+
+  .deck-container {
+    max-width: 330px;
+  }
+}
