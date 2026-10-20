@@ -17,6 +17,29 @@ function getResumePdfSrc() {
   return (typeof window !== 'undefined' && window.PORTFOLIO_RESUME_PDF) || '/resume.pdf';
 }
 
+/* ─── OFFICIAL AWS LOGO COMPONENT ─── */
+function AwsLogo({ className = "w-5 h-5", white = true, style = {} }) {
+  return (
+    <svg 
+      viewBox="0 0 128 128" 
+      className={`inline-block shrink-0 ${className}`} 
+      fill="none" 
+      xmlns="http://www.w3.org/2000/svg"
+      style={style}
+      aria-label="AWS Logo"
+    >
+      <path 
+        fill={white ? "#FFFFFF" : "#252F3E"} 
+        d="M36.379 53.64c0 1.56.168 2.825.465 3.75.336.926.758 1.938 1.347 3.032.207.336.293.672.293.969 0 .418-.254.84-.8 1.261l-2.653 1.77c-.379.25-.758.379-1.093.379-.422 0-.844-.211-1.266-.59a13.28 13.28 0 0 1-1.516-1.98 34.153 34.153 0 0 1-1.304-2.485c-3.282 3.875-7.41 5.813-12.38 5.813-3.535 0-6.355-1.012-8.421-3.032-2.063-2.023-3.114-4.718-3.114-8.086 0-3.578 1.262-6.484 3.833-8.671 2.566-2.192 5.976-3.286 10.316-3.286 1.43 0 2.902.125 4.46.336 1.56.211 3.161.547 4.845.926v-3.074c0-3.2-.676-5.43-1.98-6.734C26.061 32.633 23.788 32 20.546 32c-1.473 0-2.988.168-4.547.547a33.416 33.416 0 0 0-4.547 1.433c-.676.293-1.18.461-1.473.547-.296.082-.507.125-.675.125-.59 0-.883-.422-.883-1.304v-2.063c0-.676.082-1.18.293-1.476.21-.293.59-.586 1.18-.883 1.472-.758 3.242-1.39 5.304-1.895 2.063-.547 4.254-.8 6.57-.8 5.008 0 8.672 1.136 11.032 3.41 2.316 2.273 3.492 5.726 3.492 10.359v13.64Zm-17.094 6.403c1.387 0 2.82-.254 4.336-.758 1.516-.508 2.863-1.433 4-2.695.672-.8 1.18-1.684 1.43-2.695.254-1.012.422-2.23.422-3.665v-1.765a34.401 34.401 0 0 0-3.871-.719 31.816 31.816 0 0 0-3.961-.25c-2.82 0-4.883.547-6.274 1.684-1.387 1.136-2.062 2.734-2.062 4.84 0 1.98.504 3.453 1.558 4.464 1.012 1.051 2.485 1.559 4.422 1.559Zm33.809 4.547c-.758 0-1.262-.125-1.598-.422-.34-.254-.633-.84-.887-1.64L40.715 29.98c-.25-.843-.38-1.39-.38-1.687 0-.672.337-1.05 1.013-1.05h4.125c.8 0 1.347.124 1.644.421.336.25.59.84.84 1.64l7.074 27.876 6.57-27.875c.208-.84.462-1.39.797-1.64.34-.255.93-.423 1.688-.423h3.367c.8 0 1.348.125 1.684.422.336.25.633.84.8 1.64l6.653 28.212 7.285-28.211c.25-.84.547-1.39.84-1.64.336-.255.887-.423 1.644-.423h3.914c.676 0 1.055.336 1.055 1.051 0 .21-.043.422-.086.676-.043.254-.125.59-.293 1.05L80.801 62.57c-.254.84-.547 1.387-.887 1.64-.336.255-.883.423-1.598.423h-3.62c-.801 0-1.348-.13-1.684-.422-.34-.297-.633-.844-.801-1.684l-6.527-27.16-6.485 27.117c-.21.844-.46 1.391-.8 1.684-.337.297-.926.422-1.684.422Zm54.105 1.137c-2.187 0-4.379-.254-6.484-.758-2.106-.504-3.746-1.055-4.84-1.684-.676-.379-1.137-.8-1.305-1.18a2.919 2.919 0 0 1-.254-1.18v-2.148c0-.882.336-1.304.97-1.304.25 0 .503.043.757.129.25.082.629.25 1.05.418a23.102 23.102 0 0 0 4.634 1.476c1.683.336 3.324.504 5.011.504 2.653 0 4.715-.465 6.145-1.39 1.433-.926 2.191-2.274 2.191-4 0-1.18-.379-2.145-1.136-2.946-.758-.8-2.192-1.516-4.254-2.191l-6.106-1.895c-3.074-.969-5.348-2.398-6.734-4.293-1.39-1.855-2.106-3.918-2.106-6.105 0-1.77.38-3.328 1.137-4.676a10.829 10.829 0 0 1 3.031-3.453c1.262-.965 2.696-1.684 4.38-2.188 1.683-.504 3.452-.715 5.304-.715.926 0 1.894.043 2.82.168.969.125 1.852.293 2.738.461.84.211 1.641.422 2.399.676.758.254 1.348.504 1.77.758.59.336 1.011.672 1.261 1.05.254.34.379.802.379 1.391v1.98c0 .884-.336 1.348-.969 1.348-.336 0-.883-.171-1.597-.507-2.403-1.094-5.098-1.641-8.086-1.641-2.399 0-4.293.379-5.598 1.18-1.309.797-1.98 2.02-1.98 3.746 0 1.18.421 2.191 1.261 2.988.844.8 2.403 1.602 4.633 2.316l5.98 1.895c3.032.969 5.22 2.316 6.524 4.043 1.305 1.727 1.938 3.707 1.938 5.895 0 1.812-.38 3.453-1.094 4.882-.758 1.434-1.77 2.696-3.074 3.707-1.305 1.051-2.864 1.809-4.672 2.36-1.895.586-3.875.883-6.024.883Zm0 0" 
+      />
+      <path 
+        fill="#FF9900" 
+        d="M118 73.348c-4.432.063-9.664 1.052-13.621 3.832-1.223.883-1.012 2.062.336 1.894 4.508-.547 14.44-1.726 16.21.547 1.77 2.23-1.976 11.62-3.663 15.79-.504 1.26.59 1.769 1.726.8 7.41-6.231 9.348-19.242 7.832-21.137-.757-.925-4.388-1.79-8.82-1.726zM1.63 75.859c-.927.116-1.347 1.236-.368 2.121 16.508 14.902 38.359 23.872 62.613 23.872 17.305 0 37.43-5.43 51.281-15.66 2.273-1.688.297-4.254-2.02-3.204-15.534 6.57-32.421 9.77-47.788 9.77-22.778 0-44.8-6.273-62.653-16.633-.39-.231-.755-.304-1.064-.266z" 
+      />
+    </svg>
+  );
+}
+
 /* ─── SCROLL REVEAL HOOK ─── */
 function useScrollReveal(ready, route) {
   useEffect(() => {
@@ -199,7 +222,8 @@ const experienceData = [
     type: 'Leadership & Technical Community',
     badge: 'Student Builder Leader',
     badgeColor: 'amber',
-    icon: '☁️',
+    icon: 'aws',
+    isAws: true,
     description: 'Leading a student-driven technical community focused on AWS, cloud computing, and AI innovation at Dr. D. Y. Patil College of Engineering & Innovation, Pune. Establishing roadmaps, coordinating core team operations, and organizing hands-on builder activities.',
     responsibilities: [
       'Established the AWS Student Builder Group chapter at DYPCOEI under the Department of AI & Data Science.',
@@ -1590,9 +1614,12 @@ A big thanks to everyone who supported and guided me throughout the learning pro
   },
   {
     id: 'aws-ml-ai-cert',
+    isAws: true,
     title: 'Fundamentals of Machine Learning and Artificial Intelligence',
     category: 'certificate',
-    categoryBadge: 'CERTIFICATION',
+    categoryBadge: 'AWS CERTIFICATION',
+    cornerBadge: 'AWS CERTIFIED LEARNING',
+    specialBadge: '✦ AWS VERIFIED CREDENTIAL',
     date: 'April 13, 2026',
     dateFormatted: 'April 13, 2026',
     organization: 'AWS Training & Certification',
@@ -2023,7 +2050,7 @@ function HomePage({ navigateTo }) {
                 className="px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-amber-300 bg-amber-500/15 border border-amber-500/40 hover:bg-amber-500/25 transition-all flex items-center gap-2 shadow-lg shadow-amber-500/10"
               >
                 <span>AWS Journey</span>
-                <span>☁️</span>
+                <AwsLogo className="w-4 h-4 inline-block" />
               </button>
               <button
                 onClick={() => navigateTo('/contact')}
@@ -2098,7 +2125,7 @@ function HomePage({ navigateTo }) {
               </div>
 
               <div className="hero-float-badge hero-badge-br !top-auto !bottom-[-14px] !right-2 !bg-[#0b0f1c]/90 !border-[#FF9900]/40">
-                <span className="text-xl sm:text-2xl filter drop-shadow">☁️</span>
+                <AwsLogo className="w-6 h-6 sm:w-7 sm:h-7 filter drop-shadow" />
                 <div className="flex flex-col text-left">
                   <span className="font-heading font-extrabold text-xs sm:text-sm text-white tracking-tight">AWS SBG Leader</span>
                   <span className="font-mono text-[10px] sm:text-xs text-[#FFA724] font-bold tracking-wide">DYPCOEI · AY 26-27</span>
@@ -2258,7 +2285,7 @@ function HomePage({ navigateTo }) {
           <div className="md:col-span-2 glass-card-aws p-8 sm:p-10 rounded-3xl border border-[#FF9900]/30 bg-gradient-to-br from-[#FF9900]/10 via-[#070c18] to-[#04060d] flex flex-col md:flex-row items-center justify-between gap-6 group hover:border-[#FF9900]/50 transition-all shadow-xl">
             <div className="space-y-3 max-w-2xl text-center md:text-left">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF9900]/15 border border-[#FF9900]/30 font-mono text-xs text-[#FFA724]">
-                <span className="w-2 h-2 rounded-full bg-[#FF9900] animate-pulse" />
+                <AwsLogo className="w-3.5 h-3.5 inline-block" />
                 <span>AWS STUDENT BUILDER GROUP · AY 2026–27</span>
               </div>
               <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-white tracking-tight">
@@ -2270,10 +2297,10 @@ function HomePage({ navigateTo }) {
             </div>
             <button
               onClick={() => navigateTo('/aws-journey')}
-              className="cta-aws px-7 py-3.5 rounded-xl text-xs sm:text-sm font-bold shrink-0 flex items-center gap-2 shadow-lg shadow-[#FF9900]/20 hover:scale-105 transition-transform cursor-pointer"
+              className="cta-aws px-7 py-3.5 rounded-xl text-xs sm:text-sm font-bold shrink-0 flex items-center gap-2.5 shadow-lg shadow-[#FF9900]/20 hover:scale-105 transition-transform cursor-pointer"
             >
-              <span>Explore AWS Journey</span>
-              <span>☁️ →</span>
+              <AwsLogo className="w-5 h-5 shrink-0" />
+              <span>Explore AWS Journey →</span>
             </button>
           </div>
         </div>
@@ -2376,9 +2403,12 @@ function AboutPage({ navigateTo }) {
             </ul>
           </div>
 
-          <div className="pt-6 mt-6 border-t border-white/10">
+          <div className="pt-6 mt-6 border-t border-white/10 flex flex-wrap items-center gap-3">
             <span className="font-mono text-[11px] text-emerald-400">
               ● Active GSA Ambassador (GID: 5314)
+            </span>
+            <span className="font-mono text-[11px] text-[#FFA724] inline-flex items-center gap-1.5">
+              <AwsLogo className="w-3.5 h-3.5" /> AWS SBG Leader (AY 26-27)
             </span>
           </div>
         </div>
@@ -2625,8 +2655,12 @@ function ExperiencePage({ navigateTo }) {
             key={exp.role}
             className="glass-card p-8 rounded-3xl border border-white/10 hover:border-violet-500/30 transition-all flex flex-col md:flex-row gap-6 items-start"
           >
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-violet-600/20 via-blue-600/15 to-transparent border border-white/10 flex items-center justify-center text-2xl shrink-0">
-              {exp.icon}
+            <div className={`w-14 h-14 rounded-2xl border flex items-center justify-center shrink-0 ${
+              exp.isAws
+                ? 'bg-gradient-to-br from-[#FF9900]/25 via-amber-600/15 to-transparent border-[#FF9900]/40 shadow-lg shadow-[#FF9900]/20'
+                : 'bg-gradient-to-br from-violet-600/20 via-blue-600/15 to-transparent border-white/10 text-2xl'
+            }`}>
+              {exp.isAws ? <AwsLogo className="w-8 h-8" /> : exp.icon}
             </div>
 
             <div className="flex-1 space-y-4">
@@ -2710,7 +2744,12 @@ function AwsJourneyPage({ navigateTo }) {
       
       {/* ─── 1. HERO & STRATEGIC OVERVIEW ─── */}
       <div className="space-y-8 reveal">
-        <div className="text-center space-y-3">
+        <div className="text-center space-y-4">
+          <div className="flex justify-center mb-1">
+            <div className="w-20 h-20 rounded-3xl bg-gradient-to-br from-[#FF9900]/20 via-[#070c18] to-black border-2 border-[#FF9900]/40 shadow-[0_0_35px_rgba(255,153,0,0.3)] flex items-center justify-center p-3.5 group hover:scale-105 transition-transform duration-300">
+              <AwsLogo className="w-full h-full drop-shadow-[0_2px_10px_rgba(255,153,0,0.4)]" />
+            </div>
+          </div>
           <div className="flex items-center justify-center gap-3">
             <span className="h-[1px] w-8 bg-gradient-to-r from-transparent to-[#FF9900]/60" />
             <span className="font-mono text-xs uppercase tracking-[0.25em] text-[#FFA724] font-semibold">
@@ -2731,8 +2770,8 @@ function AwsJourneyPage({ navigateTo }) {
 
         {/* Quick Identity Pills Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
-          <div className="p-4 rounded-2xl glass-card border border-[#FF9900]/25 bg-[#FF9900]/5">
-            <span className="text-2xl block mb-1">☁️</span>
+          <div className="p-4 rounded-2xl glass-card border border-[#FF9900]/25 bg-[#FF9900]/5 flex flex-col justify-between items-center">
+            <div className="flex justify-center mb-1.5"><AwsLogo className="w-6 h-6" /></div>
             <span className="font-mono text-[10px] text-slate-400 uppercase font-semibold block">LEADERSHIP ROLE</span>
             <span className="font-heading font-bold text-xs sm:text-sm text-white">Student Builder Leader</span>
           </div>
@@ -2971,8 +3010,8 @@ function AwsJourneyPage({ navigateTo }) {
               <div className="w-full max-w-xl glass-card-aws p-6 sm:p-7 rounded-3xl border-2 border-[#FF9900] bg-gradient-to-r from-[#FF9900]/15 via-[#070c18] to-[#FF9900]/10 shadow-2xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#FF9900]/15 rounded-full blur-2xl pointer-events-none" />
                 <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 text-center sm:text-left">
-                  <div className="w-16 h-16 rounded-2xl bg-[#FF9900] text-black font-extrabold text-2xl flex items-center justify-center shrink-0 shadow-lg shadow-[#FF9900]/30">
-                    👑
+                  <div className="w-16 h-16 rounded-2xl bg-[#FF9900] flex items-center justify-center shrink-0 shadow-lg shadow-[#FF9900]/30 p-2">
+                    <AwsLogo white={false} className="w-full h-full" />
                   </div>
                   <div className="space-y-1.5 flex-1">
                     <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-[#FF9900]/20 text-[#FFA724] text-[10px] font-mono font-bold uppercase">
@@ -3189,7 +3228,7 @@ function AwsJourneyPage({ navigateTo }) {
             {/* Category B: Cloud Services */}
             <div className="glass-card-aws p-7 rounded-3xl border border-white/10 space-y-4">
               <div className="flex items-center gap-2.5">
-                <span className="text-2xl">📦</span>
+                <AwsLogo className="w-7 h-7" />
                 <div>
                   <h3 className="font-heading font-extrabold text-lg text-white">AWS Cloud Services</h3>
                   <p className="font-mono text-xs text-slate-400">Practically explored and utilized service components</p>
@@ -3270,7 +3309,7 @@ function AwsJourneyPage({ navigateTo }) {
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <span className="text-3xl">{cred.icon}</span>
+                    <span className="text-3xl flex items-center">{cred.id.includes('aws') || cred.id.includes('sbg') ? <AwsLogo className="w-8 h-8" /> : cred.icon}</span>
                     <span className="font-mono text-[10px] px-2.5 py-0.5 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 font-bold">
                       {cred.badge}
                     </span>
@@ -3365,6 +3404,11 @@ function AwsJourneyPage({ navigateTo }) {
       {/* ─── 9. BOTTOM CONNECT & INVOLVEMENT BANNER ─── */}
       <section className="pt-6">
         <div className="glass-card-aws p-8 sm:p-12 rounded-3xl border border-[#FF9900]/30 bg-gradient-to-r from-[#FF9900]/15 via-[#070b16] to-[#04060d] text-center space-y-4 shadow-2xl relative overflow-hidden">
+          <div className="flex justify-center mb-1">
+            <div className="w-12 h-12 rounded-2xl bg-[#FF9900]/20 border border-[#FF9900]/40 flex items-center justify-center p-2 shadow-lg shadow-[#FF9900]/20">
+              <AwsLogo className="w-full h-full" />
+            </div>
+          </div>
           <div className="max-w-2xl mx-auto space-y-3">
             <span className="font-mono text-xs uppercase tracking-widest text-[#FFA724] font-bold block">
               JOIN THE BUILDER COMMUNITY
@@ -3380,9 +3424,10 @@ function AwsJourneyPage({ navigateTo }) {
           <div className="flex flex-wrap items-center justify-center gap-3.5 pt-4">
             <button
               onClick={() => navigateTo('/contact')}
-              className="cta-aws px-8 py-3.5 rounded-full text-xs sm:text-sm font-bold shadow-lg shadow-[#FF9900]/30 cursor-pointer"
+              className="cta-aws px-8 py-3.5 rounded-full text-xs sm:text-sm font-bold shadow-lg shadow-[#FF9900]/30 cursor-pointer flex items-center gap-2"
             >
-              Get in Touch Directly →
+              <AwsLogo className="w-4 h-4" />
+              <span>Get in Touch Directly →</span>
             </button>
             <a
               href={personalInfo.social.linkedin}
@@ -3414,9 +3459,12 @@ function AwsJourneyPage({ navigateTo }) {
           >
             <div className="flex items-start justify-between gap-4 border-b border-white/10 pb-4">
               <div>
-                <span className="font-mono text-xs text-[#FFA724] font-bold uppercase">
-                  {selectedCertModal.issuer}
-                </span>
+                <div className="flex items-center gap-2 mb-1">
+                  <AwsLogo className="w-4 h-4" />
+                  <span className="font-mono text-xs text-[#FFA724] font-bold uppercase">
+                    {selectedCertModal.issuer}
+                  </span>
+                </div>
                 <h3 className="font-heading font-extrabold text-lg sm:text-2xl text-white mt-1">
                   {selectedCertModal.title}
                 </h3>
@@ -4411,8 +4459,8 @@ function GalleryPage({ navigateTo }) {
                   </div>
 
                   {/* Corner Badge */}
-                  <div className="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-black/70 backdrop-blur-md border border-white/15 text-[10px] font-mono text-slate-200 font-bold flex items-center gap-1 pointer-events-none">
-                    <span className={`w-1.5 h-1.5 rounded-full ${item.pulseColor || 'bg-violet-400'} animate-pulse`} />
+                  <div className="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-black/70 backdrop-blur-md border border-white/15 text-[10px] font-mono text-slate-200 font-bold flex items-center gap-1.5 pointer-events-none">
+                    {item.isAws ? <AwsLogo className="w-3.5 h-3.5" /> : <span className={`w-1.5 h-1.5 rounded-full ${item.pulseColor || 'bg-violet-400'} animate-pulse`} />}
                     {item.cornerBadge || (item.categoryBadge === 'CERTIFICATION' ? 'VERIFIED CERTIFICATION' : 'CERTIFICATE OF PARTICIPATION')}
                   </div>
                 </div>
@@ -4429,8 +4477,8 @@ function GalleryPage({ navigateTo }) {
                     <div className="grid grid-cols-5 gap-2">
                       {item.galleryImages.map((gImg, idx) => (
                         <button
-                          key={idx}
                           type="button"
+                          key={idx}
                           onClick={() => openLightbox(item, idx)}
                           className="group/thumb relative rounded-xl overflow-hidden border border-white/15 bg-slate-900 aspect-square hover:border-cyan-400/80 transition-all hover:scale-105 cursor-pointer"
                           title={gImg.title}
@@ -4458,7 +4506,7 @@ function GalleryPage({ navigateTo }) {
                 <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-white/10">
                   <div className="flex items-center gap-2 flex-wrap">
                     <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full ${item.badgeStyle || 'bg-gradient-to-r from-violet-600/20 to-blue-600/20 border border-violet-500/40 text-violet-300'} text-xs font-mono font-bold tracking-wider`}>
-                      <span className={`w-2 h-2 rounded-full ${item.pulseColor || 'bg-violet-400'} animate-ping`} />
+                      {item.isAws ? <AwsLogo className="w-3.5 h-3.5" /> : <span className={`w-2 h-2 rounded-full ${item.pulseColor || 'bg-violet-400'} animate-ping`} />}
                       {item.categoryBadge}
                     </span>
                     {item.specialBadge && (
@@ -5126,9 +5174,10 @@ function RecruiterPage({ navigateTo }) {
             </a>
             <button
               onClick={() => navigateTo('/aws-journey')}
-              className="cta-aws px-4 py-2.5 rounded-xl text-xs font-bold shadow-md shadow-[#FF9900]/20"
+              className="cta-aws px-4 py-2.5 rounded-xl text-xs font-bold shadow-md shadow-[#FF9900]/20 flex items-center gap-1.5"
             >
-              AWS Journey ☁️
+              <AwsLogo className="w-4 h-4" />
+              <span>AWS Journey</span>
             </button>
             <button
               onClick={() => navigateTo('/')}
@@ -5150,7 +5199,7 @@ function RecruiterPage({ navigateTo }) {
               <p>📱 <strong className="text-white">Phone:</strong> <a href={`tel:${personalInfo.phone}`} className="text-violet-400 hover:underline">{personalInfo.phone}</a></p>
               <p>🎓 <strong className="text-white">Program:</strong> B.Tech CSE (AI &amp; DS)</p>
               <p>🏛️ <strong className="text-white">College:</strong> DYPCOEI, Pune (2025–29)</p>
-              <p>☁️ <strong className="text-white">Leadership:</strong> AWS SBG Leader AY 26-27</p>
+              <p className="flex items-center gap-1.5"><AwsLogo className="w-3.5 h-3.5 shrink-0" /><span><strong className="text-white">Leadership:</strong> AWS SBG Leader AY 26-27</span></p>
               <p>🗣️ <strong className="text-white">Languages:</strong> English, Hindi, Marathi</p>
             </div>
           </div>
@@ -5190,6 +5239,7 @@ function RecruiterPage({ navigateTo }) {
             <div className="p-3 rounded-xl bg-amber-500/10 border border-amber-500/25 flex justify-between items-start">
               <div>
                 <p className="font-bold text-white flex items-center gap-1.5">
+                  <AwsLogo className="w-4 h-4 inline-block" />
                   <span>Student Builder Group Leader</span>
                   <span className="text-[10px] text-amber-400 font-mono">✦ AY 2026-27</span>
                 </p>
@@ -5382,7 +5432,10 @@ function App() {
               <span className="font-mono text-[10px] xl:text-[10.5px] text-slate-400 font-medium tracking-tight hidden md:block whitespace-nowrap">
                 <span className="text-cyan-300 font-semibold">Google Ambassador</span>
                 <span className="text-slate-600"> · </span>
-                <span className="text-amber-400 font-semibold">AWS Leader</span>
+                <span className="text-amber-400 font-semibold inline-flex items-center gap-1">
+                  <AwsLogo className="w-3 h-3" />
+                  <span>AWS Leader</span>
+                </span>
               </span>
             </div>
           </button>
@@ -5403,8 +5456,8 @@ function App() {
                         : (isAws ? 'text-amber-400/90 hover:text-amber-300 hover:bg-amber-500/10' : 'text-slate-400 hover:text-white')
                     }`}
                   >
-                    <span className="flex items-center gap-1 whitespace-nowrap">
-                      {isAws && <span className="text-[10.5px] leading-none shrink-0">☁️</span>}
+                    <span className="flex items-center gap-1.5 whitespace-nowrap">
+                      {isAws && <AwsLogo className="w-3.5 h-3.5 shrink-0" />}
                       <span className="hidden xl:inline">{item.label}</span>
                       <span className="xl:hidden inline">{item.shortLabel || item.label}</span>
                     </span>
@@ -5476,7 +5529,7 @@ function App() {
                   }`}
                 >
                   <span className="flex items-center gap-2">
-                    {isAws && <span>☁️</span>}
+                    {isAws && <AwsLogo className="w-4 h-4 shrink-0" />}
                     <span>{item.label}</span>
                   </span>
                   {isActive && <span className={`text-xs ${isAws ? 'text-amber-400' : 'text-violet-400'}`}>✦</span>}
@@ -5636,6 +5689,7 @@ function App() {
                     >
                       <span className="text-violet-500 opacity-0 group-hover:opacity-100 transition-opacity font-bold">▸</span>
                       <span>{link.label}</span>
+                      {link.isAws && <AwsLogo className="w-3.5 h-3.5 ml-1 inline-block shrink-0" />}
                     </button>
                   </li>
                 ))}
@@ -5802,7 +5856,8 @@ function App() {
             </div>
 
             <div className="flex flex-wrap gap-1.5 py-2 border-b border-white/5 text-[10px]">
-              <button onClick={() => handleAiSend('Tell me about your Google Ambassador role')} className="px-2 py-1 rounded bg-white/5 hover:bg-white/10 text-slate-300">GSA Role?</button>
+              <button onClick={() => handleAiSend('Tell me about your AWS Journey and SBG Leader role')} className="px-2 py-1 rounded bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 flex items-center gap-1 font-medium"><AwsLogo className="w-3 h-3" /> AWS Journey?</button>
+              <button onClick={() => handleAiSend('Tell me about your Google Ambassador role')} className="px-2 py-1 rounded bg-white/5 hover:bg-white/10 text-slate-300">GSA Silver?</button>
               <button onClick={() => handleAiSend('What is FocusNext Wellness?')} className="px-2 py-1 rounded bg-white/5 hover:bg-white/10 text-slate-300">FocusNext?</button>
               <button onClick={() => handleAiSend('What is your education background?')} className="px-2 py-1 rounded bg-white/5 hover:bg-white/10 text-slate-300">Education?</button>
             </div>
