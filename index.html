@@ -36,6 +36,8 @@
             panelDark: '#070c18',
             accentBlue: '#3b82f6',
             accentViolet: '#7c3aed',
+            awsOrange: '#FF9900',
+            awsAmber: '#FFA724',
           }
         }
       }
@@ -54,6 +56,7 @@
       --bg-secondary: #070c18;
       --accent-blue: #3b82f6;
       --accent-violet: #7c3aed;
+      --aws-orange: #FF9900;
       --font-heading: 'Plus Jakarta Sans', sans-serif;
       --font-body: 'Inter', sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
@@ -71,6 +74,41 @@
       background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #c084fc 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+    }
+    .gradient-text-aws {
+      background: linear-gradient(135deg, #FF9900 0%, #FFA724 50%, #FF6600 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .cta-aws {
+      background: linear-gradient(135deg, #FF9900 0%, #FF6600 100%);
+      color: #050505;
+      font-weight: 700;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .cta-aws:hover {
+      box-shadow: 0 0 25px rgba(255, 153, 0, 0.5);
+      transform: translateY(-2px);
+    }
+    .glass-card-aws {
+      background: rgba(255, 153, 0, 0.03);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 153, 0, 0.2);
+      border-radius: 1.25rem;
+    }
+    .glass-card-aws:hover {
+      border-color: rgba(255, 153, 0, 0.4);
+      box-shadow: 0 10px 30px -10px rgba(255, 153, 0, 0.2);
+    }
+    .tech-tag-aws {
+      background: rgba(255, 153, 0, 0.1);
+      border: 1px solid rgba(255, 153, 0, 0.3);
+      color: #FFB84D;
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-family: 'JetBrains Mono', monospace;
     }
     .glass-card {
       background: rgba(255, 255, 255, 0.03);
@@ -390,6 +428,17 @@
       background: linear-gradient(90deg, #a855f7 0%, #06b6d4 100%);
       border-radius: 9999px;
       box-shadow: 0 0 10px rgba(168, 85, 247, 0.9), 0 0 4px rgba(6, 182, 212, 0.8);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .nav-active-glow-bar-aws {
+      position: absolute;
+      bottom: 2px;
+      left: 8px;
+      right: 8px;
+      height: 2px;
+      background: linear-gradient(90deg, #ff9900 0%, #f59e0b 100%);
+      border-radius: 9999px;
+      box-shadow: 0 0 10px rgba(255, 153, 0, 0.9), 0 0 4px rgba(245, 158, 11, 0.8);
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .nav-cta-smooth {

@@ -41,10 +41,10 @@ function useScrollReveal(ready, route) {
 /* ─── COMPREHENSIVE AUTHENTIC DATA SOURCES ─── */
 const personalInfo = {
   name: 'Mohit Mundke',
-  title: 'AI & Data Science Student · Google Student Ambassador · Aspiring Software Engineer',
-  tagline: 'Building ideas into intelligent digital experiences.',
-  headline: 'Exploring technology, crafting software, and empowering student communities.',
-  description: "I'm passionate about exploring technology, building meaningful digital experiences, and turning ambitious ideas into real-world solutions through software and innovation.",
+  title: 'AI & Data Science Student · Google Student Ambassador · AWS SBG Leader · Aspiring Software Engineer',
+  tagline: 'Building ideas into intelligent digital experiences and empowering student communities in the cloud.',
+  headline: 'Exploring technology, cloud computing, crafting software, and empowering student communities.',
+  description: "I'm passionate about exploring technology, cloud computing, building meaningful digital experiences, and turning ambitious ideas into real-world solutions through software and community innovation.",
   location: 'Pune, Maharashtra, India',
   phone: '+91 9767969701',
   email: 'mohitmundke20@gmail.com',
@@ -63,6 +63,7 @@ const navItems = [
   { id: '/about', label: 'About' },
   { id: '/skills', label: 'Skills' },
   { id: '/experience', label: 'Experience' },
+  { id: '/aws-journey', label: 'AWS Journey', isAws: true },
   { id: '/projects', label: 'Projects' },
   { id: '/education', label: 'Education' },
   { id: '/achievements', label: 'Achievements' },
@@ -175,10 +176,41 @@ const skillCategories = [
       { name: 'Community Building', tag: 'Peer Mentoring & Tech Advocacy', level: 'Passion', icon: '🤝' },
       { name: 'Teamwork & Problem Solving', tag: 'Collaborative Engineering', level: 'Core Quality', icon: '🧩' }
     ]
+  },
+  {
+    id: 'cloud',
+    title: 'Cloud Computing & AWS',
+    desc: 'Foundational cloud concepts, core AWS services, and distributed architectures.',
+    skills: [
+      { name: 'AWS Cloud Fundamentals', tag: 'Global Infrastructure & Virtualization', level: 'Intermediate', icon: '☁️' },
+      { name: 'Amazon EC2 & S3', tag: 'Compute & Scalable Object Storage', level: 'Hands-on', icon: '📦' },
+      { name: 'AWS IAM & Security', tag: 'Access Management & Policies', level: 'Hands-on', icon: '🔐' },
+      { name: 'AWS Lambda & Serverless', tag: 'Event-Driven Functions', level: 'Learning', icon: '⚡' },
+      { name: 'Cloud Architecture Basics', tag: 'High Availability & Fault Tolerance', level: 'Foundational', icon: '🏛️' }
+    ]
   }
 ];
 
 const experienceData = [
+  {
+    role: 'Student Builder Group Leader',
+    company: 'AWS Student Builder Group, DYPCOEI',
+    period: 'AY 2026–2027 · Active',
+    type: 'Leadership & Technical Community',
+    badge: 'Student Builder Leader',
+    badgeColor: 'amber',
+    icon: '☁️',
+    description: 'Leading a student-driven technical community focused on AWS, cloud computing, and AI innovation at Dr. D. Y. Patil College of Engineering & Innovation, Pune. Establishing roadmaps, coordinating core team operations, and organizing hands-on builder activities.',
+    responsibilities: [
+      'Established the AWS Student Builder Group chapter at DYPCOEI under the Department of AI & Data Science.',
+      'Leading the 5-division core team (Events, Marketing, Technical, Multimedia, Documentation) and drafting technical roadmaps.',
+      'Organizing student workshops, cloud certification sprints, architectural labs, and collaborative hackathons.',
+      'Liaising with faculty advisors (Mr. Suraj Bhoite, Dr. Dipannita Mondal, Dr. Laxman Khandare) to build a sustainable engineering community.'
+    ],
+    skills: ['AWS Fundamentals', 'Community Leadership', 'Cloud Architecture', 'Core Team Governance', 'Technical Workshops', 'Peer Mentoring'],
+    ctaRoute: '/aws-journey',
+    ctaText: 'Explore Dedicated AWS Journey →'
+  },
   {
     role: 'Google Student Ambassador (GID: 5314)',
     company: 'Google',
@@ -438,6 +470,436 @@ const achievementsData = [
     color: 'emerald',
     badgeText: 'Official GSA Reward ✓',
     desc: 'Awarded Amazon Pay contributor gift card in recognition of active leadership, event execution, and community participation as a Google Student Ambassador (GID: 5314).'
+  },
+  {
+    title: 'Student Builder Group Leader (AY 2026–27)',
+    issuer: 'AWS Student Builder Group · DYPCOEI',
+    type: 'Community Leadership Milestone',
+    icon: '☁️',
+    year: '2026–27',
+    color: 'amber',
+    badgeText: 'AWS SBG Leader ✓',
+    desc: 'Appointed as Student Builder Group Leader at Dr. D. Y. Patil College of Engineering & Innovation, Pune, heading campus cloud initiatives and core team governance.'
+  },
+  {
+    title: 'Fundamentals of Machine Learning and Artificial Intelligence',
+    issuer: 'AWS Training & Certification',
+    type: 'Official Technical Credential',
+    icon: '📜',
+    year: 'Verified',
+    color: 'amber',
+    badgeText: 'AWS Certified Learning ✓',
+    desc: 'Validated understanding of machine learning algorithms, deep learning models, data preprocessing, and cloud AI fundamentals through AWS Training & Certification.'
+  }
+];
+
+/* ─── DEDICATED AWS JOURNEY & COMMUNITY BUILDER DATASETS ─── */
+const awsLeadershipInfo = {
+  role: 'Student Builder Group Leader',
+  community: 'AWS Student Builder Group, DYPCOEI',
+  academicYear: '2026–2027',
+  institution: 'Dr. D. Y. Patil College of Engineering & Innovation, Pune',
+  department: 'Department of Artificial Intelligence & Data Science',
+  tagline: 'Building, Leading, and Innovating in the Cloud.',
+  mission: 'Empowering student developers to transition from passive theory to hands-on cloud architecture, AI integration, and collaborative engineering.',
+  disclaimer: 'Student Community Leadership Role — An independent student-led technical chapter at DYPCOEI Pune. Not corporate AWS employment or an official corporate spokesperson role.',
+  pillars: [
+    { icon: '☁️', title: 'AWS & Cloud Education', desc: 'Demystifying cloud infrastructure, security fundamentals, and distributed systems for undergraduate students.' },
+    { icon: '🛠️', title: 'Hands-On Technical Learning', desc: 'Prioritizing live terminal sessions, console deployments, and architectural labs over passive slides.' },
+    { icon: '🧠', title: 'AI & Cloud Innovation', desc: 'Bridging generative AI models, machine learning workflows, and scalable cloud backends.' },
+    { icon: '🤝', title: 'Collaborative Student Building', desc: 'Encouraging interdisciplinary student teams to turn ambitious software ideas into deployed products.' },
+    { icon: '📅', title: 'Workshops & Learning Sprints', desc: 'Curating regular hands-on bootcamps, architecture review sessions, and certification guidance sprints.' },
+    { icon: '🌱', title: 'Peer Mentorship Culture', desc: 'Fostering an inclusive, open culture where senior students mentor juniors and share practical engineering practices.' }
+  ],
+  responsibilities: [
+    'Established the AWS Student Builder Group chapter charter at DYPCOEI under Department of AI & Data Science.',
+    'Directing and coordinating the 5-division core team (Events, Marketing, Technical, Multimedia, Documentation).',
+    'Serving as primary liaison between student developers and college faculty leadership.',
+    'Designing technical learning roadmaps, hands-on lab curriculums, and campus hackathon proposals.',
+    'Fostering peer participation, hands-on cloud adoption, and a sustainable student engineering culture.'
+  ],
+  facultyAdvisors: [
+    { name: 'Mr. Suraj Bhoite', title: 'Faculty Coordinator', dept: 'Department of AI & Data Science' },
+    { name: 'Dr. Dipannita Mondal', title: 'AWS Academy Educator', dept: 'Faculty Advisor & Mentor' },
+    { name: 'Dr. Laxman Khandare', title: 'Head of Department', dept: 'AI & Data Science, DYPCOEI' }
+  ]
+};
+
+const awsProgressionTimeline = [
+  {
+    phase: '01',
+    id: 'discover',
+    title: 'Discovering AWS & Cloud Infrastructure',
+    subtitle: 'Virtualization, Global Architecture & Fundamental Concepts',
+    period: 'Foundation Phase',
+    status: 'Completed',
+    statusBadge: 'COMPLETED',
+    statusColor: 'emerald',
+    icon: '🌐',
+    desc: 'Began exploring cloud primitives: AWS Global Infrastructure (Regions, Availability Zones, Edge Locations), virtualization models, compute instances, scalable object storage, and cloud security boundaries.',
+    tags: ['Global Infrastructure', 'Regions & AZs', 'Cloud Primitives', 'Virtualization']
+  },
+  {
+    phase: '02',
+    id: 'skills',
+    title: 'Developing Applied Cloud & Technical Skills',
+    subtitle: 'Hands-On Service Exploration & AWS Machine Learning Certification',
+    period: 'Skill Building Phase',
+    status: 'Completed',
+    statusBadge: 'COMPLETED',
+    statusColor: 'emerald',
+    icon: '📜',
+    desc: 'Completed official "Fundamentals of Machine Learning and Artificial Intelligence" from AWS Training & Certification. Gained practical experience configuring Amazon S3 buckets, EC2 compute instances, and IAM security policies.',
+    tags: ['AWS ML & AI', 'Amazon S3', 'Amazon EC2', 'AWS IAM', 'Python Boto3']
+  },
+  {
+    phase: '03',
+    id: 'ecosystem',
+    title: 'Engaging with the AWS Student Ecosystem',
+    subtitle: 'Academic Mentorship & Community Networking',
+    period: 'Ecosystem Immersion',
+    status: 'Completed',
+    statusBadge: 'COMPLETED',
+    statusColor: 'emerald',
+    icon: '🤝',
+    desc: 'Connected with AWS Academy educators and departmental mentors at DYPCOEI. Explored AWS Skill Builder curriculums, cloud practitioner learning pathways, and modern developer documentation.',
+    tags: ['AWS Academy', 'AWS Skill Builder', 'Faculty Mentorship', 'Student Community']
+  },
+  {
+    phase: '04',
+    id: 'responsibility',
+    title: 'Assuming Community Responsibility',
+    subtitle: 'Identifying Campus Needs & Drafting the Group Charter',
+    period: 'Leadership Inception',
+    status: 'Completed',
+    statusBadge: 'COMPLETED',
+    statusColor: 'emerald',
+    icon: '💡',
+    desc: 'Recognized that while students study computer science theory, few gain hands-on cloud deployment experience. Pitched and drafted the community charter for a student-led builder community at DYPCOEI.',
+    tags: ['Community Charter', 'Student Empowerment', 'Needs Assessment', 'Leadership Initiative']
+  },
+  {
+    phase: '05',
+    id: 'establishment',
+    title: 'Establishing AWS Student Builder Group at DYPCOEI',
+    subtitle: 'Official Campus Technical Community Inception',
+    period: 'AY 2026–2027 · Milestone',
+    status: 'Completed',
+    statusBadge: 'ESTABLISHED',
+    statusColor: 'emerald',
+    icon: '🏛️',
+    desc: 'Officially established the AWS Student Builder Group at Dr. D. Y. Patil College of Engineering & Innovation, Pune, under the Department of Artificial Intelligence & Data Science with faculty advisory endorsement.',
+    tags: ['DYPCOEI Pune', 'AI & DS Dept', 'Student Builder Group', 'Academic Year 2026-27']
+  },
+  {
+    phase: '06',
+    id: 'team',
+    title: 'Structuring & Leading the Core Team',
+    subtitle: '5 Functional Leadership Divisions & Operational Framework',
+    period: 'Active Operations',
+    status: 'Ongoing',
+    statusBadge: 'ACTIVE & ONGOING',
+    statusColor: 'amber',
+    icon: '👥',
+    desc: 'Structured the 5 core leadership positions (Events, Marketing, Technical, Multimedia, Documentation) with dedicated student heads. Established collaborative workflows, meeting schedules, and technical agendas.',
+    tags: ['Core Team Leadership', 'Operations Management', 'Cross-Disciplinary Team', 'Calendar Planning']
+  },
+  {
+    phase: '07',
+    id: 'initiatives',
+    title: 'Workshops, Learning Sprints & Hackathons',
+    subtitle: 'Hands-on Cloud Labs, Architecture Challenges & Peer Learning',
+    period: 'Execution & Future Roadmaps',
+    status: 'Ongoing & Planned',
+    statusBadge: 'PLANNED & ROLLING',
+    statusColor: 'cyan',
+    icon: '🚀',
+    desc: 'Orchestrating practical hands-on workshops, cloud certification guidance sprints, collaborative architecture challenges, and student hackathons as they take place throughout the academic year.',
+    tags: ['Cloud Bootcamps', 'Hackathons', 'Architecture Labs', 'Certification Sprints']
+  }
+];
+
+const awsCoreTeamMembers = [
+  {
+    role: 'STUDENT BUILDER GROUP LEADER',
+    position: 'Student Builder Group Leader',
+    name: 'Mohit Mundke',
+    academicYear: '2nd Year · AI & Data Science',
+    institution: 'DYPCOEI Pune',
+    color: '#FF9900',
+    icon: '👑',
+    responsibilities: 'Community vision, overall strategy, technical workshop curriculum, faculty liaison, and student developer empowerment across DYPCOEI.',
+    isLeader: true
+  },
+  {
+    role: 'DIRECTOR OF EVENTS',
+    position: 'Director of Events',
+    name: 'Dnyanada Dhavale',
+    academicYear: '3rd Year · Computer Engineering',
+    institution: 'DYPCOEI Pune',
+    color: '#FFA724',
+    icon: '📅',
+    responsibilities: 'Planning, scheduling, logistics, and operational execution for technical workshops, cloud bootcamps, and student hackathons.',
+    isLeader: false
+  },
+  {
+    role: 'DIRECTOR OF MARKETING',
+    position: 'Director of Marketing',
+    name: 'Akanksha Mirge',
+    academicYear: '3rd Year · Computer Engineering',
+    institution: 'DYPCOEI Pune',
+    color: '#FF9900',
+    icon: '📢',
+    responsibilities: 'Directing community outreach, social presence, cross-departmental engagement, event registrations, and brand awareness.',
+    isLeader: false
+  },
+  {
+    role: 'TECHNICAL LEAD',
+    position: 'Technical Lead',
+    name: 'Mayuresh Thorve',
+    academicYear: '3rd Year · Computer Engineering',
+    institution: 'DYPCOEI Pune',
+    color: '#38BDF8',
+    icon: '⚡',
+    responsibilities: 'Leading hands-on cloud architecture demonstrations, code walkthroughs, technical labs, and assisting students with debugging.',
+    isLeader: false
+  },
+  {
+    role: 'MULTIMEDIA HEAD',
+    position: 'Multimedia Head',
+    name: 'Ishwari Bhope',
+    academicYear: '2nd Year · AI-ML',
+    institution: 'DYPCOEI Pune',
+    color: '#A855F7',
+    icon: '🎨',
+    responsibilities: 'Designing visual brand identity, event posters, promotional digital graphics, reels, and video recap materials.',
+    isLeader: false
+  },
+  {
+    role: 'DOCUMENTATION HEAD',
+    position: 'Documentation Head',
+    name: 'Vaishnavee Sutar',
+    academicYear: '2nd Year · AI-ML',
+    institution: 'DYPCOEI Pune',
+    color: '#818CF8',
+    icon: '📝',
+    responsibilities: 'Maintaining event registries, minutes of meetings, student resource archives, whitepapers, and official session records.',
+    isLeader: false
+  }
+];
+
+const awsEventsData = [
+  {
+    id: 'sbg-orientation',
+    title: 'AWS Student Builder Group Inaugural Orientation',
+    category: 'Community Orientation & Roadmaps',
+    status: 'Upcoming',
+    statusBadge: 'Upcoming',
+    statusColor: 'amber',
+    date: 'Upcoming (AY 2026-27)',
+    venue: 'DYPCOEI Seminar Hall, Pune',
+    role: 'Host, Keynote Speaker & Group Leader',
+    responsibilities: 'Presenting group vision, introducing the 5-division core team, detailing cloud career pathways, and opening student community membership.',
+    description: 'An introductory campus session welcoming engineering students across all branches to the AWS Student Builder Group. Covers cloud fundamentals, free learning pathways, and the AY 2026-27 activity calendar.',
+    keyTopics: ['Community Charter & Goals', 'Why Cloud Matters for AI & Software', 'AWS Skill Builder Digital Badges', 'Upcoming Hands-On Labs'],
+    linkText: 'Registration Opening Soon',
+    linkAvailable: false
+  },
+  {
+    id: 'cloud-genai-bootcamp',
+    title: 'Hands-On Cloud Architecture & GenAI Bootcamp',
+    category: 'Technical Workshop',
+    status: 'In Planning',
+    statusBadge: 'In Planning',
+    statusColor: 'cyan',
+    date: 'Planned (AY 2026-27)',
+    venue: 'DYPCOEI Computing Laboratories & Virtual',
+    role: 'Workshop Coordinator & Instructor',
+    responsibilities: 'Curating step-by-step lab instructions, preparing sample Python repositories, configuring sandbox resources, and co-instructing the live session.',
+    description: 'An interactive hands-on lab guiding students through provisioning virtual compute (Amazon EC2), configuring secure object storage (Amazon S3), and connecting Python AI scripts with modern APIs.',
+    keyTopics: ['Amazon EC2 Instance Setup', 'Amazon S3 Bucket Policies & Static Hosting', 'AWS IAM Least Privilege Basics', 'Python Cloud Integration'],
+    linkText: 'Curriculum in Review',
+    linkAvailable: false
+  },
+  {
+    id: 'skill-builder-sprint',
+    title: 'AWS Skill Builder Learning Sprint',
+    category: 'Self-Paced Learning Sprint',
+    status: 'Ongoing',
+    statusBadge: 'Ongoing',
+    statusColor: 'emerald',
+    date: 'AY 2026-27 · Active',
+    venue: 'Hybrid / AWS Skill Builder Portal',
+    role: 'Community Lead & Peer Mentor',
+    responsibilities: 'Recommending curated foundational courses, answering student questions, hosting weekly Q&A check-ins, and verifying completion badges.',
+    description: 'A structured peer-learning sprint encouraging students to explore foundational cloud courses, understand the AWS Well-Architected Framework, and earn verified digital learning badges.',
+    keyTopics: ['Cloud Economics & Billing Concepts', 'AWS Shared Responsibility Model', 'Core Services Architecture', 'Digital Badges'],
+    linkText: 'Active Student Track',
+    linkAvailable: false
+  },
+  {
+    id: 'cloud-hackathon',
+    title: 'DYPCOEI Cloud Innovation Hackathon',
+    category: 'Builder Hackathon Challenge',
+    status: 'Planned',
+    statusBadge: 'Planned',
+    statusColor: 'purple',
+    date: 'Upcoming (Semester 2)',
+    venue: 'DYPCOEI Innovation Center',
+    role: 'Lead Organizer & Jury Coordination',
+    responsibilities: 'Drafting challenge problem statements, coordinating judging rubrics with faculty advisors, and overseeing student builder team mentoring.',
+    description: 'A collaborative builder competition inviting student teams to conceptualize and prototype real-world solutions leveraging cloud architecture, serverless design, and artificial intelligence.',
+    keyTopics: ['Rapid Solution Prototyping', 'Serverless Architecture Ideas', 'Team Pitch Presentations', 'Faculty & Peer Review'],
+    linkText: 'Proposal Drafted',
+    linkAvailable: false
+  }
+];
+
+const awsSkillsMatrix = {
+  cloudComputing: [
+    { name: 'AWS Cloud Fundamentals', level: 'Intermediate', proficiency: 'Solid Knowledge', desc: 'Understanding of cloud service models (IaaS, PaaS, SaaS), high availability, fault tolerance, and elasticity.' },
+    { name: 'AWS Global Infrastructure', level: 'Intermediate', proficiency: 'Solid Knowledge', desc: 'Working familiarity with AWS Regions, Availability Zones, Edge Locations, and low-latency content distribution.' },
+    { name: 'Cloud Architecture Principles', level: 'Foundational', proficiency: 'Applied Learning', desc: 'Core tenets of the AWS Well-Architected Framework: Security, Reliability, Performance, and Cost Optimization.' },
+    { name: 'Shared Responsibility Model', level: 'Foundational', proficiency: 'Theoretical & Practical', desc: 'Clear delineation of security OF the cloud (AWS) versus security IN the cloud (customer).' }
+  ],
+  cloudServices: [
+    { name: 'Amazon S3', level: 'Hands-on', tag: 'Storage', icon: '📦', desc: 'Creating buckets, managing object lifecycles, configuring bucket policies, and hosting static assets.' },
+    { name: 'Amazon EC2', level: 'Hands-on', tag: 'Compute', icon: '💻', desc: 'Launching virtual machine instances, configuring security groups, SSH key pairs, and instance sizing.' },
+    { name: 'AWS IAM', level: 'Hands-on', tag: 'Security & Access', icon: '🔐', desc: 'Configuring IAM users, user groups, custom permission policies, and adhering to the principle of least privilege.' },
+    { name: 'AWS Lambda', level: 'Learning', tag: 'Serverless', icon: '⚡', desc: 'Exploring event-driven serverless functions for asynchronous compute and lightweight backend tasks.' },
+    { name: 'Amazon CloudWatch', level: 'Learning', tag: 'Monitoring', icon: '📊', desc: 'Inspecting metrics, viewing application log streams, and understanding basic health alerts.' },
+    { name: 'Amazon VPC', level: 'Foundational', tag: 'Networking', icon: '🌐', desc: 'Conceptual grasp of virtual private clouds, public/private subnets, internet gateways, and CIDR blocks.' }
+  ],
+  developmentAi: [
+    { name: 'Python', level: 'Advanced', tag: 'Language', icon: '🐍', desc: 'Primary programming language for data structures, machine learning pipelines, automation scripts, and AWS Boto3 SDK.' },
+    { name: 'C / C++', level: 'Intermediate', tag: 'Systems', icon: '⚡', desc: 'Strong foundation in algorithmic thinking, memory management, and data structures (Grade A Certified).' },
+    { name: 'JavaScript & React', level: 'Proficient', tag: 'Frontend', icon: '⚛️', desc: 'Developing modern, accessible, responsive component architectures with React 18, state hooks, and client-side routing.' },
+    { name: 'HTML5, CSS3 & Tailwind', level: 'Advanced', tag: 'UI/UX', icon: '🎨', desc: 'Crafting clean, responsive, dark-mode interfaces, glassmorphism design tokens, and smooth micro-interactions.' },
+    { name: 'Machine Learning & AI', level: 'Specialization', tag: 'Core Discipline', icon: '🧠', desc: 'B.Tech academic specialization at DYPCOEI covering supervised/unsupervised algorithms, neural networks, and model evaluation.' },
+    { name: 'Generative AI & Gemini', level: 'Advanced', tag: 'Intelligence', icon: '✨', desc: 'Google Gemini AI Ambassador expertise: prompt design, multimodal models, and integrating AI into practical software.' }
+  ]
+};
+
+const awsProjectsData = [
+  {
+    id: 'cloudscale-telemetry',
+    title: 'CloudScale Telemetry & Analytics Sandbox',
+    subtitle: 'Serverless cloud telemetry pipeline prototype',
+    status: 'Prototype / Educational Lab',
+    statusBadge: 'Prototype',
+    statusColor: 'amber',
+    problem: 'IoT devices, remote applications, and developer tools generate continuous streams of structured telemetry that quickly overload traditional single-server database architectures.',
+    solution: 'Designed and prototyped a lightweight serverless architecture pattern using Amazon S3 for durable raw data ingestion, simulated AWS Lambda functions for payload validation, and CloudWatch for metrics visibility.',
+    servicesUsed: ['Amazon S3', 'AWS Lambda (Simulated)', 'Amazon CloudWatch', 'Python Boto3 SDK'],
+    techStack: ['Python 3.11', 'AWS SDK (Boto3)', 'JSON Schema', 'REST APIs'],
+    myContribution: 'Architected the cloud flow diagram, authored Python ingestion scripts using Boto3, configured secure IAM bucket policies, and created simulated load tests.',
+    githubUrl: 'https://github.com/mohitmundke',
+    liveUrl: null,
+    hasArchitecture: true
+  },
+  {
+    id: 'focusnext-cloud',
+    title: 'FocusNext Cloud Companion (Architecture Concept)',
+    subtitle: 'Serverless cloud extension for digital wellness companion',
+    status: 'Architecture Blueprint',
+    statusBadge: 'Architecture Concept',
+    statusColor: 'blue',
+    problem: 'FocusNext Wellness runs entirely client-side, meaning user break habits, ergonomic posture reminders, and deep-work session analytics do not persist across multiple devices.',
+    solution: 'Engineered an architectural blueprint transitioning FocusNext into a cloud-connected platform with AWS Lambda microservices, Amazon DynamoDB for millisecond-latency session state, and Amazon API Gateway.',
+    servicesUsed: ['AWS Lambda', 'Amazon DynamoDB', 'Amazon API Gateway', 'AWS IAM'],
+    techStack: ['React 18', 'TypeScript', 'Python FastAPI', 'AWS Serverless'],
+    myContribution: 'Drafted the cloud component architecture, defined DynamoDB partition/sort key data models, specified REST endpoint contracts, and analyzed serverless latency tradeoffs.',
+    githubUrl: 'https://github.com/mohitmundke/FocusNext-Wellness.git',
+    liveUrl: null,
+    hasArchitecture: true
+  },
+  {
+    id: 'future-cloud-sandbox',
+    title: 'Cloud Projects & Deployments in Progress',
+    subtitle: 'Active research and continuous building at DYPCOEI',
+    status: 'In Development',
+    statusBadge: 'Active Pipeline',
+    statusColor: 'emerald',
+    problem: 'Cloud computing and artificial intelligence are constantly evolving fields that require hands-on experimentation, benchmark testing, and continuous learning.',
+    solution: 'I am actively developing new cloud-native projects exploring containerized microservices (Docker), automated CI/CD deployment pipelines (GitHub Actions to AWS), and cloud-hosted machine learning inference.',
+    servicesUsed: ['AWS Cloud', 'Docker', 'GitHub Actions', 'AI Inference'],
+    techStack: ['Modern Cloud & AI Stack'],
+    myContribution: 'Continuous experimentation and implementation. Verified repositories and live demonstrations will be published here as they reach production milestones.',
+    githubUrl: 'https://github.com/mohitmundke',
+    liveUrl: null,
+    isUpcoming: true
+  }
+];
+
+const awsCredentialsData = [
+  {
+    id: 'aws-ml-ai',
+    title: 'Fundamentals of Machine Learning and Artificial Intelligence',
+    issuer: 'AWS Training & Certification',
+    issuedBy: 'Amazon Web Services (AWS)',
+    date: 'Verified Credential',
+    type: 'Official Technical Credential',
+    status: 'Verified & Completed',
+    badge: 'AWS Certified Learning ✓',
+    badgeColor: 'amber',
+    icon: '📜',
+    image: '/images/aws-ml-ai-certificate.jpg',
+    downloadName: 'Mohit-Mundke-AWS-ML-AI-Certificate.jpg',
+    desc: 'Official course completion certificate validating fundamental competencies in machine learning pipelines, supervised and unsupervised algorithms, artificial intelligence principles, and AWS cloud AI services.',
+    verified: true
+  },
+  {
+    id: 'sbg-leader-appointment',
+    title: 'Student Builder Group Leader Appointment',
+    issuer: 'AWS Student Builder Group · DYPCOEI Pune',
+    issuedBy: 'Dr. D. Y. Patil College of Engineering & Innovation, Pune',
+    date: 'AY 2026–2027',
+    type: 'Campus Leadership Appointment',
+    status: 'Active Appointment',
+    badge: 'Leadership Milestone ✓',
+    badgeColor: 'amber',
+    icon: '☁️',
+    image: null,
+    desc: 'Appointed as Student Builder Group Leader for the 2026–2027 academic year, heading campus cloud initiatives, technical workshop coordination, and core team governance at DYPCOEI Pune.',
+    verified: true
+  },
+  {
+    id: 'skill-builder-badges',
+    title: 'AWS Skill Builder Learning Pathways',
+    issuer: 'AWS Skill Builder',
+    issuedBy: 'Amazon Web Services (AWS)',
+    date: 'Ongoing Exploration',
+    type: 'Digital Learning Badges',
+    status: 'Continuous Learning',
+    badge: 'Skill Builder Track',
+    badgeColor: 'blue',
+    icon: '🎓',
+    image: null,
+    desc: 'Continuous engagement with AWS Skill Builder curriculums, completing foundational learning modules across cloud architecture, security essentials, and developer tools.',
+    verified: true
+  }
+];
+
+const awsImpactHighlights = [
+  {
+    icon: '🌐',
+    title: 'Demystifying the Cloud for Peers',
+    desc: 'Translating complex AWS terminology into approachable, practical concepts for 1st and 2nd-year engineering students through open discussions and beginner-friendly guides.'
+  },
+  {
+    icon: '🛠️',
+    title: 'Hands-on Builder Culture',
+    desc: 'Replacing passive slide-reading with live console deployments, showing students that anyone can create an S3 bucket or launch a virtual server in minutes.'
+  },
+  {
+    icon: '👥',
+    title: 'Empowering the 5 Core Leads',
+    desc: 'Creating an encouraging platform where student directors in events, marketing, technical instruction, media design, and documentation gain real leadership experience.'
+  },
+  {
+    icon: '🤝',
+    title: 'Inclusive Cross-Department Community',
+    desc: 'Opening group initiatives across AI & Data Science, Computer Engineering, and related branches to foster collaborative student hackathon teams and peer mentoring.'
   }
 ];
 
@@ -1509,7 +1971,7 @@ function HomePage({ navigateTo }) {
                 <span className="gradient-text">MUNDKE</span>
               </h1>
               <p className="font-heading font-semibold text-base sm:text-xl text-slate-300 tracking-wide">
-                AI &amp; Data Science Student · Google Student Ambassador · Aspiring Software Engineer
+                AI &amp; Data Science Student · Google Student Ambassador · AWS SBG Leader · Aspiring Software Engineer
               </p>
             </div>
 
@@ -1525,6 +1987,13 @@ function HomePage({ navigateTo }) {
                 Explore My Work ✦
               </button>
               <button
+                onClick={() => navigateTo('/aws-journey')}
+                className="px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-amber-300 bg-amber-500/15 border border-amber-500/40 hover:bg-amber-500/25 transition-all flex items-center gap-2 shadow-lg shadow-amber-500/10"
+              >
+                <span>AWS Journey</span>
+                <span>☁️</span>
+              </button>
+              <button
                 onClick={() => navigateTo('/contact')}
                 className="cta-secondary px-7 py-3.5 rounded-xl text-xs sm:text-sm font-semibold"
               >
@@ -1534,7 +2003,7 @@ function HomePage({ navigateTo }) {
                 onClick={() => navigateTo('/about')}
                 className="px-5 py-3.5 rounded-xl text-xs font-mono text-slate-400 hover:text-violet-400 hover:bg-white/5 transition-all"
               >
-                Learn More About Me 👤
+                About Me 👤
               </button>
             </div>
 
@@ -1593,6 +2062,14 @@ function HomePage({ navigateTo }) {
                 <div className="flex flex-col text-left">
                   <span className="font-heading font-extrabold text-xs sm:text-sm text-white tracking-tight">AI &amp; Data Science</span>
                   <span className="font-mono text-[10px] sm:text-xs text-violet-300 font-bold tracking-wide">DYPCOEI Pune</span>
+                </div>
+              </div>
+
+              <div className="hero-float-badge hero-badge-br !top-auto !bottom-[-14px] !right-2 !bg-[#0b0f1c]/90 !border-[#FF9900]/40">
+                <span className="text-xl sm:text-2xl filter drop-shadow">☁️</span>
+                <div className="flex flex-col text-left">
+                  <span className="font-heading font-extrabold text-xs sm:text-sm text-white tracking-tight">AWS SBG Leader</span>
+                  <span className="font-mono text-[10px] sm:text-xs text-[#FFA724] font-bold tracking-wide">DYPCOEI · AY 26-27</span>
                 </div>
               </div>
             </div>
@@ -1743,6 +2220,28 @@ function HomePage({ navigateTo }) {
             >
               <span>View Full Experience &amp; Timeline</span>
               <span>→</span>
+            </button>
+          </div>
+
+          <div className="md:col-span-2 glass-card-aws p-8 sm:p-10 rounded-3xl border border-[#FF9900]/30 bg-gradient-to-br from-[#FF9900]/10 via-[#070c18] to-[#04060d] flex flex-col md:flex-row items-center justify-between gap-6 group hover:border-[#FF9900]/50 transition-all shadow-xl">
+            <div className="space-y-3 max-w-2xl text-center md:text-left">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF9900]/15 border border-[#FF9900]/30 font-mono text-xs text-[#FFA724]">
+                <span className="w-2 h-2 rounded-full bg-[#FF9900] animate-pulse" />
+                <span>AWS STUDENT BUILDER GROUP · AY 2026–27</span>
+              </div>
+              <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-white tracking-tight">
+                My <span className="gradient-text-aws">AWS Journey</span> &amp; Community Leadership
+              </h3>
+              <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                Explore my progression from foundational cloud discovery to leading the <strong>AWS Student Builder Group at DYPCOEI Pune</strong>. Discover the 5-division core team, cloud roadmaps, technical workshops, hands-on architectures, and community initiatives.
+              </p>
+            </div>
+            <button
+              onClick={() => navigateTo('/aws-journey')}
+              className="cta-aws px-7 py-3.5 rounded-xl text-xs sm:text-sm font-bold shrink-0 flex items-center gap-2 shadow-lg shadow-[#FF9900]/20 hover:scale-105 transition-transform cursor-pointer"
+            >
+              <span>Explore AWS Journey</span>
+              <span>☁️ →</span>
             </button>
           </div>
         </div>
@@ -2130,6 +2629,17 @@ function ExperiencePage({ navigateTo }) {
                   <span key={t} className="tech-pill">{t}</span>
                 ))}
               </div>
+
+              {exp.ctaRoute && (
+                <div className="pt-2">
+                  <button
+                    onClick={() => navigateTo(exp.ctaRoute)}
+                    className="cta-aws px-5 py-2.5 rounded-xl text-xs font-bold inline-flex items-center gap-1.5 shadow-md shadow-[#FF9900]/20 hover:scale-105 transition-all cursor-pointer"
+                  >
+                    <span>{exp.ctaText || 'Explore More →'}</span>
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         ))}
@@ -2143,6 +2653,877 @@ function ExperiencePage({ navigateTo }) {
           Discuss Engineering Roles &amp; Opportunities →
         </button>
       </div>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   PAGE 4B: AWS JOURNEY (DEDICATED PREMIUM AWS & CLOUD SECTION)
+   ═══════════════════════════════════════════════════════════════════ */
+function AwsJourneyPage({ navigateTo }) {
+  const [activeTab, setActiveTab] = useState('all');
+  const [eventFilter, setEventFilter] = useState('all');
+  const [selectedCertModal, setSelectedCertModal] = useState(null);
+
+  const filteredEvents = awsEventsData.filter((ev) => {
+    if (eventFilter === 'all') return true;
+    if (eventFilter === 'upcoming') return ev.status === 'Upcoming';
+    if (eventFilter === 'planning') return ev.status === 'In Planning';
+    if (eventFilter === 'ongoing') return ev.status === 'Ongoing';
+    return true;
+  });
+
+  return (
+    <div className="page-container max-w-6xl mx-auto px-4 py-10 space-y-20">
+      
+      {/* ─── 1. HERO & STRATEGIC OVERVIEW ─── */}
+      <div className="space-y-8 reveal">
+        <div className="text-center space-y-3">
+          <div className="flex items-center justify-center gap-3">
+            <span className="h-[1px] w-8 bg-gradient-to-r from-transparent to-[#FF9900]/60" />
+            <span className="font-mono text-xs uppercase tracking-[0.25em] text-[#FFA724] font-semibold">
+              — AWS STUDENT BUILDER GROUP · DYPCOEI · AY 2026–27 —
+            </span>
+            <span className="h-[1px] w-8 bg-gradient-to-l from-transparent to-[#FF9900]/60" />
+          </div>
+          <h1 className="font-heading font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white tracking-tight">
+            My <span className="gradient-text-aws">AWS Journey</span>
+          </h1>
+          <p className="font-heading font-medium text-lg sm:text-xl text-slate-300 italic">
+            Building, Leading, and Innovating in the Cloud.
+          </p>
+          <p className="text-slate-400 text-sm sm:text-base max-w-3xl mx-auto leading-relaxed pt-2">
+            From discovering the fundamental architecture of cloud infrastructure to establishing and leading the <strong>AWS Student Builder Group at Dr. D. Y. Patil College of Engineering &amp; Innovation, Pune</strong>. This journey reflects a dedicated commitment to hands-on cloud skills, peer collaboration, and student community empowerment.
+          </p>
+        </div>
+
+        {/* Quick Identity Pills Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+          <div className="p-4 rounded-2xl glass-card border border-[#FF9900]/25 bg-[#FF9900]/5">
+            <span className="text-2xl block mb-1">☁️</span>
+            <span className="font-mono text-[10px] text-slate-400 uppercase font-semibold block">LEADERSHIP ROLE</span>
+            <span className="font-heading font-bold text-xs sm:text-sm text-white">Student Builder Leader</span>
+          </div>
+          <div className="p-4 rounded-2xl glass-card border border-[#FF9900]/25 bg-[#FF9900]/5">
+            <span className="text-2xl block mb-1">📅</span>
+            <span className="font-mono text-[10px] text-slate-400 uppercase font-semibold block">ACADEMIC YEAR</span>
+            <span className="font-heading font-bold text-xs sm:text-sm text-white">AY 2026–2027</span>
+          </div>
+          <div className="p-4 rounded-2xl glass-card border border-[#FF9900]/25 bg-[#FF9900]/5">
+            <span className="text-2xl block mb-1">🏛️</span>
+            <span className="font-mono text-[10px] text-slate-400 uppercase font-semibold block">CAMPUS CHAPTER</span>
+            <span className="font-heading font-bold text-xs sm:text-sm text-white">DYPCOEI Pune</span>
+          </div>
+          <div className="p-4 rounded-2xl glass-card border border-[#FF9900]/25 bg-[#FF9900]/5">
+            <span className="text-2xl block mb-1">🚀</span>
+            <span className="font-mono text-[10px] text-slate-400 uppercase font-semibold block">TECHNICAL FOCUS</span>
+            <span className="font-heading font-bold text-xs sm:text-sm text-white">Cloud Architecture &amp; AI</span>
+          </div>
+        </div>
+
+        {/* Official Distinction & Integrity Notice */}
+        <div className="p-4 rounded-2xl glass-card border border-white/10 bg-white/[0.02] flex items-start gap-3.5 text-xs text-slate-400 leading-relaxed">
+          <span className="text-base text-amber-400 shrink-0 mt-0.5">ℹ️</span>
+          <div>
+            <strong className="text-slate-200">Campus Student Community Leadership:</strong> The AWS Student Builder Group at DYPCOEI is an authentic student-led technical chapter focused on peer learning, workshops, and student innovation. My role as Student Builder Group Leader represents campus student leadership and developer enablement, distinct from official AWS corporate employment or certification.
+          </div>
+        </div>
+
+        {/* Interactive In-Page Navigation Strip */}
+        <div className="flex flex-wrap items-center justify-center gap-2 pt-2 text-xs font-mono">
+          {[
+            { id: 'all', label: 'All Sections', icon: '✦' },
+            { id: 'timeline', label: 'Timeline', icon: '⏳' },
+            { id: 'leadership', label: 'Leadership', icon: '👑' },
+            { id: 'team', label: 'Core Team', icon: '👥' },
+            { id: 'events', label: 'Events', icon: '📅' },
+            { id: 'skills', label: 'Cloud Skills', icon: '🛠️' },
+            { id: 'projects', label: 'Projects', icon: '💻' },
+            { id: 'credentials', label: 'Credentials', icon: '📜' },
+            { id: 'impact', label: 'Impact', icon: '🌱' },
+          ].map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`px-3.5 py-1.5 rounded-xl transition-all cursor-pointer flex items-center gap-1.5 ${
+                activeTab === tab.id
+                  ? 'bg-[#FF9900] text-black font-extrabold shadow-lg shadow-[#FF9900]/25 scale-105'
+                  : 'bg-white/[0.04] border border-white/10 text-slate-400 hover:text-white hover:border-[#FF9900]/40'
+              }`}
+            >
+              <span>{tab.icon}</span>
+              <span>{tab.label}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* ─── 2. THE PROGRESSION TIMELINE ─── */}
+      {(activeTab === 'all' || activeTab === 'timeline') && (
+        <section className="space-y-8">
+          <div className="text-center">
+            <span className="font-mono text-xs uppercase tracking-widest text-[#FFA724] font-semibold block mb-1">
+              CHRONOLOGICAL EVOLUTION
+            </span>
+            <h2 className="font-heading font-extrabold text-2xl sm:text-4xl text-white">
+              The <span className="gradient-text-aws">Progression Timeline</span>
+            </h2>
+            <p className="text-slate-400 text-xs sm:text-sm max-w-xl mx-auto mt-2">
+              From discovering the cloud to establishing and leading an active campus community.
+            </p>
+          </div>
+
+          <div className="relative pl-6 sm:pl-8 border-l-2 border-[#FF9900]/30 space-y-8 max-w-4xl mx-auto">
+            {awsProgressionTimeline.map((item) => (
+              <div
+                key={item.id}
+                className="relative group"
+              >
+                {/* Node indicator */}
+                <div className={`absolute -left-[31px] sm:-left-[39px] top-6 w-8 h-8 rounded-full border-2 flex items-center justify-center text-xs transition-all ${
+                  item.status === 'Completed'
+                    ? 'bg-[#030508] border-emerald-400 text-emerald-400 shadow-lg shadow-emerald-500/20'
+                    : item.status === 'Ongoing'
+                    ? 'bg-[#030508] border-[#FF9900] text-[#FF9900] shadow-lg shadow-[#FF9900]/30 animate-pulse'
+                    : 'bg-[#030508] border-cyan-400 text-cyan-400'
+                }`}>
+                  <span>{item.icon}</span>
+                </div>
+
+                <div className="glass-card-aws p-6 sm:p-7 rounded-2xl space-y-3 transition-all hover:translate-x-1">
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <div className="flex items-center gap-2">
+                      <span className="font-mono text-xs px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 text-slate-300 font-bold">
+                        PHASE {item.phase}
+                      </span>
+                      <span className="font-mono text-[11px] text-slate-400">{item.period}</span>
+                    </div>
+                    <span className={`font-mono text-[11px] px-2.5 py-0.5 rounded-full font-bold border ${
+                      item.statusColor === 'emerald'
+                        ? 'bg-emerald-500/15 border-emerald-500/30 text-emerald-300'
+                        : item.statusColor === 'amber'
+                        ? 'bg-amber-500/15 border-amber-500/30 text-amber-300'
+                        : 'bg-cyan-500/15 border-cyan-500/30 text-cyan-300'
+                    }`}>
+                      {item.statusBadge}
+                    </span>
+                  </div>
+
+                  <div>
+                    <h3 className="font-heading font-extrabold text-lg sm:text-xl text-white">
+                      {item.title}
+                    </h3>
+                    <p className="font-heading font-semibold text-xs sm:text-sm text-[#FFA724] mt-0.5">
+                      {item.subtitle}
+                    </p>
+                  </div>
+
+                  <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+
+                  <div className="flex flex-wrap gap-1.5 pt-1">
+                    {item.tags.map((tag) => (
+                      <span key={tag} className="tech-tag-aws">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* ─── 3. AWS STUDENT BUILDER GROUP LEADERSHIP ─── */}
+      {(activeTab === 'all' || activeTab === 'leadership') && (
+        <section className="space-y-8">
+          <div className="text-center">
+            <span className="font-mono text-xs uppercase tracking-widest text-[#FFA724] font-semibold block mb-1">
+              OFFICIAL MANDATE &amp; RESPONSIBILITIES
+            </span>
+            <h2 className="font-heading font-extrabold text-2xl sm:text-4xl text-white">
+              Student Builder Group <span className="gradient-text-aws">Leadership</span>
+            </h2>
+            <p className="text-slate-400 text-xs sm:text-sm max-w-2xl mx-auto mt-2">
+              Empowering peers through technical vision, structured roadmaps, and sustainable builder culture.
+            </p>
+          </div>
+
+          <div className="glass-card-aws p-8 sm:p-10 rounded-3xl border border-[#FF9900]/30 bg-gradient-to-br from-[#FF9900]/10 via-[#070c18] to-[#04060d] space-y-8 shadow-2xl">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <div className="lg:col-span-8 space-y-4">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF9900]/20 border border-[#FF9900]/40 text-xs font-mono text-[#FFA724] font-bold">
+                  <span>👑</span>
+                  <span>{awsLeadershipInfo.role} · {awsLeadershipInfo.academicYear}</span>
+                </div>
+                <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-white">
+                  Leading the Technical Community at <span className="text-[#FF9900]">DYPCOEI Pune</span>
+                </h3>
+                <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                  {awsLeadershipInfo.mission}
+                </p>
+
+                <div className="space-y-2 pt-2">
+                  <h4 className="font-mono text-xs text-[#FFA724] uppercase font-bold tracking-wider">
+                    Core Leadership Responsibilities:
+                  </h4>
+                  <div className="space-y-1.5 text-xs text-slate-300">
+                    {awsLeadershipInfo.responsibilities.map((resp, i) => (
+                      <div key={i} className="flex items-start gap-2.5">
+                        <span className="text-[#FF9900] font-bold">▸</span>
+                        <span>{resp}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Faculty Advisory Card */}
+              <div className="lg:col-span-4 p-6 rounded-2xl bg-black/40 border border-white/10 space-y-4">
+                <div className="flex items-center gap-2 border-b border-white/10 pb-3">
+                  <span className="text-lg">🏛️</span>
+                  <div>
+                    <h4 className="font-heading font-bold text-xs text-white uppercase tracking-wider">FACULTY ADVISORY</h4>
+                    <p className="font-mono text-[10px] text-slate-400">Department of AI &amp; Data Science</p>
+                  </div>
+                </div>
+
+                <div className="space-y-3 text-xs">
+                  {awsLeadershipInfo.facultyAdvisors.map((fac) => (
+                    <div key={fac.name} className="p-2.5 rounded-xl bg-white/[0.03] border border-white/5">
+                      <p className="font-heading font-bold text-white text-xs">{fac.name}</p>
+                      <p className="font-mono text-[11px] text-[#FFA724]">{fac.title}</p>
+                      <p className="font-mono text-[10px] text-slate-400">{fac.dept}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* 6 Core Mission Pillars */}
+            <div className="pt-6 border-t border-white/10 space-y-4">
+              <span className="font-mono text-xs uppercase tracking-widest text-slate-400 font-bold block text-center">
+                COMMUNITY MISSION &amp; STRATEGIC PILLARS
+              </span>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {awsLeadershipInfo.pillars.map((pill) => (
+                  <div key={pill.title} className="p-5 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-[#FF9900]/30 transition-all">
+                    <span className="text-2xl block mb-2">{pill.icon}</span>
+                    <h4 className="font-heading font-bold text-sm text-white">{pill.title}</h4>
+                    <p className="text-slate-400 text-xs mt-1 leading-relaxed">{pill.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ─── 4. CORE TEAM AND COMMUNITY BUILDING ─── */}
+      {(activeTab === 'all' || activeTab === 'team') && (
+        <section className="space-y-8">
+          <div className="text-center">
+            <span className="font-mono text-xs uppercase tracking-widest text-[#FFA724] font-semibold block mb-1">
+              LEADERSHIP STRUCTURE
+            </span>
+            <h2 className="font-heading font-extrabold text-2xl sm:text-4xl text-white">
+              Core Team &amp; <span className="gradient-text-aws">Community Building</span>
+            </h2>
+            <p className="text-slate-400 text-xs sm:text-sm max-w-2xl mx-auto mt-2">
+              An elegant visual representation of the AWS Student Builder Group&apos;s organizational structure.
+            </p>
+          </div>
+
+          <div className="space-y-6 max-w-5xl mx-auto">
+            {/* Group Leader Node (Top of Hierarchy) */}
+            <div className="flex justify-center">
+              <div className="w-full max-w-xl glass-card-aws p-6 sm:p-7 rounded-3xl border-2 border-[#FF9900] bg-gradient-to-r from-[#FF9900]/15 via-[#070c18] to-[#FF9900]/10 shadow-2xl relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#FF9900]/15 rounded-full blur-2xl pointer-events-none" />
+                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 text-center sm:text-left">
+                  <div className="w-16 h-16 rounded-2xl bg-[#FF9900] text-black font-extrabold text-2xl flex items-center justify-center shrink-0 shadow-lg shadow-[#FF9900]/30">
+                    👑
+                  </div>
+                  <div className="space-y-1.5 flex-1">
+                    <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-[#FF9900]/20 text-[#FFA724] text-[10px] font-mono font-bold uppercase">
+                      STUDENT BUILDER GROUP LEADER
+                    </div>
+                    <h3 className="font-heading font-extrabold text-xl sm:text-2xl text-white">
+                      Mohit Mundke
+                    </h3>
+                    <p className="font-mono text-xs text-slate-300">
+                      2nd Year · AI &amp; Data Science · DYPCOEI Pune
+                    </p>
+                    <p className="text-slate-400 text-xs leading-relaxed pt-1">
+                      Directing community vision, coordinating the 5 functional divisions, liaising with faculty coordinators, and empowering campus builders.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Connector line */}
+            <div className="flex justify-center">
+              <div className="w-0.5 h-8 bg-gradient-to-b from-[#FF9900] to-white/20" />
+            </div>
+
+            {/* 5 Core Positions Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {awsCoreTeamMembers.filter((m) => !m.isLeader).map((mem) => (
+                <div
+                  key={mem.name}
+                  className="glass-card p-6 rounded-2xl border border-white/10 hover:border-[#FF9900]/40 transition-all flex flex-col justify-between group"
+                >
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <span className="text-2xl">{mem.icon}</span>
+                      <span className="font-mono text-[10px] uppercase font-bold px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-slate-300">
+                        CORE LEAD
+                      </span>
+                    </div>
+
+                    <div>
+                      <span className="font-mono text-[11px] text-[#FFA724] font-bold block uppercase tracking-wider">
+                        {mem.position}
+                      </span>
+                      <h4 className="font-heading font-extrabold text-base sm:text-lg text-white mt-0.5">
+                        {mem.name}
+                      </h4>
+                      <p className="font-mono text-[11px] text-slate-400">
+                        {mem.academicYear}
+                      </p>
+                    </div>
+
+                    <p className="text-slate-300 text-xs leading-relaxed pt-1">
+                      {mem.responsibilities}
+                    </p>
+                  </div>
+
+                  <div className="pt-4 border-t border-white/5 mt-4 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                    <span>{mem.institution}</span>
+                    <span className="text-[#FF9900]">AY 2026–27</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ─── 5. EVENTS & INITIATIVES ─── */}
+      {(activeTab === 'all' || activeTab === 'events') && (
+        <section className="space-y-8">
+          <div className="text-center">
+            <span className="font-mono text-xs uppercase tracking-widest text-[#FFA724] font-semibold block mb-1">
+              CAMPUS ACTIVITIES &amp; WORKSHOPS
+            </span>
+            <h2 className="font-heading font-extrabold text-2xl sm:text-4xl text-white">
+              Events &amp; <span className="gradient-text-aws">Initiatives</span>
+            </h2>
+            <p className="text-slate-400 text-xs sm:text-sm max-w-2xl mx-auto mt-2">
+              Interactive technical workshops, hands-on bootcamps, and student innovation sprints.
+            </p>
+          </div>
+
+          {/* Event Filter Pills */}
+          <div className="flex items-center justify-center gap-2 text-xs font-mono">
+            {[
+              { id: 'all', label: 'All Initiatives' },
+              { id: 'upcoming', label: 'Upcoming' },
+              { id: 'planning', label: 'In Planning' },
+              { id: 'ongoing', label: 'Ongoing Sprints' },
+            ].map((f) => (
+              <button
+                key={f.id}
+                onClick={() => setEventFilter(f.id)}
+                className={`px-3 py-1.5 rounded-xl transition-all cursor-pointer ${
+                  eventFilter === f.id
+                    ? 'bg-[#FF9900] text-black font-bold shadow-md shadow-[#FF9900]/20'
+                    : 'bg-white/5 border border-white/10 text-slate-400 hover:text-white'
+                }`}
+              >
+                {f.label}
+              </button>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {filteredEvents.map((ev) => (
+              <div
+                key={ev.id}
+                className="glass-card-aws p-7 rounded-3xl border border-white/10 hover:border-[#FF9900]/40 transition-all flex flex-col justify-between space-y-5"
+              >
+                <div className="space-y-3">
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <span className="font-mono text-[11px] text-[#FFA724] font-semibold uppercase">
+                      {ev.category}
+                    </span>
+                    <span className={`font-mono text-[10px] px-2.5 py-0.5 rounded-full font-bold border ${
+                      ev.statusColor === 'amber'
+                        ? 'bg-amber-500/15 border-amber-500/30 text-amber-300'
+                        : ev.statusColor === 'cyan'
+                        ? 'bg-cyan-500/15 border-cyan-500/30 text-cyan-300'
+                        : 'bg-emerald-500/15 border-emerald-500/30 text-emerald-300'
+                    }`}>
+                      {ev.statusBadge}
+                    </span>
+                  </div>
+
+                  <h3 className="font-heading font-extrabold text-lg sm:text-xl text-white">
+                    {ev.title}
+                  </h3>
+
+                  <div className="grid grid-cols-2 gap-2 text-xs font-mono text-slate-400 bg-white/[0.02] p-3 rounded-xl border border-white/5">
+                    <div>
+                      <span className="text-[10px] uppercase text-slate-500 block">TIMELINE</span>
+                      <span className="text-slate-300 font-semibold">{ev.date}</span>
+                    </div>
+                    <div>
+                      <span className="text-[10px] uppercase text-slate-500 block">VENUE</span>
+                      <span className="text-slate-300 font-semibold">{ev.venue}</span>
+                    </div>
+                  </div>
+
+                  <div className="space-y-1 text-xs text-slate-300">
+                    <p><strong className="text-white">Role:</strong> {ev.role}</p>
+                    <p className="text-slate-400 leading-relaxed">{ev.description}</p>
+                  </div>
+
+                  <div className="space-y-1.5 pt-1">
+                    <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500 font-bold block">
+                      KEY TOPICS:
+                    </span>
+                    <div className="flex flex-wrap gap-1.5">
+                      {ev.keyTopics.map((top) => (
+                        <span key={top} className="tech-tag-aws">{top}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono">
+                  <span className="text-slate-500">AY 2026–27 Series</span>
+                  <span className="text-[#FFA724] font-semibold">{ev.linkText}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="p-6 rounded-2xl glass-card border border-white/10 text-center text-xs text-slate-400 max-w-2xl mx-auto">
+            🚀 <strong>Dynamic Community Calendar:</strong> More technical workshops, guest speaker sessions, and cloud hackathons will be published here as they take place throughout the academic year.
+          </div>
+        </section>
+      )}
+
+      {/* ─── 6. AWS SKILLS & TECHNICAL GROWTH ─── */}
+      {(activeTab === 'all' || activeTab === 'skills') && (
+        <section className="space-y-8">
+          <div className="text-center">
+            <span className="font-mono text-xs uppercase tracking-widest text-[#FFA724] font-semibold block mb-1">
+              HONEST PROFICIENCY MATRIX
+            </span>
+            <h2 className="font-heading font-extrabold text-2xl sm:text-4xl text-white">
+              AWS Skills &amp; <span className="gradient-text-aws">Technical Growth</span>
+            </h2>
+            <p className="text-slate-400 text-xs sm:text-sm max-w-2xl mx-auto mt-2">
+              Distinguishing between foundational concepts, hands-on console experience, and continuous learning.
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            {/* Category A: Cloud Computing */}
+            <div className="glass-card-aws p-7 rounded-3xl border border-white/10 space-y-4">
+              <div className="flex items-center gap-2.5">
+                <span className="text-2xl">🏛️</span>
+                <div>
+                  <h3 className="font-heading font-extrabold text-lg text-white">Cloud Computing Foundations</h3>
+                  <p className="font-mono text-xs text-slate-400">Core architectural concepts and global cloud paradigms</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                {awsSkillsMatrix.cloudComputing.map((item) => (
+                  <div key={item.name} className="p-4 rounded-2xl bg-white/[0.03] border border-white/5 space-y-2">
+                    <div className="flex items-center justify-between">
+                      <span className="font-mono text-[10px] px-2 py-0.5 rounded-full bg-[#FF9900]/15 text-[#FFA724] font-bold">
+                        {item.level}
+                      </span>
+                    </div>
+                    <h4 className="font-heading font-bold text-sm text-white">{item.name}</h4>
+                    <p className="text-slate-400 text-xs leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Category B: Cloud Services */}
+            <div className="glass-card-aws p-7 rounded-3xl border border-white/10 space-y-4">
+              <div className="flex items-center gap-2.5">
+                <span className="text-2xl">📦</span>
+                <div>
+                  <h3 className="font-heading font-extrabold text-lg text-white">AWS Cloud Services</h3>
+                  <p className="font-mono text-xs text-slate-400">Practically explored and utilized service components</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {awsSkillsMatrix.cloudServices.map((srv) => (
+                  <div key={srv.name} className="p-4 rounded-2xl bg-white/[0.03] border border-white/5 space-y-2">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xl">{srv.icon}</span>
+                      <span className={`font-mono text-[10px] px-2 py-0.5 rounded-full font-bold ${
+                        srv.level === 'Hands-on'
+                          ? 'bg-emerald-500/15 text-emerald-300 border border-emerald-500/30'
+                          : srv.level === 'Learning'
+                          ? 'bg-amber-500/15 text-amber-300 border border-amber-500/30'
+                          : 'bg-cyan-500/15 text-cyan-300 border border-cyan-500/30'
+                      }`}>
+                        {srv.level}
+                      </span>
+                    </div>
+                    <h4 className="font-heading font-bold text-sm text-white">{srv.name}</h4>
+                    <p className="text-slate-400 text-xs leading-relaxed">{srv.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Category C: Development & AI */}
+            <div className="glass-card-aws p-7 rounded-3xl border border-white/10 space-y-4">
+              <div className="flex items-center gap-2.5">
+                <span className="text-2xl">⚡</span>
+                <div>
+                  <h3 className="font-heading font-extrabold text-lg text-white">Development &amp; AI Integration</h3>
+                  <p className="font-mono text-xs text-slate-400">Languages, machine learning, and frontend integration stack</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {awsSkillsMatrix.developmentAi.map((dev) => (
+                  <div key={dev.name} className="p-4 rounded-2xl bg-white/[0.03] border border-white/5 space-y-2">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xl">{dev.icon}</span>
+                      <span className="font-mono text-[10px] px-2 py-0.5 rounded-full bg-violet-500/15 border border-violet-500/30 text-violet-300 font-bold">
+                        {dev.level}
+                      </span>
+                    </div>
+                    <h4 className="font-heading font-bold text-sm text-white">{dev.name}</h4>
+                    <p className="text-slate-400 text-xs leading-relaxed">{dev.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ─── 7. AWS PROJECTS & EXPERIMENTS ─── */}
+      {(activeTab === 'all' || activeTab === 'projects') && (
+        <section className="space-y-8">
+          <div className="text-center">
+            <span className="font-mono text-xs uppercase tracking-widest text-[#FFA724] font-semibold block mb-1">
+              PRACTICAL IMPLEMENTATIONS
+            </span>
+            <h2 className="font-heading font-extrabold text-2xl sm:text-4xl text-white">
+              AWS Projects &amp; <span className="gradient-text-aws">Experiments</span>
+            </h2>
+            <p className="text-slate-400 text-xs sm:text-sm max-w-2xl mx-auto mt-2">
+              Serverless architectures, telemetry pipelines, and practical cloud learning experiences.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {awsProjectsData.map((proj) => (
+              <div
+                key={proj.id}
+                className="glass-card-aws p-7 rounded-3xl border border-white/10 hover:border-[#FF9900]/40 transition-all flex flex-col justify-between space-y-5"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="font-mono text-[10px] px-2.5 py-0.5 rounded-full bg-[#FF9900]/15 text-[#FFA724] font-bold">
+                      {proj.statusBadge}
+                    </span>
+                    <span className="text-xl">☁️</span>
+                  </div>
+
+                  <div>
+                    <h3 className="font-heading font-extrabold text-lg sm:text-xl text-white">
+                      {proj.title}
+                    </h3>
+                    <p className="font-mono text-xs text-[#FFA724] mt-0.5">
+                      {proj.subtitle}
+                    </p>
+                  </div>
+
+                  <div className="space-y-2 text-xs">
+                    <div>
+                      <strong className="text-slate-300 block">Problem:</strong>
+                      <p className="text-slate-400 leading-relaxed">{proj.problem}</p>
+                    </div>
+                    <div>
+                      <strong className="text-slate-300 block">Architectural Solution:</strong>
+                      <p className="text-slate-400 leading-relaxed">{proj.solution}</p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-1.5 pt-1">
+                    <span className="font-mono text-[10px] uppercase text-slate-500 font-bold block">
+                      SERVICES USED:
+                    </span>
+                    <div className="flex flex-wrap gap-1.5">
+                      {proj.servicesUsed.map((s) => (
+                        <span key={s} className="tech-tag-aws">{s}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono">
+                  {proj.githubUrl && (
+                    <a
+                      href={proj.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#FFA724] hover:text-white flex items-center gap-1 font-semibold"
+                    >
+                      <span>View GitHub</span>
+                      <span>🐙 ↗</span>
+                    </a>
+                  )}
+                  {proj.isUpcoming && (
+                    <span className="text-emerald-400 italic">Continuous Building</span>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* ─── 8. CERTIFICATIONS, BADGES & ACHIEVEMENTS ─── */}
+      {(activeTab === 'all' || activeTab === 'credentials') && (
+        <section className="space-y-8">
+          <div className="text-center">
+            <span className="font-mono text-xs uppercase tracking-widest text-[#FFA724] font-semibold block mb-1">
+              OFFICIAL VERIFIED CREDENTIALS
+            </span>
+            <h2 className="font-heading font-extrabold text-2xl sm:text-4xl text-white">
+              Certifications &amp; <span className="gradient-text-aws">Achievements</span>
+            </h2>
+            <p className="text-slate-400 text-xs sm:text-sm max-w-2xl mx-auto mt-2">
+              Official learning certificates, campus appointments, and Skill Builder milestones.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {awsCredentialsData.map((cred) => (
+              <div
+                key={cred.id}
+                className="glass-card-aws p-7 rounded-3xl border border-white/10 hover:border-[#FF9900]/40 transition-all flex flex-col justify-between space-y-5"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-3xl">{cred.icon}</span>
+                    <span className="font-mono text-[10px] px-2.5 py-0.5 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 font-bold">
+                      {cred.badge}
+                    </span>
+                  </div>
+
+                  <div>
+                    <h3 className="font-heading font-extrabold text-base sm:text-lg text-white">
+                      {cred.title}
+                    </h3>
+                    <p className="font-mono text-xs text-[#FFA724] mt-0.5">
+                      {cred.issuer}
+                    </p>
+                    <p className="font-mono text-[10px] text-slate-400 mt-0.5">
+                      {cred.date}
+                    </p>
+                  </div>
+
+                  <p className="text-slate-300 text-xs leading-relaxed">
+                    {cred.desc}
+                  </p>
+
+                  {/* Certificate Image Thumbnail Preview if available */}
+                  {cred.image && (
+                    <div
+                      onClick={() => setSelectedCertModal(cred)}
+                      className="relative rounded-xl overflow-hidden border border-white/15 bg-black/40 cursor-pointer group/img aspect-[16/10] flex items-center justify-center"
+                    >
+                      <img
+                        src={getImageSrc(cred.image)}
+                        alt={cred.title}
+                        className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-0 bg-black/50 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center gap-2 text-white text-xs font-mono font-bold">
+                        <span>🔍 Inspect Certificate</span>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono">
+                  {cred.image ? (
+                    <button
+                      onClick={() => setSelectedCertModal(cred)}
+                      className="text-[#FFA724] hover:text-white font-bold flex items-center gap-1 cursor-pointer"
+                    >
+                      <span>View Verified Credential ✦</span>
+                    </button>
+                  ) : (
+                    <span className="text-slate-400">{cred.type}</span>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* ─── 9. AWS COMMUNITY IMPACT ("BUILDING BEYOND MYSELF") ─── */}
+      {(activeTab === 'all' || activeTab === 'impact') && (
+        <section className="space-y-8">
+          <div className="text-center">
+            <span className="font-mono text-xs uppercase tracking-widest text-[#FFA724] font-semibold block mb-1">
+              STUDENT COMMUNITY CONTRIBUTION
+            </span>
+            <h2 className="font-heading font-extrabold text-2xl sm:text-4xl text-white">
+              Building <span className="gradient-text-aws">Beyond Myself</span>
+            </h2>
+            <p className="text-slate-400 text-xs sm:text-sm max-w-2xl mx-auto mt-2">
+              How student leadership contributes to peer learning, collaboration, and real community growth.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {awsImpactHighlights.map((imp) => (
+              <div
+                key={imp.title}
+                className="glass-card-aws p-7 rounded-3xl border border-white/10 hover:border-[#FF9900]/30 transition-all space-y-3"
+              >
+                <span className="text-3xl block">{imp.icon}</span>
+                <h3 className="font-heading font-bold text-base sm:text-lg text-white">
+                  {imp.title}
+                </h3>
+                <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                  {imp.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* ─── 10. BOTTOM CONNECT & INVOLVEMENT BANNER ─── */}
+      <section className="pt-6">
+        <div className="glass-card-aws p-8 sm:p-12 rounded-3xl border border-[#FF9900]/30 bg-gradient-to-r from-[#FF9900]/15 via-[#070b16] to-[#04060d] text-center space-y-4 shadow-2xl relative overflow-hidden">
+          <div className="max-w-2xl mx-auto space-y-3">
+            <span className="font-mono text-xs uppercase tracking-widest text-[#FFA724] font-bold block">
+              JOIN THE BUILDER COMMUNITY
+            </span>
+            <h2 className="font-heading font-extrabold text-2xl sm:text-4xl text-white tracking-tight">
+              Ready to collaborate or <span className="gradient-text-aws">learn together?</span>
+            </h2>
+            <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+              Whether you are an engineering student at DYPCOEI looking to explore the cloud, a fellow developer, or an industry mentor interested in supporting student builders, let&apos;s connect!
+            </p>
+          </div>
+
+          <div className="flex flex-wrap items-center justify-center gap-3.5 pt-4">
+            <button
+              onClick={() => navigateTo('/contact')}
+              className="cta-aws px-8 py-3.5 rounded-full text-xs sm:text-sm font-bold shadow-lg shadow-[#FF9900]/30 cursor-pointer"
+            >
+              Get in Touch Directly →
+            </button>
+            <a
+              href={personalInfo.social.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-secondary px-7 py-3.5 rounded-full text-xs sm:text-sm font-semibold hover:border-[#FF9900]/50"
+            >
+              Connect on LinkedIn ↗
+            </a>
+            <a
+              href={`mailto:${personalInfo.email}`}
+              className="px-6 py-3.5 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-slate-300 hover:text-white hover:bg-white/10 transition-all"
+            >
+              Email Mohit ✉️
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── CERTIFICATE INSPECTION LIGHTBOX MODAL ─── */}
+      {selectedCertModal && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fadeIn"
+          onClick={() => setSelectedCertModal(null)}
+        >
+          <div
+            className="relative max-w-4xl w-full glass-card p-6 sm:p-8 rounded-3xl border border-[#FF9900]/40 bg-[#060914] space-y-5 shadow-2xl max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-start justify-between gap-4 border-b border-white/10 pb-4">
+              <div>
+                <span className="font-mono text-xs text-[#FFA724] font-bold uppercase">
+                  {selectedCertModal.issuer}
+                </span>
+                <h3 className="font-heading font-extrabold text-lg sm:text-2xl text-white mt-1">
+                  {selectedCertModal.title}
+                </h3>
+                <p className="font-mono text-xs text-slate-400 mt-0.5">
+                  Issued to: <strong>Mohit Mundke</strong> · {selectedCertModal.date}
+                </p>
+              </div>
+
+              <button
+                onClick={() => setSelectedCertModal(null)}
+                className="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white flex items-center justify-center text-lg transition-colors cursor-pointer shrink-0"
+              >
+                ✕
+              </button>
+            </div>
+
+            {selectedCertModal.image && (
+              <div className="rounded-2xl overflow-hidden border border-white/10 bg-black/50 shadow-inner">
+                <img
+                  src={getImageSrc(selectedCertModal.image)}
+                  alt={selectedCertModal.title}
+                  className="w-full h-auto object-contain max-h-[60vh] mx-auto"
+                />
+              </div>
+            )}
+
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+              <p className="text-xs text-slate-400">
+                Official credential verified in Mohit&apos;s achievement portfolio.
+              </p>
+
+              <div className="flex items-center gap-3">
+                {selectedCertModal.image && (
+                  <a
+                    href={getImageSrc(selectedCertModal.image)}
+                    download={selectedCertModal.downloadName || 'certificate.jpg'}
+                    target="_blank"
+                    className="cta-aws px-5 py-2.5 rounded-xl text-xs font-bold inline-flex items-center gap-1.5 shadow-md shadow-[#FF9900]/20"
+                  >
+                    <span>Download Official Image</span>
+                    <span>📥</span>
+                  </a>
+                )}
+                <button
+                  onClick={() => setSelectedCertModal(null)}
+                  className="cta-secondary px-5 py-2.5 rounded-xl text-xs font-semibold"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 }
@@ -3783,7 +5164,7 @@ function RecruiterPage({ navigateTo }) {
               Mohit Mundke — Executive Candidate Overview
             </h1>
             <p className="text-xs sm:text-sm text-slate-300 mt-1 max-w-2xl">
-              AI &amp; Data Science Student @ DYPCOEI Pune · Google Student Ambassador · Aspiring Software Engineer.
+              AI &amp; Data Science Student @ DYPCOEI Pune · Google Student Ambassador · AWS Student Builder Group Leader (AY 2026-27).
             </p>
           </div>
           <div className="flex flex-wrap gap-2.5">
@@ -3795,6 +5176,12 @@ function RecruiterPage({ navigateTo }) {
             >
               📄 Download Resume (PDF)
             </a>
+            <button
+              onClick={() => navigateTo('/aws-journey')}
+              className="cta-aws px-4 py-2.5 rounded-xl text-xs font-bold shadow-md shadow-[#FF9900]/20"
+            >
+              AWS Journey ☁️
+            </button>
             <button
               onClick={() => navigateTo('/')}
               className="px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-xs font-medium text-slate-300 hover:text-white"
@@ -3815,6 +5202,7 @@ function RecruiterPage({ navigateTo }) {
               <p>📱 <strong className="text-white">Phone:</strong> <a href={`tel:${personalInfo.phone}`} className="text-violet-400 hover:underline">{personalInfo.phone}</a></p>
               <p>🎓 <strong className="text-white">Program:</strong> B.Tech CSE (AI &amp; DS)</p>
               <p>🏛️ <strong className="text-white">College:</strong> DYPCOEI, Pune (2025–29)</p>
+              <p>☁️ <strong className="text-white">Leadership:</strong> AWS SBG Leader AY 26-27</p>
               <p>🗣️ <strong className="text-white">Languages:</strong> English, Hindi, Marathi</p>
             </div>
           </div>
@@ -3835,25 +5223,46 @@ function RecruiterPage({ navigateTo }) {
               <p className="font-mono font-bold text-blue-400 mb-1.5 uppercase">AI &amp; Data Science</p>
               <p className="text-slate-300">Python, Google Gemini AI, SQL, Pandas, NumPy, Data Analysis, Machine Learning Foundations</p>
             </div>
-            <div className="p-3.5 rounded-xl bg-white/5 border border-white/5">
-              <p className="font-mono font-bold text-cyan-400 mb-1.5 uppercase">Verified Credentials</p>
-              <p className="text-slate-300">Google Cybersecurity Certificate, Google Data Analytics Certificate, GSA Bronze Badge</p>
+            <div className="p-3.5 rounded-xl bg-white/5 border border-amber-500/20 bg-amber-500/5">
+              <p className="font-mono font-bold text-amber-400 mb-1.5 uppercase">Cloud &amp; AWS Core</p>
+              <p className="text-slate-300">Amazon EC2, S3, IAM, Cloud Architecture Foundations, AWS Academy, Serverless Basics</p>
             </div>
             <div className="p-3.5 rounded-xl bg-white/5 border border-white/5">
-              <p className="font-mono font-bold text-emerald-400 mb-1.5 uppercase">Leadership &amp; Collaboration</p>
-              <p className="text-slate-300">Campus Tech Advocacy, Initiative Execution (*Fund My Crazy*, *Glow-up Night*), Mentoring</p>
+              <p className="font-mono font-bold text-cyan-400 mb-1.5 uppercase">Verified Credentials</p>
+              <p className="text-slate-300">AWS Machine Learning &amp; AI, Google Cybersecurity, Google Data Analytics, GSA Bronze Badge</p>
+            </div>
+            <div className="sm:col-span-2 p-3.5 rounded-xl bg-white/5 border border-white/5">
+              <p className="font-mono font-bold text-emerald-400 mb-1.5 uppercase">Leadership &amp; Community Building</p>
+              <p className="text-slate-300">Student Builder Group Leader (AWS SBG DYPCOEI), Google Ambassador, Campus Tech Advocacy, Mentoring</p>
             </div>
           </div>
 
           <h4 className="font-heading font-bold text-sm text-white mt-6 mb-3">Key Experience Highlights</h4>
           <div className="space-y-3 text-xs">
+            <div className="p-3 rounded-xl bg-amber-500/10 border border-amber-500/25 flex justify-between items-start">
+              <div>
+                <p className="font-bold text-white flex items-center gap-1.5">
+                  <span>Student Builder Group Leader</span>
+                  <span className="text-[10px] text-amber-400 font-mono">✦ AY 2026-27</span>
+                </p>
+                <p className="text-amber-300/80">AWS Student Builder Group, DYPCOEI · May 2026 – Present</p>
+                <p className="text-slate-300 mt-1">Founding leadership mandate, coordinating 5 division heads, designing cloud workshops &amp; hackathons.</p>
+                <button
+                  onClick={() => navigateTo('/aws-journey')}
+                  className="mt-2 text-amber-300 hover:text-white font-mono text-[11px] font-bold inline-flex items-center gap-1"
+                >
+                  <span>Explore Dedicated AWS Journey Page →</span>
+                </button>
+              </div>
+              <span className="font-mono text-[10px] px-2 py-0.5 rounded bg-amber-400/20 text-amber-300 font-bold">AWS Leader</span>
+            </div>
             <div className="p-3 rounded-xl bg-white/5 border border-white/5 flex justify-between items-start">
               <div>
                 <p className="font-bold text-white">Google Student Ambassador (GID: 5314)</p>
                 <p className="text-slate-400">Google · May 2026 – Present</p>
                 <p className="text-slate-300 mt-1">Leading AI workshops on Gemini, executing campus developer initiatives.</p>
               </div>
-              <span className="font-mono text-[10px] px-2 py-0.5 rounded bg-amber-400/15 text-amber-300 font-bold">Bronze Badge</span>
+              <span className="font-mono text-[10px] px-2 py-0.5 rounded bg-blue-400/15 text-blue-300 font-bold">Google GSA</span>
             </div>
             <div className="p-3 rounded-xl bg-white/5 border border-white/5 flex justify-between items-start">
               <div>
@@ -3942,9 +5351,22 @@ function App() {
     setAiInput('');
 
     setTimeout(() => {
-      let reply = "Mohit is an AI & Data Science engineering student at DYPCOEI Pune and Google Student Ambassador (GID: 5314). Reach out at mohitmundke20@gmail.com!";
+      let reply = "Mohit is an AI & Data Science engineering student at DYPCOEI Pune, Google Student Ambassador (GID: 5314), and AWS Student Builder Group Leader (AY 2026-27). Reach out at mohitmundke20@gmail.com!";
 
-      if (q.includes('google') || q.includes('ambassador') || q.includes('gsa')) {
+      if (q.includes('aws') || q.includes('cloud') || q.includes('builder') || q.includes('sbg') || q.includes('suraj') || q.includes('dhavale') || q.includes('thorve')) {
+        reply = 
+          "Mohit is the **Student Builder Group Leader** of the **AWS Student Builder Group at DYPCOEI Pune** for Academic Year 2026–27! ☁️\n\n" +
+          "🏛️ **Campus Community**: Leading a student-driven technical community focused on AWS cloud computing education, hands-on architectural learning, and AI innovation.\n\n" +
+          "👥 **Core Team Leadership (5 Divisions)**:\n" +
+          "• **Mohit Mundke** — Student Builder Group Leader (2nd Year AI & DS)\n" +
+          "• **Dnyanada Dhavale** — Director of Events (3rd Year Computer Eng)\n" +
+          "• **Akanksha Mirge** — Director of Marketing (3rd Year Computer Eng)\n" +
+          "• **Mayuresh Thorve** — Technical Lead (3rd Year Computer Eng)\n" +
+          "• **Ishwari Bhope** — Multimedia Head (2nd Year AI-ML)\n" +
+          "• **Vaishnavee Sutar** — Documentation Head (2nd Year AI-ML)\n\n" +
+          "📜 **AWS Credential**: Certified in *Fundamentals of Machine Learning and Artificial Intelligence* (AWS Training & Certification).\n\n" +
+          "👉 Visit **#/aws-journey** to explore the complete AWS progression timeline, events, projects, and architecture!";
+      } else if (q.includes('google') || q.includes('ambassador') || q.includes('gsa')) {
         reply = "Mohit serves as a **Google Student Ambassador (GID: 5314 · Bronze Badge)**. He has spearheaded campus initiatives like *Fund My Crazy* and *Career Glow-up Night*, leading workshops on Google Gemini AI and developer tools.";
       } else if (q.includes('project') || q.includes('focusnext') || q.includes('soilosync') || q.includes('soil') || q.includes('wellness')) {
         reply = 
@@ -4005,7 +5427,7 @@ function App() {
                 Mohit Mundke
               </span>
               <span className="font-mono text-[10.5px] text-slate-400 font-medium tracking-tight hidden sm:block whitespace-nowrap">
-                AI &amp; Data Science <span className="text-slate-600">·</span> <span className="text-cyan-300 font-semibold">Google Ambassador</span>
+                AI &amp; Data Science <span className="text-slate-600">·</span> <span className="text-cyan-300 font-semibold">Google Ambassador</span> <span className="text-slate-600">·</span> <span className="text-amber-400 font-semibold">AWS SBG Leader</span>
               </span>
             </div>
           </button>
@@ -4015,16 +5437,22 @@ function App() {
             <nav className="nav-track hidden lg:flex items-center gap-0.5 xl:gap-1 p-1 rounded-xl">
               {navItems.map((item) => {
                 const isActive = route === item.id;
+                const isAws = item.isAws;
                 return (
                   <button
                     key={item.id}
                     onClick={() => navigateTo(item.id)}
                     className={`nav-pill-btn px-2 xl:px-2.5 py-1.5 text-[11.5px] xl:text-xs font-medium tracking-tight rounded-lg cursor-pointer ${
-                      isActive ? 'active font-semibold' : 'text-slate-400'
+                      isActive
+                        ? (isAws ? 'active-aws font-semibold text-amber-300 bg-amber-500/20 border border-amber-500/40 shadow-[0_0_12px_rgba(245,158,11,0.25)]' : 'active font-semibold')
+                        : (isAws ? 'text-amber-400/90 hover:text-amber-300 hover:bg-amber-500/10' : 'text-slate-400')
                     }`}
                   >
-                    <span>{item.label}</span>
-                    {isActive && <span className="nav-active-glow-bar" />}
+                    <span className="flex items-center gap-1">
+                      {isAws && <span className="text-[10px]">☁️</span>}
+                      <span>{item.label}</span>
+                    </span>
+                    {isActive && <span className={isAws ? "nav-active-glow-bar-aws" : "nav-active-glow-bar"} />}
                   </button>
                 );
               })}
@@ -4075,21 +5503,30 @@ function App() {
         {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
           <div className="lg:hidden pointer-events-auto fixed inset-x-3 top-20 rounded-2xl p-5 border border-white/15 shadow-2xl bg-[#070c1a]/95 backdrop-blur-2xl flex flex-col gap-2 z-50 animate-fadeIn">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => {
-                  navigateTo(item.id);
-                  setMobileMenuOpen(false);
-                }}
-                className={`px-4 py-2.5 rounded-xl text-sm font-medium text-left flex items-center justify-between transition-all ${
-                  route === item.id ? 'bg-gradient-to-r from-violet-600/30 to-blue-600/30 border border-violet-500/40 text-white font-bold' : 'text-slate-300 hover:bg-white/5'
-                }`}
-              >
-                <span>{item.label}</span>
-                {route === item.id && <span className="text-xs text-violet-400">✦</span>}
-              </button>
-            ))}
+            {navItems.map((item) => {
+              const isActive = route === item.id;
+              const isAws = item.isAws;
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => {
+                    navigateTo(item.id);
+                    setMobileMenuOpen(false);
+                  }}
+                  className={`px-4 py-2.5 rounded-xl text-sm font-medium text-left flex items-center justify-between transition-all ${
+                    isActive
+                      ? (isAws ? 'bg-gradient-to-r from-amber-600/30 to-orange-600/30 border border-amber-500/40 text-amber-200 font-bold' : 'bg-gradient-to-r from-violet-600/30 to-blue-600/30 border border-violet-500/40 text-white font-bold')
+                      : (isAws ? 'text-amber-300/90 hover:bg-amber-500/10' : 'text-slate-300 hover:bg-white/5')
+                  }`}
+                >
+                  <span className="flex items-center gap-2">
+                    {isAws && <span>☁️</span>}
+                    <span>{item.label}</span>
+                  </span>
+                  {isActive && <span className={`text-xs ${isAws ? 'text-amber-400' : 'text-violet-400'}`}>✦</span>}
+                </button>
+              );
+            })}
             <div className="pt-2 mt-2 border-t border-white/10 flex flex-col gap-2">
               <button
                 onClick={() => {
@@ -4129,6 +5566,7 @@ function App() {
         {route === '/about' && <AboutPage navigateTo={navigateTo} />}
         {route === '/skills' && <SkillsPage navigateTo={navigateTo} />}
         {route === '/experience' && <ExperiencePage navigateTo={navigateTo} />}
+        {route === '/aws-journey' && <AwsJourneyPage navigateTo={navigateTo} />}
         {route === '/projects' && <ProjectsPage navigateTo={navigateTo} />}
         {route === '/education' && <EducationPage navigateTo={navigateTo} />}
         {route === '/achievements' && <AchievementsPage navigateTo={navigateTo} />}
