@@ -90,7 +90,7 @@ const statsData = [
     icon: '🎓',
     value: 'GID 5314',
     label: 'Google Ambassador',
-    desc: 'Bronze Badge Leader',
+    desc: 'Silver Badge Leader',
     color: 'blue'
   },
   {
@@ -216,8 +216,8 @@ const experienceData = [
     company: 'Google',
     period: 'May 2026 – Present',
     type: 'Leadership & Community Advocacy',
-    badge: 'Bronze Badge Ambassador',
-    badgeColor: 'amber',
+    badge: 'Silver Badge Ambassador (The Navigator)',
+    badgeColor: 'blue',
     icon: '🏆',
     description: 'Leading technology awareness initiatives, organizing campus technical sessions on Google Gemini AI and modern developer tools, and driving student engagement through collaborative workshops.',
     responsibilities: [
@@ -438,14 +438,14 @@ const educationMilestones = [
 
 const achievementsData = [
   {
-    title: 'Google Student Ambassador (Bronze Badge)',
+    title: 'Google Student Ambassador (Silver Badge — The Navigator)',
     issuer: 'Google',
     type: 'Leadership Milestone',
     icon: '🏆',
     year: '2026',
-    color: 'amber',
-    badgeText: 'Official GSA Badge',
-    desc: 'Recognized with the official GSA Bronze Badge (GID: 5314) for driving impactful AI awareness initiatives and campus tech community leadership.'
+    color: 'blue',
+    badgeText: 'Official GSA Silver Badge',
+    desc: 'Awarded the official GSA Silver Badge — "The Navigator" (GID: 5314) for driving impactful AI awareness initiatives, campus tech community leadership, and guiding peers in AI innovation.'
   },
   {
     title: 'Google Cybersecurity Professional Certificate',
@@ -896,6 +896,63 @@ const galleryCategories = [
 ];
 
 const galleryData = [
+  {
+    id: 'gsa-silver-badge-navigator',
+    title: 'Google Student Ambassador — Silver Badge "The Navigator"',
+    category: 'ambassador',
+    categoryBadge: 'OFFICIAL GOOGLE BADGE',
+    specialBadge: '✦ SILVER BADGE MILESTONE',
+    secondaryBadge: '✦ THE NAVIGATOR',
+    cornerBadge: 'SILVER BADGE · GID: 5314',
+    gidBadge: 'GID: 5314',
+    date: '2026 Milestone',
+    dateFormatted: '2026 · Official Google Recognition',
+    organization: 'Google Student Ambassadors India · Team Gemini',
+    role: 'Google Student Ambassador · Silver Badge (The Navigator)',
+    program: 'Google Student Ambassador Program 2026',
+    institution: 'Dr. D. Y. Patil College of Engineering & Innovation (DYPCOEI)',
+    association: 'Team Gemini & Google Student Community',
+    issuedTo: 'Mohit Mundke',
+    actionButtonText: 'Inspect Silver Badge',
+    image: '/images/gsa-silver-badge-navigator.png',
+    imageAlt: 'Google Student Ambassador Silver Badge — The Navigator — Mohit Mundke (GID: 5314)',
+    downloadName: 'Mohit-Mundke-GSA-Silver-Badge-The-Navigator.png',
+    badgeStyle: 'bg-gradient-to-r from-slate-200/25 via-blue-500/25 to-indigo-500/25 border border-slate-300/40 text-slate-100',
+    pulseColor: 'bg-blue-400',
+    cardBg: 'from-slate-900/40 via-[#0a1224] to-[#030610]',
+    cardBorder: 'hover:border-blue-400/50',
+    topGlow: 'bg-blue-500/20',
+    bottomGlow: 'bg-slate-300/15',
+    captionBg: 'bg-slate-900/50 border-blue-500/30',
+    captionLabel: 'text-blue-300',
+    tagColor: 'text-blue-200 hover:border-blue-400/50',
+    isFeatured: true,
+    shortDescription: 'Earned the official Silver Badge — "The Navigator" as a Google Student Ambassador (GID: 5314), celebrating leadership in guiding student peers, conducting Google Gemini AI sessions, and community innovation.',
+    highlightsList: [
+      'Official Google Student Ambassador Milestone',
+      'Silver Badge — The Navigator',
+      'Issued to: Mohit Mundke',
+      'GID: 5314 · Team Gemini',
+      'AI & Machine Learning Campus Evangelism',
+      'Community Guidance & Mentorship',
+      'Google Gemini AI Developer Advocacy'
+    ],
+    caption: `Proud to achieve the official Silver Badge — "The Navigator" in the Google Student Ambassador Program 2026! 🌟
+
+This milestone reflects ongoing commitment to navigating and mentoring peers in modern AI tools, Google Gemini, and developer technologies, turning curiosity into real-world applications across campus.`,
+    tags: [
+      '#GoogleStudentAmbassador',
+      '#SilverBadge',
+      '#TheNavigator',
+      '#TeamGemini',
+      '#GoogleGemini',
+      '#GeminiAI',
+      '#GID5314',
+      '#CommunityLeadership',
+      '#StudentDeveloper',
+      '#AIInnovation'
+    ]
+  },
   {
     id: 'gsa-amazon-gift-card-reward',
     title: 'Google Student Ambassador Contributor Reward — First Earned Milestone',
@@ -2028,7 +2085,7 @@ function HomePage({ navigateTo }) {
                 <span className="text-xl sm:text-2xl filter drop-shadow">🏆</span>
                 <div className="flex flex-col text-left">
                   <span className="font-heading font-extrabold text-xs sm:text-sm text-white tracking-tight">Google Ambassador</span>
-                  <span className="font-mono text-[10px] sm:text-xs text-amber-300 font-bold tracking-wide">GID: 5314 · Bronze</span>
+                  <span className="font-mono text-[10px] sm:text-xs text-slate-200 font-bold tracking-wide">GID: 5314 · Silver</span>
                 </div>
               </div>
 
@@ -2535,20 +2592,20 @@ function ExperiencePage({ navigateTo }) {
 
       <div className="glass-card p-8 sm:p-10 rounded-3xl border-violet-500/30 bg-gradient-to-br from-violet-950/30 via-[#070b16] to-[#04060d]">
         <div className="max-w-3xl">
-          <span className="font-mono text-xs uppercase tracking-widest text-amber-400 font-bold">FEATURED LEADERSHIP STORY</span>
+          <span className="font-mono text-xs uppercase tracking-widest text-blue-400 font-bold">FEATURED LEADERSHIP STORY</span>
           <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-white mt-1 mb-4">
             Empowering student developers as a <span className="gradient-text">Google Ambassador</span>.
           </h2>
           <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
-            Stepping up as a <strong>Google Student Ambassador (GID: 5314 · Bronze Badge)</strong> transformed my perspective on technology. It taught me that impactful engineering is not only about writing clean code — it is about connecting with people, communicating possibilities, and empowering others to build.
+            Stepping up as a <strong>Google Student Ambassador (GID: 5314 · Silver Badge — The Navigator)</strong> transformed my perspective on technology. It taught me that impactful engineering is not only about writing clean code — it is about connecting with people, communicating possibilities, and empowering others to build.
           </p>
           <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
             Through campus initiatives like <em>Fund My Crazy</em> and <em>Career Glow-up Night</em>, I organized sessions where students explored Google Gemini, discussed real project ideas, and learned how to leverage modern AI developer tools.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs font-mono">
             <div className="p-3 rounded-xl bg-white/5 border border-white/10">
-              <p className="text-amber-400 font-bold">GID: 5314</p>
-              <p className="text-slate-400 text-[11px] mt-0.5">Bronze Badge Ambassador</p>
+              <p className="text-blue-400 font-bold">GID: 5314</p>
+              <p className="text-slate-400 text-[11px] mt-0.5">Silver Badge Ambassador (The Navigator)</p>
             </div>
             <div className="p-3 rounded-xl bg-white/5 border border-white/10">
               <p className="text-violet-400 font-bold">Key Initiatives</p>
@@ -5120,7 +5177,7 @@ function RecruiterPage({ navigateTo }) {
             </div>
             <div className="p-3.5 rounded-xl bg-white/5 border border-white/5">
               <p className="font-mono font-bold text-cyan-400 mb-1.5 uppercase">Verified Credentials</p>
-              <p className="text-slate-300">AWS Machine Learning &amp; AI, Google Cybersecurity, Google Data Analytics, GSA Bronze Badge</p>
+              <p className="text-slate-300">AWS Machine Learning &amp; AI, Google Cybersecurity, Google Data Analytics, GSA Silver Badge (The Navigator)</p>
             </div>
             <div className="sm:col-span-2 p-3.5 rounded-xl bg-white/5 border border-white/5">
               <p className="font-mono font-bold text-emerald-400 mb-1.5 uppercase">Leadership &amp; Community Building</p>
@@ -5262,7 +5319,7 @@ function App() {
           "📜 **AWS Credential**: Certified in *Fundamentals of Machine Learning and Artificial Intelligence* (AWS Training & Certification).\n\n" +
           "👉 Visit **#/aws-journey** to explore the complete AWS progression timeline, events, skills, credentials, and impact!";
       } else if (q.includes('google') || q.includes('ambassador') || q.includes('gsa')) {
-        reply = "Mohit serves as a **Google Student Ambassador (GID: 5314 · Bronze Badge)**. He has spearheaded campus initiatives like *Fund My Crazy* and *Career Glow-up Night*, leading workshops on Google Gemini AI and developer tools.";
+        reply = "Mohit serves as a **Google Student Ambassador (GID: 5314 · Silver Badge — The Navigator)**. He has spearheaded campus initiatives like *Fund My Crazy* and *Career Glow-up Night*, leading workshops on Google Gemini AI and developer tools.";
       } else if (q.includes('project') || q.includes('focusnext') || q.includes('soilosync') || q.includes('soil') || q.includes('wellness')) {
         reply = 
           "Mohit's featured projects include:\n\n" +
@@ -5279,17 +5336,18 @@ function App() {
         reply = 
           "Mohit's **Gallery (🎨 #/gallery)** showcases verified achievements and milestones:\n\n" +
           "1. 🏆 **Pixel War 2k26 UI/UX Design Battle** (DYPCOEI & BRAIN)\n" +
-          "2. 📜 **Fundamentals of ML & AI** (AWS Training & Certification)\n" +
-          "3. 📜 **Python for Data Science** (NPTEL · IIT Madras · 52% Score)\n" +
-          "4. 📜 **C & C++ Programming** (Imarticus Learning · Grade A)\n" +
-          "5. 🌟 **Google Gemini AI Student Ambassador 2026** (Campus Ambassador · GID: 5314)\n" +
-          "6. 🏛️ **BRAIN Foundation Membership 2026** (Academic Member · BRAIN-DRY261-S024)\n" +
-          "7. 💼 **Internship in Full Stack Development** (Thiranex · Remote / Project-Based)\n" +
-          "8. 🚀 **August 2026 Monthly Highlights — GSA** (Fund My Crazy & Leadership Growth)\n" +
-          "9. 📸 **GSA Highlights — June & July 2026** (Bronze Badge Milestone)\n" +
-          "10. 🤝 **Team Collaboration & Learning Session** (Google Meet Community Session)\n" +
-          "11. 💡 **Product Presentation & Team Discussion** (Interactive Workshop)\n" +
-          "12. 🚀 **Nano Banana Tutorial Session** (Hands-on Tutorial Workshop)";
+          "2. 🌟 **GSA Silver Badge — The Navigator** (Official Google Milestone · GID: 5314)\n" +
+          "3. 📜 **Fundamentals of ML & AI** (AWS Training & Certification)\n" +
+          "4. 📜 **Python for Data Science** (NPTEL · IIT Madras · 52% Score)\n" +
+          "5. 📜 **C & C++ Programming** (Imarticus Learning · Grade A)\n" +
+          "6. 🌟 **Google Gemini AI Student Ambassador 2026** (Campus Ambassador · GID: 5314)\n" +
+          "7. 🏛️ **BRAIN Foundation Membership 2026** (Academic Member · BRAIN-DRY261-S024)\n" +
+          "8. 💼 **Internship in Full Stack Development** (Thiranex · Remote / Project-Based)\n" +
+          "9. 🚀 **August 2026 Monthly Highlights — GSA** (Fund My Crazy & Leadership Growth)\n" +
+          "10. 📸 **GSA Highlights — June & July 2026** (Community Milestones)\n" +
+          "11. 🤝 **Team Collaboration & Learning Session** (Google Meet Community Session)\n" +
+          "12. 💡 **Product Presentation & Team Discussion** (Interactive Workshop)\n" +
+          "13. 🚀 **Nano Banana Tutorial Session** (Hands-on Tutorial Workshop)";
       }
 
       setAiMessages((prev) => [...prev, { role: 'assistant', text: reply }]);
