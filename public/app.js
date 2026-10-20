@@ -100,28 +100,41 @@ const statsData = [
     value: '2+',
     label: 'Projects',
     desc: 'Built & shipped',
-    color: 'purple'
+    color: 'purple',
+    route: '/projects'
   },
   {
     icon: '🏆',
     value: '2+',
     label: 'Hackathons',
     desc: 'Participated & competed',
-    color: 'amber'
+    color: 'amber',
+    route: '/gallery'
   },
   {
     icon: '🎓',
     value: 'GID 5314',
     label: 'Google Ambassador',
     desc: 'Silver Badge Leader',
-    color: 'blue'
+    color: 'blue',
+    route: '/gallery'
+  },
+  {
+    isAws: true,
+    icon: 'aws',
+    value: 'AY 26–27',
+    label: 'AWS SBG Leader',
+    desc: 'DYPCOEI Pune Chapter',
+    color: 'aws',
+    route: '/aws-journey'
   },
   {
     icon: '</>',
     value: '10+',
     label: 'Technologies',
     desc: 'Continuous learning',
-    color: 'cyan'
+    color: 'cyan',
+    route: '/skills'
   }
 ];
 
@@ -462,84 +475,175 @@ const educationMilestones = [
 
 const achievementsData = [
   {
+    id: 'aws-sbg-leader',
+    title: 'Student Builder Group Leader (AY 2026–27)',
+    issuer: 'AWS Student Builder Group · DYPCOEI Pune',
+    type: 'Community Leadership Milestone',
+    category: 'aws',
+    isAws: true,
+    icon: 'aws',
+    year: 'AY 2026–27',
+    color: 'amber',
+    badgeText: 'AWS Chapter Leader ✓',
+    desc: 'Appointed as Student Builder Group Leader at Dr. D. Y. Patil College of Engineering & Innovation, Pune under Department of AI & Data Science. Spearheading campus cloud adoption, technical initiatives, and 5-division core team governance.',
+    highlights: ['Chapter Inception', '5-Division Governance', 'DYPCOEI Pune'],
+    ctaLink: '/aws-journey',
+    ctaText: 'Explore AWS Hub'
+  },
+  {
+    id: 'aws-ml-ai',
+    title: 'Fundamentals of Machine Learning and Artificial Intelligence',
+    issuer: 'AWS Training & Certification',
+    type: 'Official Technical Credential',
+    category: 'aws',
+    isAws: true,
+    icon: 'aws',
+    year: 'Verified Credential',
+    color: 'amber',
+    badgeText: 'AWS Certified Learning ✓',
+    desc: 'Official technical completion credential validating foundational competencies in machine learning pipelines, deep learning algorithms, AI architectures, data preprocessing, and Amazon Web Services cloud AI services.',
+    highlights: ['Machine Learning Pipelines', 'Cloud AI Services', 'Deep Learning'],
+    hasCertificate: true,
+    certificateImage: '/images/aws-ml-ai-certificate.jpg',
+    ctaLink: '/aws-journey',
+    ctaText: 'View in AWS Hub'
+  },
+  {
+    id: 'aws-skill-builder',
+    title: 'AWS Skill Builder Learning Pathways & Cloud Foundations',
+    issuer: 'AWS Skill Builder · Amazon Web Services',
+    type: 'Digital Learning Credential',
+    category: 'aws',
+    isAws: true,
+    icon: 'aws',
+    year: 'Continuous Learning',
+    color: 'amber',
+    badgeText: 'Skill Builder Track ✓',
+    desc: 'Continuous engagement with AWS Skill Builder curriculums, completing foundational learning tracks covering AWS Global Infrastructure (Regions, AZs, Edge Locations), Amazon EC2 compute, S3 scalable storage, IAM access control, and AWS Cloud Security.',
+    highlights: ['AWS Global Infrastructure', 'EC2 & S3 Primitives', 'IAM & Cloud Security'],
+    ctaLink: '/aws-journey',
+    ctaText: 'Explore Cloud Path'
+  },
+  {
+    id: 'aws-chapter-charter',
+    title: 'Established AWS SBG Chapter Charter & 5-Division Core Team',
+    issuer: 'AWS Student Builder Group · DYPCOEI',
+    type: 'Institutional Leadership Milestone',
+    category: 'aws',
+    isAws: true,
+    icon: 'aws',
+    year: 'AY 2026–27',
+    color: 'amber',
+    badgeText: 'Institutional Milestone ✓',
+    desc: 'Architected the formal chapter blueprint and community charter at DYPCOEI Pune. Established and directing 5 core divisions (Technical, Events, Marketing, Multimedia, Documentation) uniting 15+ student leaders.',
+    highlights: ['15+ Core Student Leaders', '5 Specialized Divisions', 'Structured Roadmaps'],
+    ctaLink: '/aws-journey',
+    ctaText: 'View 5-Division Team'
+  },
+  {
+    id: 'aws-hands-on-curriculum',
+    title: 'AWS Cloud & AI Hands-On Workshop Curriculum Design',
+    issuer: 'AWS Student Builder Group · Technical Wing',
+    type: 'Technical Initiative Milestone',
+    category: 'aws',
+    isAws: true,
+    icon: 'aws',
+    year: 'Active Roadmap',
+    color: 'amber',
+    badgeText: 'Builder Milestone ✓',
+    desc: 'Authored practical, terminal-first curriculum roadmaps bridging AWS Cloud infrastructure with Google Gemini AI and applied machine learning for 200+ undergraduate peers across campus.',
+    highlights: ['Terminal-First Labs', 'Cloud + GenAI Integrations', 'Peer Roadmaps'],
+    ctaLink: '/aws-journey',
+    ctaText: 'View Workshops'
+  },
+  {
+    id: 'gsa-silver-badge',
     title: 'Google Student Ambassador (Silver Badge — The Navigator)',
     issuer: 'Google',
     type: 'Leadership Milestone',
+    category: 'google',
+    isGoogle: true,
     icon: '🏆',
     year: '2026',
     color: 'blue',
     badgeText: 'Official GSA Silver Badge',
-    desc: 'Awarded the official GSA Silver Badge — "The Navigator" (GID: 5314) for driving impactful AI awareness initiatives, campus tech community leadership, and guiding peers in AI innovation.'
+    desc: 'Awarded the official GSA Silver Badge — "The Navigator" (GID: 5314) for driving impactful AI awareness initiatives, campus tech community leadership, and guiding peers in AI innovation.',
+    highlights: ['GID: 5314', 'The Navigator', 'AI Campus Community'],
+    ctaLink: '/gallery',
+    ctaText: 'View in Gallery'
   },
   {
+    id: 'google-cybersecurity',
     title: 'Google Cybersecurity Professional Certificate',
     issuer: 'Google',
     type: 'Professional Certification',
+    category: 'certification',
+    isGoogle: true,
     icon: '🛡️',
     year: 'Verified',
     color: 'cyan',
     badgeText: 'Google Certified ✓',
-    desc: 'Comprehensive training in cybersecurity foundations, threat detection, network security, Linux command line, SQL, and security operations.'
+    desc: 'Comprehensive training in cybersecurity foundations, threat detection, network security, Linux command line, SQL, and security operations.',
+    highlights: ['Threat Detection', 'Network Security', 'Linux & SQL']
   },
   {
+    id: 'google-data-analytics',
     title: 'Google Data Analytics Professional Certificate',
     issuer: 'Google',
     type: 'Professional Certification',
+    category: 'certification',
+    isGoogle: true,
     icon: '📊',
     year: 'Verified',
     color: 'blue',
     badgeText: 'Google Certified ✓',
-    desc: 'Rigorous credential covering data cleaning, analysis, SQL, visualization, R programming, and data-driven problem solving.'
+    desc: 'Rigorous credential covering data cleaning, analysis, SQL, visualization, R programming, and data-driven problem solving.',
+    highlights: ['Data Cleaning', 'SQL & R Programming', 'Tableau Dashboards']
   },
   {
-    title: 'Campus Technical Contributor',
-    issuer: 'DYPCOEI Pune',
-    type: 'Community Honor',
-    icon: '🌟',
-    year: 'Active',
-    color: 'purple',
-    badgeText: 'Campus Recognition',
-    desc: 'Recognized for active participation in college developer initiatives, AI workshops, and peer academic mentoring.'
-  },
-  {
+    id: 'team-gemini-600',
     title: 'Team Gemini Explorer — 600 Points Milestone',
     issuer: 'Google Student Ambassadors · Team Gemini',
     type: 'Leadership Milestone',
+    category: 'google',
+    isGoogle: true,
     icon: '🚀',
     year: '2026',
     color: 'blue',
     badgeText: '600 Points Achieved ✓',
-    desc: 'Completed 600 points milestone over 5 months of active ambassadorship (GID: 5314), unlocking official Team Gemini Bronze Explorer rewards.'
+    desc: 'Completed 600 points milestone over 5 months of active ambassadorship (GID: 5314), unlocking official Team Gemini Bronze Explorer rewards.',
+    highlights: ['600 Points Unlocked', 'Team Gemini Rewards', 'Campus Evangelism'],
+    ctaLink: '/gallery',
+    ctaText: 'View Milestone'
   },
   {
+    id: 'gsa-contributor-reward',
     title: 'GSA Contributor Reward — First Earned Milestone',
     issuer: 'Google Student Ambassadors (India)',
     type: 'Contributor Recognition',
+    category: 'google',
+    isGoogle: true,
     icon: '🎁',
     year: '2026',
     color: 'emerald',
     badgeText: 'Official GSA Reward ✓',
-    desc: 'Awarded Amazon Pay contributor gift card in recognition of active leadership, event execution, and community participation as a Google Student Ambassador (GID: 5314).'
+    desc: 'Awarded Amazon Pay contributor gift card in recognition of active leadership, event execution, and community participation as a Google Student Ambassador (GID: 5314).',
+    highlights: ['First Earned Milestone', 'Contributor Award', 'Event Execution'],
+    ctaLink: '/gallery',
+    ctaText: 'View Award'
   },
   {
-    title: 'Student Builder Group Leader (AY 2026–27)',
-    issuer: 'AWS Student Builder Group · DYPCOEI',
-    type: 'Community Leadership Milestone',
-    icon: '☁️',
-    year: '2026–27',
-    color: 'amber',
-    badgeText: 'AWS SBG Leader ✓',
-    desc: 'Appointed as Student Builder Group Leader at Dr. D. Y. Patil College of Engineering & Innovation, Pune, heading campus cloud initiatives and core team governance.'
-  },
-  {
-    title: 'Fundamentals of Machine Learning and Artificial Intelligence',
-    issuer: 'AWS Training & Certification',
-    type: 'Official Technical Credential',
-    icon: '📜',
-    year: 'Verified',
-    color: 'amber',
-    badgeText: 'AWS Certified Learning ✓',
-    desc: 'Validated understanding of machine learning algorithms, deep learning models, data preprocessing, and cloud AI fundamentals through AWS Training & Certification.'
+    id: 'campus-tech-contributor',
+    title: 'Campus Technical Contributor',
+    issuer: 'DYPCOEI Pune',
+    type: 'Community Honor',
+    category: 'leadership',
+    icon: '🌟',
+    year: 'Active',
+    color: 'purple',
+    badgeText: 'Campus Recognition',
+    desc: 'Recognized for active participation in college developer initiatives, AI workshops, hackathon organizing, and peer academic mentoring.',
+    highlights: ['Developer Initiatives', 'Hackathons', 'Peer Mentoring']
   }
 ];
 
@@ -2152,27 +2256,51 @@ function HomePage({ navigateTo }) {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5">
           {statsData.map((stat, i) => (
             <div
               key={stat.label}
-              className={`reveal-up delay-${(i + 1) * 100} glass-card p-6 rounded-3xl relative overflow-hidden group flex flex-col justify-between items-center text-center`}
+              onClick={() => stat.route && navigateTo(stat.route)}
+              className={`reveal-up delay-${(i + 1) * 100} ${
+                stat.isAws
+                  ? 'glass-card-aws border border-[#FF9900]/40 hover:border-[#FF9900]/70 hover:shadow-lg hover:shadow-[#FF9900]/15 bg-gradient-to-br from-[#FF9900]/10 via-[#070c18] to-[#04060d]'
+                  : 'glass-card border border-white/10 hover:border-violet-500/40'
+              } p-5 sm:p-6 rounded-3xl relative overflow-hidden group flex flex-col justify-between items-center text-center cursor-pointer transition-all duration-300`}
             >
               <div className="corner-accent corner-tl" />
               <div className="corner-accent corner-tr" />
               <div className="corner-accent corner-bl" />
               <div className="corner-accent corner-br" />
 
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-violet-600/20 via-blue-600/15 to-transparent border border-white/10 flex items-center justify-center text-xl mb-3 group-hover:scale-110 transition-all duration-300">
-                {stat.icon}
+              <div className={`w-12 h-12 rounded-2xl flex items-center justify-center text-xl mb-3 group-hover:scale-110 transition-all duration-300 ${
+                stat.isAws
+                  ? 'bg-gradient-to-br from-[#FF9900]/25 via-amber-600/15 to-transparent border border-[#FF9900]/40 shadow-sm shadow-[#FF9900]/20 p-2'
+                  : 'bg-gradient-to-br from-violet-600/20 via-blue-600/15 to-transparent border border-white/10'
+              }`}>
+                {stat.isAws ? <AwsLogo className="w-6 h-6 inline-block" /> : stat.icon}
               </div>
-              <span className="font-space font-extrabold text-3xl text-white tracking-tight my-0.5">
+              <span className={`font-space font-extrabold text-2xl sm:text-3xl tracking-tight my-0.5 ${
+                stat.isAws ? 'text-white group-hover:text-[#FFA724] transition-colors' : 'text-white'
+              }`}>
                 {stat.value}
               </span>
-              <h4 className="font-heading font-bold text-xs text-white">{stat.label}</h4>
+              <h4 className={`font-heading font-bold text-xs ${
+                stat.isAws ? 'text-[#FFA724]' : 'text-white'
+              }`}>{stat.label}</h4>
               <p className="font-mono text-[11px] text-slate-400">{stat.desc}</p>
             </div>
           ))}
+        </div>
+
+        <div className="flex flex-wrap items-center justify-center gap-4 mt-6">
+          <button
+            onClick={() => navigateTo('/achievements')}
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#FF9900]/40 text-slate-300 hover:text-white transition-all group"
+          >
+            <AwsLogo className="w-3.5 h-3.5" />
+            <span>Explore All Achievements &amp; AWS Milestones</span>
+            <span className="group-hover:translate-x-1 transition-transform">→</span>
+          </button>
         </div>
 
         <div className="flex items-center justify-center gap-4 mt-8 max-w-xl mx-auto opacity-75 text-center">
@@ -4151,8 +4279,28 @@ function EducationPage({ navigateTo }) {
    PAGE 7: ACHIEVEMENTS (DEDICATED ACHIEVEMENTS PAGE)
    ═══════════════════════════════════════════════════════════════════ */
 function AchievementsPage({ navigateTo }) {
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [selectedCertificate, setSelectedCertificate] = useState(null);
+
+  // Compute category counts
+  const countAll = achievementsData.length;
+  const countAws = achievementsData.filter(a => a.isAws || a.category === 'aws').length;
+  const countGoogle = achievementsData.filter(a => a.isGoogle || a.category === 'google').length;
+  const countCerts = achievementsData.filter(a => a.type.toLowerCase().includes('certification') || a.type.toLowerCase().includes('credential') || a.category === 'certification').length;
+  const countLead = achievementsData.filter(a => a.type.toLowerCase().includes('leadership') || a.category === 'leadership').length;
+
+  const filteredAchievements = achievementsData.filter(ach => {
+    if (activeCategory === 'all') return true;
+    if (activeCategory === 'aws') return ach.isAws || ach.category === 'aws';
+    if (activeCategory === 'google') return ach.isGoogle || ach.category === 'google';
+    if (activeCategory === 'certifications') return ach.type.toLowerCase().includes('certification') || ach.type.toLowerCase().includes('credential') || ach.category === 'certification';
+    if (activeCategory === 'leadership') return ach.type.toLowerCase().includes('leadership') || ach.category === 'leadership';
+    return true;
+  });
+
   return (
-    <div className="page-container max-w-6xl mx-auto px-4 py-10 space-y-16">
+    <div className="page-container max-w-6xl mx-auto px-4 py-10 space-y-14">
+      {/* ── Header ── */}
       <div className="text-center reveal">
         <div className="flex items-center justify-center gap-3 mb-2">
           <span className="h-[1px] w-8 bg-gradient-to-r from-transparent to-violet-500/60" />
@@ -4165,82 +4313,367 @@ function AchievementsPage({ navigateTo }) {
           Achievements &amp; <span className="gradient-text">Milestones</span>
         </h1>
         <p className="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto mt-3 leading-relaxed">
-          Verified professional certifications, awards, and technical leadership milestones.
+          Verified professional certifications, awards, AWS cloud leadership milestones, and campus technical initiatives.
         </p>
       </div>
 
+      {/* ── Featured AWS Leadership Spotlight Banner ── */}
+      <div className="glass-card-aws p-7 sm:p-9 rounded-3xl border border-[#FF9900]/30 bg-gradient-to-br from-[#FF9900]/12 via-[#070c18] to-[#04060d] relative overflow-hidden group hover:border-[#FF9900]/50 transition-all shadow-xl reveal">
+        <div className="corner-accent corner-tl" />
+        <div className="corner-accent corner-tr" />
+        <div className="corner-accent corner-bl" />
+        <div className="corner-accent corner-br" />
+
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative z-10">
+          <div className="space-y-3 max-w-2xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF9900]/15 border border-[#FF9900]/30 font-mono text-xs text-[#FFA724]">
+              <AwsLogo className="w-3.5 h-3.5 inline-block" />
+              <span>AWS STUDENT BUILDER GROUP · CAMPUS CHAPTER</span>
+            </div>
+            <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-white tracking-tight">
+              Leading AWS Community at <span className="gradient-text-aws">DYPCOEI Pune (AY 2026–27)</span>
+            </h3>
+            <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+              Spearheading the student technical chapter under Department of AI &amp; Data Science. Leading a 5-division core team (Events, Marketing, Technical, Multimedia, Documentation) to inspire hands-on cloud architecture, console walkthroughs, and peer innovation.
+            </p>
+            <div className="flex flex-wrap gap-2 pt-1">
+              <span className="px-2.5 py-1 rounded-lg bg-black/40 border border-[#FF9900]/30 text-[#FFA724] font-mono text-[11px] flex items-center gap-1.5">
+                <AwsLogo className="w-3 h-3" />
+                <span>Student Builder Group Leader</span>
+              </span>
+              <span className="px-2.5 py-1 rounded-lg bg-black/40 border border-[#FF9900]/30 text-[#FFA724] font-mono text-[11px]">
+                📜 AWS ML &amp; AI Verified Credential
+              </span>
+              <span className="px-2.5 py-1 rounded-lg bg-black/40 border border-[#FF9900]/30 text-[#FFA724] font-mono text-[11px]">
+                🏛️ 5 Specialized Divisions
+              </span>
+            </div>
+          </div>
+          <button
+            onClick={() => navigateTo('/aws-journey')}
+            className="cta-aws px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold shrink-0 flex items-center gap-2.5 shadow-lg shadow-[#FF9900]/20 hover:scale-105 transition-transform cursor-pointer"
+          >
+            <AwsLogo className="w-5 h-5 shrink-0" />
+            <span>Explore Dedicated AWS Journey →</span>
+          </button>
+        </div>
+      </div>
+
+      {/* ── Journey in Numbers (Stats) ── */}
       <div className="space-y-6">
         <h3 className="font-heading font-bold text-xl text-white text-center">My Journey in Numbers</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5">
           {statsData.map((stat, i) => (
             <div
               key={stat.label}
-              className={`reveal-up delay-${(i + 1) * 100} glass-card p-6 rounded-3xl relative overflow-hidden group flex flex-col justify-between items-center text-center`}
+              onClick={() => stat.route && navigateTo(stat.route)}
+              className={`reveal-up delay-${(i + 1) * 100} ${
+                stat.isAws
+                  ? 'glass-card-aws border border-[#FF9900]/40 hover:border-[#FF9900]/70 hover:shadow-lg hover:shadow-[#FF9900]/15 bg-gradient-to-br from-[#FF9900]/10 via-[#070c18] to-[#04060d]'
+                  : 'glass-card border border-white/10 hover:border-violet-500/40'
+              } p-5 sm:p-6 rounded-3xl relative overflow-hidden group flex flex-col justify-between items-center text-center cursor-pointer transition-all duration-300`}
             >
               <div className="corner-accent corner-tl" />
               <div className="corner-accent corner-tr" />
               <div className="corner-accent corner-bl" />
               <div className="corner-accent corner-br" />
 
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-violet-600/20 via-blue-600/15 to-transparent border border-white/10 flex items-center justify-center text-xl mb-3 group-hover:scale-110 transition-all duration-300">
-                {stat.icon}
+              <div className={`w-12 h-12 rounded-2xl flex items-center justify-center text-xl mb-3 group-hover:scale-110 transition-all duration-300 ${
+                stat.isAws
+                  ? 'bg-gradient-to-br from-[#FF9900]/25 via-amber-600/15 to-transparent border border-[#FF9900]/40 shadow-sm shadow-[#FF9900]/20 p-2'
+                  : 'bg-gradient-to-br from-violet-600/20 via-blue-600/15 to-transparent border border-white/10'
+              }`}>
+                {stat.isAws ? <AwsLogo className="w-6 h-6 inline-block" /> : stat.icon}
               </div>
-              <span className="font-space font-extrabold text-3xl text-white tracking-tight my-0.5">
+              <span className={`font-space font-extrabold text-2xl sm:text-3xl tracking-tight my-0.5 ${
+                stat.isAws ? 'text-white group-hover:text-[#FFA724] transition-colors' : 'text-white'
+              }`}>
                 {stat.value}
               </span>
-              <h4 className="font-heading font-bold text-xs text-white">{stat.label}</h4>
+              <h4 className={`font-heading font-bold text-xs ${
+                stat.isAws ? 'text-[#FFA724]' : 'text-white'
+              }`}>{stat.label}</h4>
               <p className="font-mono text-[11px] text-slate-400">{stat.desc}</p>
             </div>
           ))}
         </div>
       </div>
 
+      {/* ── Category Filter Tabs ── */}
       <div className="space-y-6">
-        <h3 className="font-heading font-bold text-xl text-white">Verified Certifications &amp; Reserved Slots</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {achievementsData.map((ach) => (
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <h3 className="font-heading font-bold text-xl text-white">
+            Verified Certifications, AWS &amp; Leadership Milestones
+          </h3>
+          <span className="font-mono text-xs text-slate-400">
+            Showing {filteredAchievements.length} of {achievementsData.length} entries
+          </span>
+        </div>
+
+        {/* Filter buttons */}
+        <div className="flex flex-wrap items-center gap-2 pb-2">
+          <button
+            onClick={() => setActiveCategory('all')}
+            className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-1.5 cursor-pointer ${
+              activeCategory === 'all'
+                ? 'bg-violet-600 text-white shadow-lg shadow-violet-600/30'
+                : 'bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10'
+            }`}
+          >
+            <span>All Milestones</span>
+            <span className="px-1.5 py-0.2 rounded-full text-[10px] bg-white/20">{countAll}</span>
+          </button>
+
+          <button
+            onClick={() => setActiveCategory('aws')}
+            className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-1.5 cursor-pointer ${
+              activeCategory === 'aws'
+                ? 'bg-[#FF9900] text-black font-bold shadow-lg shadow-[#FF9900]/30'
+                : 'bg-[#FF9900]/10 hover:bg-[#FF9900]/20 text-[#FFA724] border border-[#FF9900]/30'
+            }`}
+          >
+            <AwsLogo className="w-3.5 h-3.5 inline-block" />
+            <span>AWS Cloud &amp; Leadership</span>
+            <span className="px-1.5 py-0.2 rounded-full text-[10px] bg-black/20 text-current">{countAws}</span>
+          </button>
+
+          <button
+            onClick={() => setActiveCategory('google')}
+            className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-1.5 cursor-pointer ${
+              activeCategory === 'google'
+                ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/30'
+                : 'bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10'
+            }`}
+          >
+            <span>Google &amp; AI</span>
+            <span className="px-1.5 py-0.2 rounded-full text-[10px] bg-white/20">{countGoogle}</span>
+          </button>
+
+          <button
+            onClick={() => setActiveCategory('certifications')}
+            className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-1.5 cursor-pointer ${
+              activeCategory === 'certifications'
+                ? 'bg-cyan-600 text-white shadow-lg shadow-cyan-600/30'
+                : 'bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10'
+            }`}
+          >
+            <span>Certifications</span>
+            <span className="px-1.5 py-0.2 rounded-full text-[10px] bg-white/20">{countCerts}</span>
+          </button>
+
+          <button
+            onClick={() => setActiveCategory('leadership')}
+            className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-1.5 cursor-pointer ${
+              activeCategory === 'leadership'
+                ? 'bg-amber-600 text-white shadow-lg shadow-amber-600/30'
+                : 'bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10'
+            }`}
+          >
+            <span>Leadership</span>
+            <span className="px-1.5 py-0.2 rounded-full text-[10px] bg-white/20">{countLead}</span>
+          </button>
+        </div>
+
+        {/* ── Milestones Grid ── */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {filteredAchievements.map((ach) => (
             <div
               key={ach.title}
-              className={`glass-card p-6 sm:p-7 rounded-3xl flex flex-col justify-between transition-all ${
-                ach.isPlaceholder ? 'border-dashed border-violet-500/40 bg-violet-950/10 hover:border-violet-400' : ''
+              className={`p-6 sm:p-7 rounded-3xl flex flex-col justify-between transition-all duration-300 relative group overflow-hidden ${
+                ach.isAws
+                  ? 'glass-card-aws border border-[#FF9900]/30 hover:border-[#FF9900]/60 bg-gradient-to-br from-[#FF9900]/10 via-[#070c18] to-[#04060d] shadow-lg shadow-[#FF9900]/5'
+                  : 'glass-card border border-white/10 hover:border-violet-500/40'
               }`}
             >
+              <div className="corner-accent corner-tl" />
+              <div className="corner-accent corner-tr" />
+              <div className="corner-accent corner-bl" />
+              <div className="corner-accent corner-br" />
+
               <div>
-                <div className="flex items-center justify-between gap-2 mb-3">
-                  <span className="text-3xl">{ach.icon}</span>
-                  <span className={`font-mono text-[10px] uppercase px-2.5 py-0.5 rounded-full border ${
-                    ach.isPlaceholder ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-300 font-bold' : 'bg-white/5 border-white/10 text-slate-400'
+                <div className="flex items-center justify-between gap-2 mb-4">
+                  <div className={`w-12 h-12 rounded-2xl flex items-center justify-center text-2xl transition-transform duration-300 group-hover:scale-110 ${
+                    ach.isAws
+                      ? 'bg-gradient-to-br from-[#FF9900]/25 via-amber-600/15 to-transparent border border-[#FF9900]/40 p-2 shadow-sm shadow-[#FF9900]/20'
+                      : 'bg-gradient-to-br from-violet-600/20 via-blue-600/15 to-transparent border border-white/10'
+                  }`}>
+                    {ach.isAws ? <AwsLogo className="w-7 h-7" /> : ach.icon}
+                  </div>
+                  <span className={`font-mono text-[10px] uppercase px-3 py-1 rounded-full border font-bold ${
+                    ach.isAws
+                      ? 'bg-[#FF9900]/15 border-[#FF9900]/40 text-[#FFA724]'
+                      : 'bg-white/5 border-white/10 text-slate-300'
                   }`}>
                     {ach.type}
                   </span>
                 </div>
-                <h4 className="font-heading font-bold text-base text-white mb-1">{ach.title}</h4>
-                <p className="text-xs text-violet-400 font-semibold mb-2">{ach.issuer} · {ach.year}</p>
-                <p className="text-xs text-slate-300 leading-relaxed">
+
+                <h4 className={`font-heading font-bold text-base sm:text-lg mb-1.5 transition-colors ${
+                  ach.isAws ? 'text-white group-hover:text-[#FFA724]' : 'text-white group-hover:text-violet-300'
+                }`}>
+                  {ach.title}
+                </h4>
+
+                <p className={`text-xs font-semibold mb-3 flex items-center gap-1.5 ${
+                  ach.isAws ? 'text-[#FFA724]' : 'text-violet-400'
+                }`}>
+                  {ach.isAws && <AwsLogo className="w-3.5 h-3.5 inline-block" />}
+                  <span>{ach.issuer}</span>
+                  <span>·</span>
+                  <span className="font-mono text-slate-400">{ach.year}</span>
+                </p>
+
+                <p className="text-xs text-slate-300 leading-relaxed mb-4">
                   {ach.desc}
                 </p>
+
+                {ach.highlights && (
+                  <div className="flex flex-wrap gap-1.5 mb-4">
+                    {ach.highlights.map(h => (
+                      <span
+                        key={h}
+                        className={`font-mono text-[10px] px-2 py-0.5 rounded-md border ${
+                          ach.isAws
+                            ? 'bg-[#FF9900]/10 border-[#FF9900]/25 text-amber-200/90'
+                            : 'bg-white/5 border-white/10 text-slate-400'
+                        }`}
+                      >
+                        {h}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
-              <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] font-mono text-slate-400">
-                <span>{ach.isPlaceholder ? 'Status' : 'Credential Level'}</span>
-                <span className={ach.isPlaceholder ? 'text-emerald-400 font-bold' : 'text-violet-400'}>{ach.badgeText || 'Verified ✓'}</span>
+
+              <div>
+                <div className="pt-3 border-t border-white/5 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                  <span>{ach.isAws ? 'AWS Credential Status' : 'Credential Status'}</span>
+                  <span className={`font-bold flex items-center gap-1 ${
+                    ach.isAws ? 'text-[#FFA724]' : 'text-emerald-400'
+                  }`}>
+                    {ach.badgeText || 'Verified ✓'}
+                  </span>
+                </div>
+
+                {/* Action buttons (if has certificate or journey link) */}
+                {(ach.hasCertificate || ach.ctaLink) && (
+                  <div className="mt-3 pt-3 border-t border-white/5 flex flex-wrap items-center gap-2">
+                    {ach.hasCertificate && (
+                      <button
+                        onClick={() => setSelectedCertificate(ach)}
+                        className="px-3 py-1.5 rounded-lg text-xs font-bold bg-[#FF9900]/15 hover:bg-[#FF9900]/25 text-[#FFA724] border border-[#FF9900]/30 transition-all flex items-center gap-1.5 cursor-pointer"
+                      >
+                        <AwsLogo className="w-3.5 h-3.5" />
+                        <span>View Certificate 📜</span>
+                      </button>
+                    )}
+                    {ach.ctaLink && (
+                      <button
+                        onClick={() => navigateTo(ach.ctaLink)}
+                        className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-all flex items-center gap-1 cursor-pointer"
+                      >
+                        <span>{ach.ctaText || 'Learn More'}</span>
+                        <span>→</span>
+                      </button>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Navigation Next Step CTA */}
+      {/* ── Interactive Certificate Lightbox Modal ── */}
+      {selectedCertificate && (
+        <div
+          className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4"
+          onClick={() => setSelectedCertificate(null)}
+        >
+          <div
+            className="bg-[#070c18] border border-[#FF9900]/40 rounded-3xl max-w-2xl w-full p-6 space-y-4 shadow-2xl relative animate-scale-in"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between border-b border-white/10 pb-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-[#FF9900]/15 border border-[#FF9900]/30 flex items-center justify-center p-2">
+                  <AwsLogo className="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 className="font-heading font-bold text-white text-base sm:text-lg">
+                    {selectedCertificate.title}
+                  </h3>
+                  <p className="text-xs text-[#FFA724] font-mono">
+                    {selectedCertificate.issuer} · Verified Credential
+                  </p>
+                </div>
+              </div>
+              <button
+                onClick={() => setSelectedCertificate(null)}
+                className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-slate-300 hover:text-white transition-all text-sm cursor-pointer"
+              >
+                ✕
+              </button>
+            </div>
+
+            <div className="rounded-2xl overflow-hidden border border-white/10 bg-black/50 flex items-center justify-center p-2">
+              <img
+                src={getImageSrc(selectedCertificate.certificateImage || selectedCertificate.image)}
+                alt={selectedCertificate.title}
+                className="w-full h-auto max-h-[60vh] object-contain rounded-xl"
+              />
+            </div>
+
+            <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
+              <p className="text-xs text-slate-400">
+                Official AWS Training &amp; Certification credential issued to Mohit Mundke.
+              </p>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => {
+                    setSelectedCertificate(null);
+                    navigateTo('/gallery');
+                  }}
+                  className="cta-secondary px-4 py-2 rounded-xl text-xs font-semibold cursor-pointer"
+                >
+                  Inspect in Gallery 🎨
+                </button>
+                <button
+                  onClick={() => {
+                    setSelectedCertificate(null);
+                    navigateTo('/aws-journey');
+                  }}
+                  className="cta-aws px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5 cursor-pointer"
+                >
+                  <AwsLogo className="w-3.5 h-3.5" />
+                  <span>AWS Journey Hub</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── Navigation Next Step CTA ── */}
       <div className="pt-6 flex flex-wrap justify-center gap-4 reveal">
         <button
+          onClick={() => navigateTo('/aws-journey')}
+          className="cta-aws px-7 py-3 rounded-xl text-xs font-bold shadow-lg shadow-[#FF9900]/20 flex items-center gap-2 cursor-pointer"
+        >
+          <AwsLogo className="w-4 h-4" />
+          <span>Explore AWS Journey Hub</span>
+          <span>→</span>
+        </button>
+        <button
           onClick={() => navigateTo('/gallery')}
-          className="cta-primary px-7 py-3 rounded-xl text-xs font-bold shadow-lg shadow-violet-600/30 flex items-center gap-2"
+          className="cta-primary px-7 py-3 rounded-xl text-xs font-bold shadow-lg shadow-violet-600/30 flex items-center gap-2 cursor-pointer"
         >
           <span>Explore Moments &amp; Gallery 🎨</span>
           <span>→</span>
         </button>
         <button
           onClick={() => navigateTo('/contact')}
-          className="cta-secondary px-7 py-3 rounded-xl text-xs font-semibold flex items-center gap-2"
+          className="cta-secondary px-7 py-3 rounded-xl text-xs font-semibold flex items-center gap-2 cursor-pointer"
         >
           <span>Get in Touch ✉️</span>
           <span>→</span>
