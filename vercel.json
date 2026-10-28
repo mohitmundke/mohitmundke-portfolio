@@ -1,7 +1,7 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/((?!.*\\.[\\w]+$).*)", "destination": "/index.html" }
+    { "source": "/((?!_vercel|.*\\.[\\w]+$).*)", "destination": "/index.html" }
   ],
   "headers": [
     {

@@ -5770,6 +5770,12 @@ function App() {
     setRoute(clean);
     setMobileMenuOpen(false);
     window.scrollTo({ top: 0, behavior: 'instant' });
+    try {
+      if (typeof window !== 'undefined') {
+        if (typeof window.va === 'function') window.va('pageview', { path: clean });
+        if (typeof window.si === 'function') window.si('event', { name: 'route_change', path: clean });
+      }
+    } catch (_) {}
   };
 
   useScrollReveal(!loading, route);
